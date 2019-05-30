@@ -6,10 +6,10 @@ Please cite: Vickovic et al. Multidimensional transcriptomics uncovers spatial d
 
 
 # Tech workflow
-![github-small](https://github.com/broadinstitute/hdst/blob/master/workflow.png)
+![github-small](https://github.com/klarman-cell-observatory/3dst/blob/master/workflow.png)
 
 # File Structure Overview
-All processed files are available at: https://portals.broadinstitute.org/single_cell/study/SCP446
+All processed files are available at: https://portals.broadinstitute.org/single_cell/study/SCPXXX
 
 ![github-small](https://github.com/broadinstitute/hdst/blob/master/files.png)
 
