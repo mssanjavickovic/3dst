@@ -20,12 +20,12 @@ We recommed using the `Bulk Download` function and to consult the file descripti
 `GENE` as row names 
 
 #### `*Norm.exp*` files: matrix with normalized counts tsv files with:
-`X_Y` barcode (X_Y) coordinate as row names
-`GENE` as column names 
+`X_Y` barcode (X_Y) coordinate as column names
+`GENE` as row names 
 
 #### `*all_inf*` files: files connect (x,y) coordinates to infiltrate annotation regions in `3dst` with:
-`X_Y` barcode (X_Y) coordinate  
-`Inf` infiltrate ID 
+`SectionID_X_Y` barcode (X_Y) coordinate  
+`infiltrate` infiltrate ID 
 
 #### `*HE*` files: jpg H&E image files
 
@@ -37,7 +37,7 @@ We recommed using the `Bulk Download` function and to consult the file descripti
 `pix_y` centroid pixel (y) coordinate in the HE and Mask images
 
 #### `*xyz*` files: files connect (x,y) coordinates to z-axis alignments and enable the 3D viewing:
-`Section_X_Y` Section number followed barcode (X_Y) coordinate  
+`SectionID_X_Y` Section number followed barcode (X_Y) coordinate  
 `V1` rotated and aligned centroid (x) coordinate in the HE and Mask images
 `V2` rotated and centroid (y) coordinate in the HE and Mask images
 
@@ -51,7 +51,7 @@ We recommed using the `Bulk Download` function and to consult the file descripti
 `Image ID` eg. RA1_HE_1 which matches the `*HE*` file names
 `x` barcode (X) coordinate 
 `y` barcode (Y) coordinate  
-`b_cell` eg. B cell specific score (same format for all 12 tested cell types)
+`b_cell` eg. B cell specific score (same format for all 13 tested cell types)
 
 # Alignment
 This is [code](./alignment) for aligning HE images to (x,y) barcode coordiantes as given by ST Pipeline ([v.0.8.5](https://github.com/SpatialTranscriptomicsResearch/st_pipeline/releases/tag/0.8.5)). 
