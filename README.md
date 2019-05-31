@@ -15,11 +15,11 @@ All processed files are available at: https://portals.broadinstitute.org/single_
 
 We recommed using the `Bulk Download` function and to consult the file descriptions as mentioned bellow. 
 
-#### `*exp_matrix*` files: matrix with raw UMI-filtered counts tsv files with:
-`X_Y` barcode (X_Y) coordinate as row names
-`GENE` as column names 
+#### `*Raw.exp*` files: matrix with raw UMI-filtered counts tsv files with:
+`X_Y` barcode (X_Y) coordinate as column names
+`GENE` as row names 
 
-#### `*norm.exp*` files: matrix with normalized counts tsv files with:
+#### `*Norm.exp*` files: matrix with normalized counts tsv files with:
 `X_Y` barcode (X_Y) coordinate as row names
 `GENE` as column names 
 
@@ -36,10 +36,10 @@ We recommed using the `Bulk Download` function and to consult the file descripti
 `pix_x` centroid pixel (x) coordinate in the HE and Mask images
 `pix_y` centroid pixel (y) coordinate in the HE and Mask images
 
-#### `*aligned_positions*` files: files connect (x,y) coordinates to z-axis alignments and enable the 3D viewing:
+#### `*xyz*` files: files connect (x,y) coordinates to z-axis alignments and enable the 3D viewing:
 `Section_X_Y` Section number followed barcode (X_Y) coordinate  
-`V1` centroid (x) coordinate in the HE and Mask images
-`V2` centroid (y) coordinate in the HE and Mask images
+`V1` rotated and aligned centroid (x) coordinate in the HE and Mask images
+`V2` rotated and centroid (y) coordinate in the HE and Mask images
 
 #### `*Cluster*` files: files connect (x,y) coordinates to normalized expression of genes found in each respective cluster with:
 `Image ID` eg. RA1_HE_1 which matches the `*HE*` file names
