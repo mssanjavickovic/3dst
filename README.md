@@ -66,4 +66,4 @@ This is [code](./cell_typing) for imputing cell types onto (x,y) spatial positio
 This is [code](./clustering) for clustering and DE analysis between clusters.
 
 # 3d app for viewing the data
-This is the [app](https://spatialtranscriptomics3d.shinyapps.io/3DSeTH_RA/) for viewing 3D aligned and normalized ST-based expression. The raw [code](.shinnyapp) is also available. 
+This is the [app](https://spatialtranscriptomics3d.shinyapps.io/3DSeTH_RA/) for viewing 3D aligned and normalized ST-based expression. The raw [code](.app) is also available. 
