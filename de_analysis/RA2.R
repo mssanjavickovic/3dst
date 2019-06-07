@@ -202,7 +202,7 @@ per_out = permutationPA(as.matrix(t(all_matrix)), B = 1, threshold = 0.01, verbo
 tsne_out <- Rtsne(as.matrix(t(all_matrix)), dims = 3, pca = TRUE, initial_dims = per_out$r, theta = 0.5, check_duplicates = FALSE, perplexity = 60, max_iter = 10000, verbose = TRUE) # Run TSNE
 
 # Make matrix of tsne data output
-tsne <- as.data.frame(tsne_out$Y)
+tsne <- as.data.frame(tsne_out$Y) # saved matrix availalbe in ./data
 t1 <- as.matrix(tsne[1])
 t2 <- as.matrix(tsne[2])
 t3 <- as.matrix(tsne[3])
