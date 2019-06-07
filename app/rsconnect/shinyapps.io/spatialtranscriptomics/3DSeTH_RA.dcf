@@ -1,0 +1,12 @@
+name: 3DSeTH_RA
+title: 3DSeTH_RA
+username:
+account: spatialtranscriptomics
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 835227
+bundleId: 1983550
+url: https://spatialtranscriptomics3d.shinyapps.io/3DSeTH_RA/
+when: 1554280484.84627
+asMultiple: FALSE
+asStatic: FALSE
