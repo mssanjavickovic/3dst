@@ -60,7 +60,7 @@ This is [code](./alignment) for aligning HE images to (x,y) barcode coordiantes 
 This is [code](./segmentation) for segmenting HE nuclei and cytoplasm. HE image segmentation was performed by combining Ilastik and CellProfiler. The labeled segmentation mask was used to assign the individual spots to the corresponding Cell ID. The output CSV file includes Cell IDs, X and Y position of the cells (centroid) and the corresponding spots.
 
 # Cell typing 
-This is [code](./cell_typing) for imputing cell types onto (x,y) spatial positions based on scRNA-seq data taken from [Stephenson et al](https://www.nature.com/articles/s41467-017-02659-x). 
+This is [code](./cell_typing) for imputing cell types onto (x,y) spatial positions based on scRNA-seq data taken from [Stephenson et al](https://www.nature.com/articles/s41467-017-02659-x). [GO enrichment](./GO_enrichment) was performed on the selected genes. 
 
 # Clustering and Differential expression (DE) analysis
 This is [code](./clustering) for clustering and DE analysis between clusters.
