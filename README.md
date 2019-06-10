@@ -63,7 +63,7 @@ This is [code](./segmentation) for segmenting HE nuclei and cytoplasm. HE image 
 This is [code](./cell_typing) for imputing cell types onto (x,y) spatial positions based on scRNA-seq data taken from [Stephenson et al](https://www.nature.com/articles/s41467-017-02659-x). [GO enrichment](./GO_enrichment) was performed on the selected genes. 
 
 # Clustering and Differential expression (DE) analysis
-This is [code](./clustering) for clustering and DE analysis between clusters.
+This is [code](./de_analysis) for clustering and DE analysis between clusters.
 
 # 3d app for viewing the data
 This is the [app](https://spatialtranscriptomics3d.shinyapps.io/3DSeTH_RA/) for viewing 3D aligned and normalized ST-based expression. The raw [code](./app) is also available. 
