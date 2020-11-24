@@ -18,7 +18,10 @@ sidebar <- ## Sidebar content
       sidebarMenu(
         menuItem("RA1", tabName = "RA1", icon = icon("cube")),
         menuItem("RA2", tabName = "RA2", icon = icon("cube")),
-        mainPanel(selectInput('min','Min value for Log(normalized expression)', choices = c(-2:12), selected = "-2"),
+        menuItem("RA3", tabName = "RA3", icon = icon("cube")),
+        menuItem("RA4", tabName = "RA4", icon = icon("cube")),
+        menuItem("RA5", tabName = "RA5", icon = icon("cube")),
+        mainPanel(selectInput('min','Min value for Log(normalized expression)', choices = c(-2:12), selected = "0"),
                   selectInput('max','Max value for Log(normalized expression)', choices = c(12:-2), selected = "6"))
       ),
       uiOutput("conds")
@@ -45,7 +48,34 @@ body <- dashboardBody(
                      column(8,(box(selectInput("GeneRA2_3",label = "Choose 3rd gene to display", multiple = F, choices = unique(t1_names, t2_names), selected = "MS4A1"),
                                    rglwidgetOutput("visData.7", height = 400, width = "90%"))),
                             fluidRow(box(selectInput("GeneRA2_4",label = "Choose 4th gene to display", multiple = F, choices = unique(t1_names, t2_names), selected = "SSR4"),
-                                         rglwidgetOutput("visData.8", height = 400, width = "90%")))))))
+                                         rglwidgetOutput("visData.8", height = 400, width = "90%")))))),
+    tabItem(tabName = "RA3", fluidRow(column(1),
+                                      column(8,box(selectInput("GeneRA3_1",label = "Choose 1st gene to display", multiple = F, choices = unique(t1_names, t2_names), selected = "CCL19"),
+                                                   rglwidgetOutput("visData.9", height = 400, width = "90%")),
+                                             fluidRow(box(selectInput("GeneRA3_2",label = "Choose 2nd gene to display", multiple = F, choices = unique(t1_names, t2_names), selected = "CD52"),
+                                                          rglwidgetOutput("visData.10", height = 400, width = "90%"))))),
+            fluidRow(column(1),column(8,(box(selectInput("GeneRA3_3",label = "Choose 3rd gene to display", multiple = F, choices = unique(t1_names, t2_names), selected = "MS4A1"),
+                                             rglwidgetOutput("visData.11", height = 400, width = "90%"))),
+                                      fluidRow(box(selectInput("GeneRA3_4",label = "Choose 4th gene to display", multiple = F, choices = unique(t1_names, t2_names), selected = "SSR4"),
+                                                   rglwidgetOutput("visData.12", height = 400, width = "90%")))))),
+    tabItem(tabName = "RA4", fluidRow(column(1),
+                                      column(8,box(selectInput("GeneRA4_1",label = "Choose 1st gene to display", multiple = F, choices = unique(t1_names, t2_names), selected = "CCL19"),
+                                                   rglwidgetOutput("visData.13", height = 400, width = "90%")),
+                                             fluidRow(box(selectInput("GeneRA4_2",label = "Choose 2nd gene to display", multiple = F, choices = unique(t1_names, t2_names), selected = "CD52"),
+                                                          rglwidgetOutput("visData.14", height = 400, width = "90%"))))),
+            fluidRow(column(1),column(8,(box(selectInput("GeneRA4_3",label = "Choose 3rd gene to display", multiple = F, choices = unique(t1_names, t2_names), selected = "MS4A1"),
+                                             rglwidgetOutput("visData.15", height = 400, width = "90%"))),
+                                      fluidRow(box(selectInput("GeneRA4_4",label = "Choose 4th gene to display", multiple = F, choices = unique(t1_names, t2_names), selected = "SSR4"),
+                                                   rglwidgetOutput("visData.16", height = 400, width = "90%")))))),
+    tabItem(tabName = "RA5", fluidRow(column(1),
+                                      column(8,box(selectInput("GeneRA5_1",label = "Choose 1st gene to display", multiple = F, choices = unique(t1_names, t2_names), selected = "CCL19"),
+                                                   rglwidgetOutput("visData.17", height = 400, width = "90%")),
+                                             fluidRow(box(selectInput("GeneRA5_2",label = "Choose 2nd gene to display", multiple = F, choices = unique(t1_names, t2_names), selected = "CD52"),
+                                                          rglwidgetOutput("visData.18", height = 400, width = "90%"))))),
+            fluidRow(column(1),column(8,(box(selectInput("GeneRA5_3",label = "Choose 3rd gene to display", multiple = F, choices = unique(t1_names, t2_names), selected = "MS4A1"),
+                                             rglwidgetOutput("visData.19", height = 400, width = "90%"))),
+                                      fluidRow(box(selectInput("GeneRA5_4",label = "Choose 4th gene to display", multiple = F, choices = unique(t1_names, t2_names), selected = "SSR4"),
+                                                   rglwidgetOutput("visData.20", height = 400, width = "90%")))))))
 )
 
 # Put them together into a dashboardPage
@@ -116,6 +146,90 @@ while (rgl.cur() > 0) { rgl.close() }
     )
     plot.gene.3d.9(sample = "RA2",gene=input$GeneRA2_4, t2.1, t2.2, t2.3, t2.4, t2.5, t2.6, t2.7,  s2.1,s2.2,s2.3,s2.4,s2.5,s2.6,s2.7, x = 65, y = 50, transparency = 0.1, min = as.numeric(input$min), max = as.numeric(input$max))
     #snapshot3d(filename = paste("tmp/RA2_",input$Gene_4,".png", sep=""))
+    rglwidget()})
+  output$visData.9 <- renderRglwidget({
+    validate(
+      need(!input$GeneRA3_1 %in% t1_names == FALSE, "The selected gene is not expressed in this dataset.")
+    )
+    plot.gene.3d.4(sample = "RA3", gene=input$GeneRA3_1, t3.1, t3.2, t3.3, t3.4, s3.1,s3.2,s3.3,s3.4, x = 59, y = 40, transparency = 0.1, min = as.numeric(input$min), max = as.numeric(input$max))
+    #snapshot3d(filename = paste("tmp/RA3_",input$Gene_1,".png", sep=""))
+    rglwidget()})
+  output$visData.10 <- renderRglwidget({
+    validate(
+      need(!input$GeneRA3_2 %in% t1_names == FALSE, "The selected gene is not expressed in this dataset.")
+    )
+    plot.gene.3d.4(sample = "RA3",gene=input$GeneRA3_2,t3.1, t3.2, t3.3, t3.4, s3.1,s3.2,s3.3,s3.4,  x = 59, y = 40, transparency = 0.1, min = as.numeric(input$min), max = as.numeric(input$max))
+    #snapshot3d(filename = paste("tmp/RA3_",input$Gene_2,".png", sep=""))
+    rglwidget()})
+  output$visData.11 <- renderRglwidget({
+    validate(
+      need(!input$GeneRA3_3 %in% t1_names == FALSE, "The selected gene is not expressed in this dataset.")
+    )
+    plot.gene.3d.4(sample = "RA3",gene=input$GeneRA3_3,t3.1, t3.2, t3.3, t3.4, s3.1,s3.2,s3.3,s3.4,  x = 59, y = 40, transparency = 0.1, min = as.numeric(input$min), max = as.numeric(input$max))
+    #snapshot3d(filename = paste("tmp/RA3_",input$Gene_3,".png", sep=""))
+    rglwidget()})
+  output$visData.12 <- renderRglwidget({
+    validate(
+      need(!input$GeneRA3_4 %in% t1_names == FALSE, "The selected gene is not expressed in this dataset.")
+    )
+    plot.gene.3d.4(sample = "RA3",gene=input$GeneRA3_4,t3.1, t3.2, t3.3, t3.4, s3.1,s3.2,s3.3,s3.4,  x = 59, y = 40, transparency = 0.1, min = as.numeric(input$min), max = as.numeric(input$max))
+    #snapshot3d(filename = paste("tmp/RA3_",input$Gene_4,".png", sep=""))
+    rglwidget()})
+  output$visData.13 <- renderRglwidget({
+    validate(
+      need(!input$GeneRA4_1 %in% t1_names == FALSE, "The selected gene is not expressed in this dataset.")
+    )
+    plot.gene.3d.5(sample = "RA4", gene=input$GeneRA4_1, t4.1, t4.2, t4.3, t4.4, t4.5, s4.1,s4.2,s4.3,s4.4, s4.5, x = 59, y = 40, transparency = 0.1, min = as.numeric(input$min), max = as.numeric(input$max))
+    #snapshot3d(filename = paste("tmp/RA4_",input$Gene_1,".png", sep=""))
+    rglwidget()})
+  output$visData.14 <- renderRglwidget({
+    validate(
+      need(!input$GeneRA4_2 %in% t1_names == FALSE, "The selected gene is not expressed in this dataset.")
+    )
+    plot.gene.3d.5(sample = "RA4",gene=input$GeneRA4_2,t4.1, t4.2, t4.3, t4.4, t4.5, s4.1,s4.2,s4.3,s4.4, s4.5, x = 59, y = 40, transparency = 0.1, min = as.numeric(input$min), max = as.numeric(input$max))
+    #snapshot3d(filename = paste("tmp/RA4_",input$Gene_2,".png", sep=""))
+    rglwidget()})
+  output$visData.15 <- renderRglwidget({
+    validate(
+      need(!input$GeneRA4_3 %in% t1_names == FALSE, "The selected gene is not expressed in this dataset.")
+    )
+    plot.gene.3d.5(sample = "RA4",gene=input$GeneRA4_3,t4.1, t4.2, t4.3, t4.4, t4.5, s4.1,s4.2,s4.3,s4.4, s4.5,  x = 59, y = 40, transparency = 0.1, min = as.numeric(input$min), max = as.numeric(input$max))
+    #snapshot3d(filename = paste("tmp/RA4_",input$Gene_3,".png", sep=""))
+    rglwidget()})
+  output$visData.16 <- renderRglwidget({
+    validate(
+      need(!input$GeneRA4_4 %in% t1_names == FALSE, "The selected gene is not expressed in this dataset.")
+    )
+    plot.gene.3d.5(sample = "RA4",gene=input$GeneRA4_4,t4.1, t4.2, t4.3, t4.4, t4.5, s4.1,s4.2,s4.3,s4.4, s4.5, x = 59, y = 40, transparency = 0.1, min = as.numeric(input$min), max = as.numeric(input$max))
+    #snapshot3d(filename = paste("tmp/RA4_",input$Gene_4,".png", sep=""))
+    rglwidget()})
+  output$visData.17 <- renderRglwidget({
+    validate(
+      need(!input$GeneRA5_1 %in% t1_names == FALSE, "The selected gene is not expressed in this dataset.")
+    )
+    plot.gene.3d.3(sample = "RA5", gene=input$GeneRA5_1, t5.1, t5.2, t5.3, s5.1, s5.2, s5.3, x = 59, y = 40, transparency = 0.1, min = as.numeric(input$min), max = as.numeric(input$max))
+    #snapshot3d(filename = paste("tmp/RA5_",input$Gene_1,".png", sep=""))
+    rglwidget()})
+  output$visData.18 <- renderRglwidget({
+    validate(
+      need(!input$GeneRA5_2 %in% t1_names == FALSE, "The selected gene is not expressed in this dataset.")
+    )
+    plot.gene.3d.3(sample = "RA5",gene=input$GeneRA5_2,t5.1, t5.2, t5.3, s5.1, s5.2, s5.3,  x = 59, y = 40, transparency = 0.1, min = as.numeric(input$min), max = as.numeric(input$max))
+    #snapshot3d(filename = paste("tmp/RA5_",input$Gene_2,".png", sep=""))
+    rglwidget()})
+  output$visData.19 <- renderRglwidget({
+    validate(
+      need(!input$GeneRA5_3 %in% t1_names == FALSE, "The selected gene is not expressed in this dataset.")
+    )
+    plot.gene.3d.3(sample = "RA5",gene=input$GeneRA5_3,t5.1, t5.2, t5.3, s5.1, s5.2, s5.3,   x = 59, y = 40, transparency = 0.1, min = as.numeric(input$min), max = as.numeric(input$max))
+    #snapshot3d(filename = paste("tmp/RA5_",input$Gene_3,".png", sep=""))
+    rglwidget()})
+  output$visData.20 <- renderRglwidget({
+    validate(
+      need(!input$GeneRA5_4 %in% t1_names == FALSE, "The selected gene is not expressed in this dataset.")
+    )
+    plot.gene.3d.3(sample = "RA5",gene=input$GeneRA5_4,t5.1, t5.2, t5.3, s5.1,s5.2,s5.3,  x = 59, y = 40, transparency = 0.1, min = as.numeric(input$min), max = as.numeric(input$max))
+    #snapshot3d(filename = paste("tmp/RA5_",input$Gene_4,".png", sep=""))
     rglwidget()})
   session$onSessionEnded(function() { while (rgl.cur() > 0) { rgl.close() }})
 }

@@ -1,40 +1,110 @@
+# Example normalization for all RA samples
 #Load libraries
-library(scran)
+suppressMessages(suppressWarnings(library(scran,warn.conflicts = F, quietly = T)))
+suppressMessages(suppressWarnings(library(SingleCellExperiment,warn.conflicts = F, quietly = T)))
+suppressMessages(suppressWarnings(library(stringr,warn.conflicts = F, quietly = T)))
+suppressMessages(suppressWarnings(library(scater,warn.conflicts = F, quietly = T)))
 
-# Normalize counts RA1 samples
-m1 = read.csv("RA1_Raw.exp_1.csv", header = T, row.names = 1)
-m2 = read.csv("RA1_Raw.exp_2.csv", header = T, row.names = 1)
-m3 = read.csv("RA1_Raw.exp_3.csv", header = T, row.names = 1)
-m4 = read.csv("RA1_Raw.exp_4.csv", header = T, row.names = 1)
+# removes all glob variables from env
+rm(list = ls())
 
-### Combine all the inf norm data in one matrix
-exp.values = mbind(m1, m2, m3, m4)
+# Read the fuctions file 
+setwd("/Users/svickovi/Library/Mobile Documents/com~apple~CloudDocs/Desktop/morphoSPOT/3dst_repo/3dst/normalization")
+source('../functions/Read_Functions.R')
 
-# Normalize using Scran
-all.exp.values = newSCESet(countData=data.frame(exp.values))
-clusters = quickCluster(all.exp.values,  min.size=20)
-all.exp.values.all = computeSumFactors(all.exp.values, sizes = c(5,10,15,20,25),clusters=clusters, positive = TRUE)
-all.exp.values.norm = normalize(all.exp.values.all)
-fit = trendVar(all.exp.values.norm, use.spikes=FALSE)
-RA1.norm = all.exp.values.norm
+# Which samples do you want to normalize? 
+norm_samples = "RA3"
 
-# Read in counts RA2 samples
-m1 = read.csv("RA2_Raw.exp_1.csv", header = T, row.names = 1)
-m2 = read.csv("RA2_Raw.exp_2.csv", header = T, row.names = 1)
-m3 = read.csv("RA2_Raw.exp_3.csv", header = T, row.names = 1)
-m4 = read.csv("RA2_Raw.exp_4.csv", header = T, row.names = 1)
-m5 = read.csv("RA2_Raw.exp_5.csv", header = T, row.names = 1)
-m6 = read.csv("RA2_Raw.exp_6.csv", header = T, row.names = 1)
-m7 = read.csv("RA2_Raw.exp_7.csv", header = T, row.names = 1)
+# Where are you raw csv expression files located? 
+path_samples = "/Users/svickovi/Library/Mobile Documents/com~apple~CloudDocs/Desktop/morphoSPOT/Raw counts and images for paper/RA5"
 
-### Combine all the inf norm data in one matrix
-exp.values = mbind(m1, m2, m3, m4, m5, m6, m7)
+# Set output directory that will contain all cell_typing pdf plots and output gene files
+path_output = "/Users/svickovi/Library/Mobile Documents/com~apple~CloudDocs/Desktop/morphoSPOT/norm_counts_output"
 
-# Normalize counts for RA2 
-all.exp.values = newSCESet(countData=data.frame(exp.values))
-clusters = quickCluster(all.exp.values,  min.size=60)
-all.exp.values.all = computeSumFactors(all.exp.values, clusters=clusters, sizes = c(2,5,7,10,12,15,17,20,22,25,27,30,35,40), positive = TRUE, assay="counts")
-all.exp.values.norm = normalize(all.exp.values.all, log=TRUE)
-fit = trendVar(all.exp.values.norm, use.spikes=FALSE)
-RA2.norm = all.exp.values.norm
+# List avaiable raw matrices for normalization 
+files_raw = list.files(pattern =  glob2rx(paste0(norm_samples, "_Raw.exp_*.csv")), path = path_samples)
+
+# Load all raw counts matrices in your env
+sample_counter = 1
+for (i in files_raw){
+  print(i)
+  assign(paste0("raw_mat", sample_counter), read.csv(paste0(path_samples, "/", i), header = T, row.names = 1))
+  sample_counter = sample_counter + 1
+}
+raw_mat_loaded_in_env <- grep("raw_mat",names(.GlobalEnv),value=TRUE)
+
+# Combine all the raw data in one matrix
+exp.values = do.call(mbind,mget(raw_mat_loaded_in_env))
+exp.values[is.na(exp.values)] <- 0
+
+# Label sections as covariates
+section.labels = ""
+section.data = ""
+for (secs in 1:length(raw_mat_loaded_in_env)){
+  section.labels = c(section.labels, paste0(paste0("X",secs, "_"), str_replace(colnames(get(paste0("raw_mat", secs))), "X", "")))
+  section.data = c(section.data, rep(paste0("X",secs), ncol(get(paste0("raw_mat", secs)))))
+}
+section.labels = section.labels[-1]
+section.data = section.data[-1]
+
+# Rename colnames to reflect sections from a single patient biopsy
+colnames(exp.values) = section.labels 
+
+# Make a SCE object required by scran
+sce <- SingleCellExperiment(list(counts=as.matrix(exp.values)),
+                            colData=DataFrame(section=section.data),
+                            rowData=DataFrame(label=row.names(exp.values)))
+
+# Compute some lib metrics
+# for more details on scran normalization, please check Aaron's tutorial: https://bioconductor.org/packages/release/bioc/vignettes/scran/inst/doc/scran.html#33_computing_normalized_expression_values
+counts <- assay(sce)
+libsizes <- colSums(counts)
+size.factors <- libsizes/mean(libsizes)
+qcstats <- perCellQCMetrics(sce)
+qcfilter <- quickPerCellQC(qcstats)
+sce <- sce[,!qcfilter$discard]
+summary(qcfilter$discard) # false denotes number of discarded ST spots
+
+# Performes normalization
+clusters <- quickCluster(sce,  min.size=20) # do not want very small clusters
+sce <- computeSumFactors(sce, clusters=clusters, positive = TRUE)
+summary(sizeFactors(sce))
+sce <- logNormCounts(sce) # this represents the log normalized object
+
+# Output normalized counts into separate files and R objects
+norm.counts = assay(sce, 'logcounts')
+
+# Change dir to some output dir 
+setwd(path_output)
+
+###output norm counts
+for (secs in 1:length(raw_mat_loaded_in_env)){
+  assign(paste0("m", secs), assay(sce, "logcounts")[,grep(pattern = paste0("X", secs), colnames(norm.counts), value = F)])
+  print(paste0("Saving normalized file ... : ", paste0(norm_samples, '_Norm.exp_', secs, '.csv')))
+  save(list=paste0("m", secs), file = paste0(norm_samples, '_norm.exp.values.', secs))
+  write.table(get(paste0("m", secs)), file = paste0(norm_samples, '_Norm.exp_', secs, '.csv'), sep = ",", quote = F, col.names = T, row.names = T)
+}
+
+
+
+
+# 
+# # how to make s files from xyz from britta
+# setwd('/Users/sanjavickovic/Desktop/morphoSPOT/new_tranforms')
+# files_raw = list.files(pattern =  glob2rx("RA5*xyz*"), path = './')
+# files_raw
+# # Load all raw counts matrices in your env
+# norm_samples = "RA5"
+# sample_counter = 1
+# for (i in files_raw){
+#   print(i)
+#   assign(paste0("s", sample_counter), read.delim(i, header = T, row.names = 1))
+#   save(list=paste0("s", sample_counter), file = paste0(norm_samples, "_", sample_counter, "_selected_adjusted_spots_3D_manual_app"))
+#   sample_counter = sample_counter + 1
+# }
+
+
+
+
+
 

@@ -1,0 +1,949 @@
+image	x_y	x	y	value
+2018DiamondCNO-308_D1	45_33	45	33	Synovial cell hyperplasia
+2018DiamondCNO-308_D1	35_41	35	41	Infiltrate;Synovial stroma
+2018DiamondCNO-308_D1	31_13	31	13	Collagenous/Adipose tissue
+2018DiamondCNO-308_D1	22_30	22	30	Synovial stroma
+2018DiamondCNO-308_D1	47_37	47	37	Unknown
+2018DiamondCNO-308_D1	18_30	18	30	Collagenous/Adipose tissue
+2018DiamondCNO-308_D1	43_41	43	41	Unknown
+2018DiamondCNO-308_D1	5_33	5	33	Unknown
+2018DiamondCNO-308_D1	26_48	26	48	Synovial stroma
+2018DiamondCNO-308_D1	3_31	3	31	Unknown
+2018DiamondCNO-308_D1	5_31	5	31	Unknown
+2018DiamondCNO-308_D1	17_33	17	33	Synovial stroma
+2018DiamondCNO-308_D1	29_25	29	25	Synovial stroma
+2018DiamondCNO-308_D1	7_47	7	47	Unknown
+2018DiamondCNO-308_D1	23_39	23	39	Synovial stroma
+2018DiamondCNO-308_D1	33_25	33	25	Unknown
+2018DiamondCNO-308_D1	24_12	24	12	Synovial cell hyperplasia
+2018DiamondCNO-308_D1	51_29	51	29	Unknown
+2018DiamondCNO-308_D1	16_32	16	32	Synovial stroma
+2018DiamondCNO-308_D1	42_48	42	48	Synovial stroma
+2018DiamondCNO-308_D1	17_37	17	37	Synovial stroma
+2018DiamondCNO-308_D1	31_45	31	45	Unknown
+2018DiamondCNO-308_D1	17_39	17	39	Synovial stroma
+2018DiamondCNO-308_D1	50_42	50	42	Synovial stroma
+2018DiamondCNO-308_D1	13_53	13	53	Unknown
+2018DiamondCNO-308_D1	44_48	44	48	Unknown
+2018DiamondCNO-308_D1	11_45	11	45	Infiltrate
+2018DiamondCNO-308_D1	16_48	16	48	Infiltrate;Synovial stroma
+2018DiamondCNO-308_D1	18_26	18	26	Synovial stroma
+2018DiamondCNO-308_D1	24_36	24	36	Collagenous/Adipose tissue
+2018DiamondCNO-308_D1	26_14	26	14	Synovial stroma
+2018DiamondCNO-308_D1	23_17	23	17	Synovial stroma
+2018DiamondCNO-308_D1	47_55	47	55	Unknown
+2018DiamondCNO-308_D1	19_37	19	37	Synovial stroma
+2018DiamondCNO-308_D1	8_42	8	42	Infiltrate;Synovial stroma
+2018DiamondCNO-308_D1	19_31	19	31	Synovial stroma
+2018DiamondCNO-308_D1	41_27	41	27	Synovial stroma
+2018DiamondCNO-308_D1	49_33	49	33	Unknown
+2018DiamondCNO-308_D1	49_31	49	31	Unknown
+2018DiamondCNO-308_D1	12_34	12	34	Synovial stroma
+2018DiamondCNO-308_D1	22_28	22	28	Synovial stroma
+2018DiamondCNO-308_D1	49_41	49	41	Synovial stroma
+2018DiamondCNO-308_D1	43_31	43	31	Synovial stroma
+2018DiamondCNO-308_D1	50_30	50	30	Unknown
+2018DiamondCNO-308_D1	45_43	45	43	Unknown
+2018DiamondCNO-308_D1	34_26	34	26	Synovial stroma
+2018DiamondCNO-308_D1	26_40	26	40	Synovial stroma
+2018DiamondCNO-308_D1	25_33	25	33	Collagenous/Adipose tissue
+2018DiamondCNO-308_D1	34_36	34	36	Unknown
+2018DiamondCNO-308_D1	12_42	12	42	Unknown
+2018DiamondCNO-308_D1	31_41	31	41	Synovial stroma
+2018DiamondCNO-308_D1	19_23	19	23	Synovial stroma
+2018DiamondCNO-308_D1	35_43	35	43	Unknown
+2018DiamondCNO-308_D1	12_22	12	22	Synovial cell hyperplasia
+2018DiamondCNO-308_D1	11_21	11	21	Unknown
+2018DiamondCNO-308_D1	23_29	23	29	Synovial stroma
+2018DiamondCNO-308_D1	27_31	27	31	Collagenous/Adipose tissue
+2018DiamondCNO-308_D1	18_42	18	42	Synovial stroma
+2018DiamondCNO-308_D1	44_24	44	24	Synovial stroma
+2018DiamondCNO-308_D1	24_16	24	16	Synovial stroma
+2018DiamondCNO-308_D1	39_17	39	17	Synovial stroma
+2018DiamondCNO-308_D1	43_13	43	13	Unknown
+2018DiamondCNO-308_D1	10_46	10	46	Infiltrate;Synovial stroma
+2018DiamondCNO-308_D1	30_18	30	18	Collagenous/Adipose tissue
+2018DiamondCNO-308_D1	53_39	53	39	Unknown
+2018DiamondCNO-308_D1	9_37	9	37	Unknown
+2018DiamondCNO-308_D1	23_43	23	43	Synovial stroma
+2018DiamondCNO-308_D1	30_42	30	42	Synovial stroma
+2018DiamondCNO-308_D1	32_26	32	26	Synovial stroma
+2018DiamondCNO-308_D1	34_48	34	48	Unknown
+2018DiamondCNO-308_D1	24_40	24	40	Synovial stroma
+2018DiamondCNO-308_D1	21_27	21	27	Collagenous/Adipose tissue
+2018DiamondCNO-308_D1	46_54	46	54	Synovial stroma
+2018DiamondCNO-308_D1	10_42	10	42	Unknown
+2018DiamondCNO-308_D1	10_22	10	22	Unknown
+2018DiamondCNO-308_D1	41_49	41	49	Infiltrate;Synovial stroma
+2018DiamondCNO-308_D1	50_28	50	28	Unknown
+2018DiamondCNO-308_D1	19_51	19	51	Synovial stroma
+2018DiamondCNO-308_D1	49_35	49	35	Synovial cell hyperplasia
+2018DiamondCNO-308_D1	44_54	44	54	Synovial stroma
+2018DiamondCNO-308_D1	17_47	17	47	Synovial stroma
+2018DiamondCNO-308_D1	46_18	46	18	Infiltrate
+2018DiamondCNO-308_D1	13_23	13	23	Synovial stroma
+2018DiamondCNO-308_D1	1_33	1	33	Unknown
+2018DiamondCNO-308_D1	51_41	51	41	Synovial stroma
+2018DiamondCNO-308_D1	47_53	47	53	Infiltrate
+2018DiamondCNO-308_D1	16_44	16	44	Synovial stroma
+2018DiamondCNO-308_D1	4_32	4	32	Unknown
+2018DiamondCNO-308_D1	25_21	25	21	Synovial stroma
+2018DiamondCNO-308_D1	21_21	21	21	Synovial stroma
+2018DiamondCNO-308_D1	13_43	13	43	Synovial stroma
+2018DiamondCNO-308_D1	28_20	28	20	Collagenous/Adipose tissue
+2018DiamondCNO-308_D1	44_26	44	26	Synovial stroma
+2018DiamondCNO-308_D1	2_42	2	42	Unknown
+2018DiamondCNO-308_D1	18_36	18	36	Synovial stroma
+2018DiamondCNO-308_D1	40_42	40	42	Unknown
+2018DiamondCNO-308_D1	39_47	39	47	Synovial stroma
+2018DiamondCNO-308_D1	46_24	46	24	Unknown
+2018DiamondCNO-308_D1	16_38	16	38	Synovial stroma
+2018DiamondCNO-308_D1	50_26	50	26	Unknown
+2018DiamondCNO-308_D1	45_29	45	29	Collagenous/Adipose tissue
+2018DiamondCNO-308_D1	48_36	48	36	Synovial cell hyperplasia
+2018DiamondCNO-308_D1	42_28	42	28	Synovial stroma
+2018DiamondCNO-308_D1	5_27	5	27	Unknown
+2018DiamondCNO-308_D1	19_33	19	33	Collagenous/Adipose tissue
+2018DiamondCNO-308_D1	9_33	9	33	Unknown
+2018DiamondCNO-308_D1	45_21	45	21	Infiltrate;Synovial stroma
+2018DiamondCNO-308_D1	41_51	41	51	Infiltrate;Synovial stroma
+2018DiamondCNO-308_D1	39_35	39	35	Synovial stroma
+2018DiamondCNO-308_D1	43_51	43	51	Infiltrate;Synovial stroma
+2018DiamondCNO-308_D1	19_35	19	35	Synovial stroma
+2018DiamondCNO-308_D1	45_27	45	27	Synovial stroma
+2018DiamondCNO-308_D1	7_37	7	37	Synovial stroma
+2018DiamondCNO-308_D1	26_16	26	16	Synovial stroma
+2018DiamondCNO-308_D1	15_49	15	49	Infiltrate;Synovial stroma
+2018DiamondCNO-308_D1	29_13	29	13	Synovial stroma
+2018DiamondCNO-308_D1	38_40	38	40	Synovial stroma
+2018DiamondCNO-308_D1	34_32	34	32	Synovial stroma
+2018DiamondCNO-308_D1	26_42	26	42	Synovial stroma
+2018DiamondCNO-308_D1	32_10	32	10	Synovial stroma
+2018DiamondCNO-308_D1	10_32	10	32	Synovial stroma
+2018DiamondCNO-308_D1	33_21	33	21	Collagenous/Adipose tissue
+2018DiamondCNO-308_D1	29_27	29	27	Synovial stroma
+2018DiamondCNO-308_D1	14_26	14	26	Synovial stroma
+2018DiamondCNO-308_D1	50_52	50	52	Synovial stroma
+2018DiamondCNO-308_D1	5_45	5	45	Unknown
+2018DiamondCNO-308_D1	6_28	6	28	Unknown
+2018DiamondCNO-308_D1	18_50	18	50	Synovial stroma
+2018DiamondCNO-308_D1	33_23	33	23	Unknown
+2018DiamondCNO-308_D1	37_45	37	45	Unknown
+2018DiamondCNO-308_D1	38_12	38	12	Infiltrate;Synovial stroma
+2018DiamondCNO-308_D1	25_31	25	31	Collagenous/Adipose tissue
+2018DiamondCNO-308_D1	36_32	36	32	Synovial stroma
+2018DiamondCNO-308_D1	38_14	38	14	Synovial stroma
+2018DiamondCNO-308_D1	12_50	12	50	Infiltrate
+2018DiamondCNO-308_D1	48_20	48	20	Unknown
+2018DiamondCNO-308_D1	15_27	15	27	Synovial stroma
+2018DiamondCNO-308_D1	9_25	9	25	Unknown
+2018DiamondCNO-308_D1	17_41	17	41	Synovial stroma
+2018DiamondCNO-308_D1	34_24	34	24	Collagenous/Adipose tissue
+2018DiamondCNO-308_D1	43_53	43	53	Infiltrate
+2018DiamondCNO-308_D1	45_49	45	49	Unknown
+2018DiamondCNO-308_D1	8_34	8	34	Unknown
+2018DiamondCNO-308_D1	51_47	51	47	Unknown
+2018DiamondCNO-308_D1	32_18	32	18	Collagenous/Adipose tissue
+2018DiamondCNO-308_D1	40_12	40	12	Synovial stroma
+2018DiamondCNO-308_D1	15_35	15	35	Unknown
+2018DiamondCNO-308_D1	26_44	26	44	Synovial stroma
+2018DiamondCNO-308_D1	36_50	36	50	Infiltrate;Synovial stroma
+2018DiamondCNO-308_D1	51_53	51	53	Unknown
+2018DiamondCNO-308_D1	36_52	36	52	Unknown
+2018DiamondCNO-308_D1	13_21	13	21	Unknown
+2018DiamondCNO-308_D1	19_29	19	29	Collagenous/Adipose tissue
+2018DiamondCNO-308_D1	3_39	3	39	Unknown
+2018DiamondCNO-308_D1	22_18	22	18	Synovial stroma
+2018DiamondCNO-308_D1	36_48	36	48	Unknown
+2018DiamondCNO-308_D1	25_47	25	47	Synovial stroma
+2018DiamondCNO-308_D1	45_39	45	39	Unknown
+2018DiamondCNO-308_D1	1_37	1	37	Unknown
+2018DiamondCNO-308_D1	50_24	50	24	Unknown
+2018DiamondCNO-308_D1	3_43	3	43	Unknown
+2018DiamondCNO-308_D1	27_37	27	37	Synovial stroma
+2018DiamondCNO-308_D1	23_33	23	33	Collagenous/Adipose tissue
+2018DiamondCNO-308_D1	40_26	40	26	Synovial stroma
+2018DiamondCNO-308_D1	38_24	38	24	Synovial stroma
+2018DiamondCNO-308_D1	33_43	33	43	Synovial stroma
+2018DiamondCNO-308_D1	30_16	30	16	Collagenous/Adipose tissue
+2018DiamondCNO-308_D1	48_42	48	42	Unknown
+2018DiamondCNO-308_D1	11_23	11	23	Synovial cell hyperplasia
+2018DiamondCNO-308_D1	10_28	10	28	Synovial stroma
+2018DiamondCNO-308_D1	3_35	3	35	Unknown
+2018DiamondCNO-308_D1	22_20	22	20	Synovial stroma
+2018DiamondCNO-308_D1	47_27	47	27	Unknown
+2018DiamondCNO-308_D1	27_15	27	15	Synovial stroma
+2018DiamondCNO-308_D1	29_23	29	23	Synovial stroma
+2018DiamondCNO-308_D1	32_12	32	12	Synovial stroma
+2018DiamondCNO-308_D1	17_23	17	23	Synovial stroma
+2018DiamondCNO-308_D1	30_44	30	44	Synovial stroma
+2018DiamondCNO-308_D1	49_47	49	47	Unknown
+2018DiamondCNO-308_D1	36_28	36	28	Synovial stroma
+2018DiamondCNO-308_D1	41_29	41	29	Synovial stroma
+2018DiamondCNO-308_D1	6_46	6	46	Unknown
+2018DiamondCNO-308_D1	46_42	46	42	Unknown
+2018DiamondCNO-308_D1	27_29	27	29	Synovial stroma
+2018DiamondCNO-308_D1	19_19	19	19	Synovial stroma
+2018DiamondCNO-308_D1	19_49	19	49	Synovial stroma
+2018DiamondCNO-308_D1	4_34	4	34	Unknown
+2018DiamondCNO-308_D1	46_30	46	30	Collagenous/Adipose tissue
+2018DiamondCNO-308_D1	11_35	11	35	Unknown
+2018DiamondCNO-308_D1	51_37	51	37	Unknown
+2018DiamondCNO-308_D1	34_30	34	30	Synovial stroma
+2018DiamondCNO-308_D1	35_53	35	53	Synovial stroma
+2018DiamondCNO-308_D1	41_37	41	37	Unknown
+2018DiamondCNO-308_D1	40_14	40	14	Synovial stroma
+2018DiamondCNO-308_D1	26_46	26	46	Synovial stroma
+2018DiamondCNO-308_D1	16_50	16	50	Infiltrate;Synovial stroma
+2018DiamondCNO-308_D1	50_38	50	38	Unknown
+2018DiamondCNO-308_D1	30_30	30	30	Synovial stroma
+2018DiamondCNO-308_D1	40_34	40	34	Unknown
+2018DiamondCNO-308_D1	35_19	35	19	Synovial stroma
+2018DiamondCNO-308_D1	14_28	14	28	Synovial stroma
+2018DiamondCNO-308_D1	2_44	2	44	Unknown
+2018DiamondCNO-308_D1	30_36	30	36	Synovial stroma
+2018DiamondCNO-308_D1	16_30	16	30	Synovial stroma
+2018DiamondCNO-308_D1	37_39	37	39	Synovial stroma
+2018DiamondCNO-308_D1	4_28	4	28	Unknown
+2018DiamondCNO-308_D1	37_41	37	41	Synovial stroma
+2018DiamondCNO-308_D1	20_44	20	44	Synovial stroma
+2018DiamondCNO-308_D1	21_41	21	41	Synovial stroma
+2018DiamondCNO-308_D1	43_29	43	29	Synovial stroma
+2018DiamondCNO-308_D1	8_24	8	24	Unknown
+2018DiamondCNO-308_D1	45_47	45	47	Unknown
+2018DiamondCNO-308_D1	28_12	28	12	Synovial stroma
+2018DiamondCNO-308_D1	39_53	39	53	Synovial stroma
+2018DiamondCNO-308_D1	28_18	28	18	Synovial stroma
+2018DiamondCNO-308_D1	27_51	27	51	Unknown
+2018DiamondCNO-308_D1	17_25	17	25	Synovial stroma
+2018DiamondCNO-308_D1	27_35	27	35	Collagenous/Adipose tissue
+2018DiamondCNO-308_D1	51_35	51	35	Unknown
+2018DiamondCNO-308_D1	49_25	49	25	Unknown
+2018DiamondCNO-308_D1	27_43	27	43	Synovial stroma
+2018DiamondCNO-308_D1	43_17	43	17	Synovial stroma
+2018DiamondCNO-308_D1	25_13	25	13	Synovial stroma
+2018DiamondCNO-308_D1	31_51	31	51	Unknown
+2018DiamondCNO-308_D1	51_49	51	49	Unknown
+2018DiamondCNO-308_D1	46_38	46	38	Unknown
+2018DiamondCNO-308_D1	15_31	15	31	Synovial stroma
+2018DiamondCNO-308_D1	40_10	40	10	Unknown
+2018DiamondCNO-308_D1	47_47	47	47	Unknown
+2018DiamondCNO-308_D1	21_15	21	15	Synovial cell hyperplasia
+2018DiamondCNO-308_D1	10_36	10	36	Unknown
+2018DiamondCNO-308_D1	46_28	46	28	Unknown
+2018DiamondCNO-308_D1	6_40	6	40	Unknown
+2018DiamondCNO-308_D1	23_25	23	25	Unknown
+2018DiamondCNO-308_D1	16_28	16	28	Synovial stroma
+2018DiamondCNO-308_D1	22_34	22	34	Synovial stroma
+2018DiamondCNO-308_D1	46_46	46	46	Unknown
+2018DiamondCNO-308_D1	42_36	42	36	Unknown
+2018DiamondCNO-308_D1	22_46	22	46	Collagenous/Adipose tissue
+2018DiamondCNO-308_D1	44_32	44	32	Synovial cell hyperplasia
+2018DiamondCNO-308_D1	52_48	52	48	Unknown
+2018DiamondCNO-308_D1	45_19	45	19	Infiltrate
+2018DiamondCNO-308_D1	2_30	2	30	Unknown
+2018DiamondCNO-308_D1	32_14	32	14	Collagenous/Adipose tissue
+2018DiamondCNO-308_D1	44_50	44	50	Unknown
+2018DiamondCNO-308_D1	42_24	42	24	Synovial stroma
+2018DiamondCNO-308_D1	39_37	39	37	Unknown
+2018DiamondCNO-308_D1	24_24	24	24	Synovial stroma
+2018DiamondCNO-308_D1	47_23	47	23	Infiltrate;Unknown
+2018DiamondCNO-308_D1	9_43	9	43	Infiltrate;Synovial stroma
+2018DiamondCNO-308_D1	11_47	11	47	Synovial stroma
+2018DiamondCNO-308_D1	49_27	49	27	Unknown
+2018DiamondCNO-308_D1	5_41	5	41	Unknown
+2018DiamondCNO-308_D1	33_9	33	9	Unknown
+2018DiamondCNO-308_D1	31_15	31	15	Collagenous/Adipose tissue
+2018DiamondCNO-308_D1	23_49	23	49	Collagenous/Adipose tissue
+2018DiamondCNO-308_D1	47_25	47	25	Synovial stroma
+2018DiamondCNO-308_D1	36_16	36	16	Synovial stroma
+2018DiamondCNO-308_D1	38_42	38	42	Unknown
+2018DiamondCNO-308_D1	18_54	18	54	Unknown
+2018DiamondCNO-308_D1	38_46	38	46	Unknown
+2018DiamondCNO-308_D1	27_25	27	25	Unknown
+2018DiamondCNO-308_D1	38_30	38	30	Collagenous/Adipose tissue
+2018DiamondCNO-308_D1	24_32	24	32	Collagenous/Adipose tissue
+2018DiamondCNO-308_D1	50_36	50	36	Unknown
+2018DiamondCNO-308_D1	35_37	35	37	Synovial stroma
+2018DiamondCNO-308_D1	45_25	45	25	Collagenous/Adipose tissue
+2018DiamondCNO-308_D1	21_19	21	19	Synovial stroma
+2018DiamondCNO-308_D1	7_45	7	45	Unknown
+2018DiamondCNO-308_D1	16_26	16	26	Synovial stroma
+2018DiamondCNO-308_D1	27_41	27	41	Synovial stroma
+2018DiamondCNO-308_D1	42_26	42	26	Synovial stroma
+2018DiamondCNO-308_D1	43_35	43	35	Unknown
+2018DiamondCNO-308_D1	15_53	15	53	Unknown
+2018DiamondCNO-308_D1	37_27	37	27	Collagenous/Adipose tissue
+2018DiamondCNO-308_D1	51_33	51	33	Unknown
+2018DiamondCNO-308_D1	30_24	30	24	Unknown
+2018DiamondCNO-308_D1	37_43	37	43	Infiltrate;Synovial stroma
+2018DiamondCNO-308_D1	38_10	38	10	Unknown
+2018DiamondCNO-308_D1	11_51	11	51	Unknown
+2018DiamondCNO-308_D1	21_33	21	33	Synovial stroma
+2018DiamondCNO-308_D1	22_26	22	26	Collagenous/Adipose tissue
+2018DiamondCNO-308_D1	7_31	7	31	Unknown
+2018DiamondCNO-308_D1	37_25	37	25	Synovial stroma
+2018DiamondCNO-308_D1	20_16	20	16	Synovial cell hyperplasia
+2018DiamondCNO-308_D1	5_39	5	39	Unknown
+2018DiamondCNO-308_D1	46_50	46	50	Unknown
+2018DiamondCNO-308_D1	5_25	5	25	Unknown
+2018DiamondCNO-308_D1	40_24	40	24	Synovial stroma
+2018DiamondCNO-308_D1	28_34	28	34	Collagenous/Adipose tissue
+2018DiamondCNO-308_D1	38_22	38	22	Collagenous/Adipose tissue
+2018DiamondCNO-308_D1	25_25	25	25	Collagenous/Adipose tissue
+2018DiamondCNO-308_D1	14_32	14	32	Synovial stroma
+2018DiamondCNO-308_D1	48_46	48	46	Unknown
+2018DiamondCNO-308_D1	23_21	23	21	Synovial stroma
+2018DiamondCNO-308_D1	21_47	21	47	Collagenous/Adipose tissue
+2018DiamondCNO-308_D1	25_15	25	15	Synovial stroma
+2018DiamondCNO-308_D1	49_29	49	29	Unknown
+2018DiamondCNO-308_D1	28_16	28	16	Synovial stroma
+2018DiamondCNO-308_D1	24_38	24	38	Synovial stroma
+2018DiamondCNO-308_D1	49_23	49	23	Unknown
+2018DiamondCNO-308_D1	51_51	51	51	Unknown
+2018DiamondCNO-308_D1	24_30	24	30	Synovial stroma
+2018DiamondCNO-308_D1	24_28	24	28	Synovial stroma
+2018DiamondCNO-308_D1	12_52	12	52	Unknown
+2018DiamondCNO-308_D1	36_30	36	30	Collagenous/Adipose tissue
+2018DiamondCNO-308_D1	33_51	33	51	Unknown
+2018DiamondCNO-308_D1	43_47	43	47	Unknown
+2018DiamondCNO-308_D1	24_50	24	50	Collagenous/Adipose tissue
+2018DiamondCNO-308_D1	6_26	6	26	Unknown
+2018DiamondCNO-308_D1	50_54	50	54	Unknown
+2018DiamondCNO-308_D1	37_29	37	29	Synovial stroma
+2018DiamondCNO-308_D1	18_38	18	38	Synovial stroma
+2018DiamondCNO-308_D1	39_31	39	31	Synovial stroma
+2018DiamondCNO-308_D1	23_13	23	13	Synovial stroma
+2018DiamondCNO-308_D1	47_21	47	21	Infiltrate
+2018DiamondCNO-308_D1	23_15	23	15	Synovial stroma
+2018DiamondCNO-308_D1	10_24	10	24	Unknown
+2018DiamondCNO-308_D1	16_24	16	24	Unknown
+2018DiamondCNO-308_D1	42_34	42	34	Synovial stroma
+2018DiamondCNO-308_D1	5_37	5	37	Synovial stroma
+2018DiamondCNO-308_D1	32_50	32	50	Unknown
+2018DiamondCNO-308_D1	29_15	29	15	Collagenous/Adipose tissue
+2018DiamondCNO-308_D1	48_28	48	28	Unknown
+2018DiamondCNO-308_D1	14_20	14	20	Unknown
+2018DiamondCNO-308_D1	47_29	47	29	Unknown
+2018DiamondCNO-308_D1	32_44	32	44	Synovial stroma
+2018DiamondCNO-308_D1	29_39	29	39	Synovial stroma
+2018DiamondCNO-308_D1	48_32	48	32	Unknown
+2018DiamondCNO-308_D1	48_50	48	50	Unknown
+2018DiamondCNO-308_D1	35_39	35	39	Synovial stroma
+2018DiamondCNO-308_D1	51_43	51	43	Unknown
+2018DiamondCNO-308_D1	8_48	8	48	Unknown
+2018DiamondCNO-308_D1	24_34	24	34	Synovial stroma
+2018DiamondCNO-308_D1	4_44	4	44	Unknown
+2018DiamondCNO-308_D1	31_17	31	17	Collagenous/Adipose tissue
+2018DiamondCNO-308_D1	11_25	11	25	Synovial cell hyperplasia
+2018DiamondCNO-308_D1	41_39	41	39	Unknown
+2018DiamondCNO-308_D1	44_18	44	18	Infiltrate;Synovial stroma
+2018DiamondCNO-308_D1	9_39	9	39	Infiltrate;Synovial stroma
+2018DiamondCNO-308_D1	4_30	4	30	Unknown
+2018DiamondCNO-308_D1	36_10	36	10	Unknown
+2018DiamondCNO-308_D1	27_39	27	39	Synovial stroma
+2018DiamondCNO-308_D1	15_19	15	19	Unknown
+2018DiamondCNO-308_D1	47_33	47	33	Unknown
+2018DiamondCNO-308_D1	13_35	13	35	Synovial stroma
+2018DiamondCNO-308_D1	39_49	39	49	Synovial stroma
+2018DiamondCNO-308_D1	46_44	46	44	Synovial stroma
+2018DiamondCNO-308_D1	30_40	30	40	Unknown
+2018DiamondCNO-308_D1	32_48	32	48	Unknown
+2018DiamondCNO-308_D1	25_29	25	29	Synovial stroma
+2018DiamondCNO-308_D1	19_21	19	21	Synovial stroma
+2018DiamondCNO-308_D1	21_23	21	23	Synovial stroma
+2018DiamondCNO-308_D1	28_42	28	42	Synovial stroma
+2018DiamondCNO-308_D1	18_28	18	28	Collagenous/Adipose tissue
+2018DiamondCNO-308_D1	20_38	20	38	Collagenous/Adipose tissue
+2018DiamondCNO-308_D1	37_51	37	51	Unknown
+2018DiamondCNO-308_D1	28_26	28	26	Unknown
+2018DiamondCNO-308_D1	42_54	42	54	Synovial stroma
+2018DiamondCNO-308_D1	7_21	7	21	Unknown
+2018DiamondCNO-308_D1	8_28	8	28	Unknown
+2018DiamondCNO-308_D1	29_41	29	41	Collagenous/Adipose tissue
+2018DiamondCNO-308_D1	28_10	28	10	Synovial cell hyperplasia
+2018DiamondCNO-308_D1	40_28	40	28	Synovial stroma
+2018DiamondCNO-308_D1	7_27	7	27	Unknown
+2018DiamondCNO-308_D1	32_34	32	34	Collagenous/Adipose tissue
+2018DiamondCNO-308_D1	37_53	37	53	Synovial stroma
+2018DiamondCNO-308_D1	24_48	24	48	Synovial stroma
+2018DiamondCNO-308_D1	33_39	33	39	Infiltrate;Unknown
+2018DiamondCNO-308_D1	27_21	27	21	Unknown
+2018DiamondCNO-308_D1	29_47	29	47	Synovial stroma
+2018DiamondCNO-308_D1	28_24	28	24	Synovial stroma
+2018DiamondCNO-308_D1	20_36	20	36	Synovial stroma
+2018DiamondCNO-308_D1	39_25	39	25	Synovial stroma
+2018DiamondCNO-308_D1	44_38	44	38	Unknown
+2018DiamondCNO-308_D1	30_14	30	14	Collagenous/Adipose tissue
+2018DiamondCNO-308_D1	42_52	42	52	Unknown
+2018DiamondCNO-308_D1	37_31	37	31	Collagenous/Adipose tissue
+2018DiamondCNO-308_D1	17_27	17	27	Synovial stroma
+2018DiamondCNO-308_D1	22_22	22	22	Synovial stroma
+2018DiamondCNO-308_D1	14_48	14	48	Synovial stroma
+2018DiamondCNO-308_D1	33_37	33	37	Unknown
+2018DiamondCNO-308_D1	13_29	13	29	Synovial stroma
+2018DiamondCNO-308_D1	39_39	39	39	Unknown
+2018DiamondCNO-308_D1	40_46	40	46	Unknown
+2018DiamondCNO-308_D1	18_34	18	34	Synovial stroma
+2018DiamondCNO-308_D1	38_20	38	20	Synovial stroma
+2018DiamondCNO-308_D1	49_43	49	43	Unknown
+2018DiamondCNO-308_D1	34_46	34	46	Unknown
+2018DiamondCNO-308_D1	35_29	35	29	Collagenous/Adipose tissue
+2018DiamondCNO-308_D1	23_47	23	47	Collagenous/Adipose tissue
+2018DiamondCNO-308_D1	33_49	33	49	Unknown
+2018DiamondCNO-308_D1	40_48	40	48	Unknown
+2018DiamondCNO-308_D1	35_21	35	21	Unknown
+2018DiamondCNO-308_D1	31_37	31	37	Collagenous/Adipose tissue
+2018DiamondCNO-308_D1	35_51	35	51	Infiltrate;Synovial stroma
+2018DiamondCNO-308_D1	43_15	43	15	Unknown
+2018DiamondCNO-308_D1	16_36	16	36	Synovial stroma
+2018DiamondCNO-308_D1	6_30	6	30	Unknown
+2018DiamondCNO-308_D1	31_49	31	49	Unknown
+2018DiamondCNO-308_D1	43_49	43	49	Unknown
+2018DiamondCNO-308_D1	42_42	42	42	Unknown
+2018DiamondCNO-308_D1	18_40	18	40	Synovial stroma
+2018DiamondCNO-308_D1	41_43	41	43	Unknown
+2018DiamondCNO-308_D1	17_31	17	31	Synovial stroma
+2018DiamondCNO-308_D1	29_43	29	43	Synovial stroma
+2018DiamondCNO-308_D1	22_14	22	14	Synovial stroma
+2018DiamondCNO-308_D1	6_44	6	44	Unknown
+2018DiamondCNO-308_D1	41_25	41	25	Synovial stroma
+2018DiamondCNO-308_D1	3_45	3	45	Unknown
+2018DiamondCNO-308_D1	17_45	17	45	Synovial stroma
+2018DiamondCNO-308_D1	28_28	28	28	Collagenous/Adipose tissue
+2018DiamondCNO-308_D1	11_29	11	29	Synovial stroma
+2018DiamondCNO-308_D1	23_53	23	53	Unknown
+2018DiamondCNO-308_D1	41_31	41	31	Collagenous/Adipose tissue
+2018DiamondCNO-308_D1	19_41	19	41	Synovial stroma
+2018DiamondCNO-308_D1	19_17	19	17	Synovial cell hyperplasia
+2018DiamondCNO-308_D1	28_36	28	36	Synovial stroma
+2018DiamondCNO-308_D1	24_44	24	44	Synovial stroma
+2018DiamondCNO-308_D1	3_41	3	41	Unknown
+2018DiamondCNO-308_D1	18_18	18	18	Synovial cell hyperplasia
+2018DiamondCNO-308_D1	27_11	27	11	Synovial stroma
+2018DiamondCNO-308_D1	39_13	39	13	Infiltrate;Synovial stroma
+2018DiamondCNO-308_D1	45_41	45	41	Unknown
+2018DiamondCNO-308_D1	40_54	40	54	Unknown
+2018DiamondCNO-308_D1	8_32	8	32	Unknown
+2018DiamondCNO-308_D1	32_30	32	30	Collagenous/Adipose tissue
+2018DiamondCNO-308_D1	11_33	11	33	Synovial stroma
+2018DiamondCNO-308_D1	24_42	24	42	Synovial stroma
+2018DiamondCNO-308_D1	22_50	22	50	Collagenous/Adipose tissue
+2018DiamondCNO-308_D1	38_38	38	38	Synovial stroma
+2018DiamondCNO-308_D1	10_50	10	50	Unknown
+2018DiamondCNO-308_D1	49_45	49	45	Unknown
+2018DiamondCNO-308_D1	12_28	12	28	Synovial stroma
+2018DiamondCNO-308_D1	37_15	37	15	Synovial stroma
+2018DiamondCNO-308_D1	24_22	24	22	Synovial stroma
+2018DiamondCNO-308_D1	31_47	31	47	Unknown
+2018DiamondCNO-308_D1	16_54	16	54	Unknown
+2018DiamondCNO-308_D1	5_35	5	35	Unknown
+2018DiamondCNO-308_D1	22_52	22	52	Synovial cell hyperplasia
+2018DiamondCNO-308_D1	6_24	6	24	Unknown
+2018DiamondCNO-308_D1	6_32	6	32	Unknown
+2018DiamondCNO-308_D1	11_11	11	11	Unknown
+2018DiamondCNO-308_D1	13_27	13	27	Synovial stroma
+2018DiamondCNO-308_D1	15_39	15	39	Unknown
+2018DiamondCNO-308_D1	17_29	17	29	Collagenous/Adipose tissue
+2018DiamondCNO-308_D1	48_38	48	38	Unknown
+2018DiamondCNO-308_D1	37_21	37	21	Synovial stroma
+2018DiamondCNO-308_D1	52_50	52	50	Unknown
+2018DiamondCNO-308_D1	11_13	11	13	Unknown
+2018DiamondCNO-308_D1	10_30	10	30	Synovial stroma
+2018DiamondCNO-308_D1	44_22	44	22	Collagenous/Adipose tissue
+2018DiamondCNO-308_D1	30_20	30	20	Collagenous/Adipose tissue
+2018DiamondCNO-308_D1	40_38	40	38	Unknown
+2018DiamondCNO-308_D1	14_44	14	44	Synovial stroma
+2018DiamondCNO-308_D1	29_29	29	29	Collagenous/Adipose tissue
+2018DiamondCNO-308_D1	28_14	28	14	Synovial stroma
+2018DiamondCNO-308_D1	25_11	25	11	Synovial cell hyperplasia
+2018DiamondCNO-308_D1	36_22	36	22	Unknown
+2018DiamondCNO-308_D1	38_54	38	54	Synovial stroma
+2018DiamondCNO-308_D1	37_37	37	37	Synovial stroma
+2018DiamondCNO-308_D1	23_45	23	45	Collagenous/Adipose tissue
+2018DiamondCNO-308_D1	41_55	41	55	Unknown
+2018DiamondCNO-308_D1	12_44	12	44	Synovial stroma
+2018DiamondCNO-308_D1	18_44	18	44	Collagenous/Adipose tissue
+2018DiamondCNO-308_D1	32_22	32	22	Collagenous/Adipose tissue
+2018DiamondCNO-308_D1	30_10	30	10	Unknown
+2018DiamondCNO-308_D1	51_45	51	45	Unknown
+2018DiamondCNO-308_D1	38_16	38	16	Synovial stroma
+2018DiamondCNO-308_D1	13_33	13	33	Synovial stroma
+2018DiamondCNO-308_D1	44_30	44	30	Synovial stroma
+2018DiamondCNO-308_D1	18_20	18	20	Synovial stroma
+2018DiamondCNO-308_D1	20_52	20	52	Synovial stroma
+2018DiamondCNO-308_D1	22_40	22	40	Synovial stroma
+2018DiamondCNO-308_D1	41_53	41	53	Infiltrate;Synovial stroma
+2018DiamondCNO-308_D1	31_27	31	27	Collagenous/Adipose tissue
+2018DiamondCNO-308_D1	42_32	42	32	Collagenous/Adipose tissue
+2018DiamondCNO-308_D1	7_25	7	25	Unknown
+2018DiamondCNO-308_D1	18_52	18	52	Synovial stroma
+2018DiamondCNO-308_D1	2_38	2	38	Unknown
+2018DiamondCNO-308_D1	30_38	30	38	Collagenous/Adipose tissue
+2018DiamondCNO-308_D1	48_34	48	34	Unknown
+2018DiamondCNO-308_D1	40_20	40	20	Synovial stroma
+2018DiamondCNO-308_D1	15_23	15	23	Synovial stroma
+2018DiamondCNO-308_D1	16_46	16	46	Unknown
+2018DiamondCNO-308_D1	39_27	39	27	Synovial stroma
+2018DiamondCNO-308_D1	14_30	14	30	Synovial stroma
+2018DiamondCNO-308_D1	11_43	11	43	Synovial stroma
+2018DiamondCNO-308_D1	26_36	26	36	Synovial stroma
+2018DiamondCNO-308_D1	41_15	41	15	Infiltrate;Synovial stroma
+2018DiamondCNO-308_D1	10_40	10	40	Synovial stroma
+2018DiamondCNO-308_D1	48_54	48	54	Synovial stroma
+2018DiamondCNO-308_D1	23_19	23	19	Synovial stroma
+2018DiamondCNO-308_D1	50_40	50	40	Synovial stroma
+2018DiamondCNO-308_D1	9_23	9	23	Unknown
+2018DiamondCNO-308_D1	49_53	49	53	Infiltrate;Synovial stroma
+2018DiamondCNO-308_D1	15_41	15	41	Unknown
+2018DiamondCNO-308_D1	39_21	39	21	Collagenous/Adipose tissue
+2018DiamondCNO-308_D1	7_29	7	29	Unknown
+2018DiamondCNO-308_D1	14_24	14	24	Synovial stroma
+2018DiamondCNO-308_D1	47_51	47	51	Synovial stroma
+2018DiamondCNO-308_D1	26_28	26	28	Synovial stroma
+2018DiamondCNO-308_D1	37_13	37	13	Synovial stroma
+2018DiamondCNO-308_D1	45_37	45	37	Unknown
+2018DiamondCNO-308_D1	8_40	8	40	Synovial stroma
+2018DiamondCNO-308_D1	44_36	44	36	Unknown
+2018DiamondCNO-308_D1	32_16	32	16	Collagenous/Adipose tissue
+2018DiamondCNO-308_D1	28_48	28	48	Synovial stroma
+2018DiamondCNO-308_D1	37_9	37	9	Unknown
+2018DiamondCNO-308_D1	37_49	37	49	Synovial stroma
+2018DiamondCNO-308_D1	36_46	36	46	Unknown
+2018DiamondCNO-308_D1	26_24	26	24	Collagenous/Adipose tissue
+2018DiamondCNO-308_D1	30_22	30	22	Synovial stroma
+2018DiamondCNO-308_D1	50_50	50	50	Unknown
+2018DiamondCNO-308_D1	5_43	5	43	Unknown
+2018DiamondCNO-308_D1	35_45	35	45	Unknown
+2018DiamondCNO-308_D1	22_24	22	24	Synovial stroma
+2018DiamondCNO-308_D1	29_35	29	35	Synovial stroma
+2018DiamondCNO-308_D1	30_34	30	34	Synovial stroma
+2018DiamondCNO-308_D1	24_20	24	20	Synovial stroma
+2018DiamondCNO-308_D1	50_48	50	48	Unknown
+2018DiamondCNO-308_D1	38_52	38	52	Unknown
+2018DiamondCNO-308_D1	21_25	21	25	Unknown
+2018DiamondCNO-308_D1	33_31	33	31	Synovial stroma
+2018DiamondCNO-308_D1	36_40	36	40	Synovial stroma
+2018DiamondCNO-308_D1	27_27	27	27	Synovial stroma
+2018DiamondCNO-308_D1	17_53	17	53	Unknown
+2018DiamondCNO-308_D1	38_32	38	32	Collagenous/Adipose tissue
+2018DiamondCNO-308_D1	10_48	10	48	Infiltrate;Synovial stroma
+2018DiamondCNO-308_D1	35_9	35	9	Unknown
+2018DiamondCNO-308_D1	6_48	6	48	Unknown
+2018DiamondCNO-308_D1	35_15	35	15	Synovial stroma
+2018DiamondCNO-308_D1	36_20	36	20	Collagenous/Adipose tissue
+2018DiamondCNO-308_D1	46_20	46	20	Infiltrate
+2018DiamondCNO-308_D1	3_37	3	37	Unknown
+2018DiamondCNO-308_D1	44_28	44	28	Synovial stroma
+2018DiamondCNO-308_D1	34_54	34	54	Unknown
+2018DiamondCNO-308_D1	27_19	27	19	Synovial stroma
+2018DiamondCNO-308_D1	12_40	12	40	Synovial stroma
+2018DiamondCNO-308_D1	31_19	31	19	Collagenous/Adipose tissue
+2018DiamondCNO-308_D1	25_51	25	51	Synovial stroma
+2018DiamondCNO-308_D1	45_51	45	51	Infiltrate;Synovial stroma
+2018DiamondCNO-308_D1	45_53	45	53	Infiltrate
+2018DiamondCNO-308_D1	29_19	29	19	Synovial stroma
+2018DiamondCNO-308_D1	46_16	46	16	Unknown
+2018DiamondCNO-308_D1	40_16	40	16	Synovial stroma
+2018DiamondCNO-308_D1	42_10	42	10	Unknown
+2018DiamondCNO-308_D1	38_36	38	36	Synovial stroma
+2018DiamondCNO-308_D1	20_24	20	24	Synovial stroma
+2018DiamondCNO-308_D1	21_45	21	45	Synovial stroma
+2018DiamondCNO-308_D1	21_31	21	31	Synovial stroma
+2018DiamondCNO-308_D1	20_18	20	18	Synovial stroma
+2018DiamondCNO-308_D1	36_12	36	12	Synovial stroma
+2018DiamondCNO-308_D1	2_36	2	36	Unknown
+2018DiamondCNO-308_D1	31_23	31	23	Collagenous/Adipose tissue
+2018DiamondCNO-308_D1	46_22	46	22	Infiltrate
+2018DiamondCNO-308_D1	47_45	47	45	Unknown
+2018DiamondCNO-308_D1	41_13	41	13	Synovial stroma
+2018DiamondCNO-308_D1	19_45	19	45	Collagenous/Adipose tissue
+2018DiamondCNO-308_D1	25_41	25	41	Synovial stroma
+2018DiamondCNO-308_D1	24_14	24	14	Synovial stroma
+2018DiamondCNO-308_D1	46_26	46	26	Synovial stroma
+2018DiamondCNO-308_D1	41_45	41	45	Unknown
+2018DiamondCNO-308_D1	48_40	48	40	Unknown
+2018DiamondCNO-308_D1	39_51	39	51	Infiltrate
+2018DiamondCNO-308_D1	48_52	48	52	Infiltrate;Synovial stroma
+2018DiamondCNO-308_D1	33_33	33	33	Collagenous/Adipose tissue
+2018DiamondCNO-308_D1	25_17	25	17	Synovial stroma
+2018DiamondCNO-308_D1	44_52	44	52	Unknown
+2018DiamondCNO-308_D1	48_48	48	48	Unknown
+2018DiamondCNO-308_D1	4_46	4	46	Unknown
+2018DiamondCNO-308_D1	27_23	27	23	Synovial stroma
+2018DiamondCNO-308_D1	47_43	47	43	Unknown
+2018DiamondCNO-308_D1	9_41	9	41	Infiltrate;Synovial stroma
+2018DiamondCNO-308_D1	24_52	24	52	Synovial stroma
+2018DiamondCNO-308_D1	10_34	10	34	Unknown
+2018DiamondCNO-308_D1	7_39	7	39	Synovial stroma
+2018DiamondCNO-308_D1	25_45	25	45	Synovial stroma
+2018DiamondCNO-308_D1	8_44	8	44	Unknown
+2018DiamondCNO-308_D1	35_35	35	35	Synovial stroma
+2018DiamondCNO-308_D1	9_45	9	45	Synovial stroma
+2018DiamondCNO-308_D1	8_46	8	46	Unknown
+2018DiamondCNO-308_D1	48_22	48	22	Unknown
+2018DiamondCNO-308_D1	33_35	33	35	Unknown
+2018DiamondCNO-308_D1	4_36	4	36	Unknown
+2018DiamondCNO-308_D1	43_33	43	33	Unknown
+2018DiamondCNO-308_D1	42_22	42	22	Synovial stroma
+2018DiamondCNO-308_D1	5_23	5	23	Unknown
+2018DiamondCNO-308_D1	42_30	42	30	Synovial stroma
+2018DiamondCNO-308_D1	25_49	25	49	Collagenous/Adipose tissue
+2018DiamondCNO-308_D1	43_27	43	27	Synovial stroma
+2018DiamondCNO-308_D1	14_22	14	22	Synovial stroma
+2018DiamondCNO-308_D1	34_34	34	34	Unknown
+2018DiamondCNO-308_D1	38_48	38	48	Synovial stroma
+2018DiamondCNO-308_D1	35_27	35	27	Unknown
+2018DiamondCNO-308_D1	15_21	15	21	Synovial stroma
+2018DiamondCNO-308_D1	33_47	33	47	Unknown
+2018DiamondCNO-308_D1	36_38	36	38	Synovial stroma
+2018DiamondCNO-308_D1	22_44	22	44	Synovial stroma
+2018DiamondCNO-308_D1	21_43	21	43	Synovial stroma
+2018DiamondCNO-308_D1	49_39	49	39	Synovial stroma
+2018DiamondCNO-308_D1	47_49	47	49	Unknown
+2018DiamondCNO-308_D1	43_19	43	19	Synovial stroma
+2018DiamondCNO-308_D1	28_38	28	38	Synovial stroma
+2018DiamondCNO-308_D1	10_26	10	26	Synovial cell hyperplasia
+2018DiamondCNO-308_D1	14_42	14	42	Unknown
+2018DiamondCNO-308_D1	27_45	27	45	Synovial stroma
+2018DiamondCNO-308_D1	32_40	32	40	Unknown
+2018DiamondCNO-308_D1	2_40	2	40	Unknown
+2018DiamondCNO-308_D1	21_35	21	35	Synovial stroma
+2018DiamondCNO-308_D1	31_29	31	29	Collagenous/Adipose tissue
+2018DiamondCNO-308_D1	29_21	29	21	Collagenous/Adipose tissue
+2018DiamondCNO-308_D1	16_42	16	42	Synovial stroma
+2018DiamondCNO-308_D1	10_12	10	12	Unknown
+2018DiamondCNO-308_D1	13_47	13	47	Infiltrate;Synovial stroma
+2018DiamondCNO-308_D1	42_16	42	16	Infiltrate;Synovial stroma
+2018DiamondCNO-308_D1	9_47	9	47	Synovial stroma
+2018DiamondCNO-308_D1	33_29	33	29	Collagenous/Adipose tissue
+2018DiamondCNO-308_D1	8_36	8	36	Unknown
+2018DiamondCNO-308_D1	22_48	22	48	Collagenous/Adipose tissue
+2018DiamondCNO-308_D1	12_24	12	24	Synovial stroma
+2018DiamondCNO-308_D1	13_19	13	19	Unknown
+2018DiamondCNO-308_D1	31_11	31	11	Synovial stroma
+2018DiamondCNO-308_D1	32_28	32	28	Unknown
+2018DiamondCNO-308_D1	16_22	16	22	Collagenous/Adipose tissue
+2018DiamondCNO-308_D1	20_30	20	30	Synovial stroma
+2018DiamondCNO-308_D1	30_26	30	26	Synovial stroma
+2018DiamondCNO-308_D1	45_31	45	31	Collagenous/Adipose tissue
+2018DiamondCNO-308_D1	15_29	15	29	Synovial stroma
+2018DiamondCNO-308_D1	46_36	46	36	Unknown
+2018DiamondCNO-308_D1	9_35	9	35	Unknown
+2018DiamondCNO-308_D1	40_40	40	40	Unknown
+2018DiamondCNO-308_D1	45_17	45	17	Unknown
+2018DiamondCNO-308_D1	43_25	43	25	Synovial stroma
+2018DiamondCNO-308_D1	47_31	47	31	Collagenous/Adipose tissue
+2018DiamondCNO-308_D1	49_37	49	37	Unknown
+2018DiamondCNO-308_D1	27_13	27	13	Synovial stroma
+2018DiamondCNO-308_D1	31_43	31	43	Synovial stroma
+2018DiamondCNO-308_D1	17_49	17	49	Infiltrate
+2018DiamondCNO-308_D1	9_49	9	49	Unknown
+2018DiamondCNO-308_D1	11_49	11	49	Infiltrate
+2018DiamondCNO-308_D1	46_40	46	40	Unknown
+2018DiamondCNO-308_D1	22_42	22	42	Synovial stroma
+2018DiamondCNO-308_D1	7_43	7	43	Unknown
+2018DiamondCNO-308_D1	3_27	3	27	Unknown
+2018DiamondCNO-308_D1	18_48	18	48	Synovial stroma
+2018DiamondCNO-308_D1	37_19	37	19	Synovial stroma
+2018DiamondCNO-308_D1	36_18	36	18	Synovial stroma
+2018DiamondCNO-308_D1	26_22	26	22	Synovial stroma
+2018DiamondCNO-308_D1	36_14	36	14	Synovial stroma
+2018DiamondCNO-308_D1	17_21	17	21	Collagenous/Adipose tissue
+2018DiamondCNO-308_D1	24_46	24	46	Collagenous/Adipose tissue
+2018DiamondCNO-308_D1	15_37	15	37	Synovial stroma
+2018DiamondCNO-308_D1	10_38	10	38	Synovial stroma
+2018DiamondCNO-308_D1	18_46	18	46	Synovial stroma
+2018DiamondCNO-308_D1	15_33	15	33	Synovial stroma
+2018DiamondCNO-308_D1	1_35	1	35	Unknown
+2018DiamondCNO-308_D1	6_36	6	36	Synovial stroma
+2018DiamondCNO-308_D1	26_26	26	26	Synovial stroma
+2018DiamondCNO-308_D1	23_35	23	35	Synovial stroma
+2018DiamondCNO-308_D1	35_13	35	13	Synovial stroma
+2018DiamondCNO-308_D1	38_50	38	50	Synovial stroma
+2018DiamondCNO-308_D1	20_28	20	28	Collagenous/Adipose tissue
+2018DiamondCNO-308_D1	26_30	26	30	Synovial stroma
+2018DiamondCNO-308_D1	34_12	34	12	Synovial stroma
+2018DiamondCNO-308_D1	34_28	34	28	Collagenous/Adipose tissue
+2018DiamondCNO-308_D1	31_31	31	31	Synovial stroma
+2018DiamondCNO-308_D1	47_41	47	41	Unknown
+2018DiamondCNO-308_D1	36_54	36	54	Synovial stroma
+2018DiamondCNO-308_D1	32_36	32	36	Collagenous/Adipose tissue
+2018DiamondCNO-308_D1	49_51	49	51	Unknown
+2018DiamondCNO-308_D1	37_11	37	11	Synovial stroma
+2018DiamondCNO-308_D1	38_44	38	44	Unknown
+2018DiamondCNO-308_D1	20_20	20	20	Synovial stroma
+2018DiamondCNO-308_D1	13_45	13	45	Synovial stroma
+2018DiamondCNO-308_D1	39_43	39	43	Unknown
+2018DiamondCNO-308_D1	38_34	38	34	Synovial stroma
+2018DiamondCNO-308_D1	18_32	18	32	Synovial stroma
+2018DiamondCNO-308_D1	25_19	25	19	Synovial stroma
+2018DiamondCNO-308_D1	25_23	25	23	Collagenous/Adipose tissue
+2018DiamondCNO-308_D1	4_40	4	40	Unknown
+2018DiamondCNO-308_D1	34_42	34	42	Unknown
+2018DiamondCNO-308_D1	19_47	19	47	Synovial stroma
+2018DiamondCNO-308_D1	23_31	23	31	Collagenous/Adipose tissue
+2018DiamondCNO-308_D1	45_55	45	55	Unknown
+2018DiamondCNO-308_D1	41_35	41	35	Synovial stroma
+2018DiamondCNO-308_D1	9_27	9	27	Unknown
+2018DiamondCNO-308_D1	42_20	42	20	Synovial stroma
+2018DiamondCNO-308_D1	20_50	20	50	Synovial stroma
+2018DiamondCNO-308_D1	2_34	2	34	Unknown
+2018DiamondCNO-308_D1	12_38	12	38	Synovial stroma
+2018DiamondCNO-308_D1	4_26	4	26	Unknown
+2018DiamondCNO-308_D1	26_10	26	10	Unknown
+2018DiamondCNO-308_D1	44_40	44	40	Unknown
+2018DiamondCNO-308_D1	21_39	21	39	Synovial stroma
+2018DiamondCNO-308_D1	7_23	7	23	Unknown
+2018DiamondCNO-308_D1	20_42	20	42	Synovial stroma
+2018DiamondCNO-308_D1	22_16	22	16	Synovial stroma
+2018DiamondCNO-308_D1	20_40	20	40	Synovial stroma
+2018DiamondCNO-308_D1	52_42	52	42	Unknown
+2018DiamondCNO-308_D1	32_32	32	32	Synovial stroma
+2018DiamondCNO-308_D1	35_17	35	17	Collagenous/Adipose tissue
+2018DiamondCNO-308_D1	41_33	41	33	Collagenous/Adipose tissue
+2018DiamondCNO-308_D1	13_39	13	39	Synovial stroma
+2018DiamondCNO-308_D1	43_39	43	39	Unknown
+2018DiamondCNO-308_D1	27_47	27	47	Synovial stroma
+2018DiamondCNO-308_D1	7_41	7	41	Unknown
+2018DiamondCNO-308_D1	16_18	16	18	Unknown
+2018DiamondCNO-308_D1	50_32	50	32	Unknown
+2018DiamondCNO-308_D1	39_19	39	19	Synovial stroma
+2018DiamondCNO-308_D1	32_52	32	52	Unknown
+2018DiamondCNO-308_D1	50_46	50	46	Unknown
+2018DiamondCNO-308_D1	35_11	35	11	Synovial stroma
+2018DiamondCNO-308_D1	14_50	14	50	Synovial stroma
+2018DiamondCNO-308_D1	40_52	40	52	Infiltrate
+2018DiamondCNO-308_D1	40_22	40	22	Synovial stroma
+2018DiamondCNO-308_D1	32_20	32	20	Collagenous/Adipose tissue
+2018DiamondCNO-308_D1	15_47	15	47	Synovial stroma
+2018DiamondCNO-308_D1	26_18	26	18	Synovial stroma
+2018DiamondCNO-308_D1	21_17	21	17	Synovial stroma
+2018DiamondCNO-308_D1	5_29	5	29	Unknown
+2018DiamondCNO-308_D1	21_29	21	29	Collagenous/Adipose tissue
+2018DiamondCNO-308_D1	42_38	42	38	Unknown
+2018DiamondCNO-308_D1	33_11	33	11	Synovial stroma
+2018DiamondCNO-308_D1	50_44	50	44	Synovial stroma
+2018DiamondCNO-308_D1	50_34	50	34	Unknown
+2018DiamondCNO-308_D1	31_35	31	35	Unknown
+2018DiamondCNO-308_D1	36_36	36	36	Synovial stroma
+2018DiamondCNO-308_D1	38_28	38	28	Synovial stroma
+2018DiamondCNO-308_D1	28_46	28	46	Synovial stroma
+2018DiamondCNO-308_D1	42_18	42	18	Synovial stroma
+2018DiamondCNO-308_D1	14_34	14	34	Synovial stroma
+2018DiamondCNO-308_D1	31_39	31	39	Unknown
+2018DiamondCNO-308_D1	40_30	40	30	Synovial stroma
+2018DiamondCNO-308_D1	36_26	36	26	Synovial stroma
+2018DiamondCNO-308_D1	29_17	29	17	Synovial stroma
+2018DiamondCNO-308_D1	39_55	39	55	Unknown
+2018DiamondCNO-308_D1	45_15	45	15	Unknown
+2018DiamondCNO-308_D1	18_22	18	22	Synovial stroma
+2018DiamondCNO-308_D1	30_32	30	32	Synovial stroma
+2018DiamondCNO-308_D1	21_53	21	53	Synovial cell hyperplasia
+2018DiamondCNO-308_D1	43_45	43	45	Synovial stroma
+2018DiamondCNO-308_D1	45_23	45	23	Synovial stroma
+2018DiamondCNO-308_D1	39_11	39	11	Synovial stroma
+2018DiamondCNO-308_D1	27_17	27	17	Synovial stroma
+2018DiamondCNO-308_D1	36_24	36	24	Collagenous/Adipose tissue
+2018DiamondCNO-308_D1	4_24	4	24	Unknown
+2018DiamondCNO-308_D1	7_35	7	35	Unknown
+2018DiamondCNO-308_D1	40_36	40	36	Unknown
+2018DiamondCNO-308_D1	16_34	16	34	Synovial stroma
+2018DiamondCNO-308_D1	25_39	25	39	Synovial stroma
+2018DiamondCNO-308_D1	34_10	34	10	Synovial stroma
+2018DiamondCNO-308_D1	14_36	14	36	Synovial stroma
+2018DiamondCNO-308_D1	14_52	14	52	Unknown
+2018DiamondCNO-308_D1	43_55	43	55	Synovial stroma
+2018DiamondCNO-308_D1	29_37	29	37	Synovial stroma
+2018DiamondCNO-308_D1	33_45	33	45	Unknown
+2018DiamondCNO-308_D1	28_22	28	22	Synovial stroma
+2018DiamondCNO-308_D1	39_41	39	41	Unknown
+2018DiamondCNO-308_D1	31_21	31	21	Collagenous/Adipose tissue
+2018DiamondCNO-308_D1	35_49	35	49	Unknown
+2018DiamondCNO-308_D1	13_41	13	41	Unknown
+2018DiamondCNO-308_D1	11_41	11	41	Synovial stroma
+2018DiamondCNO-308_D1	25_27	25	27	Synovial stroma
+2018DiamondCNO-308_D1	41_23	41	23	Synovial stroma
+2018DiamondCNO-308_D1	34_40	34	40	Infiltrate
+2018DiamondCNO-308_D1	20_46	20	46	Synovial stroma
+2018DiamondCNO-308_D1	31_9	31	9	Unknown
+2018DiamondCNO-308_D1	9_31	9	31	Unknown
+2018DiamondCNO-308_D1	12_46	12	46	Infiltrate;Synovial stroma
+2018DiamondCNO-308_D1	44_16	44	16	Unknown
+2018DiamondCNO-308_D1	8_30	8	30	Unknown
+2018DiamondCNO-308_D1	3_33	3	33	Unknown
+2018DiamondCNO-308_D1	20_34	20	34	Collagenous/Adipose tissue
+2018DiamondCNO-308_D1	21_49	21	49	Collagenous/Adipose tissue
+2018DiamondCNO-308_D1	36_44	36	44	Synovial stroma
+2018DiamondCNO-308_D1	28_32	28	32	Synovial stroma
+2018DiamondCNO-308_D1	26_50	26	50	Synovial stroma
+2018DiamondCNO-308_D1	38_18	38	18	Synovial stroma
+2018DiamondCNO-308_D1	26_20	26	20	Synovial stroma
+2018DiamondCNO-308_D1	42_44	42	44	Unknown
+2018DiamondCNO-308_D1	19_39	19	39	Synovial stroma
+2018DiamondCNO-308_D1	29_45	29	45	Synovial stroma
+2018DiamondCNO-308_D1	37_23	37	23	Collagenous/Adipose tissue
+2018DiamondCNO-308_D1	17_19	17	19	Synovial cell hyperplasia
+2018DiamondCNO-308_D1	2_32	2	32	Unknown
+2018DiamondCNO-308_D1	12_30	12	30	Synovial stroma
+2018DiamondCNO-308_D1	24_26	24	26	Synovial stroma
+2018DiamondCNO-308_D1	43_23	43	23	Collagenous/Adipose tissue
+2018DiamondCNO-308_D1	28_44	28	44	Synovial stroma
+2018DiamondCNO-308_D1	27_33	27	33	Collagenous/Adipose tissue
+2018DiamondCNO-308_D1	33_19	33	19	Synovial stroma
+2018DiamondCNO-308_D1	14_46	14	46	Synovial stroma
+2018DiamondCNO-308_D1	17_35	17	35	Synovial stroma
+2018DiamondCNO-308_D1	26_12	26	12	Synovial stroma
+2018DiamondCNO-308_D1	12_20	12	20	Unknown
+2018DiamondCNO-308_D1	16_52	16	52	Infiltrate
+2018DiamondCNO-308_D1	30_28	30	28	Synovial stroma
+2018DiamondCNO-308_D1	11_37	11	37	Synovial stroma
+2018DiamondCNO-308_D1	34_52	34	52	Unknown
+2018DiamondCNO-308_D1	12_36	12	36	Synovial stroma
+2018DiamondCNO-308_D1	23_23	23	23	Synovial stroma
+2018DiamondCNO-308_D1	12_48	12	48	Synovial stroma
+2018DiamondCNO-308_D1	34_18	34	18	Collagenous/Adipose tissue
+2018DiamondCNO-308_D1	40_44	40	44	Unknown
+2018DiamondCNO-308_D1	39_29	39	29	Synovial stroma
+2018DiamondCNO-308_D1	20_48	20	48	Synovial stroma
+2018DiamondCNO-308_D1	19_53	19	53	Synovial cell hyperplasia
+2018DiamondCNO-308_D1	32_46	32	46	Unknown
+2018DiamondCNO-308_D1	26_34	26	34	Collagenous/Adipose tissue
+2018DiamondCNO-308_D1	34_44	34	44	Unknown
+2018DiamondCNO-308_D1	49_49	49	49	Unknown
+2018DiamondCNO-308_D1	32_42	32	42	Synovial stroma
+2018DiamondCNO-308_D1	23_41	23	41	Synovial stroma
+2018DiamondCNO-308_D1	35_47	35	47	Unknown
+2018DiamondCNO-308_D1	46_52	46	52	Synovial stroma
+2018DiamondCNO-308_D1	44_46	44	46	Unknown
+2018DiamondCNO-308_D1	23_37	23	37	Synovial stroma
+2018DiamondCNO-308_D1	6_38	6	38	Synovial stroma
+2018DiamondCNO-308_D1	15_45	15	45	Unknown
+2018DiamondCNO-308_D1	13_51	13	51	Infiltrate;Synovial stroma
+2018DiamondCNO-308_D1	22_36	22	36	Synovial stroma
+2018DiamondCNO-308_D1	47_19	47	19	Unknown
+2018DiamondCNO-308_D1	6_22	6	22	Unknown
+2018DiamondCNO-308_D1	33_53	33	53	Unknown
+2018DiamondCNO-308_D1	39_15	39	15	Collagenous/Adipose tissue
+2018DiamondCNO-308_D1	11_39	11	39	Synovial stroma
+2018DiamondCNO-308_D1	8_22	8	22	Unknown
+2018DiamondCNO-308_D1	35_31	35	31	Synovial stroma
+2018DiamondCNO-308_D1	47_39	47	39	Unknown
+2018DiamondCNO-308_D1	36_42	36	42	Infiltrate;Synovial stroma
+2018DiamondCNO-308_D1	52_38	52	38	Unknown
+2018DiamondCNO-308_D1	34_50	34	50	Unknown
+2018DiamondCNO-308_D1	43_37	43	37	Unknown
+2018DiamondCNO-308_D1	39_33	39	33	Synovial stroma
+2018DiamondCNO-308_D1	19_27	19	27	Collagenous/Adipose tissue
+2018DiamondCNO-308_D1	13_31	13	31	Synovial stroma
+2018DiamondCNO-308_D1	28_50	28	50	Unknown
+2018DiamondCNO-308_D1	15_51	15	51	Infiltrate;Synovial stroma
+2018DiamondCNO-308_D1	19_43	19	43	Synovial stroma
+2018DiamondCNO-308_D1	40_32	40	32	Collagenous/Adipose tissue
+2018DiamondCNO-308_D1	20_26	20	26	Collagenous/Adipose tissue
+2018DiamondCNO-308_D1	7_33	7	33	Unknown
+2018DiamondCNO-308_D1	43_21	43	21	Synovial stroma
+2018DiamondCNO-308_D1	30_46	30	46	Unknown
+2018DiamondCNO-308_D1	15_25	15	25	Synovial stroma
+2018DiamondCNO-308_D1	42_46	42	46	Unknown
+2018DiamondCNO-308_D1	41_21	41	21	Synovial stroma
+2018DiamondCNO-308_D1	13_37	13	37	Synovial stroma
+2018DiamondCNO-308_D1	31_25	31	25	Unknown
+2018DiamondCNO-308_D1	29_49	29	49	Unknown
+2018DiamondCNO-308_D1	28_40	28	40	Synovial stroma
+2018DiamondCNO-308_D1	39_23	39	23	Collagenous/Adipose tissue
+2018DiamondCNO-308_D1	4_38	4	38	Synovial stroma
+2018DiamondCNO-308_D1	17_51	17	51	Infiltrate;Synovial stroma
+2018DiamondCNO-308_D1	45_35	45	35	Unknown
+2018DiamondCNO-308_D1	13_49	13	49	Infiltrate
+2018DiamondCNO-308_D1	11_27	11	27	Synovial stroma
+2018DiamondCNO-308_D1	44_44	44	44	Synovial stroma
+2018DiamondCNO-308_D1	23_27	23	27	Collagenous/Adipose tissue
+2018DiamondCNO-308_D1	39_45	39	45	Unknown
+2018DiamondCNO-308_D1	45_45	45	45	Synovial stroma
+2018DiamondCNO-308_D1	29_33	29	33	Synovial stroma
+2018DiamondCNO-308_D1	8_38	8	38	Synovial stroma
+2018DiamondCNO-308_D1	41_41	41	41	Unknown
+2018DiamondCNO-308_D1	6_34	6	34	Unknown
+2018DiamondCNO-308_D1	26_32	26	32	Collagenous/Adipose tissue
+2018DiamondCNO-308_D1	37_35	37	35	Synovial stroma
+2018DiamondCNO-308_D1	35_33	35	33	Unknown
+2018DiamondCNO-308_D1	8_26	8	26	Unknown
+2018DiamondCNO-308_D1	16_20	16	20	Synovial cell hyperplasia
+2018DiamondCNO-308_D1	16_40	16	40	Synovial stroma
+2018DiamondCNO-308_D1	25_43	25	43	Synovial stroma
+2018DiamondCNO-308_D1	36_34	36	34	Synovial stroma
+2018DiamondCNO-308_D1	41_17	41	17	Synovial stroma
+2018DiamondCNO-308_D1	14_38	14	38	Synovial stroma
+2018DiamondCNO-308_D1	30_48	30	48	Synovial stroma
+2018DiamondCNO-308_D1	25_35	25	35	Synovial stroma
+2018DiamondCNO-308_D1	48_26	48	26	Unknown
+2018DiamondCNO-308_D1	34_20	34	20	Synovial stroma
+2018DiamondCNO-308_D1	46_48	46	48	Unknown
+2018DiamondCNO-308_D1	42_14	42	14	Unknown
+2018DiamondCNO-308_D1	40_18	40	18	Synovial stroma
+2018DiamondCNO-308_D1	33_41	33	41	Unknown
+2018DiamondCNO-308_D1	3_29	3	29	Unknown
+2018DiamondCNO-308_D1	18_24	18	24	Unknown
+2018DiamondCNO-308_D1	33_15	33	15	Collagenous/Adipose tissue
+2018DiamondCNO-308_D1	47_35	47	35	Synovial cell hyperplasia
+2018DiamondCNO-308_D1	6_42	6	42	Unknown
+2018DiamondCNO-308_D1	10_44	10	44	Infiltrate;Synovial stroma
+2018DiamondCNO-308_D1	33_27	33	27	Unknown
+2018DiamondCNO-308_D1	13_25	13	25	Synovial stroma
+2018DiamondCNO-308_D1	37_33	37	33	Unknown
+2018DiamondCNO-308_D1	4_42	4	42	Unknown
+2018DiamondCNO-308_D1	48_30	48	30	Unknown
+2018DiamondCNO-308_D1	22_32	22	32	Collagenous/Adipose tissue
+2018DiamondCNO-308_D1	25_37	25	37	Collagenous/Adipose tissue
+2018DiamondCNO-308_D1	44_42	44	42	Unknown
+2018DiamondCNO-308_D1	29_9	29	9	Unknown
+2018DiamondCNO-308_D1	35_25	35	25	Synovial stroma
+2018DiamondCNO-308_D1	29_11	29	11	Synovial stroma
+2018DiamondCNO-308_D1	21_51	21	51	Synovial stroma
+2018DiamondCNO-308_D1	11_31	11	31	Synovial stroma
+2018DiamondCNO-308_D1	9_29	9	29	Unknown
+2018DiamondCNO-308_D1	42_40	42	40	Unknown
+2018DiamondCNO-308_D1	46_34	46	34	Synovial cell hyperplasia
+2018DiamondCNO-308_D1	29_51	29	51	Unknown
+2018DiamondCNO-308_D1	46_32	46	32	Collagenous/Adipose tissue
+2018DiamondCNO-308_D1	34_16	34	16	Collagenous/Adipose tissue
+2018DiamondCNO-308_D1	17_43	17	43	Synovial stroma
+2018DiamondCNO-308_D1	24_18	24	18	Synovial stroma
+2018DiamondCNO-308_D1	37_47	37	47	Unknown
+2018DiamondCNO-308_D1	44_34	44	34	Unknown
+2018DiamondCNO-308_D1	15_43	15	43	Unknown
+2018DiamondCNO-308_D1	52_52	52	52	Unknown
+2018DiamondCNO-308_D1	30_50	30	50	Unknown
+2018DiamondCNO-308_D1	23_51	23	51	Collagenous/Adipose tissue
+2018DiamondCNO-308_D1	12_32	12	32	Synovial stroma
+2018DiamondCNO-308_D1	38_26	38	26	Synovial stroma
+2018DiamondCNO-308_D1	41_19	41	19	Synovial stroma
+2018DiamondCNO-308_D1	20_22	20	22	Synovial stroma
+2018DiamondCNO-308_D1	22_38	22	38	Synovial stroma
+2018DiamondCNO-308_D1	29_31	29	31	Synovial stroma
+2018DiamondCNO-308_D1	34_22	34	22	Unknown
+2018DiamondCNO-308_D1	20_32	20	32	Collagenous/Adipose tissue
+2018DiamondCNO-308_D1	14_40	14	40	Unknown
+2018DiamondCNO-308_D1	19_25	19	25	Unknown
+2018DiamondCNO-308_D1	52_40	52	40	Unknown
+2018DiamondCNO-308_D1	40_50	40	50	Infiltrate
+2018DiamondCNO-308_D1	43_43	43	43	Unknown
+2018DiamondCNO-308_D1	41_11	41	11	Unknown
+2018DiamondCNO-308_D1	12_26	12	26	Synovial stroma
+2018DiamondCNO-308_D1	26_38	26	38	Synovial stroma
+2018DiamondCNO-308_D1	48_44	48	44	Unknown
+2018DiamondCNO-308_D1	28_30	28	30	Synovial stroma
+2018DiamondCNO-308_D1	34_14	34	14	Collagenous/Adipose tissue
+2018DiamondCNO-308_D1	34_38	34	38	Unknown
+2018DiamondCNO-308_D1	35_23	35	23	Unknown
+2018DiamondCNO-308_D1	37_17	37	17	Synovial stroma
+2018DiamondCNO-308_D1	32_38	32	38	Unknown
+2018DiamondCNO-308_D1	41_47	41	47	Synovial stroma
+2018DiamondCNO-308_D1	32_24	32	24	Collagenous/Adipose tissue
+2018DiamondCNO-308_D1	44_20	44	20	Infiltrate;Synovial stroma
+2018DiamondCNO-308_D1	51_39	51	39	Unknown
+2018DiamondCNO-308_D1	31_33	31	33	Collagenous/Adipose tissue
+2018DiamondCNO-308_D1	42_50	42	50	Infiltrate;Synovial stroma
+2018DiamondCNO-308_D1	27_49	27	49	Synovial stroma
+2018DiamondCNO-308_D1	21_37	21	37	Synovial stroma

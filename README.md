@@ -53,8 +53,8 @@ We recommed using the `Bulk Download` function and to consult the file descripti
 `y` barcode (Y) coordinate  
 `b_cell` eg. B cell specific score (same format for all 13 tested cell types)
 
-# Alignment
-This is [code](./alignment) for aligning HE images to (x,y) barcode coordiantes as given by ST Pipeline ([v.0.8.5](https://github.com/SpatialTranscriptomicsResearch/st_pipeline/releases/tag/0.8.5)). 
+# Pairing HE image and sequencing data
+Please refer to our github repo SpoTter. 
 
 # Segmentation
 This is [code](./segmentation) for segmenting HE nuclei and cytoplasm. HE image segmentation was performed by combining Ilastik and CellProfiler. The labeled segmentation mask was used to assign the individual spots to the corresponding Cell ID. The output CSV file includes Cell IDs, X and Y position of the cells (centroid) and the corresponding spots.

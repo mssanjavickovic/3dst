@@ -1,0 +1,811 @@
+image	x_y	x	y	value
+2018DiamondCNO-254_C1	27_39	27	39	Synovial stroma
+2018DiamondCNO-254_C1	33_49	33	49	Synovial stroma
+2018DiamondCNO-254_C1	32_22	32	22	Synovial stroma
+2018DiamondCNO-254_C1	56_22	56	22	Infiltrate
+2018DiamondCNO-254_C1	34_20	34	20	Synovial stroma
+2018DiamondCNO-254_C1	56_32	56	32	Infiltrate;Synovial stroma
+2018DiamondCNO-254_C1	38_28	38	28	Synovial stroma
+2018DiamondCNO-254_C1	44_30	44	30	Infiltrate;Synovial stroma
+2018DiamondCNO-254_C1	36_14	36	14	Infiltrate
+2018DiamondCNO-254_C1	54_22	54	22	Synovial stroma
+2018DiamondCNO-254_C1	35_45	35	45	Synovial stroma
+2018DiamondCNO-254_C1	32_50	32	50	Synovial stroma
+2018DiamondCNO-254_C1	15_47	15	47	Unknown
+2018DiamondCNO-254_C1	43_15	43	15	Unknown
+2018DiamondCNO-254_C1	34_48	34	48	Infiltrate;Synovial stroma
+2018DiamondCNO-254_C1	34_50	34	50	Unknown
+2018DiamondCNO-254_C1	31_33	31	33	Infiltrate;Synovial stroma
+2018DiamondCNO-254_C1	45_47	45	47	Synovial stroma
+2018DiamondCNO-254_C1	30_36	30	36	Unknown
+2018DiamondCNO-254_C1	15_39	15	39	Infiltrate
+2018DiamondCNO-254_C1	33_19	33	19	Synovial stroma
+2018DiamondCNO-254_C1	52_40	52	40	Infiltrate
+2018DiamondCNO-254_C1	23_41	23	41	Synovial stroma
+2018DiamondCNO-254_C1	23_43	23	43	Synovial stroma
+2018DiamondCNO-254_C1	31_39	31	39	Synovial stroma
+2018DiamondCNO-254_C1	29_27	29	27	Synovial cell hyperplasia
+2018DiamondCNO-254_C1	20_44	20	44	Infiltrate;Synovial stroma
+2018DiamondCNO-254_C1	54_38	54	38	Unknown
+2018DiamondCNO-254_C1	29_25	29	25	Synovial cell hyperplasia
+2018DiamondCNO-254_C1	16_48	16	48	Unknown
+2018DiamondCNO-254_C1	26_24	26	24	Synovial stroma
+2018DiamondCNO-254_C1	30_50	30	50	Synovial stroma
+2018DiamondCNO-254_C1	28_14	28	14	Infiltrate
+2018DiamondCNO-254_C1	31_41	31	41	Synovial stroma
+2018DiamondCNO-254_C1	34_22	34	22	Synovial stroma
+2018DiamondCNO-254_C1	30_46	30	46	Synovial stroma
+2018DiamondCNO-254_C1	53_37	53	37	Synovial stroma
+2018DiamondCNO-254_C1	50_46	50	46	Infiltrate
+2018DiamondCNO-254_C1	32_16	32	16	Synovial stroma
+2018DiamondCNO-254_C1	39_19	39	19	Infiltrate
+2018DiamondCNO-254_C1	46_44	46	44	Synovial stroma
+2018DiamondCNO-254_C1	34_30	34	30	Synovial cell hyperplasia
+2018DiamondCNO-254_C1	40_44	40	44	Synovial stroma
+2018DiamondCNO-254_C1	46_18	46	18	Infiltrate
+2018DiamondCNO-254_C1	43_31	43	31	Synovial stroma
+2018DiamondCNO-254_C1	24_48	24	48	Synovial stroma
+2018DiamondCNO-254_C1	22_30	22	30	Infiltrate
+2018DiamondCNO-254_C1	37_43	37	43	Synovial stroma
+2018DiamondCNO-254_C1	51_39	51	39	Infiltrate
+2018DiamondCNO-254_C1	37_27	37	27	Infiltrate;Synovial stroma
+2018DiamondCNO-254_C1	33_21	33	21	Synovial stroma
+2018DiamondCNO-254_C1	14_42	14	42	Synovial stroma
+2018DiamondCNO-254_C1	22_52	22	52	Infiltrate;Synovial stroma
+2018DiamondCNO-254_C1	45_33	45	33	Synovial stroma
+2018DiamondCNO-254_C1	42_40	42	40	Infiltrate;Synovial stroma
+2018DiamondCNO-254_C1	54_42	54	42	Infiltrate;Synovial stroma
+2018DiamondCNO-254_C1	21_47	21	47	Synovial stroma
+2018DiamondCNO-254_C1	11_35	11	35	Synovial stroma
+2018DiamondCNO-254_C1	52_42	52	42	Infiltrate;Synovial stroma
+2018DiamondCNO-254_C1	20_32	20	32	Synovial stroma
+2018DiamondCNO-254_C1	49_23	49	23	Synovial stroma
+2018DiamondCNO-254_C1	10_38	10	38	Synovial stroma
+2018DiamondCNO-254_C1	26_40	26	40	Synovial stroma
+2018DiamondCNO-254_C1	22_18	22	18	Synovial stroma
+2018DiamondCNO-254_C1	43_17	43	17	Infiltrate
+2018DiamondCNO-254_C1	36_32	36	32	Synovial stroma
+2018DiamondCNO-254_C1	37_19	37	19	Synovial stroma
+2018DiamondCNO-254_C1	30_22	30	22	Synovial stroma
+2018DiamondCNO-254_C1	19_27	19	27	Synovial stroma
+2018DiamondCNO-254_C1	32_42	32	42	Infiltrate
+2018DiamondCNO-254_C1	36_24	36	24	Unknown
+2018DiamondCNO-254_C1	53_47	53	47	Synovial stroma
+2018DiamondCNO-254_C1	30_16	30	16	Infiltrate
+2018DiamondCNO-254_C1	52_30	52	30	Synovial stroma
+2018DiamondCNO-254_C1	45_19	45	19	Infiltrate
+2018DiamondCNO-254_C1	52_36	52	36	Synovial stroma
+2018DiamondCNO-254_C1	41_17	41	17	Infiltrate
+2018DiamondCNO-254_C1	59_29	59	29	Infiltrate
+2018DiamondCNO-254_C1	56_38	56	38	Unknown
+2018DiamondCNO-254_C1	35_39	35	39	Synovial stroma
+2018DiamondCNO-254_C1	14_38	14	38	Infiltrate
+2018DiamondCNO-254_C1	41_37	41	37	Synovial stroma
+2018DiamondCNO-254_C1	30_44	30	44	Synovial stroma
+2018DiamondCNO-254_C1	40_36	40	36	Synovial stroma
+2018DiamondCNO-254_C1	56_40	56	40	Unknown
+2018DiamondCNO-254_C1	20_20	20	20	Synovial stroma
+2018DiamondCNO-254_C1	37_15	37	15	Infiltrate
+2018DiamondCNO-254_C1	26_30	26	30	Synovial stroma
+2018DiamondCNO-254_C1	43_47	43	47	Synovial stroma
+2018DiamondCNO-254_C1	19_35	19	35	Synovial stroma
+2018DiamondCNO-254_C1	47_37	47	37	Synovial stroma
+2018DiamondCNO-254_C1	26_32	26	32	Infiltrate
+2018DiamondCNO-254_C1	33_23	33	23	Infiltrate;Synovial stroma
+2018DiamondCNO-254_C1	28_44	28	44	Synovial stroma
+2018DiamondCNO-254_C1	13_39	13	39	Synovial stroma
+2018DiamondCNO-254_C1	56_28	56	28	Infiltrate
+2018DiamondCNO-254_C1	28_50	28	50	Synovial stroma
+2018DiamondCNO-254_C1	15_27	15	27	Infiltrate
+2018DiamondCNO-254_C1	60_30	60	30	Unknown
+2018DiamondCNO-254_C1	36_34	36	34	Synovial stroma
+2018DiamondCNO-254_C1	30_52	30	52	Unknown
+2018DiamondCNO-254_C1	12_38	12	38	Synovial stroma
+2018DiamondCNO-254_C1	25_41	25	41	Synovial stroma
+2018DiamondCNO-254_C1	45_49	45	49	Unknown
+2018DiamondCNO-254_C1	40_38	40	38	Infiltrate;Synovial stroma
+2018DiamondCNO-254_C1	42_46	42	46	Synovial stroma
+2018DiamondCNO-254_C1	22_16	22	16	Synovial stroma
+2018DiamondCNO-254_C1	45_15	45	15	Unknown
+2018DiamondCNO-254_C1	28_46	28	46	Synovial stroma
+2018DiamondCNO-254_C1	21_23	21	23	Synovial stroma
+2018DiamondCNO-254_C1	38_20	38	20	Synovial stroma
+2018DiamondCNO-254_C1	44_22	44	22	Infiltrate;Synovial stroma
+2018DiamondCNO-254_C1	43_41	43	41	Synovial stroma
+2018DiamondCNO-254_C1	25_35	25	35	Synovial stroma
+2018DiamondCNO-254_C1	35_43	35	43	Unknown
+2018DiamondCNO-254_C1	53_27	53	27	Infiltrate
+2018DiamondCNO-254_C1	24_46	24	46	Infiltrate;Synovial stroma
+2018DiamondCNO-254_C1	19_49	19	49	Synovial stroma
+2018DiamondCNO-254_C1	57_27	57	27	Infiltrate;Synovial stroma
+2018DiamondCNO-254_C1	27_11	27	11	Infiltrate;Synovial stroma
+2018DiamondCNO-254_C1	43_45	43	45	Synovial stroma
+2018DiamondCNO-254_C1	54_26	54	26	Synovial stroma
+2018DiamondCNO-254_C1	16_26	16	26	Synovial stroma
+2018DiamondCNO-254_C1	47_23	47	23	Synovial stroma
+2018DiamondCNO-254_C1	37_21	37	21	Synovial stroma
+2018DiamondCNO-254_C1	46_46	46	46	Synovial stroma
+2018DiamondCNO-254_C1	23_31	23	31	Infiltrate
+2018DiamondCNO-254_C1	42_24	42	24	Synovial stroma
+2018DiamondCNO-254_C1	29_35	29	35	Infiltrate
+2018DiamondCNO-254_C1	38_14	38	14	Unknown
+2018DiamondCNO-254_C1	52_38	52	38	Synovial stroma
+2018DiamondCNO-254_C1	37_37	37	37	Infiltrate;Synovial stroma
+2018DiamondCNO-254_C1	24_12	24	12	Unknown
+2018DiamondCNO-254_C1	34_42	34	42	Synovial stroma
+2018DiamondCNO-254_C1	49_29	49	29	Synovial stroma
+2018DiamondCNO-254_C1	22_44	22	44	Synovial stroma
+2018DiamondCNO-254_C1	18_34	18	34	Synovial stroma
+2018DiamondCNO-254_C1	31_37	31	37	Synovial stroma
+2018DiamondCNO-254_C1	22_40	22	40	Synovial stroma
+2018DiamondCNO-254_C1	24_42	24	42	Synovial stroma
+2018DiamondCNO-254_C1	37_33	37	33	Synovial stroma
+2018DiamondCNO-254_C1	47_43	47	43	Synovial stroma
+2018DiamondCNO-254_C1	26_48	26	48	Synovial stroma
+2018DiamondCNO-254_C1	39_41	39	41	Unknown
+2018DiamondCNO-254_C1	36_44	36	44	Synovial stroma
+2018DiamondCNO-254_C1	17_43	17	43	Synovial stroma
+2018DiamondCNO-254_C1	44_40	44	40	Synovial stroma
+2018DiamondCNO-254_C1	15_35	15	35	Synovial stroma
+2018DiamondCNO-254_C1	9_41	9	41	Unknown
+2018DiamondCNO-254_C1	59_33	59	33	Infiltrate
+2018DiamondCNO-254_C1	36_30	36	30	Infiltrate;Synovial stroma
+2018DiamondCNO-254_C1	15_41	15	41	Infiltrate
+2018DiamondCNO-254_C1	19_23	19	23	Synovial stroma
+2018DiamondCNO-254_C1	56_36	56	36	Unknown
+2018DiamondCNO-254_C1	28_20	28	20	Infiltrate;Unknown
+2018DiamondCNO-254_C1	23_37	23	37	Synovial stroma
+2018DiamondCNO-254_C1	17_47	17	47	Synovial stroma
+2018DiamondCNO-254_C1	31_31	31	31	Synovial cell hyperplasia
+2018DiamondCNO-254_C1	34_14	34	14	Synovial stroma
+2018DiamondCNO-254_C1	40_24	40	24	Synovial stroma
+2018DiamondCNO-254_C1	16_28	16	28	Infiltrate
+2018DiamondCNO-254_C1	24_36	24	36	Infiltrate;Synovial stroma
+2018DiamondCNO-254_C1	45_31	45	31	Synovial stroma
+2018DiamondCNO-254_C1	55_25	55	25	Synovial stroma
+2018DiamondCNO-254_C1	32_36	32	36	Unknown
+2018DiamondCNO-254_C1	33_29	33	29	Synovial stroma
+2018DiamondCNO-254_C1	38_38	38	38	Synovial stroma
+2018DiamondCNO-254_C1	58_22	58	22	Infiltrate
+2018DiamondCNO-254_C1	17_25	17	25	Synovial cell hyperplasia
+2018DiamondCNO-254_C1	13_35	13	35	Infiltrate;Synovial stroma
+2018DiamondCNO-254_C1	16_36	16	36	Synovial stroma
+2018DiamondCNO-254_C1	32_48	32	48	Synovial stroma
+2018DiamondCNO-254_C1	56_24	56	24	Infiltrate
+2018DiamondCNO-254_C1	49_49	49	49	Unknown
+2018DiamondCNO-254_C1	39_31	39	31	Synovial stroma
+2018DiamondCNO-254_C1	26_16	26	16	Synovial stroma
+2018DiamondCNO-254_C1	55_33	55	33	Infiltrate
+2018DiamondCNO-254_C1	25_19	25	19	Synovial stroma
+2018DiamondCNO-254_C1	57_31	57	31	Synovial stroma
+2018DiamondCNO-254_C1	22_38	22	38	Infiltrate;Synovial stroma
+2018DiamondCNO-254_C1	46_26	46	26	Infiltrate;Synovial stroma
+2018DiamondCNO-254_C1	23_39	23	39	Synovial stroma
+2018DiamondCNO-254_C1	27_23	27	23	Synovial cell hyperplasia
+2018DiamondCNO-254_C1	18_40	18	40	Infiltrate;Synovial stroma
+2018DiamondCNO-254_C1	37_31	37	31	Synovial cell hyperplasia
+2018DiamondCNO-254_C1	14_36	14	36	Infiltrate;Synovial stroma
+2018DiamondCNO-254_C1	46_30	46	30	Synovial stroma
+2018DiamondCNO-254_C1	51_41	51	41	Infiltrate
+2018DiamondCNO-254_C1	12_34	12	34	Infiltrate
+2018DiamondCNO-254_C1	45_41	45	41	Synovial stroma
+2018DiamondCNO-254_C1	12_44	12	44	Unknown
+2018DiamondCNO-254_C1	29_17	29	17	Infiltrate;Synovial stroma
+2018DiamondCNO-254_C1	29_47	29	47	Synovial stroma
+2018DiamondCNO-254_C1	42_20	42	20	Synovial stroma
+2018DiamondCNO-254_C1	19_41	19	41	Synovial stroma
+2018DiamondCNO-254_C1	28_36	28	36	Synovial stroma
+2018DiamondCNO-254_C1	56_34	56	34	Infiltrate;Synovial stroma
+2018DiamondCNO-254_C1	27_33	27	33	Infiltrate;Synovial stroma
+2018DiamondCNO-254_C1	20_38	20	38	Synovial stroma
+2018DiamondCNO-254_C1	42_30	42	30	Synovial stroma
+2018DiamondCNO-254_C1	39_27	39	27	Unknown
+2018DiamondCNO-254_C1	35_35	35	35	Infiltrate;Synovial stroma
+2018DiamondCNO-254_C1	44_48	44	48	Unknown
+2018DiamondCNO-254_C1	27_49	27	49	Synovial stroma
+2018DiamondCNO-254_C1	27_31	27	31	Synovial stroma
+2018DiamondCNO-254_C1	20_40	20	40	Infiltrate
+2018DiamondCNO-254_C1	24_32	24	32	Infiltrate
+2018DiamondCNO-254_C1	47_45	47	45	Synovial stroma
+2018DiamondCNO-254_C1	15_37	15	37	Infiltrate;Synovial stroma
+2018DiamondCNO-254_C1	25_55	25	55	Unknown
+2018DiamondCNO-254_C1	56_20	56	20	Unknown
+2018DiamondCNO-254_C1	37_41	37	41	Infiltrate;Synovial stroma
+2018DiamondCNO-254_C1	14_28	14	28	Unknown
+2018DiamondCNO-254_C1	55_41	55	41	Infiltrate
+2018DiamondCNO-254_C1	14_44	14	44	Synovial stroma
+2018DiamondCNO-254_C1	47_47	47	47	Synovial stroma
+2018DiamondCNO-254_C1	29_33	29	33	Infiltrate;Synovial stroma
+2018DiamondCNO-254_C1	18_24	18	24	Synovial stroma
+2018DiamondCNO-254_C1	52_32	52	32	Synovial cell hyperplasia
+2018DiamondCNO-254_C1	30_24	30	24	Synovial stroma
+2018DiamondCNO-254_C1	35_15	35	15	Synovial stroma
+2018DiamondCNO-254_C1	45_27	45	27	Synovial stroma
+2018DiamondCNO-254_C1	12_36	12	36	Synovial stroma
+2018DiamondCNO-254_C1	32_26	32	26	Synovial stroma
+2018DiamondCNO-254_C1	26_20	26	20	Infiltrate;Synovial stroma
+2018DiamondCNO-254_C1	30_12	30	12	Synovial stroma
+2018DiamondCNO-254_C1	39_43	39	43	Synovial stroma
+2018DiamondCNO-254_C1	33_13	33	13	Synovial stroma
+2018DiamondCNO-254_C1	29_23	29	23	Synovial stroma
+2018DiamondCNO-254_C1	31_11	31	11	Synovial stroma
+2018DiamondCNO-254_C1	57_29	57	29	Infiltrate
+2018DiamondCNO-254_C1	43_33	43	33	Synovial stroma
+2018DiamondCNO-254_C1	49_21	49	21	Unknown
+2018DiamondCNO-254_C1	35_19	35	19	Synovial stroma
+2018DiamondCNO-254_C1	36_38	36	38	Infiltrate;Synovial stroma
+2018DiamondCNO-254_C1	32_14	32	14	Synovial stroma
+2018DiamondCNO-254_C1	46_38	46	38	Synovial stroma
+2018DiamondCNO-254_C1	44_34	44	34	Synovial stroma
+2018DiamondCNO-254_C1	53_31	53	31	Synovial stroma
+2018DiamondCNO-254_C1	60_24	60	24	Infiltrate
+2018DiamondCNO-254_C1	39_47	39	47	Synovial stroma
+2018DiamondCNO-254_C1	47_19	47	19	Unknown
+2018DiamondCNO-254_C1	23_33	23	33	Synovial stroma
+2018DiamondCNO-254_C1	54_24	54	24	Synovial stroma
+2018DiamondCNO-254_C1	47_27	47	27	Infiltrate
+2018DiamondCNO-254_C1	21_37	21	37	Synovial stroma
+2018DiamondCNO-254_C1	41_41	41	41	Infiltrate;Synovial stroma
+2018DiamondCNO-254_C1	34_28	34	28	Synovial stroma
+2018DiamondCNO-254_C1	53_43	53	43	Infiltrate
+2018DiamondCNO-254_C1	57_19	57	19	Unknown
+2018DiamondCNO-254_C1	37_13	37	13	Unknown
+2018DiamondCNO-254_C1	44_26	44	26	Synovial stroma
+2018DiamondCNO-254_C1	21_41	21	41	Infiltrate;Synovial stroma
+2018DiamondCNO-254_C1	22_34	22	34	Synovial stroma
+2018DiamondCNO-254_C1	17_27	17	27	Synovial stroma
+2018DiamondCNO-254_C1	26_26	26	26	Synovial stroma
+2018DiamondCNO-254_C1	59_23	59	23	Infiltrate
+2018DiamondCNO-254_C1	22_22	22	22	Unknown
+2018DiamondCNO-254_C1	51_37	51	37	Infiltrate;Synovial stroma
+2018DiamondCNO-254_C1	22_50	22	50	Infiltrate;Synovial stroma
+2018DiamondCNO-254_C1	24_22	24	22	Unknown
+2018DiamondCNO-254_C1	27_25	27	25	Synovial stroma
+2018DiamondCNO-254_C1	17_41	17	41	Infiltrate
+2018DiamondCNO-254_C1	30_20	30	20	Synovial stroma
+2018DiamondCNO-254_C1	51_31	51	31	Unknown
+2018DiamondCNO-254_C1	10_40	10	40	Unknown
+2018DiamondCNO-254_C1	55_45	55	45	Unknown
+2018DiamondCNO-254_C1	39_33	39	33	Synovial stroma
+2018DiamondCNO-254_C1	41_25	41	25	Infiltrate;Synovial stroma
+2018DiamondCNO-254_C1	33_27	33	27	Synovial stroma
+2018DiamondCNO-254_C1	24_54	24	54	Unknown
+2018DiamondCNO-254_C1	30_38	30	38	Unknown
+2018DiamondCNO-254_C1	43_49	43	49	Unknown
+2018DiamondCNO-254_C1	15_45	15	45	Synovial stroma
+2018DiamondCNO-254_C1	19_37	19	37	Infiltrate;Synovial stroma
+2018DiamondCNO-254_C1	18_32	18	32	Synovial stroma
+2018DiamondCNO-254_C1	43_23	43	23	Synovial stroma
+2018DiamondCNO-254_C1	28_16	28	16	Synovial stroma
+2018DiamondCNO-254_C1	48_46	48	46	Synovial stroma
+2018DiamondCNO-254_C1	29_45	29	45	Synovial stroma
+2018DiamondCNO-254_C1	36_50	36	50	Unknown
+2018DiamondCNO-254_C1	30_40	30	40	Synovial stroma
+2018DiamondCNO-254_C1	48_32	48	32	Unknown
+2018DiamondCNO-254_C1	38_36	38	36	Synovial stroma
+2018DiamondCNO-254_C1	55_37	55	37	Unknown
+2018DiamondCNO-254_C1	38_16	38	16	Infiltrate;Synovial stroma
+2018DiamondCNO-254_C1	19_31	19	31	Synovial stroma
+2018DiamondCNO-254_C1	43_43	43	43	Synovial stroma
+2018DiamondCNO-254_C1	54_20	54	20	Unknown
+2018DiamondCNO-254_C1	52_26	52	26	Infiltrate
+2018DiamondCNO-254_C1	43_29	43	29	Synovial stroma
+2018DiamondCNO-254_C1	48_44	48	44	Synovial stroma
+2018DiamondCNO-254_C1	41_33	41	33	Synovial stroma
+2018DiamondCNO-254_C1	39_35	39	35	Synovial stroma
+2018DiamondCNO-254_C1	31_43	31	43	Infiltrate;Synovial stroma
+2018DiamondCNO-254_C1	38_34	38	34	Synovial stroma
+2018DiamondCNO-254_C1	18_36	18	36	Synovial stroma
+2018DiamondCNO-254_C1	49_41	49	41	Infiltrate;Synovial stroma
+2018DiamondCNO-254_C1	44_24	44	24	Infiltrate
+2018DiamondCNO-254_C1	29_41	29	41	Synovial stroma
+2018DiamondCNO-254_C1	14_34	14	34	Infiltrate
+2018DiamondCNO-254_C1	11_43	11	43	Unknown
+2018DiamondCNO-254_C1	14_30	14	30	Unknown
+2018DiamondCNO-254_C1	29_15	29	15	Infiltrate;Synovial stroma
+2018DiamondCNO-254_C1	22_24	22	24	Synovial cell hyperplasia
+2018DiamondCNO-254_C1	50_40	50	40	Infiltrate
+2018DiamondCNO-254_C1	47_35	47	35	Infiltrate;Synovial stroma
+2018DiamondCNO-254_C1	29_51	29	51	Synovial stroma
+2018DiamondCNO-254_C1	49_45	49	45	Synovial stroma
+2018DiamondCNO-254_C1	18_28	18	28	Synovial stroma
+2018DiamondCNO-254_C1	53_41	53	41	Infiltrate
+2018DiamondCNO-254_C1	30_34	30	34	Infiltrate
+2018DiamondCNO-254_C1	46_34	46	34	Unknown
+2018DiamondCNO-254_C1	34_36	34	36	Synovial stroma
+2018DiamondCNO-254_C1	33_33	33	33	Synovial stroma
+2018DiamondCNO-254_C1	21_27	21	27	Synovial stroma
+2018DiamondCNO-254_C1	28_26	28	26	Synovial stroma
+2018DiamondCNO-254_C1	26_34	26	34	Infiltrate;Synovial stroma
+2018DiamondCNO-254_C1	24_14	24	14	Synovial stroma
+2018DiamondCNO-254_C1	48_24	48	24	Synovial stroma
+2018DiamondCNO-254_C1	44_38	44	38	Synovial stroma
+2018DiamondCNO-254_C1	21_25	21	25	Synovial cell hyperplasia
+2018DiamondCNO-254_C1	55_35	55	35	Infiltrate;Synovial stroma
+2018DiamondCNO-254_C1	39_45	39	45	Synovial stroma
+2018DiamondCNO-254_C1	16_46	16	46	Infiltrate;Synovial stroma
+2018DiamondCNO-254_C1	13_37	13	37	Infiltrate;Synovial stroma
+2018DiamondCNO-254_C1	18_42	18	42	Infiltrate
+2018DiamondCNO-254_C1	61_29	61	29	Unknown
+2018DiamondCNO-254_C1	28_38	28	38	Unknown
+2018DiamondCNO-254_C1	23_19	23	19	Synovial stroma
+2018DiamondCNO-254_C1	21_43	21	43	Synovial stroma
+2018DiamondCNO-254_C1	43_39	43	39	Synovial stroma
+2018DiamondCNO-254_C1	47_29	47	29	Infiltrate
+2018DiamondCNO-254_C1	37_23	37	23	Unknown
+2018DiamondCNO-254_C1	38_30	38	30	Synovial stroma
+2018DiamondCNO-254_C1	23_13	23	13	Unknown
+2018DiamondCNO-254_C1	48_40	48	40	Infiltrate
+2018DiamondCNO-254_C1	58_30	58	30	Infiltrate
+2018DiamondCNO-254_C1	34_24	34	24	Synovial stroma
+2018DiamondCNO-254_C1	27_51	27	51	Synovial stroma
+2018DiamondCNO-254_C1	32_28	32	28	Synovial stroma
+2018DiamondCNO-254_C1	39_39	39	39	Infiltrate;Synovial stroma
+2018DiamondCNO-254_C1	50_24	50	24	Infiltrate
+2018DiamondCNO-254_C1	32_40	32	40	Synovial stroma
+2018DiamondCNO-254_C1	28_52	28	52	Synovial stroma
+2018DiamondCNO-254_C1	31_19	31	19	Synovial stroma
+2018DiamondCNO-254_C1	44_46	44	46	Synovial stroma
+2018DiamondCNO-254_C1	18_44	18	44	Synovial stroma
+2018DiamondCNO-254_C1	46_20	46	20	Synovial stroma
+2018DiamondCNO-254_C1	20_28	20	28	Synovial stroma
+2018DiamondCNO-254_C1	37_39	37	39	Synovial stroma
+2018DiamondCNO-254_C1	47_33	47	33	Unknown
+2018DiamondCNO-254_C1	58_32	58	32	Infiltrate;Synovial stroma
+2018DiamondCNO-254_C1	22_32	22	32	Infiltrate
+2018DiamondCNO-254_C1	27_53	27	53	Unknown
+2018DiamondCNO-254_C1	30_28	30	28	Synovial stroma
+2018DiamondCNO-254_C1	17_31	17	31	Infiltrate;Synovial stroma
+2018DiamondCNO-254_C1	60_32	60	32	Unknown
+2018DiamondCNO-254_C1	31_23	31	23	Synovial stroma
+2018DiamondCNO-254_C1	38_42	38	42	Synovial stroma
+2018DiamondCNO-254_C1	37_45	37	45	Synovial stroma
+2018DiamondCNO-254_C1	51_45	51	45	Synovial stroma
+2018DiamondCNO-254_C1	25_49	25	49	Synovial stroma
+2018DiamondCNO-254_C1	21_29	21	29	Synovial cell hyperplasia
+2018DiamondCNO-254_C1	33_37	33	37	Synovial stroma
+2018DiamondCNO-254_C1	41_45	41	45	Infiltrate
+2018DiamondCNO-254_C1	41_35	41	35	Synovial stroma
+2018DiamondCNO-254_C1	54_44	54	44	Infiltrate
+2018DiamondCNO-254_C1	29_49	29	49	Infiltrate
+2018DiamondCNO-254_C1	36_18	36	18	Synovial stroma
+2018DiamondCNO-254_C1	46_32	46	32	Unknown
+2018DiamondCNO-254_C1	24_16	24	16	Synovial stroma
+2018DiamondCNO-254_C1	36_40	36	40	Synovial stroma
+2018DiamondCNO-254_C1	58_34	58	34	Synovial stroma
+2018DiamondCNO-254_C1	22_26	22	26	Synovial stroma
+2018DiamondCNO-254_C1	38_26	38	26	Unknown
+2018DiamondCNO-254_C1	45_17	45	17	Synovial stroma
+2018DiamondCNO-254_C1	54_36	54	36	Infiltrate;Synovial stroma
+2018DiamondCNO-254_C1	21_51	21	51	Synovial stroma
+2018DiamondCNO-254_C1	50_22	50	22	Synovial stroma
+2018DiamondCNO-254_C1	27_13	27	13	Synovial stroma
+2018DiamondCNO-254_C1	12_42	12	42	Synovial stroma
+2018DiamondCNO-254_C1	28_42	28	42	Synovial stroma
+2018DiamondCNO-254_C1	21_31	21	31	Synovial stroma
+2018DiamondCNO-254_C1	50_30	50	30	Unknown
+2018DiamondCNO-254_C1	48_26	48	26	Synovial stroma
+2018DiamondCNO-254_C1	27_15	27	15	Synovial stroma
+2018DiamondCNO-254_C1	41_23	41	23	Synovial stroma
+2018DiamondCNO-254_C1	53_21	53	21	Synovial stroma
+2018DiamondCNO-254_C1	59_31	59	31	Infiltrate
+2018DiamondCNO-254_C1	29_13	29	13	Synovial stroma
+2018DiamondCNO-254_C1	24_24	24	24	Synovial stroma
+2018DiamondCNO-254_C1	35_25	35	25	Synovial stroma
+2018DiamondCNO-254_C1	34_16	34	16	Synovial stroma
+2018DiamondCNO-254_C1	34_12	34	12	Synovial stroma
+2018DiamondCNO-254_C1	17_39	17	39	Synovial stroma
+2018DiamondCNO-254_C1	20_22	20	22	Unknown
+2018DiamondCNO-254_C1	42_42	42	42	Infiltrate;Synovial stroma
+2018DiamondCNO-254_C1	18_48	18	48	Synovial stroma
+2018DiamondCNO-254_C1	31_49	31	49	Synovial stroma
+2018DiamondCNO-254_C1	22_20	22	20	Synovial stroma
+2018DiamondCNO-254_C1	41_39	41	39	Infiltrate;Synovial stroma
+2018DiamondCNO-254_C1	30_14	30	14	Infiltrate
+2018DiamondCNO-254_C1	25_29	25	29	Synovial stroma
+2018DiamondCNO-254_C1	23_49	23	49	Synovial stroma
+2018DiamondCNO-254_C1	18_22	18	22	Unknown
+2018DiamondCNO-254_C1	23_29	23	29	Synovial cell hyperplasia
+2018DiamondCNO-254_C1	40_22	40	22	Synovial stroma
+2018DiamondCNO-254_C1	47_39	47	39	Synovial stroma
+2018DiamondCNO-254_C1	11_39	11	39	Synovial stroma
+2018DiamondCNO-254_C1	41_49	41	49	Unknown
+2018DiamondCNO-254_C1	34_18	34	18	Infiltrate
+2018DiamondCNO-254_C1	24_50	24	50	Synovial stroma
+2018DiamondCNO-254_C1	51_35	51	35	Synovial stroma
+2018DiamondCNO-254_C1	57_35	57	35	Unknown
+2018DiamondCNO-254_C1	16_38	16	38	Synovial stroma
+2018DiamondCNO-254_C1	25_15	25	15	Synovial stroma
+2018DiamondCNO-254_C1	36_16	36	16	Synovial stroma
+2018DiamondCNO-254_C1	27_47	27	47	Synovial stroma
+2018DiamondCNO-254_C1	33_11	33	11	Unknown
+2018DiamondCNO-254_C1	29_37	29	37	Unknown
+2018DiamondCNO-254_C1	50_48	50	48	Infiltrate
+2018DiamondCNO-254_C1	34_34	34	34	Synovial cell hyperplasia
+2018DiamondCNO-254_C1	42_16	42	16	Unknown
+2018DiamondCNO-254_C1	36_28	36	28	Infiltrate;Synovial stroma
+2018DiamondCNO-254_C1	13_45	13	45	Unknown
+2018DiamondCNO-254_C1	54_28	54	28	Infiltrate
+2018DiamondCNO-254_C1	20_34	20	34	Synovial stroma
+2018DiamondCNO-254_C1	35_41	35	41	Synovial stroma
+2018DiamondCNO-254_C1	24_40	24	40	Infiltrate;Synovial stroma
+2018DiamondCNO-254_C1	26_44	26	44	Synovial stroma
+2018DiamondCNO-254_C1	58_28	58	28	Infiltrate
+2018DiamondCNO-254_C1	51_29	51	29	Unknown
+2018DiamondCNO-254_C1	49_31	49	31	Unknown
+2018DiamondCNO-254_C1	32_20	32	20	Synovial stroma
+2018DiamondCNO-254_C1	36_22	36	22	Synovial stroma
+2018DiamondCNO-254_C1	33_47	33	47	Synovial stroma
+2018DiamondCNO-254_C1	49_47	49	47	Synovial stroma
+2018DiamondCNO-254_C1	35_21	35	21	Synovial stroma
+2018DiamondCNO-254_C1	58_24	58	24	Infiltrate
+2018DiamondCNO-254_C1	26_46	26	46	Synovial stroma
+2018DiamondCNO-254_C1	50_38	50	38	Infiltrate;Synovial stroma
+2018DiamondCNO-254_C1	26_22	26	22	Synovial stroma
+2018DiamondCNO-254_C1	40_32	40	32	Synovial stroma
+2018DiamondCNO-254_C1	40_14	40	14	Unknown
+2018DiamondCNO-254_C1	29_29	29	29	Synovial cell hyperplasia
+2018DiamondCNO-254_C1	47_25	47	25	Synovial stroma
+2018DiamondCNO-254_C1	57_25	57	25	Infiltrate
+2018DiamondCNO-254_C1	35_17	35	17	Synovial stroma
+2018DiamondCNO-254_C1	43_25	43	25	Synovial stroma
+2018DiamondCNO-254_C1	52_44	52	44	Infiltrate;Synovial stroma
+2018DiamondCNO-254_C1	42_22	42	22	Infiltrate;Synovial stroma
+2018DiamondCNO-254_C1	26_12	26	12	Synovial stroma
+2018DiamondCNO-254_C1	13_43	13	43	Synovial stroma
+2018DiamondCNO-254_C1	56_26	56	26	Infiltrate;Synovial stroma
+2018DiamondCNO-254_C1	28_22	28	22	Synovial stroma
+2018DiamondCNO-254_C1	36_42	36	42	Synovial stroma
+2018DiamondCNO-254_C1	31_51	31	51	Unknown
+2018DiamondCNO-254_C1	42_36	42	36	Synovial stroma
+2018DiamondCNO-254_C1	21_39	21	39	Infiltrate;Synovial stroma
+2018DiamondCNO-254_C1	25_21	25	21	Infiltrate;Unknown
+2018DiamondCNO-254_C1	15_43	15	43	Synovial stroma
+2018DiamondCNO-254_C1	31_27	31	27	Synovial stroma
+2018DiamondCNO-254_C1	53_45	53	45	Synovial stroma
+2018DiamondCNO-254_C1	36_46	36	46	Synovial stroma
+2018DiamondCNO-254_C1	50_42	50	42	Infiltrate
+2018DiamondCNO-254_C1	18_26	18	26	Synovial cell hyperplasia
+2018DiamondCNO-254_C1	11_41	11	41	Synovial stroma
+2018DiamondCNO-254_C1	20_48	20	48	Synovial stroma
+2018DiamondCNO-254_C1	48_28	48	28	Infiltrate;Synovial stroma
+2018DiamondCNO-254_C1	16_40	16	40	Unknown
+2018DiamondCNO-254_C1	25_47	25	47	Synovial stroma
+2018DiamondCNO-254_C1	27_27	27	27	Synovial stroma
+2018DiamondCNO-254_C1	30_18	30	18	Synovial stroma
+2018DiamondCNO-254_C1	33_35	33	35	Infiltrate;Synovial stroma
+2018DiamondCNO-254_C1	28_12	28	12	Infiltrate;Synovial stroma
+2018DiamondCNO-254_C1	31_47	31	47	Infiltrate;Synovial stroma
+2018DiamondCNO-254_C1	23_15	23	15	Synovial stroma
+2018DiamondCNO-254_C1	49_33	49	33	Unknown
+2018DiamondCNO-254_C1	44_44	44	44	Infiltrate
+2018DiamondCNO-254_C1	38_46	38	46	Unknown
+2018DiamondCNO-254_C1	25_43	25	43	Infiltrate;Synovial stroma
+2018DiamondCNO-254_C1	52_34	52	34	Infiltrate;Synovial stroma
+2018DiamondCNO-254_C1	18_30	18	30	Synovial stroma
+2018DiamondCNO-254_C1	46_42	46	42	Synovial stroma
+2018DiamondCNO-254_C1	23_45	23	45	Synovial stroma
+2018DiamondCNO-254_C1	26_28	26	28	Synovial stroma
+2018DiamondCNO-254_C1	41_21	41	21	Synovial stroma
+2018DiamondCNO-254_C1	60_26	60	26	Infiltrate
+2018DiamondCNO-254_C1	35_27	35	27	Synovial stroma
+2018DiamondCNO-254_C1	21_33	21	33	Synovial stroma
+2018DiamondCNO-254_C1	25_37	25	37	Synovial stroma
+2018DiamondCNO-254_C1	55_27	55	27	Infiltrate
+2018DiamondCNO-254_C1	13_41	13	41	Synovial stroma
+2018DiamondCNO-254_C1	32_38	32	38	Infiltrate
+2018DiamondCNO-254_C1	42_34	42	34	Synovial stroma
+2018DiamondCNO-254_C1	55_39	55	39	Infiltrate;Synovial stroma
+2018DiamondCNO-254_C1	53_35	53	35	Synovial stroma
+2018DiamondCNO-254_C1	16_34	16	34	Synovial stroma
+2018DiamondCNO-254_C1	59_25	59	25	Infiltrate;Synovial stroma
+2018DiamondCNO-254_C1	42_44	42	44	Synovial stroma
+2018DiamondCNO-254_C1	54_46	54	46	Unknown
+2018DiamondCNO-254_C1	35_29	35	29	Synovial cell hyperplasia
+2018DiamondCNO-254_C1	45_23	45	23	Infiltrate
+2018DiamondCNO-254_C1	32_24	32	24	Synovial cell hyperplasia;Synovial stroma
+2018DiamondCNO-254_C1	35_31	35	31	Synovial cell hyperplasia
+2018DiamondCNO-254_C1	36_36	36	36	Synovial stroma
+2018DiamondCNO-254_C1	18_38	18	38	Synovial stroma
+2018DiamondCNO-254_C1	42_50	42	50	Unknown
+2018DiamondCNO-254_C1	21_21	21	21	Synovial stroma
+2018DiamondCNO-254_C1	37_25	37	25	Unknown
+2018DiamondCNO-254_C1	48_36	48	36	Synovial stroma
+2018DiamondCNO-254_C1	28_30	28	30	Synovial stroma
+2018DiamondCNO-254_C1	45_29	45	29	Synovial stroma
+2018DiamondCNO-254_C1	30_32	30	32	Infiltrate;Synovial stroma
+2018DiamondCNO-254_C1	51_23	51	23	Infiltrate
+2018DiamondCNO-254_C1	40_30	40	30	Synovial stroma
+2018DiamondCNO-254_C1	47_21	47	21	Infiltrate;Synovial stroma
+2018DiamondCNO-254_C1	45_37	45	37	Synovial stroma
+2018DiamondCNO-254_C1	20_30	20	30	Synovial stroma
+2018DiamondCNO-254_C1	45_45	45	45	Infiltrate
+2018DiamondCNO-254_C1	31_21	31	21	Synovial stroma
+2018DiamondCNO-254_C1	50_20	50	20	Unknown
+2018DiamondCNO-254_C1	23_23	23	23	Synovial cell hyperplasia
+2018DiamondCNO-254_C1	44_20	44	20	Infiltrate
+2018DiamondCNO-254_C1	14_40	14	40	Infiltrate;Synovial stroma
+2018DiamondCNO-254_C1	39_21	39	21	Infiltrate;Synovial stroma
+2018DiamondCNO-254_C1	21_49	21	49	Synovial stroma
+2018DiamondCNO-254_C1	29_39	29	39	Unknown
+2018DiamondCNO-254_C1	48_38	48	38	Unknown
+2018DiamondCNO-254_C1	42_32	42	32	Synovial stroma
+2018DiamondCNO-254_C1	51_27	51	27	Infiltrate
+2018DiamondCNO-254_C1	22_36	22	36	Infiltrate;Synovial stroma
+2018DiamondCNO-254_C1	61_27	61	27	Unknown
+2018DiamondCNO-254_C1	55_29	55	29	Infiltrate
+2018DiamondCNO-254_C1	46_24	46	24	Synovial stroma
+2018DiamondCNO-254_C1	30_42	30	42	Synovial stroma
+2018DiamondCNO-254_C1	49_37	49	37	Synovial stroma
+2018DiamondCNO-254_C1	24_28	24	28	Synovial stroma
+2018DiamondCNO-254_C1	48_18	48	18	Unknown
+2018DiamondCNO-254_C1	25_39	25	39	Infiltrate;Synovial stroma
+2018DiamondCNO-254_C1	41_15	41	15	Unknown
+2018DiamondCNO-254_C1	28_32	28	32	Synovial stroma
+2018DiamondCNO-254_C1	23_55	23	55	Unknown
+2018DiamondCNO-254_C1	31_29	31	29	Synovial stroma
+2018DiamondCNO-254_C1	34_40	34	40	Infiltrate
+2018DiamondCNO-254_C1	28_28	28	28	Synovial stroma
+2018DiamondCNO-254_C1	46_28	46	28	Synovial stroma
+2018DiamondCNO-254_C1	41_27	41	27	Synovial stroma
+2018DiamondCNO-254_C1	19_43	19	43	Synovial stroma
+2018DiamondCNO-254_C1	40_34	40	34	Synovial stroma
+2018DiamondCNO-254_C1	35_37	35	37	Synovial stroma
+2018DiamondCNO-254_C1	39_37	39	37	Synovial stroma
+2018DiamondCNO-254_C1	33_45	33	45	Synovial stroma
+2018DiamondCNO-254_C1	56_30	56	30	Synovial stroma
+2018DiamondCNO-254_C1	17_35	17	35	Synovial stroma
+2018DiamondCNO-254_C1	23_25	23	25	Synovial cell hyperplasia
+2018DiamondCNO-254_C1	54_34	54	34	Synovial stroma
+2018DiamondCNO-254_C1	55_23	55	23	Synovial stroma
+2018DiamondCNO-254_C1	22_28	22	28	Synovial cell hyperplasia
+2018DiamondCNO-254_C1	28_18	28	18	Synovial stroma
+2018DiamondCNO-254_C1	34_46	34	46	Infiltrate;Synovial stroma
+2018DiamondCNO-254_C1	35_51	35	51	Unknown
+2018DiamondCNO-254_C1	24_38	24	38	Synovial stroma
+2018DiamondCNO-254_C1	15_31	15	31	Infiltrate;Synovial stroma
+2018DiamondCNO-254_C1	23_17	23	17	Synovial stroma
+2018DiamondCNO-254_C1	49_43	49	43	Infiltrate;Synovial stroma
+2018DiamondCNO-254_C1	32_44	32	44	Infiltrate
+2018DiamondCNO-254_C1	51_43	51	43	Infiltrate
+2018DiamondCNO-254_C1	39_29	39	29	Synovial stroma
+2018DiamondCNO-254_C1	38_24	38	24	Unknown
+2018DiamondCNO-254_C1	54_30	54	30	Synovial stroma
+2018DiamondCNO-254_C1	19_29	19	29	Synovial stroma
+2018DiamondCNO-254_C1	46_40	46	40	Infiltrate;Synovial stroma
+2018DiamondCNO-254_C1	10_36	10	36	Synovial stroma
+2018DiamondCNO-254_C1	49_27	49	27	Synovial stroma
+2018DiamondCNO-254_C1	45_35	45	35	Infiltrate;Synovial stroma
+2018DiamondCNO-254_C1	27_37	27	37	Synovial stroma
+2018DiamondCNO-254_C1	46_48	46	48	Unknown
+2018DiamondCNO-254_C1	20_24	20	24	Synovial stroma
+2018DiamondCNO-254_C1	20_42	20	42	Infiltrate
+2018DiamondCNO-254_C1	49_39	49	39	Infiltrate
+2018DiamondCNO-254_C1	39_15	39	15	Infiltrate;Synovial stroma
+2018DiamondCNO-254_C1	22_46	22	46	Synovial stroma
+2018DiamondCNO-254_C1	20_54	20	54	Unknown
+2018DiamondCNO-254_C1	51_33	51	33	Infiltrate
+2018DiamondCNO-254_C1	24_34	24	34	Synovial stroma
+2018DiamondCNO-254_C1	56_44	56	44	Unknown
+2018DiamondCNO-254_C1	40_16	40	16	Synovial stroma
+2018DiamondCNO-254_C1	20_52	20	52	Unknown
+2018DiamondCNO-254_C1	38_40	38	40	Infiltrate
+2018DiamondCNO-254_C1	31_25	31	25	Synovial stroma
+2018DiamondCNO-254_C1	20_36	20	36	Synovial stroma
+2018DiamondCNO-254_C1	18_46	18	46	Synovial stroma
+2018DiamondCNO-254_C1	16_44	16	44	Infiltrate
+2018DiamondCNO-254_C1	19_45	19	45	Infiltrate;Synovial stroma
+2018DiamondCNO-254_C1	29_21	29	21	Synovial stroma
+2018DiamondCNO-254_C1	44_18	44	18	Infiltrate
+2018DiamondCNO-254_C1	25_13	25	13	Infiltrate
+2018DiamondCNO-254_C1	37_35	37	35	Infiltrate;Synovial stroma
+2018DiamondCNO-254_C1	36_26	36	26	Synovial stroma
+2018DiamondCNO-254_C1	26_18	26	18	Synovial stroma
+2018DiamondCNO-254_C1	50_34	50	34	Infiltrate;Synovial stroma
+2018DiamondCNO-254_C1	54_32	54	32	Synovial stroma
+2018DiamondCNO-254_C1	23_51	23	51	Synovial stroma
+2018DiamondCNO-254_C1	44_32	44	32	Synovial stroma
+2018DiamondCNO-254_C1	52_28	52	28	Infiltrate
+2018DiamondCNO-254_C1	57_33	57	33	Synovial stroma
+2018DiamondCNO-254_C1	29_31	29	31	Synovial stroma
+2018DiamondCNO-254_C1	23_21	23	21	Infiltrate
+2018DiamondCNO-254_C1	24_52	24	52	Synovial stroma
+2018DiamondCNO-254_C1	53_25	53	25	Synovial stroma
+2018DiamondCNO-254_C1	26_52	26	52	Synovial stroma
+2018DiamondCNO-254_C1	24_44	24	44	Infiltrate;Synovial stroma
+2018DiamondCNO-254_C1	32_12	32	12	Synovial stroma
+2018DiamondCNO-254_C1	38_32	38	32	Synovial stroma
+2018DiamondCNO-254_C1	33_43	33	43	Infiltrate
+2018DiamondCNO-254_C1	9_39	9	39	Unknown
+2018DiamondCNO-254_C1	27_45	27	45	Synovial stroma
+2018DiamondCNO-254_C1	51_25	51	25	Synovial stroma
+2018DiamondCNO-254_C1	14_46	14	46	Unknown
+2018DiamondCNO-254_C1	30_48	30	48	Infiltrate;Synovial stroma
+2018DiamondCNO-254_C1	30_26	30	26	Synovial cell hyperplasia
+2018DiamondCNO-254_C1	43_27	43	27	Synovial stroma
+2018DiamondCNO-254_C1	10_42	10	42	Unknown
+2018DiamondCNO-254_C1	33_25	33	25	Synovial stroma
+2018DiamondCNO-254_C1	59_27	59	27	Infiltrate
+2018DiamondCNO-254_C1	43_35	43	35	Synovial stroma
+2018DiamondCNO-254_C1	31_45	31	45	Synovial stroma
+2018DiamondCNO-254_C1	42_26	42	26	Synovial stroma
+2018DiamondCNO-254_C1	28_40	28	40	Unknown
+2018DiamondCNO-254_C1	34_38	34	38	Infiltrate;Synovial stroma
+2018DiamondCNO-254_C1	35_33	35	33	Synovial cell hyperplasia
+2018DiamondCNO-254_C1	25_25	25	25	Synovial cell hyperplasia
+2018DiamondCNO-254_C1	51_21	51	21	Unknown
+2018DiamondCNO-254_C1	32_32	32	32	Synovial stroma
+2018DiamondCNO-254_C1	40_50	40	50	Unknown
+2018DiamondCNO-254_C1	17_45	17	45	Synovial stroma
+2018DiamondCNO-254_C1	22_48	22	48	Infiltrate;Synovial stroma
+2018DiamondCNO-254_C1	25_53	25	53	Synovial stroma
+2018DiamondCNO-254_C1	24_18	24	18	Synovial stroma
+2018DiamondCNO-254_C1	28_48	28	48	Synovial stroma
+2018DiamondCNO-254_C1	19_47	19	47	Infiltrate;Synovial stroma
+2018DiamondCNO-254_C1	26_50	26	50	Synovial stroma
+2018DiamondCNO-254_C1	53_39	53	39	Infiltrate
+2018DiamondCNO-254_C1	41_43	41	43	Synovial stroma
+2018DiamondCNO-254_C1	41_19	41	19	Synovial stroma
+2018DiamondCNO-254_C1	16_30	16	30	Synovial stroma
+2018DiamondCNO-254_C1	42_48	42	48	Unknown
+2018DiamondCNO-254_C1	33_15	33	15	Synovial stroma
+2018DiamondCNO-254_C1	40_46	40	46	Synovial stroma
+2018DiamondCNO-254_C1	20_26	20	26	Synovial stroma
+2018DiamondCNO-254_C1	45_39	45	39	Synovial stroma
+2018DiamondCNO-254_C1	25_31	25	31	Synovial stroma
+2018DiamondCNO-254_C1	48_30	48	30	Unknown
+2018DiamondCNO-254_C1	54_40	54	40	Infiltrate
+2018DiamondCNO-254_C1	31_17	31	17	Infiltrate
+2018DiamondCNO-254_C1	34_26	34	26	Synovial stroma
+2018DiamondCNO-254_C1	40_40	40	40	Infiltrate;Synovial stroma
+2018DiamondCNO-254_C1	17_29	17	29	Synovial stroma
+2018DiamondCNO-254_C1	40_20	40	20	Synovial stroma
+2018DiamondCNO-254_C1	27_35	27	35	Synovial stroma
+2018DiamondCNO-254_C1	28_24	28	24	Synovial cell hyperplasia
+2018DiamondCNO-254_C1	32_18	32	18	Infiltrate
+2018DiamondCNO-254_C1	29_19	29	19	Synovial stroma
+2018DiamondCNO-254_C1	52_48	52	48	Infiltrate
+2018DiamondCNO-254_C1	25_17	25	17	Synovial stroma
+2018DiamondCNO-254_C1	17_37	17	37	Synovial stroma
+2018DiamondCNO-254_C1	31_13	31	13	Synovial stroma
+2018DiamondCNO-254_C1	35_13	35	13	Synovial stroma
+2018DiamondCNO-254_C1	48_20	48	20	Unknown
+2018DiamondCNO-254_C1	45_43	45	43	Synovial stroma
+2018DiamondCNO-254_C1	48_42	48	42	Infiltrate;Synovial stroma
+2018DiamondCNO-254_C1	57_21	57	21	Synovial stroma
+2018DiamondCNO-254_C1	12_40	12	40	Synovial stroma
+2018DiamondCNO-254_C1	40_18	40	18	Infiltrate;Synovial stroma
+2018DiamondCNO-254_C1	37_29	37	29	Synovial stroma
+2018DiamondCNO-254_C1	58_26	58	26	Infiltrate
+2018DiamondCNO-254_C1	19_39	19	39	Synovial stroma
+2018DiamondCNO-254_C1	50_28	50	28	Synovial stroma
+2018DiamondCNO-254_C1	39_49	39	49	Unknown
+2018DiamondCNO-254_C1	44_16	44	16	Unknown
+2018DiamondCNO-254_C1	40_42	40	42	Synovial stroma
+2018DiamondCNO-254_C1	41_47	41	47	Infiltrate;Synovial stroma
+2018DiamondCNO-254_C1	47_31	47	31	Unknown
+2018DiamondCNO-254_C1	42_38	42	38	Synovial stroma
+2018DiamondCNO-254_C1	40_48	40	48	Synovial stroma
+2018DiamondCNO-254_C1	30_30	30	30	Synovial cell hyperplasia
+2018DiamondCNO-254_C1	50_36	50	36	Infiltrate;Synovial stroma
+2018DiamondCNO-254_C1	33_39	33	39	Infiltrate;Synovial stroma
+2018DiamondCNO-254_C1	36_20	36	20	Synovial stroma
+2018DiamondCNO-254_C1	44_28	44	28	Synovial stroma
+2018DiamondCNO-254_C1	45_21	45	21	Synovial stroma
+2018DiamondCNO-254_C1	38_22	38	22	Synovial stroma
+2018DiamondCNO-254_C1	16_32	16	32	Synovial stroma
+2018DiamondCNO-254_C1	55_31	55	31	Infiltrate;Synovial stroma
+2018DiamondCNO-254_C1	26_42	26	42	Synovial stroma
+2018DiamondCNO-254_C1	28_10	28	10	Unknown
+2018DiamondCNO-254_C1	19_21	19	21	Unknown
+2018DiamondCNO-254_C1	49_25	49	25	Infiltrate
+2018DiamondCNO-254_C1	39_17	39	17	Infiltrate;Synovial stroma
+2018DiamondCNO-254_C1	48_22	48	22	Synovial stroma
+2018DiamondCNO-254_C1	52_24	52	24	Synovial stroma
+2018DiamondCNO-254_C1	22_42	22	42	Synovial stroma
+2018DiamondCNO-254_C1	26_38	26	38	Synovial stroma
+2018DiamondCNO-254_C1	32_34	32	34	Synovial stroma
+2018DiamondCNO-254_C1	43_19	43	19	Infiltrate
+2018DiamondCNO-254_C1	32_46	32	46	Infiltrate;Synovial stroma
+2018DiamondCNO-254_C1	14_32	14	32	Infiltrate;Synovial stroma
+2018DiamondCNO-254_C1	50_32	50	32	Unknown
+2018DiamondCNO-254_C1	46_36	46	36	Infiltrate;Synovial stroma
+2018DiamondCNO-254_C1	11_37	11	37	Synovial stroma
+2018DiamondCNO-254_C1	37_47	37	47	Unknown
+2018DiamondCNO-254_C1	22_54	22	54	Synovial stroma
+2018DiamondCNO-254_C1	55_43	55	43	Infiltrate
+2018DiamondCNO-254_C1	21_35	21	35	Synovial stroma
+2018DiamondCNO-254_C1	20_50	20	50	Unknown
+2018DiamondCNO-254_C1	25_11	25	11	Unknown
+2018DiamondCNO-254_C1	48_48	48	48	Unknown
+2018DiamondCNO-254_C1	26_36	26	36	Synovial stroma
+2018DiamondCNO-254_C1	21_19	21	19	Synovial stroma
+2018DiamondCNO-254_C1	21_17	21	17	Synovial stroma
+2018DiamondCNO-254_C1	27_19	27	19	Synovial stroma
+2018DiamondCNO-254_C1	23_35	23	35	Infiltrate;Synovial stroma
+2018DiamondCNO-254_C1	51_47	51	47	Infiltrate
+2018DiamondCNO-254_C1	29_43	29	43	Synovial stroma
+2018DiamondCNO-254_C1	23_47	23	47	Synovial stroma
+2018DiamondCNO-254_C1	20_46	20	46	Synovial stroma
+2018DiamondCNO-254_C1	21_45	21	45	Synovial stroma
+2018DiamondCNO-254_C1	49_19	49	19	Unknown
+2018DiamondCNO-254_C1	15_29	15	29	Synovial stroma
+2018DiamondCNO-254_C1	27_29	27	29	Synovial stroma
+2018DiamondCNO-254_C1	47_49	47	49	Unknown
+2018DiamondCNO-254_C1	8_40	8	40	Unknown
+2018DiamondCNO-254_C1	50_26	50	26	Synovial stroma
+2018DiamondCNO-254_C1	33_51	33	51	Unknown
+2018DiamondCNO-254_C1	25_23	25	23	Synovial cell hyperplasia
+2018DiamondCNO-254_C1	52_46	52	46	Synovial stroma
+2018DiamondCNO-254_C1	34_32	34	32	Synovial cell hyperplasia
+2018DiamondCNO-254_C1	37_49	37	49	Synovial stroma
+2018DiamondCNO-254_C1	55_21	55	21	Synovial stroma
+2018DiamondCNO-254_C1	24_26	24	26	Synovial cell hyperplasia
+2018DiamondCNO-254_C1	52_22	52	22	Infiltrate;Synovial stroma
+2018DiamondCNO-254_C1	43_21	43	21	Synovial stroma
+2018DiamondCNO-254_C1	38_44	38	44	Synovial stroma
+2018DiamondCNO-254_C1	39_23	39	23	Synovial stroma
+2018DiamondCNO-254_C1	57_23	57	23	Infiltrate
+2018DiamondCNO-254_C1	43_37	43	37	Infiltrate;Synovial stroma
+2018DiamondCNO-254_C1	25_27	25	27	Synovial stroma
+2018DiamondCNO-254_C1	19_25	19	25	Synovial stroma
+2018DiamondCNO-254_C1	30_10	30	10	Unknown
+2018DiamondCNO-254_C1	53_29	53	29	Synovial stroma
+2018DiamondCNO-254_C1	53_23	53	23	Synovial stroma
+2018DiamondCNO-254_C1	25_45	25	45	Infiltrate;Synovial stroma
+2018DiamondCNO-254_C1	40_28	40	28	Synovial stroma
+2018DiamondCNO-254_C1	45_25	45	25	Synovial stroma
+2018DiamondCNO-254_C1	42_18	42	18	Unknown
+2018DiamondCNO-254_C1	41_29	41	29	Synovial stroma
+2018DiamondCNO-254_C1	44_36	44	36	Infiltrate
+2018DiamondCNO-254_C1	27_17	27	17	Synovial stroma
+2018DiamondCNO-254_C1	26_14	26	14	Infiltrate
+2018DiamondCNO-254_C1	28_34	28	34	Infiltrate
+2018DiamondCNO-254_C1	44_42	44	42	Synovial stroma
+2018DiamondCNO-254_C1	47_41	47	41	Infiltrate;Synovial stroma
+2018DiamondCNO-254_C1	39_25	39	25	Synovial stroma
+2018DiamondCNO-254_C1	60_28	60	28	Infiltrate
+2018DiamondCNO-254_C1	42_28	42	28	Synovial stroma
+2018DiamondCNO-254_C1	27_43	27	43	Synovial stroma
+2018DiamondCNO-254_C1	46_22	46	22	Synovial stroma
+2018DiamondCNO-254_C1	13_33	13	33	Synovial stroma
+2018DiamondCNO-254_C1	26_54	26	54	Unknown
+2018DiamondCNO-254_C1	29_11	29	11	Synovial stroma
+2018DiamondCNO-254_C1	36_12	36	12	Synovial stroma
+2018DiamondCNO-254_C1	35_23	35	23	Synovial stroma
+2018DiamondCNO-254_C1	41_31	41	31	Synovial stroma
+2018DiamondCNO-254_C1	24_30	24	30	Synovial stroma
+2018DiamondCNO-254_C1	15_33	15	33	Infiltrate;Synovial stroma
+2018DiamondCNO-254_C1	35_47	35	47	Infiltrate;Synovial stroma
+2018DiamondCNO-254_C1	32_30	32	30	Synovial cell hyperplasia
+2018DiamondCNO-254_C1	38_48	38	48	Infiltrate
+2018DiamondCNO-254_C1	21_55	21	55	Unknown
+2018DiamondCNO-254_C1	23_27	23	27	Synovial stroma
+2018DiamondCNO-254_C1	52_20	52	20	Unknown
+2018DiamondCNO-254_C1	48_34	48	34	Synovial stroma
+2018DiamondCNO-254_C1	24_20	24	20	Infiltrate
+2018DiamondCNO-254_C1	31_15	31	15	Synovial stroma
+2018DiamondCNO-254_C1	25_51	25	51	Synovial stroma
+2018DiamondCNO-254_C1	33_41	33	41	Infiltrate
+2018DiamondCNO-254_C1	21_53	21	53	Synovial stroma
+2018DiamondCNO-254_C1	37_51	37	51	Unknown
+2018DiamondCNO-254_C1	49_35	49	35	Infiltrate
+2018DiamondCNO-254_C1	23_53	23	53	Synovial stroma
+2018DiamondCNO-254_C1	50_44	50	44	Synovial stroma
+2018DiamondCNO-254_C1	34_44	34	44	Infiltrate;Synovial stroma
+2018DiamondCNO-254_C1	25_33	25	33	Infiltrate;Synovial stroma
+2018DiamondCNO-254_C1	37_17	37	17	Synovial stroma
+2018DiamondCNO-254_C1	27_21	27	21	Infiltrate;Unknown
+2018DiamondCNO-254_C1	33_31	33	31	Synovial cell hyperplasia
+2018DiamondCNO-254_C1	27_41	27	41	Synovial stroma
+2018DiamondCNO-254_C1	38_50	38	50	Unknown
+2018DiamondCNO-254_C1	16_42	16	42	Synovial stroma
+2018DiamondCNO-254_C1	19_33	19	33	Synovial stroma
+2018DiamondCNO-254_C1	17_33	17	33	Infiltrate
+2018DiamondCNO-254_C1	40_26	40	26	Infiltrate;Synovial stroma
+2018DiamondCNO-254_C1	36_48	36	48	Unknown
+2018DiamondCNO-254_C1	35_49	35	49	Synovial stroma
+2018DiamondCNO-254_C1	33_17	33	17	Infiltrate;Synovial stroma
+2018DiamondCNO-254_C1	31_35	31	35	Synovial stroma
+2018DiamondCNO-254_C1	38_18	38	18	Synovial stroma
+2018DiamondCNO-254_C1	53_33	53	33	Synovial stroma
