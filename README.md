@@ -2,7 +2,7 @@
 
 This is a public repository for all code connected to 3D spatial transcriptomics analysis in the rheumatoid arthitis synovium. 
 
-Please cite: Vickovic et al. Multidimensional transcriptomics uncovers spatial dynamics in the rheumatoid arthritis synovium. bioRxiv. 
+Please cite: Vickovic et al. Three dimensional transcriptomics uncovers spatial dynamics in the rheumatoid arthritis synovium. bioRxiv. 
 
 
 # Tech workflow
