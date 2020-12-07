@@ -9,9 +9,9 @@ Please cite: Vickovic et al. Three dimensional transcriptomics uncovers spatial 
 ![github-small](https://github.com/klarman-cell-observatory/3dst/blob/master/workflow.png)
 
 # File Structure Overview
-All processed files are available at: https://portals.broadinstitute.org/single_cell/study/SCP460
+All processed files are available at: https://singlecell.broadinstitute.org/single_cell/study/SCP460
 
-![github-small](https://github.com/broadinstitute/hdst/blob/master/files.png)
+![github-small](https://github.com/klarman-cell-observatory/3dst/blob/master/files.png)
 
 We recommed using the `Bulk Download` function and to consult the file descriptions as mentioned bellow. 
 
