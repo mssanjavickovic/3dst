@@ -1,0 +1,307 @@
+image	x_y	x	y	value
+RA1_2	7_23	7	23	Infiltrate
+RA1_2	24_18	24	18	Collagenous/Adipose tissue;Synovial stroma
+RA1_2	20_19	20	19	Collagenous/Adipose tissue;Synovial stroma
+RA1_2	7_22	7	22	Infiltrate;Synovial stroma
+RA1_2	24_11	24	11	Synovial stroma
+RA1_2	25_20	25	20	Infiltrate;Synovial stroma
+RA1_2	28_19	28	19	Collagenous/Adipose tissue;Synovial stroma
+RA1_2	22_14	22	14	Synovial stroma
+RA1_2	10_25	10	25	Synovial stroma
+RA1_2	18_17	18	17	Infiltrate
+RA1_2	24_16	24	16	Synovial stroma
+RA1_2	20_28	20	28	Synovial stroma
+RA1_2	13_14	13	14	Collagenous/Adipose tissue
+RA1_2	12_19	12	19	Synovial stroma
+RA1_2	9_19	9	19	Synovial stroma
+RA1_2	29_19	29	19	Synovial stroma
+RA1_2	7_19	7	19	Synovial stroma
+RA1_2	29_20	29	20	Synovial stroma
+RA1_2	22_12	22	12	Infiltrate;Synovial stroma
+RA1_2	21_14	21	14	Collagenous/Adipose tissue;Synovial stroma
+RA1_2	23_24	23	24	Synovial stroma
+RA1_2	9_23	9	23	Infiltrate
+RA1_2	27_16	27	16	Synovial stroma
+RA1_2	20_12	20	12	Collagenous/Adipose tissue;Synovial stroma
+RA1_2	16_28	16	28	Synovial stroma
+RA1_2	11_26	11	26	Infiltrate
+RA1_2	18_20	18	20	Synovial stroma
+RA1_2	8_18	8	18	Synovial stroma
+RA1_2	28_21	28	21	Synovial stroma
+RA1_2	17_18	17	18	Collagenous/Adipose tissue;Synovial stroma
+RA1_2	27_18	27	18	Synovial stroma
+RA1_2	15_23	15	23	Synovial stroma
+RA1_2	19_22	19	22	Synovial stroma
+RA1_2	13_19	13	19	Synovial stroma
+RA1_2	18_26	18	26	Synovial stroma
+RA1_2	27_15	27	15	Infiltrate
+RA1_2	25_15	25	15	Synovial stroma
+RA1_2	20_11	20	11	Synovial stroma
+RA1_2	23_15	23	15	Collagenous/Adipose tissue;Synovial stroma
+RA1_2	16_25	16	25	Collagenous/Adipose tissue;Synovial stroma
+RA1_2	25_25	25	25	Infiltrate
+RA1_2	17_16	17	16	Collagenous/Adipose tissue;Synovial stroma
+RA1_2	25_19	25	19	Infiltrate;Synovial stroma
+RA1_2	9_17	9	17	Synovial stroma
+RA1_2	8_22	8	22	Infiltrate;Synovial stroma
+RA1_2	8_21	8	21	Synovial stroma
+RA1_2	13_22	13	22	Synovial stroma
+RA1_2	17_20	17	20	Collagenous/Adipose tissue;Synovial stroma
+RA1_2	11_24	11	24	Synovial stroma
+RA1_2	21_22	21	22	Infiltrate;Synovial stroma
+RA1_2	23_9	23	9	Synovial stroma
+RA1_2	21_13	21	13	Synovial stroma
+RA1_2	25_26	25	26	Infiltrate;Synovial stroma
+RA1_2	13_18	13	18	Synovial stroma
+RA1_2	24_12	24	12	Synovial stroma
+RA1_2	25_13	25	13	Synovial stroma
+RA1_2	12_17	12	17	Synovial stroma
+RA1_2	26_22	26	22	Synovial stroma
+RA1_2	25_23	25	23	Synovial stroma
+RA1_2	19_28	19	28	Synovial stroma
+RA1_2	21_21	21	21	Collagenous/Adipose tissue;Synovial stroma
+RA1_2	26_23	26	23	Infiltrate;Synovial stroma
+RA1_2	21_27	21	27	Synovial stroma
+RA1_2	16_18	16	18	Collagenous/Adipose tissue;Synovial stroma
+RA1_2	12_15	12	15	Collagenous/Adipose tissue;Synovial stroma
+RA1_2	10_19	10	19	Synovial stroma
+RA1_2	19_20	19	20	Synovial stroma
+RA1_2	11_18	11	18	Synovial stroma
+RA1_2	18_16	18	16	Collagenous/Adipose tissue;Synovial stroma
+RA1_2	6_19	6	19	Synovial stroma
+RA1_2	13_15	13	15	Collagenous/Adipose tissue;Synovial stroma
+RA1_2	26_14	26	14	Infiltrate;Synovial stroma
+RA1_2	22_20	22	20	Collagenous/Adipose tissue;Synovial stroma
+RA1_2	18_23	18	23	Synovial stroma
+RA1_2	17_24	17	24	Synovial stroma
+RA1_2	11_25	11	25	Synovial stroma
+RA1_2	8_24	8	24	Infiltrate
+RA1_2	24_13	24	13	Synovial stroma
+RA1_2	14_19	14	19	Synovial stroma
+RA1_2	12_24	12	24	Collagenous/Adipose tissue;Synovial stroma
+RA1_2	20_29	20	29	Synovial stroma
+RA1_2	19_29	19	29	Synovial stroma
+RA1_2	22_21	22	21	Collagenous/Adipose tissue;Synovial stroma
+RA1_2	10_22	10	22	Infiltrate;Synovial stroma
+RA1_2	21_25	21	25	Infiltrate;Synovial stroma
+RA1_2	16_21	16	21	Synovial stroma
+RA1_2	13_21	13	21	Synovial stroma
+RA1_2	12_20	12	20	Synovial stroma
+RA1_2	20_18	20	18	Collagenous/Adipose tissue
+RA1_2	15_29	15	29	Synovial stroma
+RA1_2	10_17	10	17	Synovial stroma
+RA1_2	22_10	22	10	Infiltrate
+RA1_2	13_27	13	27	Collagenous/Adipose tissue;Synovial stroma
+RA1_2	26_15	26	15	Infiltrate
+RA1_2	16_14	16	14	Synovial stroma
+RA1_2	20_27	20	27	Synovial stroma
+RA1_2	14_16	14	16	Synovial stroma
+RA1_2	19_11	19	11	Synovial stroma
+RA1_2	25_24	25	24	Synovial stroma
+RA1_2	20_23	20	23	Synovial stroma
+RA1_2	27_22	27	22	Infiltrate;Synovial stroma
+RA1_2	28_20	28	20	Collagenous/Adipose tissue;Synovial stroma
+RA1_2	15_15	15	15	Collagenous/Adipose tissue;Synovial stroma
+RA1_2	24_20	24	20	Collagenous/Adipose tissue;Synovial stroma
+RA1_2	12_22	12	22	Synovial stroma
+RA1_2	23_23	23	23	Infiltrate;Synovial stroma
+RA1_2	22_11	22	11	Infiltrate;Synovial stroma
+RA1_2	24_23	24	23	Collagenous/Adipose tissue;Synovial stroma
+RA1_2	17_22	17	22	Synovial stroma
+RA1_2	9_22	9	22	Synovial stroma
+RA1_2	9_16	9	16	Synovial stroma
+RA1_2	21_11	21	11	Infiltrate;Synovial stroma
+RA1_2	17_23	17	23	Synovial stroma
+RA1_2	15_16	15	16	Collagenous/Adipose tissue;Synovial stroma
+RA1_2	21_26	21	26	Synovial stroma
+RA1_2	23_20	23	20	Collagenous/Adipose tissue;Synovial stroma
+RA1_2	23_25	23	25	Synovial stroma
+RA1_2	18_21	18	21	Synovial stroma
+RA1_2	7_20	7	20	Infiltrate
+RA1_2	12_21	12	21	Synovial stroma
+RA1_2	15_21	15	21	Synovial stroma
+RA1_2	14_26	14	26	Collagenous/Adipose tissue;Synovial stroma
+RA1_2	25_18	25	18	Infiltrate
+RA1_2	14_20	14	20	Synovial stroma
+RA1_2	28_17	28	17	Synovial stroma
+RA1_2	19_17	19	17	Collagenous/Adipose tissue
+RA1_2	24_17	24	17	Synovial stroma
+RA1_2	15_17	15	17	Collagenous/Adipose tissue;Synovial stroma
+RA1_2	25_12	25	12	Synovial stroma
+RA1_2	9_18	9	18	Synovial stroma
+RA1_2	26_20	26	20	Synovial stroma
+RA1_2	22_25	22	25	Synovial stroma
+RA1_2	9_24	9	24	Infiltrate
+RA1_2	9_25	9	25	Synovial stroma
+RA1_2	18_22	18	22	Synovial stroma
+RA1_2	19_24	19	24	Synovial stroma
+RA1_2	17_14	17	14	Synovial stroma
+RA1_2	20_20	20	20	Synovial stroma
+RA1_2	22_23	22	23	Synovial stroma
+RA1_2	10_23	10	23	Synovial stroma
+RA1_2	15_25	15	25	Collagenous/Adipose tissue;Synovial stroma
+RA1_2	18_13	18	13	Collagenous/Adipose tissue
+RA1_2	23_13	23	13	Synovial stroma
+RA1_2	23_10	23	10	Infiltrate
+RA1_2	8_17	8	17	Synovial stroma
+RA1_2	18_15	18	15	Collagenous/Adipose tissue;Synovial stroma
+RA1_2	18_14	18	14	Collagenous/Adipose tissue;Synovial stroma
+RA1_2	20_17	20	17	Collagenous/Adipose tissue
+RA1_2	10_16	10	16	Synovial stroma
+RA1_2	13_20	13	20	Synovial stroma
+RA1_2	26_25	26	25	Synovial stroma
+RA1_2	26_16	26	16	Synovial stroma
+RA1_2	9_20	9	20	Synovial stroma
+RA1_2	11_19	11	19	Synovial stroma
+RA1_2	13_17	13	17	Synovial stroma
+RA1_2	6_22	6	22	Synovial stroma
+RA1_2	17_15	17	15	Collagenous/Adipose tissue;Synovial stroma
+RA1_2	10_20	10	20	Synovial stroma
+RA1_2	18_19	18	19	Collagenous/Adipose tissue;Synovial stroma
+RA1_2	11_15	11	15	Collagenous/Adipose tissue;Synovial stroma
+RA1_2	23_16	23	16	Collagenous/Adipose tissue
+RA1_2	25_22	25	22	Synovial stroma
+RA1_2	23_21	23	21	Collagenous/Adipose tissue;Synovial stroma
+RA1_2	6_21	6	21	Synovial stroma
+RA1_2	14_17	14	17	Synovial stroma
+RA1_2	14_28	14	28	Collagenous/Adipose tissue;Synovial stroma
+RA1_2	27_21	27	21	Synovial stroma
+RA1_2	6_17	6	17	Synovial stroma
+RA1_2	10_18	10	18	Synovial stroma
+RA1_2	19_19	19	19	Collagenous/Adipose tissue;Synovial stroma
+RA1_2	22_16	22	16	Collagenous/Adipose tissue
+RA1_2	21_24	21	24	Synovial stroma
+RA1_2	11_17	11	17	Synovial stroma
+RA1_2	21_10	21	10	Infiltrate
+RA1_2	11_21	11	21	Infiltrate;Synovial stroma
+RA1_2	18_28	18	28	Infiltrate;Synovial stroma
+RA1_2	17_13	17	13	Collagenous/Adipose tissue;Synovial stroma
+RA1_2	28_22	28	22	Synovial stroma
+RA1_2	20_24	20	24	Synovial stroma
+RA1_2	13_28	13	28	Collagenous/Adipose tissue;Synovial stroma
+RA1_2	17_21	17	21	Synovial stroma
+RA1_2	19_26	19	26	Infiltrate;Synovial stroma
+RA1_2	26_18	26	18	Infiltrate
+RA1_2	9_26	9	26	Synovial stroma
+RA1_2	14_14	14	14	Collagenous/Adipose tissue;Synovial stroma
+RA1_2	6_18	6	18	Synovial stroma
+RA1_2	17_17	17	17	Collagenous/Adipose tissue;Synovial stroma
+RA1_2	26_19	26	19	Infiltrate
+RA1_2	12_23	12	23	Synovial stroma
+RA1_2	14_21	14	21	Synovial stroma
+RA1_2	17_12	17	12	Collagenous/Adipose tissue;Synovial stroma
+RA1_2	6_20	6	20	Synovial stroma
+RA1_2	10_21	10	21	Infiltrate;Synovial stroma
+RA1_2	13_23	13	23	Collagenous/Adipose tissue;Synovial stroma
+RA1_2	17_29	17	29	Synovial stroma
+RA1_2	20_25	20	25	Synovial stroma
+RA1_2	12_14	12	14	Collagenous/Adipose tissue;Synovial stroma
+RA1_2	28_23	28	23	Synovial stroma
+RA1_2	24_19	24	19	Collagenous/Adipose tissue;Synovial stroma
+RA1_2	15_18	15	18	Collagenous/Adipose tissue;Synovial stroma
+RA1_2	15_19	15	19	Synovial stroma
+RA1_2	21_16	21	16	Collagenous/Adipose tissue;Synovial stroma
+RA1_2	10_26	10	26	Infiltrate
+RA1_2	27_20	27	20	Synovial stroma
+RA1_2	5_19	5	19	Synovial stroma
+RA1_2	18_11	18	11	Synovial stroma
+RA1_2	24_10	24	10	Infiltrate
+RA1_2	25_17	25	17	Infiltrate;Synovial stroma
+RA1_2	25_16	25	16	Infiltrate;Synovial stroma
+RA1_2	22_24	22	24	Synovial stroma
+RA1_2	24_14	24	14	Collagenous/Adipose tissue;Synovial stroma
+RA1_2	7_24	7	24	Infiltrate
+RA1_2	18_12	18	12	Collagenous/Adipose tissue;Synovial stroma
+RA1_2	22_22	22	22	Infiltrate
+RA1_2	19_25	19	25	Synovial stroma
+RA1_2	16_27	16	27	Synovial stroma
+RA1_2	17_27	17	27	Infiltrate
+RA1_2	20_22	20	22	Synovial stroma
+RA1_2	8_23	8	23	Infiltrate
+RA1_2	15_22	15	22	Synovial stroma
+RA1_2	14_18	14	18	Synovial stroma
+RA1_2	7_17	7	17	Synovial stroma
+RA1_2	12_18	12	18	Synovial stroma
+RA1_2	24_15	24	15	Synovial stroma
+RA1_2	11_23	11	23	Infiltrate;Synovial stroma
+RA1_2	26_17	26	17	Infiltrate;Synovial stroma
+RA1_2	11_20	11	20	Synovial stroma
+RA1_2	23_11	23	11	Synovial stroma
+RA1_2	24_25	24	25	Infiltrate
+RA1_2	18_24	18	24	Synovial stroma
+RA1_2	16_17	16	17	Collagenous/Adipose tissue;Synovial stroma
+RA1_2	19_27	19	27	Synovial stroma
+RA1_2	14_29	14	29	Synovial stroma
+RA1_2	10_24	10	24	Synovial stroma
+RA1_2	22_9	22	9	Synovial stroma
+RA1_2	24_21	24	21	Collagenous/Adipose tissue;Synovial stroma
+RA1_2	24_26	24	26	Synovial stroma
+RA1_2	27_19	27	19	Synovial stroma
+RA1_2	16_26	16	26	Collagenous/Adipose tissue;Synovial stroma
+RA1_2	19_21	19	21	Synovial stroma
+RA1_2	27_23	27	23	Infiltrate;Synovial stroma
+RA1_2	14_15	14	15	Synovial stroma
+RA1_2	8_16	8	16	Synovial stroma
+RA1_2	8_20	8	20	Synovial stroma
+RA1_2	23_14	23	14	Synovial stroma
+RA1_2	16_16	16	16	Collagenous/Adipose tissue;Synovial stroma
+RA1_2	19_14	19	14	Collagenous/Adipose tissue
+RA1_2	12_28	12	28	Collagenous/Adipose tissue;Synovial stroma
+RA1_2	16_23	16	23	Synovial stroma
+RA1_2	18_29	18	29	Synovial stroma
+RA1_2	10_15	10	15	Synovial stroma
+RA1_2	9_21	9	21	Synovial stroma
+RA1_2	24_22	24	22	Collagenous/Adipose tissue;Synovial stroma
+RA1_2	20_21	20	21	Synovial stroma
+RA1_2	13_16	13	16	Synovial stroma
+RA1_2	14_23	14	23	Synovial stroma
+RA1_2	12_26	12	26	Collagenous/Adipose tissue;Synovial stroma
+RA1_2	21_19	21	19	Collagenous/Adipose tissue
+RA1_2	15_20	15	20	Synovial stroma
+RA1_2	25_14	25	14	Collagenous/Adipose tissue;Synovial stroma
+RA1_2	27_24	27	24	Synovial stroma
+RA1_2	5_18	5	18	Synovial stroma
+RA1_2	21_23	21	23	Infiltrate;Synovial stroma
+RA1_2	24_24	24	24	Infiltrate;Synovial stroma
+RA1_2	17_19	17	19	Collagenous/Adipose tissue;Synovial stroma
+RA1_2	22_13	22	13	Synovial stroma
+RA1_2	23_12	23	12	Synovial stroma
+RA1_2	26_21	26	21	Synovial stroma
+RA1_2	14_22	14	22	Synovial stroma
+RA1_2	17_25	17	25	Synovial stroma
+RA1_2	16_19	16	19	Collagenous/Adipose tissue;Synovial stroma
+RA1_2	15_28	15	28	Collagenous/Adipose tissue;Synovial stroma
+RA1_2	23_22	23	22	Infiltrate
+RA1_2	19_12	19	12	Collagenous/Adipose tissue;Synovial stroma
+RA1_2	22_15	22	15	Collagenous/Adipose tissue;Synovial stroma
+RA1_2	16_24	16	24	Synovial stroma
+RA1_2	8_19	8	19	Synovial stroma
+RA1_2	7_21	7	21	Synovial stroma
+RA1_2	18_25	18	25	Synovial stroma
+RA1_2	18_27	18	27	Synovial stroma
+RA1_2	21_20	21	20	Collagenous/Adipose tissue;Synovial stroma
+RA1_2	6_23	6	23	Infiltrate;Synovial stroma
+RA1_2	16_12	16	12	Collagenous/Adipose tissue;Synovial stroma
+RA1_2	18_18	18	18	Collagenous/Adipose tissue
+RA1_2	20_10	20	10	Synovial stroma
+RA1_2	21_12	21	12	Infiltrate;Synovial stroma
+RA1_2	16_15	16	15	Synovial stroma
+RA1_2	26_24	26	24	Infiltrate;Synovial stroma
+RA1_2	13_24	13	24	Collagenous/Adipose tissue;Synovial stroma
+RA1_2	15_24	15	24	Synovial stroma
+RA1_2	11_16	11	16	Synovial stroma
+RA1_2	16_22	16	22	Synovial stroma
+RA1_2	16_20	16	20	Collagenous/Adipose tissue;Synovial stroma
+RA1_2	19_30	19	30	Synovial stroma
+RA1_2	8_25	8	25	Synovial stroma
+RA1_2	17_28	17	28	Synovial stroma
+RA1_2	17_26	17	26	Infiltrate
+RA1_2	25_21	25	21	Synovial stroma
+RA1_2	11_22	11	22	Infiltrate
+RA1_2	20_26	20	26	Infiltrate
+RA1_2	27_25	27	25	Synovial stroma
+RA1_2	19_18	19	18	Collagenous/Adipose tissue
+RA1_2	12_16	12	16	Synovial stroma
+RA1_2	7_18	7	18	Synovial stroma
+RA1_2	19_23	19	23	Synovial stroma
+RA1_2	27_17	27	17	Synovial stroma

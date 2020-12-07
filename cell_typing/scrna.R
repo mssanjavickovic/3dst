@@ -9,6 +9,9 @@ suppressMessages(suppressWarnings(library(stringr,warn.conflicts = F, quietly = 
 suppressMessages(suppressWarnings(library(ggplot2,warn.conflicts = F, quietly = T)))
 suppressMessages(suppressWarnings(library(RColorBrewer,warn.conflicts = F, quietly = T)))
 suppressMessages(suppressWarnings(library(cowplot,warn.conflicts = F, quietly = T)))
+suppressMessages(suppressWarnings(library(reshape2,warn.conflicts = F, quietly = T)))
+suppressMessages(suppressWarnings(library(dplyr,warn.conflicts = F, quietly = T)))
+
 
 # setwd("/Users/svickovi/Library/Mobile Documents/com~apple~CloudDocs/Desktop/morphoSPOT/3dst_repo/3dst/cell_typing")
 setwd("/Users/sanjavickovic/Desktop/morphoSPOT/3dst_repo/3dst/cell_typing")
@@ -18,7 +21,7 @@ rm(list = ls())
 
 # Run sc imputation for ex. RA1 samples
 # Which samples do you want to use? 
-norm_samples = "RA1"
+norm_samples = "RA5"
 
 # Where are you norm expression R files located? 
 path_samples = "../data/"
@@ -170,18 +173,18 @@ for (i in 1:length(files_norm)){
 }
 
 # Plot spatial heatmaps per cell type
-# setwd(path_output)
-for (i in row.names(mf1)){
-  # Plot spatial spots
-  ## (un)comment for specific samples ex. use only plot.gene.2d.4 for RA1
-  if (norm_samples == 'RA1') plot.gene.2d.4("RA1_scRNAseq",i, mn1, mn2, mn3, mn4, s1, s2, s3, s4, con = T, x=40, y=20, transparency=1, min=min(mf1), max=max(mf1)) # for RA1
-  if (norm_samples == 'RA2') plot.gene.2d.7("RA2_scRNAseq",i, mn1, mn2, mn3, mn4, mn5, mn6, mn7, s1, s2, s3, s4, s5, s6, s7, con = T, x=40, y=20, transparency=1, min=min(mf1), max=max(mf1)) # for RA2
-  #if (norm_samples == 'RA2') plot.gene.3d.7("RA2_scRNAseq",i, mn1, mn2, mn3, mn4, mn5, mn6, mn7, s1, s2, s3, s4, s5, s6, s7, x=40, y=20, transparency=0.1, min=min(mf1), max=max(mf1)) # for RA2
-  if (norm_samples == 'RA3') plot.gene.2d.4("RA3_scRNAseq",i, mn1, mn2, mn3, mn4, s1, s2, s3, s4, con = T, x=40, y=40, transparency=1, min=min(mf1), max=max(mf1)) # for RA3
-  if (norm_samples == 'RA4') plot.gene.2d.5("RA4_scRNAseq",i, mn1, mn2, mn3, mn4, mn5, s1, s2, s3, s4, s5, con = T, x=40, y=40, transparency=1, min=min(mf1), max=max(mf1)) # for RA4
-  # if (norm_samples == 'RA5') plot.gene.3d.4("RA5_scRNAseq",i, mn1, mn2, mn3, mn4, s1, s2, s3, s4, x=80, y=60, transparency=0.2, min=min(mf1), max=max(mf1)) # for RA5
-  if (norm_samples == 'RA5') plot.gene.2d.3("RA5_scRNAseq",i, mn1, mn2, mn3, s1, s2, s3, con = T, x=80, y=80, transparency=1, min=min(mf1), max=max(mf1)) # for RA5
-}
+# # setwd(path_output)
+# for (i in row.names(mf1)){
+#   # Plot spatial spots
+#   ## (un)comment for specific samples ex. use only plot.gene.2d.4 for RA1
+#   if (norm_samples == 'RA1') plot.gene.2d.4("RA1_scRNAseq",i, mn1, mn2, mn3, mn4, s1, s2, s3, s4, con = T, x=40, y=20, transparency=1, min=min(mf1), max=max(mf1)) # for RA1
+#   if (norm_samples == 'RA2') plot.gene.2d.7("RA2_scRNAseq",i, mn1, mn2, mn3, mn4, mn5, mn6, mn7, s1, s2, s3, s4, s5, s6, s7, con = T, x=40, y=20, transparency=1, min=min(mf1), max=max(mf1)) # for RA2
+#   #if (norm_samples == 'RA2') plot.gene.3d.7("RA2_scRNAseq",i, mn1, mn2, mn3, mn4, mn5, mn6, mn7, s1, s2, s3, s4, s5, s6, s7, x=40, y=20, transparency=0.1, min=min(mf1), max=max(mf1)) # for RA2
+#   if (norm_samples == 'RA3') plot.gene.2d.4("RA3_scRNAseq",i, mn1, mn2, mn3, mn4, s1, s2, s3, s4, con = T, x=40, y=40, transparency=1, min=min(mf1), max=max(mf1)) # for RA3
+#   if (norm_samples == 'RA4') plot.gene.2d.5("RA4_scRNAseq",i, mn1, mn2, mn3, mn4, mn5, s1, s2, s3, s4, s5, con = T, x=40, y=40, transparency=1, min=min(mf1), max=max(mf1)) # for RA4
+#   # if (norm_samples == 'RA5') plot.gene.3d.4("RA5_scRNAseq",i, mn1, mn2, mn3, mn4, s1, s2, s3, s4, x=80, y=60, transparency=0.2, min=min(mf1), max=max(mf1)) # for RA5
+#   if (norm_samples == 'RA5') plot.gene.2d.3("RA5_scRNAseq",i, mn1, mn2, mn3, s1, s2, s3, con = T, x=80, y=80, transparency=1, min=min(mf1), max=max(mf1)) # for RA5
+# }
 
 # Avg cell signature per infiltrate 
 ### Take only infiltrates that are present in all sections according to annotations
@@ -222,7 +225,6 @@ colnames(avg_rest) = paste0("rest_Section", 1:length(norm_mat_loaded_in_env))
 
 # plot Inf and rest together per section
 myplots <- vector("list", 1)
-library(reshape2) # for melt
 melted <- melt(rbind(Infs, t(avg_rest)))
 colnames(melted) = c("area","ct","Avg")
 melted$inf <- sapply(strsplit(as.character(melted$area), "_"),"[[",1)
@@ -252,8 +254,7 @@ save_plot(paste0(path_output,"Average_SC_sigs_per_inf_", norm_samples, ".pdf"), 
 
 # plot correlation plots between cell type abundances
 ct1 = paste0("scRNAseq_", tolower(norm_samples), "_", "dendritic_cells", "_clusters") #echange cell types here
-ct2 = paste0("scRNAseq_", tolower(norm_samples), "_", "b_cells", "_clusters") #echange cell types here #fibro2b_thy1
-melted$ct
+ct2 = paste0("scRNAseq_", tolower(norm_samples), "_", "b_cells", "_clusters") #echange cell types here 
 melted_cts_cor1 = melted[(melted$ct == ct1),] # & melted$inf != 'rest'
 melted_cts_cor2 = melted[(melted$ct == ct2),]
 df = data.frame(melted_cts_cor1, melted_cts_cor2)
@@ -270,5 +271,64 @@ ggplot(data = df, aes(x = as.numeric(Avg), y = as.numeric(Avg.1))) +
   stat_cor(method = "pearson", p.accuracy = 0.05) +
   facet_wrap(~ inf, scales = "free")
 save_plot(paste0(path_output,"Average_SC_sigs_per_inf_correlations_", ct1, "_", ct2, "_", norm_samples, ".pdf"), plot_grid(plotlist=myplots), ncol = 3, nrow = 2)
-     
+    
+# save melted file
+melted$sample = norm_samples
+write.table(melted, paste0(path_output, "Average_sc_sigs_table_", norm_samples, ".tsv"), sep = "\t")
 
+# check if cell type abundance changes are significant in all samples
+fl = list.files(pattern = glob2rx("Average_sc_sigs_table_*"), path = path_output)
+abun = matrix(nrow = 1, ncol = 6)
+colnames(abun) = c("area","ct","Avg","inf","section","sample")
+for (f in fl){
+  scabun = read.csv(paste0(path_output, f), sep = "\t")
+  abun = rbind(abun, scabun)
+}
+abun = abun[-1,]
+
+# do some renaming
+nm = c(abun["ct"])
+ctypes = ""
+for (i in nm){
+  ctypes = c(ctypes, paste(sapply(strsplit(i, "_"), "[[", 3),sapply(strsplit(i, "_"), "[[", 4), sep = "_"))
+}
+ctypes = ctypes[-1]
+abun["ct"] = ctypes
+
+# first checks general changes in abundances in all samples (ex. b cells)
+by_vs_am <- abun %>% group_by(sample, ct, section)
+by_vs <- by_vs_am %>% summarise(meanct = mean(Avg))
+for (j in unique(by_vs$ct)){
+  by_vs_ct = by_vs[by_vs$ct == j,]
+  print(paste0("checking cell type: ", j))
+  for (i in 1:5){
+    print(paste0("RA",i))
+    if (length(by_vs_ct[by_vs_ct$sample == paste0("RA",i),]$meanct)==0) next
+    if (t.test(by_vs_ct[by_vs_ct$sample == paste0("RA",i),]$meanct,by_vs_ct[by_vs_ct$sample != paste0("RA",i),]$meanct, alternative = "greater")$p.value < 0.05){
+      print("significant")
+    }
+  }
+}
+
+# first checks general changes in abundances in infiltrates (ex. b cells)
+by_vs_am <- abun %>% group_by(sample, ct, section, inf)
+newinf = ""
+for (i in by_vs_am$inf){
+  newinf = c(newinf,substr(i, start = 1, stop = 3))
+}
+newinf = newinf[-1]
+by_vs_am$inf = newinf
+by_vs <- by_vs_am %>% summarise(meanct = mean(Avg))
+for (j in unique(by_vs$ct)){
+  by_vs_ct = by_vs[by_vs$ct == j,]
+  print(paste0("checking cell type: ", j))
+  for (i in 1:5){
+    print(paste0("RA",i))
+    if (length(by_vs_ct[by_vs_ct$sample == paste0("RA",i),]$meanct)==0) {
+      print("no cells")
+      next}
+    if (t.test(by_vs_ct[by_vs_ct$sample == paste0("RA",i) & by_vs_ct$inf == "inf",]$meanct,by_vs_ct[by_vs_ct$sample != paste0("RA",i),]$meanct, alternative = "greater")$p.value < 0.05){
+      print("significant")
+      }
+  }
+}

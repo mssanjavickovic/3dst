@@ -26,7 +26,7 @@ setwd('/Users/svickovi/Library/Mobile Documents/com~apple~CloudDocs/Desktop/morp
 #setwd('/Users/sanjavickovic/Desktop/morphoSPOT/3dst_repo/3dst/de_analysis')
 
 # Which samples do you want to use? 
-norm_samples = "RA5"
+norm_samples = "RA1"
 
 # Where are you norm expression R files located? 
 path_samples = "../data/"
@@ -121,32 +121,53 @@ col.spatial.clusters = run_spatial_cluster_analysis(RA.norm, 4, read_tsne_from_m
 inf_per_cluster(RA.norm, all_ann_inf, col.spatial.clusters)
 
 #### Make barplot of avg expression per interesting marker genes
-gen_names = c("CCL19","CXCL13","LTB","PRG4","MMP3","CD52","MS4A1","FN1", "TYROBP")
+gen_names = c("LTB","CCL19","CXCL13","CD52","MS4A1","CD79A","TYROBP","MMP3","FN1","VCAM1")
 save_plot(paste0(path_output,"Average_genes_per_cluster_", norm_samples, ".pdf"), avg_genes_barplot(RA.norm, gen_names, col.spatial.clusters), ncol = 1, nrow = 1)
 
 ### Make gene-to-gene correlation plots 
-# df1 = data.frame(t(RA.norm[c("CD52", "MS4A1"),]))
-# df1[,3] = col.spatial.clusters[row.names(df1),]
-#df2 = data.frame(t(RA.norm[c("CD52", "MS4A1"),]))
+#df1 = data.frame(t(RA.norm[c("RASGRP2", "CXCL13"),]))
+#df1[,3] = col.spatial.clusters[row.names(d1f),]
+#df2 = data.frame(t(RA.norm[c("RASGRP2", "CXCL13"),]))
 #df2[,3] = col.spatial.clusters[row.names(df2),]
-#df3 = data.frame(t(RA.norm[c("CD52", "MS4A1"),]))
+#df3 = data.frame(t(RA.norm[c("RASGRP2", "CXCL13"),]))
 #df3[,3] = col.spatial.clusters[row.names(df3),]
-# df4 = data.frame(t(RA.norm[c("CD52", "MS4A1"),]))
-# df4[,3] = col.spatial.clusters[row.names(df4),]
-#df5 = data.frame(t(RA.norm[c("CD52", "MS4A1"),]))
+#df4 = data.frame(t(RA.norm[c("RASGRP2", "CXCL13"),]))
+#df4[,3] = col.spatial.clusters[row.names(df4),]
+#df5 = data.frame(t(RA.norm[c("RASGRP2", "CXCL13"),]))
 #df5[,3] = col.spatial.clusters[row.names(df5),]
 #t1 = c(mean(df1[df1[,1] & df1[,3] == "#FED8B1",][,1]),mean(df2[df2[,1] & df2[,3] == "#FED8B1",][,1]),mean(df3[df3[,1] & df3[,3] == "#FED8B1",][,1]))
 #t2 = c(mean(df4[df4[,1] & df4[,3] == "#FED8B1",][,1]),mean(df5[df5[,1] & df5[,3] == "#FED8B1",][,1]))
 #t.test(t1, t2, paired = FALSE, alternative = "greater")$p.value
 
+# takes only cluster 1
+# df = data.frame(t(RA.norm[c("TYROBP", "CXCL13"),]))
+# df[,3] = col.spatial.clusters[row.names(df1),]
+# df = df[df[,3] == "#FED8B1",]
+
 # Change the confidence interval fill color
 ggplot(df, aes(x=df[,1], y=df[,2], color = df[,3])) + 
+  facet_grid(~df[,3]) + 
+  stat_cor(method = "pearson", p.accuracy = 0.05) +
   geom_point(shape=18, color = df[,3])
 
-nrow(df[df[,1] > 0.5 & df[,2] < 0.5,])/nrow(df) # in the whole data
-nrow(df[df[,1] < 0.5 & df[,2] > 0.5 & df[,3] == "#FED8B1",])/nrow(df[df[,3] == "#FED8B1",]) 
+# Print out how many cells are gene1 high and gene2 low
+#df = df5
+#nrow(df[df[,1] > 0.5 & df[,2] > 0.5,])/nrow(df) # in the whole data
+#nrow(df[df[,1] > 0.5 & df[,2] > 0.5 & df[,3] == "#FED8B1",])/nrow(df[df[,3] == "#FED8B1",]) # in cluster1 only data
+ 
+# # Checks weather gene1 high spots are also gene3 low
+# df = df[df[,1] > 0.5 & df[,2] < 0.5,]
+# spots_subset1 = row.names(df)
+# df = data.frame(t(RA.norm[c("TYROBP", "RASGRP2"),]))
+# df[,3] = col.spatial.clusters[row.names(df),]
+# df = df[row.names(df) %in% spots_subset1,]
+# 
+# # Print out how many cells are gene1 high and gene3 low
+# nrow(df[df[,1] > 0.5 & df[,2] > 0.5,])/nrow(df) # in the whole data
+# nrow(df[df[,1] > 0.5 & df[,2] > 0.5 & df[,3] == "#FED8B1",])/nrow(df[df[,3] == "#FED8B1",]) # in cluster1 only data
 
-#Plot all barcode clusters over the tissue for Fig3a
+
+  #Plot all barcode clusters over the tissue for Fig3a
 # ann.col = matrix(nrow=nrow(ann_to_plot), ncol = 1)
 # rownames(ann.col) = rownames(ann_to_plot)
 # for (sam in rownames(ann)){

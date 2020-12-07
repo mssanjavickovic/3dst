@@ -1,0 +1,338 @@
+image	x_y	x	y	value
+RA2_5	12_20	12	20	Infiltrate
+RA2_5	22_20	22	20	Synovial stroma
+RA2_5	19_26	19	26	Infiltrate
+RA2_5	29_12	29	12	Synovial stroma
+RA2_5	20_28	20	28	Synovial stroma
+RA2_5	25_21	25	21	Synovial stroma
+RA2_5	21_26	21	26	Synovial stroma
+RA2_5	25_15	25	15	Infiltrate
+RA2_5	17_12	17	12	Synovial stroma
+RA2_5	23_21	23	21	Synovial stroma
+RA2_5	18_25	18	25	Infiltrate
+RA2_5	30_27	30	27	Synovial stroma
+RA2_5	29_20	29	20	Synovial stroma
+RA2_5	13_19	13	19	Infiltrate
+RA2_5	19_21	19	21	Synovial stroma
+RA2_5	19_13	19	13	Synovial stroma
+RA2_5	26_25	26	25	Infiltrate
+RA2_5	18_20	18	20	Synovial stroma
+RA2_5	19_16	19	16	Synovial stroma
+RA2_5	30_23	30	23	Synovial stroma
+RA2_5	25_17	25	17	Infiltrate
+RA2_5	14_17	14	17	Infiltrate
+RA2_5	30_25	30	25	Synovial stroma
+RA2_5	14_22	14	22	Infiltrate
+RA2_5	24_13	24	13	Synovial stroma
+RA2_5	25_22	25	22	Synovial stroma
+RA2_5	12_21	12	21	Infiltrate
+RA2_5	18_26	18	26	Infiltrate
+RA2_5	25_16	25	16	Infiltrate
+RA2_5	32_14	32	14	Synovial stroma
+RA2_5	14_18	14	18	Infiltrate
+RA2_5	18_15	18	15	Synovial stroma
+RA2_5	17_28	17	28	Infiltrate
+RA2_5	17_13	17	13	Synovial stroma
+RA2_5	20_13	20	13	Synovial stroma
+RA2_5	26_28	26	28	Synovial stroma
+RA2_5	16_26	16	26	Infiltrate
+RA2_5	18_21	18	21	Infiltrate
+RA2_5	28_18	28	18	Infiltrate
+RA2_5	17_24	17	24	Infiltrate
+RA2_5	29_13	29	13	Synovial stroma
+RA2_5	32_22	32	22	Infiltrate
+RA2_5	18_22	18	22	Infiltrate
+RA2_5	25_18	25	18	Infiltrate
+RA2_5	28_21	28	21	Synovial stroma
+RA2_5	29_29	29	29	Unknown
+RA2_5	15_21	15	21	Infiltrate;Synovial stroma
+RA2_5	19_24	19	24	Synovial stroma
+RA2_5	15_14	15	14	Synovial stroma
+RA2_5	20_19	20	19	Synovial stroma
+RA2_5	28_13	28	13	Synovial stroma
+RA2_5	22_24	22	24	Synovial stroma
+RA2_5	19_27	19	27	Infiltrate
+RA2_5	15_13	15	13	Synovial stroma
+RA2_5	24_17	24	17	Infiltrate;Synovial stroma
+RA2_5	22_28	22	28	Synovial stroma
+RA2_5	13_14	13	14	Synovial stroma
+RA2_5	28_14	28	14	Synovial stroma
+RA2_5	31_28	31	28	Unknown
+RA2_5	24_15	24	15	Synovial stroma
+RA2_5	30_24	30	24	Synovial stroma
+RA2_5	25_20	25	20	Synovial stroma
+RA2_5	21_23	21	23	Synovial stroma
+RA2_5	24_14	24	14	Synovial stroma
+RA2_5	25_19	25	19	Infiltrate
+RA2_5	18_27	18	27	Infiltrate
+RA2_5	23_16	23	16	Synovial stroma
+RA2_5	31_26	31	26	Synovial stroma
+RA2_5	28_25	28	25	Infiltrate
+RA2_5	23_25	23	25	Infiltrate
+RA2_5	25_14	25	14	Synovial stroma
+RA2_5	27_14	27	14	Synovial stroma
+RA2_5	14_19	14	19	Infiltrate
+RA2_5	17_20	17	20	Synovial stroma
+RA2_5	31_17	31	17	Synovial stroma
+RA2_5	17_17	17	17	Synovial stroma
+RA2_5	31_15	31	15	Synovial stroma
+RA2_5	17_16	17	16	Synovial stroma
+RA2_5	15_20	15	20	Infiltrate
+RA2_5	21_13	21	13	Synovial stroma
+RA2_5	17_21	17	21	Infiltrate
+RA2_5	17_23	17	23	Infiltrate
+RA2_5	31_25	31	25	Synovial stroma
+RA2_5	27_27	27	27	Synovial stroma
+RA2_5	26_19	26	19	Infiltrate
+RA2_5	12_17	12	17	Infiltrate
+RA2_5	22_27	22	27	Synovial stroma
+RA2_5	14_13	14	13	Synovial stroma
+RA2_5	17_25	17	25	Infiltrate
+RA2_5	13_21	13	21	Infiltrate
+RA2_5	29_27	29	27	Synovial stroma
+RA2_5	24_22	24	22	Synovial stroma
+RA2_5	12_18	12	18	Infiltrate
+RA2_5	14_12	14	12	Synovial stroma
+RA2_5	17_27	17	27	Infiltrate
+RA2_5	12_19	12	19	Infiltrate
+RA2_5	21_15	21	15	Synovial stroma
+RA2_5	23_26	23	26	Infiltrate
+RA2_5	23_13	23	13	Synovial stroma
+RA2_5	23_18	23	18	Synovial stroma
+RA2_5	31_18	31	18	Synovial stroma
+RA2_5	14_16	14	16	Infiltrate
+RA2_5	32_21	32	21	Synovial stroma
+RA2_5	16_17	16	17	Infiltrate
+RA2_5	26_16	26	16	Infiltrate
+RA2_5	18_14	18	14	Synovial stroma
+RA2_5	31_16	31	16	Synovial stroma
+RA2_5	14_24	14	24	Synovial stroma
+RA2_5	21_27	21	27	Synovial stroma
+RA2_5	20_25	20	25	Synovial stroma
+RA2_5	30_20	30	20	Synovial stroma
+RA2_5	15_23	15	23	Synovial stroma
+RA2_5	20_15	20	15	Synovial stroma
+RA2_5	27_23	27	23	Infiltrate;Synovial stroma
+RA2_5	14_20	14	20	Infiltrate
+RA2_5	24_28	24	28	Synovial stroma
+RA2_5	21_16	21	16	Synovial stroma
+RA2_5	16_21	16	21	Synovial stroma
+RA2_5	12_22	12	22	Infiltrate
+RA2_5	20_18	20	18	Synovial stroma
+RA2_5	21_14	21	14	Synovial stroma
+RA2_5	24_12	24	12	Synovial stroma
+RA2_5	26_18	26	18	Infiltrate
+RA2_5	14_25	14	25	Infiltrate
+RA2_5	22_23	22	23	Synovial stroma
+RA2_5	31_13	31	13	Synovial stroma
+RA2_5	31_19	31	19	Synovial stroma
+RA2_5	29_14	29	14	Synovial stroma
+RA2_5	28_24	28	24	Infiltrate
+RA2_5	16_22	16	22	Synovial stroma
+RA2_5	32_16	32	16	Synovial stroma
+RA2_5	30_14	30	14	Synovial stroma
+RA2_5	16_14	16	14	Synovial stroma
+RA2_5	26_14	26	14	Synovial stroma
+RA2_5	18_18	18	18	Synovial stroma
+RA2_5	13_20	13	20	Infiltrate
+RA2_5	31_21	31	21	Synovial stroma
+RA2_5	16_15	16	15	Synovial stroma
+RA2_5	21_20	21	20	Synovial stroma
+RA2_5	19_19	19	19	Synovial stroma
+RA2_5	31_22	31	22	Infiltrate
+RA2_5	29_19	29	19	Synovial stroma
+RA2_5	22_16	22	16	Synovial stroma
+RA2_5	19_20	19	20	Synovial stroma
+RA2_5	32_19	32	19	Synovial stroma
+RA2_5	16_27	16	27	Infiltrate
+RA2_5	28_27	28	27	Synovial stroma
+RA2_5	14_26	14	26	Infiltrate
+RA2_5	17_14	17	14	Synovial stroma
+RA2_5	18_12	18	12	Synovial stroma
+RA2_5	19_17	19	17	Synovial stroma
+RA2_5	22_13	22	13	Synovial stroma
+RA2_5	32_15	32	15	Synovial stroma
+RA2_5	19_23	19	23	Synovial stroma
+RA2_5	24_24	24	24	Synovial stroma
+RA2_5	20_22	20	22	Synovial stroma
+RA2_5	19_15	19	15	Synovial stroma
+RA2_5	25_25	25	25	Synovial stroma
+RA2_5	17_22	17	22	Infiltrate
+RA2_5	21_12	21	12	Synovial stroma
+RA2_5	26_13	26	13	Synovial stroma
+RA2_5	13_23	13	23	Infiltrate
+RA2_5	16_12	16	12	Synovial stroma
+RA2_5	13_22	13	22	Infiltrate
+RA2_5	32_17	32	17	Synovial stroma
+RA2_5	27_16	27	16	Infiltrate
+RA2_5	15_22	15	22	Synovial stroma
+RA2_5	25_23	25	23	Synovial stroma
+RA2_5	18_19	18	19	Synovial stroma
+RA2_5	20_24	20	24	Synovial stroma
+RA2_5	23_14	23	14	Synovial stroma
+RA2_5	22_15	22	15	Synovial stroma
+RA2_5	27_15	27	15	Infiltrate
+RA2_5	20_21	20	21	Synovial stroma
+RA2_5	24_16	24	16	Infiltrate;Synovial stroma
+RA2_5	22_25	22	25	Infiltrate;Synovial stroma
+RA2_5	28_16	28	16	Infiltrate
+RA2_5	21_22	21	22	Synovial stroma
+RA2_5	27_12	27	12	Synovial stroma
+RA2_5	23_15	23	15	Synovial stroma
+RA2_5	17_15	17	15	Synovial stroma
+RA2_5	18_23	18	23	Infiltrate
+RA2_5	29_22	29	22	Synovial stroma
+RA2_5	24_23	24	23	Synovial stroma
+RA2_5	22_22	22	22	Synovial stroma
+RA2_5	26_27	26	27	Synovial stroma
+RA2_5	31_27	31	27	Synovial stroma
+RA2_5	30_12	30	12	Synovial stroma
+RA2_5	31_20	31	20	Synovial stroma
+RA2_5	15_25	15	25	Infiltrate
+RA2_5	22_18	22	18	Synovial stroma
+RA2_5	26_20	26	20	Synovial stroma
+RA2_5	24_25	24	25	Infiltrate
+RA2_5	18_24	18	24	Infiltrate
+RA2_5	20_20	20	20	Synovial stroma
+RA2_5	23_22	23	22	Synovial stroma
+RA2_5	25_28	25	28	Synovial stroma
+RA2_5	15_12	15	12	Synovial stroma
+RA2_5	15_24	15	24	Infiltrate;Synovial stroma
+RA2_5	24_26	24	26	Infiltrate
+RA2_5	16_19	16	19	Infiltrate;Synovial stroma
+RA2_5	30_26	30	26	Synovial stroma
+RA2_5	26_24	26	24	Infiltrate
+RA2_5	23_28	23	28	Synovial stroma
+RA2_5	17_26	17	26	Infiltrate
+RA2_5	32_23	32	23	Infiltrate
+RA2_5	28_20	28	20	Synovial stroma
+RA2_5	29_16	29	16	Infiltrate
+RA2_5	18_17	18	17	Synovial stroma
+RA2_5	19_14	19	14	Synovial stroma
+RA2_5	29_23	29	23	Synovial stroma
+RA2_5	23_24	23	24	Synovial stroma
+RA2_5	15_26	15	26	Infiltrate
+RA2_5	12_15	12	15	Synovial stroma
+RA2_5	13_24	13	24	Synovial stroma
+RA2_5	25_11	25	11	Synovial stroma
+RA2_5	23_19	23	19	Synovial stroma
+RA2_5	21_28	21	28	Synovial stroma
+RA2_5	30_13	30	13	Synovial stroma
+RA2_5	12_23	12	23	Infiltrate
+RA2_5	25_24	25	24	Synovial stroma
+RA2_5	28_26	28	26	Infiltrate
+RA2_5	15_16	15	16	Infiltrate
+RA2_5	32_18	32	18	Synovial stroma
+RA2_5	22_26	22	26	Infiltrate
+RA2_5	28_19	28	19	Synovial stroma
+RA2_5	20_16	20	16	Synovial stroma
+RA2_5	13_13	13	13	Synovial stroma
+RA2_5	20_14	20	14	Synovial stroma
+RA2_5	31_23	31	23	Infiltrate
+RA2_5	19_22	19	22	Synovial stroma
+RA2_5	32_20	32	20	Synovial stroma
+RA2_5	26_15	26	15	Infiltrate
+RA2_5	13_18	13	18	Infiltrate
+RA2_5	27_28	27	28	Synovial stroma
+RA2_5	22_21	22	21	Synovial stroma
+RA2_5	24_19	24	19	Infiltrate;Synovial stroma
+RA2_5	15_18	15	18	Infiltrate
+RA2_5	27_13	27	13	Synovial stroma
+RA2_5	18_16	18	16	Synovial stroma
+RA2_5	18_28	18	28	Infiltrate
+RA2_5	19_25	19	25	Infiltrate
+RA2_5	26_11	26	11	Synovial stroma
+RA2_5	15_17	15	17	Infiltrate
+RA2_5	17_18	17	18	Synovial stroma
+RA2_5	21_17	21	17	Synovial stroma
+RA2_5	32_27	32	27	Synovial stroma
+RA2_5	21_25	21	25	Synovial stroma
+RA2_5	14_15	14	15	Synovial stroma
+RA2_5	13_15	13	15	Synovial stroma
+RA2_5	21_18	21	18	Synovial stroma
+RA2_5	24_27	24	27	Infiltrate
+RA2_5	30_21	30	21	Synovial stroma
+RA2_5	31_12	31	12	Synovial stroma
+RA2_5	30_16	30	16	Infiltrate
+RA2_5	29_17	29	17	Infiltrate
+RA2_5	23_17	23	17	Synovial stroma
+RA2_5	32_26	32	26	Synovial stroma
+RA2_5	30_15	30	15	Infiltrate
+RA2_5	30_17	30	17	Infiltrate;Synovial stroma
+RA2_5	13_17	13	17	Infiltrate
+RA2_5	25_13	25	13	Synovial stroma
+RA2_5	22_12	22	12	Synovial stroma
+RA2_5	14_14	14	14	Synovial stroma
+RA2_5	26_23	26	23	Synovial stroma
+RA2_5	16_23	16	23	Synovial stroma
+RA2_5	16_24	16	24	Infiltrate
+RA2_5	15_15	15	15	Synovial stroma
+RA2_5	23_20	23	20	Synovial stroma
+RA2_5	22_17	22	17	Synovial stroma
+RA2_5	21_24	21	24	Synovial stroma
+RA2_5	20_27	20	27	Synovial stroma
+RA2_5	32_25	32	25	Synovial stroma
+RA2_5	27_22	27	22	Synovial stroma
+RA2_5	16_16	16	16	Infiltrate
+RA2_5	25_27	25	27	Synovial stroma
+RA2_5	28_17	28	17	Infiltrate
+RA2_5	29_24	29	24	Synovial stroma
+RA2_5	24_18	24	18	Infiltrate;Synovial stroma
+RA2_5	19_12	19	12	Synovial stroma
+RA2_5	27_25	27	25	Infiltrate
+RA2_5	25_12	25	12	Synovial stroma
+RA2_5	18_13	18	13	Synovial stroma
+RA2_5	30_19	30	19	Synovial stroma
+RA2_5	29_26	29	26	Synovial stroma
+RA2_5	27_26	27	26	Infiltrate
+RA2_5	15_19	15	19	Infiltrate
+RA2_5	23_12	23	12	Synovial stroma
+RA2_5	19_28	19	28	Synovial stroma
+RA2_5	21_19	21	19	Synovial stroma
+RA2_5	20_12	20	12	Synovial stroma
+RA2_5	27_17	27	17	Infiltrate
+RA2_5	23_23	23	23	Synovial stroma
+RA2_5	19_18	19	18	Synovial stroma
+RA2_5	26_12	26	12	Synovial stroma
+RA2_5	13_16	13	16	Infiltrate
+RA2_5	29_25	29	25	Synovial stroma
+RA2_5	29_18	29	18	Infiltrate
+RA2_5	20_26	20	26	Synovial stroma
+RA2_5	17_19	17	19	Synovial stroma
+RA2_5	21_21	21	21	Synovial stroma
+RA2_5	27_19	27	19	Infiltrate
+RA2_5	31_14	31	14	Synovial stroma
+RA2_5	22_14	22	14	Synovial stroma
+RA2_5	16_20	16	20	Synovial stroma
+RA2_5	27_21	27	21	Synovial stroma
+RA2_5	27_20	27	20	Synovial stroma
+RA2_5	28_12	28	12	Synovial stroma
+RA2_5	28_23	28	23	Synovial stroma
+RA2_5	27_24	27	24	Infiltrate
+RA2_5	29_21	29	21	Synovial stroma
+RA2_5	30_22	30	22	Synovial stroma
+RA2_5	28_22	28	22	Synovial stroma
+RA2_5	32_24	32	24	Infiltrate
+RA2_5	14_23	14	23	Synovial stroma
+RA2_5	14_21	14	21	Infiltrate
+RA2_5	32_28	32	28	Unknown
+RA2_5	28_15	28	15	Infiltrate
+RA2_5	26_17	26	17	Infiltrate
+RA2_5	26_22	26	22	Synovial stroma
+RA2_5	31_24	31	24	Infiltrate
+RA2_5	24_21	24	21	Synovial stroma
+RA2_5	26_21	26	21	Synovial stroma
+RA2_5	16_13	16	13	Synovial stroma
+RA2_5	22_19	22	19	Synovial stroma
+RA2_5	26_26	26	26	Infiltrate
+RA2_5	12_16	12	16	Infiltrate
+RA2_5	23_27	23	27	Infiltrate
+RA2_5	29_15	29	15	Infiltrate
+RA2_5	16_25	16	25	Infiltrate
+RA2_5	27_18	27	18	Infiltrate
+RA2_5	24_20	24	20	Synovial stroma
+RA2_5	20_17	20	17	Synovial stroma
+RA2_5	30_18	30	18	Synovial stroma
+RA2_5	25_26	25	26	Synovial stroma
+RA2_5	16_18	16	18	Infiltrate
+RA2_5	20_23	20	23	Synovial stroma

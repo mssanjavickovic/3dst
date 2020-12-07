@@ -179,7 +179,7 @@ avg_genes_barplot = function(all_bar, gen_names, cluster_names){
   all_bar = RA.norm
   #### Make barplot of avg expression per interesting marker genes
   cluster_names = col.spatial.clusters
-  gen_names = c("CCL19","CXCL13","LTB","PRG4","MMP3","CD52","MS4A1","FN1","TYROBP") #, "CD79A", "CD79B", "TYROBP"
+  # gen_names = c("CCL19","CXCL13","LTB","PRG4","MMP3","CD52","MS4A1","FN1","TYROBP") #, "CD79A", "CD79B", "TYROBP"
   col.scale = unique(cluster_names[,1])
   
   ### arrange matrix per cluster 
