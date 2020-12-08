@@ -67,3 +67,7 @@ This is [code](./de_analysis) for clustering and DE analysis between clusters.
 
 # 3d app for viewing the data
 This is the [app](https://spatialtranscriptomics3d.shinyapps.io/3DSeTH_RA/) for viewing 3D aligned and normalized ST-based expression. The raw [code](./app) is also available. 
+
+# ST histoCAT integration
+histoCAT interactive sessions with ST clusters and cell type annotations are available at: XXX
+A video guide highlighting the interactive workflow can be found at: XXX
