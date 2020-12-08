@@ -70,4 +70,5 @@ This is the [app](https://spatialtranscriptomics3d.shinyapps.io/3DSeTH_RA/) for 
 
 # ST histoCAT integration
 histoCAT interactive sessions with ST clusters and cell type annotations are available at: XXX
+
 A video guide highlighting the interactive workflow can be found at: XXX
