@@ -9,17 +9,17 @@ suppressMessages(suppressWarnings(library(scater,warn.conflicts = F, quietly = T
 rm(list = ls())
 
 # Read the fuctions file 
-setwd("/Users/svickovi/Library/Mobile Documents/com~apple~CloudDocs/Desktop/morphoSPOT/3dst_repo/3dst/normalization")
+setwd("/Users/sanjavickovic/Desktop/morphoSPOT/3dst_repo/3dst/normalization")
 source('../functions/Read_Functions.R')
 
 # Which samples do you want to normalize? 
-norm_samples = "RA3"
+norm_samples = "RA6"
 
 # Where are you raw csv expression files located? 
-path_samples = "/Users/svickovi/Library/Mobile Documents/com~apple~CloudDocs/Desktop/morphoSPOT/Raw counts and images for paper/RA5"
+path_samples = paste0("/Users/sanjavickovic/Desktop/morphoSPOT/Raw counts and images for paper/", norm_samples)
 
 # Set output directory that will contain all cell_typing pdf plots and output gene files
-path_output = "/Users/svickovi/Library/Mobile Documents/com~apple~CloudDocs/Desktop/morphoSPOT/norm_counts_output"
+path_output = "/Users/sanjavickovic/Desktop/morphoSPOT/norm_counts_output"
 
 # List avaiable raw matrices for normalization 
 files_raw = list.files(pattern =  glob2rx(paste0(norm_samples, "_Raw.exp_*.csv")), path = path_samples)
@@ -63,10 +63,10 @@ size.factors <- libsizes/mean(libsizes)
 qcstats <- perCellQCMetrics(sce)
 qcfilter <- quickPerCellQC(qcstats)
 sce <- sce[,!qcfilter$discard]
-summary(qcfilter$discard) # false denotes number of discarded ST spots
+summary(qcfilter$discard) # true denotes number of discarded ST spots
 
 # Performes normalization
-clusters <- quickCluster(sce,  min.size=20) # do not want very small clusters
+clusters <- quickCluster(sce,  min.size=200) # do not want very small clusters, #20 for most, 200 for RA6
 sce <- computeSumFactors(sce, clusters=clusters, positive = TRUE)
 summary(sizeFactors(sce))
 sce <- logNormCounts(sce) # this represents the log normalized object
@@ -85,26 +85,21 @@ for (secs in 1:length(raw_mat_loaded_in_env)){
   write.table(get(paste0("m", secs)), file = paste0(norm_samples, '_Norm.exp_', secs, '.csv'), sep = ",", quote = F, col.names = T, row.names = T)
 }
 
-
-
-
-# 
 # # how to make s files from xyz from britta
 # setwd('/Users/sanjavickovic/Desktop/morphoSPOT/new_tranforms')
-# files_raw = list.files(pattern =  glob2rx("RA5*xyz*"), path = './')
+# files_raw = list.files(pattern =  glob2rx("RA6*xyz*"), path = './')
 # files_raw
 # # Load all raw counts matrices in your env
-# norm_samples = "RA5"
+# norm_samples = "RA6"
 # sample_counter = 1
 # for (i in files_raw){
-#   print(i)
-#   assign(paste0("s", sample_counter), read.delim(i, header = T, row.names = 1))
-#   save(list=paste0("s", sample_counter), file = paste0(norm_samples, "_", sample_counter, "_selected_adjusted_spots_3D_manual_app"))
-#   sample_counter = sample_counter + 1
+#    print(i)
+#    assign(paste0("s", sample_counter), read.delim(i, header = T, row.names = 1))
+#    save(list=paste0("s", sample_counter), file = paste0(norm_samples, "_", sample_counter, "_selected_adjusted_spots_3D_manual_app"))
+#    sample_counter = sample_counter + 1
 # }
-
-
-
-
-
-
+# 
+# 
+# 
+# 
+# 

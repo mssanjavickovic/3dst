@@ -21,9 +21,10 @@ suppressMessages(suppressWarnings(library(cowplot,warn.conflicts = F, quietly = 
 suppressMessages(suppressWarnings(library(pheatmap,warn.conflicts = F, quietly = T)))
 suppressMessages(suppressWarnings(library(stringr,warn.conflicts = F, quietly = T)))
 suppressMessages(suppressWarnings(library(grid,warn.conflicts = F, quietly = T)))
+suppressMessages(suppressWarnings(library(ggpubr,warn.conflicts = F, quietly = T)))
 
-setwd('/Users/svickovi/Library/Mobile Documents/com~apple~CloudDocs/Desktop/morphoSPOT/3dst_repo/3dst/de_analysis')
-#setwd('/Users/sanjavickovic/Desktop/morphoSPOT/3dst_repo/3dst/de_analysis')
+# set wd
+setwd('/Users/sanjavickovic/Desktop/morphoSPOT/3dst_repo/3dst/de_analysis')
 
 # Which samples do you want to use? 
 norm_samples = "RA1"
@@ -107,7 +108,8 @@ save_plot(paste0(path_output,"Average_genes_per_infiltrate_", norm_samples, ".pd
 #k = 3 #RA3
 #k = 3 #RA4
 #k = 2 #RA5
-col.inf.clusters = run_inf_analysis(RA.norm[,colnames(RA.norm) %in% all_inf], k=2, norm_samples, path_output) # number of clusters
+#k = 3 #RA6
+col.inf.clusters = run_inf_analysis(RA.norm[,colnames(RA.norm) %in% all_inf], k=k, norm_samples, path_output) # number of clusters
 
 # Run spatial clustering analysis on all ST spots per biopsy
 #f = 4 #RA1
@@ -115,18 +117,19 @@ col.inf.clusters = run_inf_analysis(RA.norm[,colnames(RA.norm) %in% all_inf], k=
 #f = 3 #RA3
 #f = 4 #RA4
 #f = 4 # RA5
+#f = 4 # RA6
 col.spatial.clusters = run_spatial_cluster_analysis(RA.norm, 4, read_tsne_from_memory="yes", norm_samples, path_output)
 
 # Which barcodes and clusters are part of the annotated infiltrates? 
 inf_per_cluster(RA.norm, all_ann_inf, col.spatial.clusters)
 
 #### Make barplot of avg expression per interesting marker genes
-gen_names = c("LTB","CCL19","CXCL13","CD52","MS4A1","CD79A","TYROBP","MMP3","FN1","VCAM1")
+gen_names = c("LTB","CCL19","CXCL13","CD52","MS4A1","TYROBP","MMP3","FN1","PRG4")
 save_plot(paste0(path_output,"Average_genes_per_cluster_", norm_samples, ".pdf"), avg_genes_barplot(RA.norm, gen_names, col.spatial.clusters), ncol = 1, nrow = 1)
 
 ### Make gene-to-gene correlation plots 
 #df1 = data.frame(t(RA.norm[c("RASGRP2", "CXCL13"),]))
-#df1[,3] = col.spatial.clusters[row.names(d1f),]
+#df1[,3] = col.spatial.clusters[row.names(df1),]
 #df2 = data.frame(t(RA.norm[c("RASGRP2", "CXCL13"),]))
 #df2[,3] = col.spatial.clusters[row.names(df2),]
 #df3 = data.frame(t(RA.norm[c("RASGRP2", "CXCL13"),]))
@@ -135,14 +138,14 @@ save_plot(paste0(path_output,"Average_genes_per_cluster_", norm_samples, ".pdf")
 #df4[,3] = col.spatial.clusters[row.names(df4),]
 #df5 = data.frame(t(RA.norm[c("RASGRP2", "CXCL13"),]))
 #df5[,3] = col.spatial.clusters[row.names(df5),]
-#t1 = c(mean(df1[df1[,1] & df1[,3] == "#FED8B1",][,1]),mean(df2[df2[,1] & df2[,3] == "#FED8B1",][,1]),mean(df3[df3[,1] & df3[,3] == "#FED8B1",][,1]))
-#t2 = c(mean(df4[df4[,1] & df4[,3] == "#FED8B1",][,1]),mean(df5[df5[,1] & df5[,3] == "#FED8B1",][,1]))
-#t.test(t1, t2, paired = FALSE, alternative = "greater")$p.value
+t1 = c(mean(df1[df1[,1] & df1[,3] == "#FED8B1",][,1]),mean(df2[df2[,1] & df2[,3] == "#FED8B1",][,1]),mean(df3[df3[,1] & df3[,3] == "#FED8B1",][,1]))
+t2 = c(mean(df4[df4[,1] & df4[,3] == "#FED8B1",][,1]),mean(df5[df5[,1] & df5[,3] == "#FED8B1",][,1]))
+t.test(t1, t2, paired = FALSE, alternative = "greater")$p.value
 
 # takes only cluster 1
-# df = data.frame(t(RA.norm[c("TYROBP", "CXCL13"),]))
-# df[,3] = col.spatial.clusters[row.names(df1),]
-# df = df[df[,3] == "#FED8B1",]
+df = data.frame(t(RA.norm[c("RASGRP2", "CXCL13"),]))
+df[,3] = col.spatial.clusters[row.names(df),]
+df = df[df[,3] == "#FED8B1",]
 
 # Change the confidence interval fill color
 ggplot(df, aes(x=df[,1], y=df[,2], color = df[,3])) + 
@@ -152,8 +155,8 @@ ggplot(df, aes(x=df[,1], y=df[,2], color = df[,3])) +
 
 # Print out how many cells are gene1 high and gene2 low
 #df = df5
-#nrow(df[df[,1] > 0.5 & df[,2] > 0.5,])/nrow(df) # in the whole data
-#nrow(df[df[,1] > 0.5 & df[,2] > 0.5 & df[,3] == "#FED8B1",])/nrow(df[df[,3] == "#FED8B1",]) # in cluster1 only data
+nrow(df[df[,1] > 0.5 & df[,2] > 0.5,])/nrow(df) # in the whole data
+nrow(df[df[,1] > 0.5 & df[,2] < 0.5 & df[,3] == "#FED8B1",])/nrow(df[df[,3] == "#FED8B1",]) # in cluster1 only data
  
 # # Checks weather gene1 high spots are also gene3 low
 # df = df[df[,1] > 0.5 & df[,2] < 0.5,]
@@ -183,9 +186,9 @@ ann.cluster = assign_col_cluster_numbers(col.spatial.clusters, all_ann_inf) # pr
 # Plot spatial heatmaps per cell type
 setwd(path_output)
 
-if (norm_samples == 'RA1' | norm_samples =='RA3' ) {
-  plot.gene.2d.inf.4(norm_samples, ann.col.inf, m1, m2, m3, m4, s1, s2, s3, s4, x=40, y=20, transparency=1, min=1, max=4)
-  plot.gene.2d.cluster.4(norm_samples, ann.cluster, m1, m2, m3, m4, s1, s2, s3, s4, x=40, y=20, transparency=1, min=1, max=5)
+if (norm_samples == 'RA1' | norm_samples =='RA3' | norm_samples =='RA6') {
+  plot.gene.2d.inf.4(norm_samples, ann.col.inf, m1, m2, m3, m4, s1, s2, s3, s4, x=40, y=20, transparency=1, min=1, max=3)
+  plot.gene.2d.cluster.4(norm_samples, ann.cluster, m1, m2, m3, m4, s1, s2, s3, s4, x=40, y=20, transparency=1, min=1, max=3)
   plot.gene.2d.4(norm_samples, "CD79A", m1, m2, m3, m4, s1, s2, s3, s4, x=40, y=20, transparency=1, min=0, max=6, con = T)
 }
 
@@ -204,3 +207,10 @@ if (norm_samples == 'RA5') {
   plot.gene.2d.cluster.3(norm_samples, ann.cluster, m1, m2, m3,  s1, s2, s3, x=30, y=30, transparency=1, min=1, max=5)
   plot.gene.2d.3(norm_samples, "ACTB", m1, m2, m3, s1, s2, s3, x=30, y=30, transparency=1, min=0, max=6, con = T)
 }
+
+rms1 = c(0.6723, 0.2423, 0.1737)
+rms2 = c(0.0163,0.2083,0.0239)
+
+rms1 = c(1.1844, 1.8742, 1.0053)
+rms2 = c(0.5881, 0.3413, 0.2746)
+t.test(rms1, rms2)

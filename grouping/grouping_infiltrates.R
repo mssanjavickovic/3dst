@@ -5,10 +5,10 @@ library(RColorBrewer)
 rm(list = ls())
 
 # set wd
-# setwd('/Users/sanjavickovic/Desktop/morphoSPOT/3dst_repo/3dst/grouping')
-setwd('/Users/svickovi/Library/Mobile Documents/com~apple~CloudDocs/Desktop/morphoSPOT/3dst_repo/3dst/grouping')
+setwd('/Users/sanjavickovic/Desktop/morphoSPOT/3dst_repo/3dst/grouping')
+
 # Which samples do you want to use? 
-norm_samples = "RA5"
+norm_samples = "RA6"
 
 # Where are you norm expression R files located? 
 path_samples = "../data/"
@@ -27,6 +27,9 @@ for (i in 1:length(anns)){
   assign(paste0("mat"), read.delim(paste0(path_samples, norm_samples, "_", i, "_annotations.txt"), header = T)) # files found on SCP
 
   # makes sure x_y names are the same
+  mat$x = round(mat$x)
+  mat$y = round(mat$y)
+  mat$x_y = paste0(mat$x, "_", mat$y)
   mat$x_y = paste0("X",i,"_", mat$x_y)
   row.names(mat) = mat$x_y
   
@@ -37,7 +40,7 @@ for (i in 1:length(anns)){
   # sort by row.names
   s = s[sort(row.names(s)),]
   mat = mat[sort(row.names(mat)),]
-  
+
   # merge into one df
   if (unique(row.names(s) == row.names(mat)) == T){
     mat_xy = cbind(s,mat)
@@ -52,10 +55,10 @@ for (i in 1:length(anns)){
   y = mat_xy$V2
   chc <- hclust(dist(data.frame(x=x,y=y)), method="ward.D2")
   plot(chc)
-  # Distance with a 13 cluster threshold threshold  
+  # Distance with a 13 cluster threshold  
   # if (i == 4) {chc.d40 <- cutree(chc, h = 0.5)}
   # else  chc.d40 <- cutree(chc, h = 0.6) 
-  chc.d40 <- cutree(chc, h = 0.5) 
+  chc.d40 <- cutree(chc, h = 0.4) 
   print(paste0("Found ", max(chc.d40), " infiltrate clusters.."))
   
   # Join results to meuse sp points
@@ -93,7 +96,7 @@ infs4 = read.csv(paste0(path_samples,fl[4]), row.names = 1, header = T)
 infs_1 = c(row.names(subset(infs1, infs1$infiltrate == "Inf1")),
            row.names(subset(infs2, infs2$infiltrate == "Inf1")),
            row.names(subset(infs3, infs3$infiltrate == "Inf1")),
-           row.names(subset(infs4, infs4$infiltrate == "Inf2")))
+           row.names(subset(infs4, infs4$infiltrate == "Inf1")))
 infs_exp1 = matrix(nrow = length(infs_1), ncol = 1)
 infs_exp1[,1] = "Inf1"
 row.names(infs_exp1) = infs_1
@@ -103,91 +106,90 @@ colnames(infs_exp1) = "Inf"
 infs_2 = c(row.names(subset(infs1, infs1$infiltrate == "Inf2")),
            row.names(subset(infs2, infs2$infiltrate == "Inf2")),
            row.names(subset(infs3, infs3$infiltrate == "Inf2")),
-           row.names(subset(infs4, infs4$infiltrate == "Inf3")),
-           row.names(subset(infs4, infs4$infiltrate == "Inf4")))
+           row.names(subset(infs4, infs4$infiltrate == "Inf3")))
 infs_exp2 = matrix(nrow = length(infs_2), ncol = 1)
 infs_exp2[,1] = "Inf2"
 row.names(infs_exp2) = infs_2
 colnames(infs_exp2) = "Inf"
 
 infs_3 = c(row.names(subset(infs1, infs1$infiltrate == "Inf3")),
-           row.names(subset(infs2, infs2$infiltrate == "Inf4")),
+           row.names(subset(infs1, infs1$infiltrate == "Inf4")),
+           row.names(subset(infs2, infs2$infiltrate == "Inf3")),
            row.names(subset(infs3, infs3$infiltrate == "Inf4")),
-           row.names(subset(infs4, infs4$infiltrate == "Inf5")))
+           row.names(subset(infs4, infs4$infiltrate == "Inf4")))
 infs_exp3= matrix(nrow = length(infs_3), ncol = 1)
 infs_exp3[,1] = "Inf3"
 row.names(infs_exp3) = infs_3
 colnames(infs_exp3) = "Inf"
 
-infs_4 = c(row.names(subset(infs1, infs1$infiltrate == "Inf4")),
-           row.names(subset(infs2, infs2$infiltrate == "Inf3")),
-           row.names(subset(infs3, infs3$infiltrate == "Inf6")),
-           row.names(subset(infs4, infs4$infiltrate == "Inf7")))
+infs_4 = c(row.names(subset(infs1, infs1$infiltrate == "Inf6")),
+           row.names(subset(infs2, infs2$infiltrate == "Inf5")),
+           row.names(subset(infs3, infs3$infiltrate == "Inf5")),
+           row.names(subset(infs4, infs4$infiltrate == "Inf6")))
 infs_exp4= matrix(nrow = length(infs_4), ncol = 1)
 infs_exp4[,1] = "Inf4"
 row.names(infs_exp4) = infs_4
 colnames(infs_exp4) = "Inf"
 
-infs_5 = c(row.names(subset(infs1, infs1$infiltrate == "Inf5")),
-           row.names(subset(infs1, infs1$infiltrate == "Inf6")),
-           row.names(subset(infs2, infs2$infiltrate == "Inf6")),
-           row.names(subset(infs3, infs3$infiltrate == "Inf3")),
-           row.names(subset(infs3, infs3$infiltrate == "Inf5")),
-           row.names(subset(infs4, infs4$infiltrate == "Inf1")),
-           row.names(subset(infs4, infs4$infiltrate == "Inf6")))
+infs_5 = c(row.names(subset(infs1, infs1$infiltrate == "Inf7")),
+           row.names(subset(infs2, infs2$infiltrate == "Inf7")),
+           row.names(subset(infs3, infs3$infiltrate == "Inf6")),
+           row.names(subset(infs4, infs4$infiltrate == "Inf7")))
 infs_exp5= matrix(nrow = length(infs_5), ncol = 1)
 infs_exp5[,1] = "Inf5"
 row.names(infs_exp5) = infs_5
 colnames(infs_exp5) = "Inf"
 
-infs_6 = c(row.names(subset(infs1, infs1$infiltrate == "Inf7")),
-           row.names(subset(infs2, infs2$infiltrate == "Inf5")),
-           row.names(subset(infs3, infs3$infiltrate == "Inf8")),
-           row.names(subset(infs4, infs4$infiltrate == "Inf8")),
-           row.names(subset(infs4, infs4$infiltrate == "Inf10")))
+infs_6 = c(row.names(subset(infs1, infs1$infiltrate == "Inf5")),
+           row.names(subset(infs2, infs2$infiltrate == "Inf4")),
+           row.names(subset(infs3, infs3$infiltrate == "Inf3")),
+           row.names(subset(infs4, infs4$infiltrate == "Inf2")),
+           row.names(subset(infs4, infs4$infiltrate == "Inf5")))
 infs_exp6= matrix(nrow = length(infs_6), ncol = 1)
 infs_exp6[,1] = "Inf6"
 row.names(infs_exp6) = infs_6
 colnames(infs_exp6) = "Inf"
-
-infs_7 = c(row.names(subset(infs1, infs1$infiltrate == "Inf8")),
-           row.names(subset(infs2, infs2$infiltrate == "Inf8")),
-           row.names(subset(infs2, infs2$infiltrate == "Inf9")),
-           row.names(subset(infs3, infs3$infiltrate == "Inf7")),
-           row.names(subset(infs4, infs4$infiltrate == "Inf9")))
-infs_exp7= matrix(nrow = length(infs_7), ncol = 1)
-infs_exp7[,1] = "Inf7"
-row.names(infs_exp7) = infs_7
-colnames(infs_exp7) = "Inf"
-
-infs_8 = c(row.names(subset(infs1, infs1$infiltrate == "Inf9")),
-           row.names(subset(infs1, infs1$infiltrate == "Inf10")),
-           row.names(subset(infs2, infs2$infiltrate == "Inf7")),
-           row.names(subset(infs3, infs3$infiltrate == "Inf9")),
-           row.names(subset(infs4, infs4$infiltrate == "Inf11")),
-           row.names(subset(infs4, infs4$infiltrate == "Inf12")))
-infs_exp8= matrix(nrow = length(infs_8), ncol = 1)
-infs_exp8[,1] = "Inf8"
-row.names(infs_exp8) = infs_8
-colnames(infs_exp8) = "Inf"
-
-infs_9 = c(row.names(subset(infs1, infs1$infiltrate == "Inf11")),
-           row.names(subset(infs2, infs2$infiltrate == "Inf10")),
-           row.names(subset(infs2, infs2$infiltrate == "Inf11")),
-           row.names(subset(infs3, infs3$infiltrate == "Inf10")),
-           row.names(subset(infs4, infs4$infiltrate == "Inf13")))
-infs_exp9= matrix(nrow = length(infs_9), ncol = 1)
-infs_exp9[,1] = "Inf9"
-row.names(infs_exp9) = infs_9
-colnames(infs_exp9) = "Inf"
+# 
+# infs_7 = c(row.names(subset(infs1, infs1$infiltrate == "Inf8")),
+#            row.names(subset(infs2, infs2$infiltrate == "Inf8")),
+#            row.names(subset(infs2, infs2$infiltrate == "Inf9")),
+#            row.names(subset(infs3, infs3$infiltrate == "Inf7")),
+#            row.names(subset(infs4, infs4$infiltrate == "Inf9")))
+# infs_exp7= matrix(nrow = length(infs_7), ncol = 1)
+# infs_exp7[,1] = "Inf7"
+# row.names(infs_exp7) = infs_7
+# colnames(infs_exp7) = "Inf"
+# 
+# infs_8 = c(row.names(subset(infs1, infs1$infiltrate == "Inf9")),
+#            row.names(subset(infs1, infs1$infiltrate == "Inf10")),
+#            row.names(subset(infs2, infs2$infiltrate == "Inf7")),
+#            row.names(subset(infs3, infs3$infiltrate == "Inf9")),
+#            row.names(subset(infs4, infs4$infiltrate == "Inf11")),
+#            row.names(subset(infs4, infs4$infiltrate == "Inf12")))
+# infs_exp8= matrix(nrow = length(infs_8), ncol = 1)
+# infs_exp8[,1] = "Inf8"
+# row.names(infs_exp8) = infs_8
+# colnames(infs_exp8) = "Inf"
+# 
+# infs_9 = c(row.names(subset(infs1, infs1$infiltrate == "Inf11")),
+#            row.names(subset(infs2, infs2$infiltrate == "Inf10")),
+#            row.names(subset(infs2, infs2$infiltrate == "Inf11")),
+#            row.names(subset(infs3, infs3$infiltrate == "Inf10")),
+#            row.names(subset(infs4, infs4$infiltrate == "Inf13")))
+# infs_exp9= matrix(nrow = length(infs_9), ncol = 1)
+# infs_exp9[,1] = "Inf9"
+# row.names(infs_exp9) = infs_9
+# colnames(infs_exp9) = "Inf"
 
 inf_all_ra3 = rbind(infs_exp1,infs_exp2,infs_exp3,
-                    infs_exp4,infs_exp5,infs_exp6,
-                    infs_exp7,infs_exp8,infs_exp9)
+                    infs_exp4,infs_exp5, infs_exp6)
+                    #infs_exp7,infs_exp8,infs_exp9)
+#inf_all_ra3 = as.matrix(inf_all_ra3[!duplicated(row.names(inf_all_ra3)),])
+#length(unique(row.names(inf_all_ra3))) == nrow(inf_all_ra3)
+write.table(inf_all_ra3, file = "../data/RA6_zstack_Infs.csv", col.names  = T, sep =",")
+length(unique(row.names(inf_all_ra3))) == length((row.names(inf_all_ra3)))
 
 
-length(unique(row.names(inf_all_ra3))) == nrow(inf_all_ra3)
-write.table(inf_all_ra3, file = "../data/RA3_zstack_Infs.csv", col.names  = T, sep =",")
 
 
 # check1= inf_all_ra3[grep(row.names(inf_all_ra3),pattern= "X1", value = T),]

@@ -2,19 +2,19 @@
 suppressMessages(suppressWarnings(library(stringr,warn.conflicts = F, quietly = T)))
 suppressMessages(suppressWarnings(library(ggplot2,warn.conflicts = F, quietly = T)))
 suppressMessages(suppressWarnings(library(cowplot,warn.conflicts = F, quietly = T)))
+
 # removes all glob variables from env
 rm(list = ls())
 
 # Read the fuctions file 
-setwd("/Users/svickovi/Library/Mobile Documents/com~apple~CloudDocs/Desktop/morphoSPOT/3dst_repo/3dst/data")
+setwd("/Users/sanjavickovic/Desktop/morphoSPOT/3dst_repo/3dst/data")
 source('../functions/Read_Functions.R')
 
 # Where are you raw csv expression files located? 
 path_samples = list.files("../data/", pattern = glob2rx("RA*Raw.exp*"))
 
 # Set output directory that will contain all plots and output gene files
-path_output = "/Users/svickovi/Library/Mobile Documents/com~apple~CloudDocs/Desktop/morphoSPOT/plot_output"
-
+path_output = "/Users/sanjavickovic/Desktop/morphoSPOT/plot_output"
 
 stats = matrix(ncol = 6, nrow = 1)
 for (ra in unique(sapply(str_split(path_samples, "_"),"[[",1))){
@@ -31,11 +31,14 @@ for (ra in unique(sapply(str_split(path_samples, "_"),"[[",1))){
     print(i)
     assign(paste0("raw_mat", sample_counter), read.csv(i, header = T, row.names = 1))
     trans_means = c(trans_means, mean(colSums(get(paste0("raw_mat", sample_counter)))))
+    print(mean(colSums(get(paste0("raw_mat", sample_counter)))))
     genes_means = c(genes_means, mean(colSums(get(paste0("raw_mat", sample_counter))>0)))
     ra_ncols = c(ra_ncols, ncol(get(paste0("raw_mat", sample_counter))))
     sample_counter = sample_counter + 1
   }
   raw_mat_loaded_in_env <- grep("raw_mat",names(.GlobalEnv),value=TRUE)
+
+  
   trans_means = as.numeric(trans_means[-1])
   genes_means = as.numeric(genes_means[-1])
   ra_ncols = as.numeric(ra_ncols[-1])
@@ -44,6 +47,7 @@ for (ra in unique(sapply(str_split(path_samples, "_"),"[[",1))){
   genes_sd = as.numeric(sd(genes_means)/sqrt(ra_size))
   trans_means = mean(trans_means)
   genes_means = mean(genes_means)
+  print(ra_ncols)
   
   if (ra == "RA1"){
     seq = (c(60000000,60000000,60000000,60000000)/ra_ncols)/100
@@ -66,7 +70,12 @@ for (ra in unique(sapply(str_split(path_samples, "_"),"[[",1))){
     seq_mean = mean(seq)
   }
   if (ra == "RA5"){
-    seq = (c(14999492,45159498,62707152,61266189)/ra_ncols)/100
+    seq = (c(45159498,62707152,61266189)/ra_ncols)/100
+    seq_sd = sd(seq)/sqrt(length(seq))
+    seq_mean = mean(seq)
+  }
+  if (ra == "RA6"){
+    seq = (c(78954161,43533588,77954143,74830517)/ra_ncols)/100
     seq_sd = sd(seq)/sqrt(length(seq))
     seq_mean = mean(seq)
   }
@@ -77,7 +86,7 @@ for (ra in unique(sapply(str_split(path_samples, "_"),"[[",1))){
 stats = stats[-1,]
 row.names(stats) = unique(sapply(str_split(path_samples, "_"),"[[",1))
 
-# Plot avg gene expression for each Inf separately
+# Plot avg gene expression for each RA sample separately
 counter = 1
 myplots <- vector("list", 3)
 for(i in 1:3){
@@ -92,10 +101,11 @@ for(i in 1:3){
   myplots[[i]] <- ggplot(data = myData, aes(x = factor(row.names(myData)), y = Avg, fill = row.names(myData))) + 
     geom_bar(stat = "identity", position = position_dodge(0.99)) + 
     geom_errorbar(limits, position = position_dodge(0.99), width = 0.25) + 
-    scale_fill_manual(name = "RA patient biopsy", values = c("firebrick4","firebrick","firebrick3","firebrick2","firebrick1")) + 
+    scale_fill_manual(name = "RA patient biopsy", values = c("firebrick4","firebrick","firebrick3","firebrick2","firebrick1", "tomato1")) + 
     labs(x = "", y = "Number of observations") + 
     labs(title = y_lab) + 
     ylab(y_lab)
   counter = counter + 2
 }
 plot_grid(plotlist=myplots)
+

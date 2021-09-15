@@ -2,27 +2,27 @@
 suppressPackageStartupMessages({
   library(openxlsx)
   library(clusterProfiler)
+  library(stringr)
 })
 
 # removes all glob variables from env
 rm(list = ls())
 
-setwd('/Users/sanjavickovic/Desktop/morphoSPOT/3dst_repo/3dst/de_analysis')
-# setwd("/Users/svickovi/Library/Mobile Documents/com~apple~CloudDocs/Desktop/morphoSPOT/3dst_repo/3dst/go_analysis")
+setwd("/Users/sanjavickovic/Desktop/morphoSPOT/3dst_repo/3dst/go_analysis")
 
 # Loads files for ST analysis
 path_output = "../../../plot_outputs"
 
 # Which samples do you want to use? 
-norm_samples = "RA5"
+norm_samples = "RA6"
 
-txt.files <- list.files(pattern = glob2rx(paste0("DEGs.Inf.Cluster*_subsetted*",norm_samples, "*.txt")), path = path_output, full.names = T)
+#txt.files <- list.files(pattern = glob2rx(paste0("DEGs.Inf.Cluster*_subsetted*",norm_samples, "*.txt")), path = path_output, full.names = T)
 #txt.files <- list.files(pattern = glob2rx(paste0("DEGs.Spatial.Cluster*_subsetted*",norm_samples, "*.txt")), path = path_output, full.names = T)
-# txt.files <- list.files(pattern = glob2rx(paste0("*",tolower(norm_samples), "*_clusters_subsetted.txt")), path = path_output, full.names = T)
+txt.files <- list.files(pattern = glob2rx(paste0("*",tolower(norm_samples), "*_clusters_subsetted.txt")), path = path_output, full.names = T)
 
 
-celltypes <-  sapply(strsplit(sapply(strsplit(txt.files, split = "/"),"[[",5), "_"),"[[",1)
-# celltypes <-  str_replace(sapply(strsplit(str_replace(txt.files, "_clusters_subsetted.txt", ""), "/"),"[[",5),"scRNAseq_","")
+#celltypes <-  sapply(strsplit(sapply(strsplit(txt.files, split = "/"),"[[",5), "_"),"[[",1)
+celltypes <-  str_replace(sapply(strsplit(str_replace(txt.files, "_clusters_subsetted.txt", ""), "/"),"[[",5),"scRNAseq_","")
 
 
 GeneSets <- setNames(lapply(txt.files, function(cell.type.file) {
@@ -37,11 +37,12 @@ bp.eriched.terms <- setNames(lapply(celltypes, function(cl) {
   as.data.frame(egmt)
 }), nm = celltypes)
 
-sh <- createWorkbook(title = paste0(norm_samples, " inf clusters GO enrcihment"))
-# sh <- createWorkbook(title = paste0(norm_samples, " celltypes GO enrcihment"))
-# sh <- createWorkbook(title = paste0(norm_samples, " spatial clusters GO enrcihment"))
+# sh <- createWorkbook(title = paste0(norm_samples, " inf clusters GO enrcihment"))
+sh <- createWorkbook(title = paste0(norm_samples, " celltypes GO enrcihment"))
+#sh <- createWorkbook(title = paste0(norm_samples, " spatial clusters GO enrcihment"))
 
 for (cl in celltypes) {
+  print(cl)
   addWorksheet(wb = sh, sheetName = cl)
   firstrow <- paste0(norm_samples," cluster: ", gsub(pattern = "Cluster", replacement = "", x = cl))
   writeData(wb = sh, x = firstrow, sheet = cl)
@@ -53,8 +54,8 @@ for (cl in celltypes) {
   print(bp.eriched.terms[[cl]][, -1])
 }
 
-saveWorkbook(sh, file = paste0(path_output, "/", norm_samples, "_inf_clusters_GO_enrichment.xlsx"), overwrite = TRUE)
-# saveWorkbook(sh, file = paste0(path_output, "/", norm_samples, "_cell_types_GO_enrichment.xlsx"), overwrite = TRUE)
+#saveWorkbook(sh, file = paste0(path_output, "/", norm_samples, "_inf_clusters_GO_enrichment.xlsx"), overwrite = TRUE)
+saveWorkbook(sh, file = paste0(path_output, "/", norm_samples, "_cell_types_GO_enrichment.xlsx"), overwrite = TRUE)
 #saveWorkbook(sh, file = paste0(path_output, "/", norm_samples, "_spatial_clusters_GO_enrichment.xlsx"), overwrite = TRUE)          
 
 
@@ -62,16 +63,16 @@ saveWorkbook(sh, file = paste0(path_output, "/", norm_samples, "_inf_clusters_GO
 
 # make one big doc with all top 3 pathways 
 # Which samples do you want to use? 
-norm_samples = c("RA1", "RA2","RA3","RA4","RA5")
+norm_samples = c("RA4", "RA5") #, #c(),,  
 go_infs = matrix(ncol = 3, nrow = 1)
 for (samples in norm_samples){
   print(samples)
-  txt.files <- list.files(pattern = glob2rx(paste0("DEGs.Inf.Cluster*_subsetted*",samples, "*.txt")), path = path_output, full.names = T)
-  # txt.files <- list.files(pattern = glob2rx(paste0("DEGs.Spatial.Cluster*_subsetted*",norm_samples, "*.txt")), path = path_output, full.names = T)
-  #txt.files <- list.files(pattern = glob2rx(paste0("*",tolower(norm_samples), "*_clusters_subsetted.txt")), path = path_output, full.names = T)
+  #txt.files <- list.files(pattern = glob2rx(paste0("DEGs.Inf.Cluster*_subsetted*",samples, "*.txt")), path = path_output, full.names = T)
+  #txt.files <- list.files(pattern = glob2rx(paste0("DEGs.Spatial.Cluster*_subsetted*",norm_samples, "*.txt")), path = path_output, full.names = T)
+  txt.files <- list.files(pattern = glob2rx(paste0("*",tolower(samples), "*_clusters_subsetted.txt")), path = path_output, full.names = T)
   
-  celltypes <-  sapply(strsplit(sapply(strsplit(txt.files, split = "/"),"[[",5), "_"),"[[",1)
-  # celltypes <-  str_replace(sapply(strsplit(str_replace(txt.files, "_clusters_subsetted.txt", ""), "/"),"[[",5),"scRNAseq_","")
+  #celltypes <-  sapply(strsplit(sapply(strsplit(txt.files, split = "/"),"[[",5), "_"),"[[",1)
+  celltypes <-  str_replace(sapply(strsplit(str_replace(txt.files, "_clusters_subsetted.txt", ""), "/"),"[[",5),"scRNAseq_","")
 
   GeneSets <- setNames(lapply(txt.files, function(cell.type.file) {
     read.table(cell.type.file, header = T, stringsAsFactors = F)$x
@@ -99,8 +100,10 @@ go_infs = go_infs[,-1]
 colnames(go_infs) = c("pathway", "genes")
 go_infs = data.frame(go_infs)
 go_infs$sample = sapply(strsplit(row.names(go_infs), "_"),"[[",1)
-go_infs$cluster = sapply(strsplit(row.names(go_infs), "\\."),"[[",3)
-#go_infs$cluster = sapply(strsplit(sapply(strsplit(row.names(go_infs), "\\."),"[[",1),"_"),"[[",3)
+#go_infs$cluster = sapply(strsplit(row.names(go_infs), "\\."),"[[",3)
+go_infs$cluster = sapply(strsplit(sapply(strsplit(row.names(go_infs), "\\."),"[[",1),"_"),"[[",3)
+
+sort(table(go_infs[,1]), decreasing = T)[1:5]
 
 gn = ""
 for (p in names(sort(table(go_infs[,1]), decreasing = T)[1:5])){
@@ -113,7 +116,7 @@ for (p in names(sort(table(go_infs[,1]), decreasing = T)[1:5])){
     print(sort(table(gn), decreasing = T)[1:5])
   }
 }
-
+                                  
 
 
             

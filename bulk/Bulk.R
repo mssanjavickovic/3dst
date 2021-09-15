@@ -13,16 +13,15 @@ suppressMessages(suppressWarnings(library(stringr,warn.conflicts = F, quietly = 
 suppressMessages(suppressWarnings(library(grid,warn.conflicts = F, quietly = T)))
 
 # Read the fuctions file 
-setwd("/Users/svickovi/Library/Mobile Documents/com~apple~CloudDocs/Desktop/morphoSPOT/3dst_repo/3dst/data")
+setwd("/Users/sanjavickovic/Desktop/morphoSPOT/3dst_repo/3dst/data")
 source('../functions/Read_Functions.R')
 
 # Where are you raw csv expression files located? 
 path_samples = list.files("../data/", pattern = glob2rx("RA*norm.exp*"))
 
 # Set output directory that will contain all plots and output gene files
-path_output = "/Users/svickovi/Library/Mobile Documents/com~apple~CloudDocs/Desktop/morphoSPOT/plot_outputs/"
+path_output = "../../../plot_outputs"
 
-stats = matrix(ncol = 6, nrow = 1)
 for (ra in unique(sapply(str_split(path_samples, "_"),"[[",1))){
   
   # List avaiable raw matrices for normalization 
@@ -81,9 +80,10 @@ all.exp.values.norm = genes_cleanup(all.exp.values.norm)
 
 # Hierachical clustering on tsne matrix
 hc = hclust(dist(t(all.exp.values.norm)), method = "ward.D2")
-f = 5
+f = 6
 clusters = as.matrix(cutree(hc, f))
-col.panel = c("#FED8B1", "gray85", "gray76",  "gray61", "gray90", "gray99")
+shadesOfGrey <- colorRampPalette(c("grey50", "grey80"))
+col.panel = c("firebrick4","firebrick","firebrick3",shadesOfGrey(3)[1],shadesOfGrey(3)[2],shadesOfGrey(3)[3])
 row.names(clusters) = colnames(all.exp.values.norm)
 
 print("Plotting dendogram ... Please adjust k and rerun if needed")
@@ -131,7 +131,7 @@ rot$RA = sapply(strsplit(row.names(rot), "_"),"[[",1)
 
 ggplot(rot, aes(x=PCA1, y=PCA2, color=RA)) + 
   geom_point() +
-  scale_color_manual(name = "RA patient biopsy", values = c("firebrick4","firebrick","firebrick3","firebrick2","firebrick1"))
+  scale_color_manual(name = "RA patient biopsy", values = c("firebrick4","firebrick","firebrick3",shadesOfGrey(3)[1],shadesOfGrey(3)[2],shadesOfGrey(3)[3]))
 
 # How much variation is explained with each PC? 
 summary(pc)
@@ -148,19 +148,21 @@ palette.breaks <- seq(quantile.range["0%"], quantile.range["100%"], 0.1)
 col.pal = colorRampPalette(c("black","purple","darkorchid1","gold1"))
 color.palette  <- col.pal(length(palette.breaks) - 1)
 
-annotdf <- data.frame(row.names = rownames(rot), RA = rot$RA)
-cols = c("firebrick4","firebrick","firebrick3","firebrick2","firebrick1")
-names(cols) = paste0("RA", 1:5)
-mycolors <- list(RA = cols)
+rownames(rot)
 
+annotdf <- data.frame(row.names = rownames(rot), RA = rot$RA)
+annotdf
+cols = c("firebrick4","firebrick","firebrick3",shadesOfGrey(3)[1],shadesOfGrey(3)[2],shadesOfGrey(3)[3])
+names(cols) = paste0("RA", 1:6)
+mycolors <- list(RA = cols)
+mycolors
 heat <- pheatmap(m3_ref[genes,], show_colnames = F , cluster_rows = T, cluster_cols = T, 
-                 col=color.palette, breaks = palette.breaks,clustering_distance_cols = "euclidean",
-                 scale="none", trace = "none",density.info = "none", cexRow = 0.05,
-                 annotation_col = annotdf, annotation_colors = mycolors, fontsize_row = 10,
-                 cellheight = 2, cellwidth = 5)
+                 col=color.palette, breaks = palette.breaks, clustering_method = "ward.D2",
+                 scale="none", trace = "none", density.info = "none", cexRow = 0.05,
+                 annotation_col = annotdf, annotation_colors = mycolors, fontsize_row = 10)
 
 add.flag(heat,
-         kept.labels = c("IGLL5", "FN1", "CD52", "MS4A1", "CXCL12", "MMP9", "CLU", "VIM", "COL6A2", "CD4", "XBP1", "JUN", "LTB", "TYROBP"),
+         kept.labels = c("IGLL5", "FN1", "CD52", "MS4A1", "CXCL12", "MMP9", "CLU", "VIM", "COL6A2", "CD4", "XBP1", "JUN", "LTB", "TYROBP", "PRG4"),
          repel.degree = 0)
 
 

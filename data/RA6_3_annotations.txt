@@ -1,0 +1,354 @@
+image	x_y	x	y	value
+RA6_D2	54.1_51.79	54.1	51.79	Synovial stroma
+RA6_D2	47.95_49.9	47.95	49.9	Synovial stroma
+RA6_D2	36.01_49.88	36.01	49.88	Infiltrate
+RA6_D2	56.06_47.78	56.06	47.78	Synovial stroma
+RA6_D2	45.18_58.97	45.18	58.97	Synovial stroma;Unknown
+RA6_D2	31.88_36.05	31.88	36.05	Synovial stroma
+RA6_D2	50.93_42.84	50.93	42.84	Synovial stroma
+RA6_D2	55.01_40.81	55.01	40.81	Synovial stroma
+RA6_D2	50.01_53.86	50.01	53.86	Synovial stroma
+RA6_D2	36.91_42.94	36.91	42.94	Synovial stroma
+RA6_D2	48.07_57.89	48.07	57.89	Infiltrate
+RA6_D2	53.03_50.86	53.03	50.86	Synovial stroma
+RA6_D2	52.03_51.85	52.03	51.85	Synovial stroma
+RA6_D2	33.07_41.03	33.07	41.03	Synovial stroma
+RA6_D2	33.93_43.97	33.93	43.97	Synovial stroma
+RA6_D2	42.96_36.93	42.96	36.93	Synovial stroma
+RA6_D2	32.11_48.01	32.11	48.01	Synovial stroma
+RA6_D2	48.9_50.88	48.9	50.88	Synovial stroma
+RA6_D2	45.97_45.9	45.97	45.9	Synovial stroma
+RA6_D2	49.98_47.87	49.98	47.87	Synovial stroma
+RA6_D2	28.12_49.92	28.12	49.92	Unknown
+RA6_D2	36.08_53.92	36.08	53.92	Synovial stroma
+RA6_D2	29.98_34.08	29.98	34.08	Synovial stroma
+RA6_D2	38.02_35.99	38.02	35.99	Synovial stroma
+RA6_D2	25.01_45.13	25.01	45.13	Synovial stroma
+RA6_D2	33.96_35.88	33.96	35.88	Synovial stroma
+RA6_D2	51.98_49.81	51.98	49.81	Synovial stroma;Unknown
+RA6_D2	39.12_51.01	39.12	51.01	Synovial stroma
+RA6_D2	56.09_51.82	56.09	51.82	Infiltrate;Synovial stroma
+RA6_D2	37.04_54.89	37.04	54.89	Synovial stroma
+RA6_D2	23.93_36.13	23.93	36.13	Synovial stroma
+RA6_D2	55.11_54.83	55.11	54.83	Infiltrate
+RA6_D2	35.01_48.92	35.01	48.92	Infiltrate
+RA6_D2	28.04_43.98	28.04	43.98	Synovial stroma
+RA6_D2	28.04_39.95	28.04	39.95	Synovial stroma
+RA6_D2	54.09_45.8	54.09	45.8	Synovial stroma
+RA6_D2	26.04_35.97	26.04	35.97	Synovial stroma
+RA6_D2	54_41.79	54	41.79	Synovial stroma
+RA6_D2	33.09_47.04	33.09	47.04	Synovial stroma
+RA6_D2	37.07_46.96	37.07	46.96	Synovial stroma
+RA6_D2	49.05_56.9	49.05	56.9	Synovial stroma
+RA6_D2	40.03_37.98	40.03	37.98	Synovial stroma
+RA6_D2	42.1_49.93	42.1	49.93	Synovial stroma
+RA6_D2	43.1_48.99	43.1	48.99	Synovial stroma
+RA6_D2	33.14_53.06	33.14	53.06	Synovial stroma
+RA6_D2	32.03_42.06	32.03	42.06	Synovial stroma
+RA6_D2	28.12_45.97	28.12	45.97	Synovial stroma
+RA6_D2	33_39.04	33	39.04	Infiltrate
+RA6_D2	47.96_51.86	47.96	51.86	Synovial stroma
+RA6_D2	28.15_47.99	28.15	47.99	Synovial stroma
+RA6_D2	35_50.94	35	50.94	Infiltrate
+RA6_D2	44.1_55.98	44.1	55.98	Synovial stroma
+RA6_D2	45.91_39.88	45.91	39.88	Synovial stroma
+RA6_D2	58.11_55.84	58.11	55.84	Synovial stroma;Unknown
+RA6_D2	33.14_51.06	33.14	51.06	Infiltrate;Synovial stroma
+RA6_D2	43.1_50.96	43.1	50.96	Synovial stroma
+RA6_D2	35.92_37.84	35.92	37.84	Synovial stroma
+RA6_D2	46.9_38.92	46.9	38.92	Synovial stroma
+RA6_D2	49_52.9	49	52.9	Synovial stroma
+RA6_D2	35.07_54.91	35.07	54.91	Infiltrate
+RA6_D2	42.15_47.96	42.15	47.96	Synovial stroma
+RA6_D2	30.06_44.06	30.06	44.06	Synovial stroma
+RA6_D2	47.89_41.9	47.89	41.9	Synovial stroma
+RA6_D2	27.18_48.96	27.18	48.96	Unknown
+RA6_D2	52.86_38.87	52.86	38.87	Synovial stroma;Unknown
+RA6_D2	45.04_46.93	45.04	46.93	Synovial stroma
+RA6_D2	57.08_52.77	57.08	52.77	Synovial stroma
+RA6_D2	32.11_52.05	32.11	52.05	Synovial stroma
+RA6_D2	39.04_34.96	39.04	34.96	Synovial stroma;Unknown
+RA6_D2	45.17_60.96	45.17	60.96	Synovial stroma;Unknown
+RA6_D2	31.07_41.06	31.07	41.06	Unknown
+RA6_D2	32.11_50.07	32.11	50.07	Synovial stroma
+RA6_D2	45.99_47.92	45.99	47.92	Synovial stroma
+RA6_D2	34.06_41.9	34.06	41.9	Infiltrate;Synovial stroma
+RA6_D2	39.23_57.11	39.23	57.11	Synovial stroma
+RA6_D2	51.04_54.86	51.04	54.86	Synovial stroma
+RA6_D2	50.94_44.8	50.94	44.8	Synovial stroma
+RA6_D2	35.94_35.9	35.94	35.9	Collagenous/Adipose tissue
+RA6_D2	55.16_56.79	55.16	56.79	Synovial stroma
+RA6_D2	34.94_42.96	34.94	42.96	Infiltrate;Synovial stroma
+RA6_D2	36.91_36.88	36.91	36.88	Infiltrate;Synovial stroma
+RA6_D2	42.07_51.98	42.07	51.98	Synovial stroma
+RA6_D2	52.08_57.83	52.08	57.83	Synovial stroma
+RA6_D2	33.11_49.07	33.11	49.07	Synovial stroma
+RA6_D2	46.84_40.94	46.84	40.94	Synovial stroma
+RA6_D2	41.09_41	41.09	41	Infiltrate
+RA6_D2	57.1_56.82	57.1	56.82	Synovial stroma;Unknown
+RA6_D2	26.07_43.98	26.07	43.98	Synovial stroma
+RA6_D2	30.09_46.08	30.09	46.08	Synovial stroma
+RA6_D2	43.97_37.9	43.97	37.9	Synovial stroma
+RA6_D2	44.99_38.92	44.99	38.92	Infiltrate;Synovial stroma
+RA6_D2	48_53.9	48	53.9	Synovial stroma
+RA6_D2	52.95_46.82	52.95	46.82	Synovial stroma
+RA6_D2	52.94_42.82	52.94	42.82	Synovial stroma
+RA6_D2	29.18_46.94	29.18	46.94	Synovial stroma
+RA6_D2	26.03_41.98	26.03	41.98	Synovial stroma
+RA6_D2	47.02_54.91	47.02	54.91	Synovial stroma
+RA6_D2	31.13_51.09	31.13	51.09	Synovial stroma
+RA6_D2	51.07_56.86	51.07	56.86	Synovial stroma
+RA6_D2	36.99_48.89	36.99	48.89	Synovial stroma
+RA6_D2	50.07_55.91	50.07	55.91	Synovial stroma
+RA6_D2	36.04_47.9	36.04	47.9	Synovial stroma
+RA6_D2	44.96_36.91	44.96	36.91	Synovial stroma
+RA6_D2	34.94_36.91	34.94	36.91	Collagenous/Adipose tissue
+RA6_D2	48.03_59.91	48.03	59.91	Synovial stroma
+RA6_D2	31.04_39.07	31.04	39.07	Synovial stroma
+RA6_D2	58.09_53.9	58.09	53.9	Synovial stroma
+RA6_D2	35.04_52.91	35.04	52.91	Synovial stroma
+RA6_D2	56.97_40.76	56.97	40.76	Synovial stroma
+RA6_D2	55.98_43.79	55.98	43.79	Synovial cell hyperplasia;Synovial stroma
+RA6_D2	55.05_50.81	55.05	50.81	Synovial stroma
+RA6_D2	46.93_46.92	46.93	46.92	Synovial stroma
+RA6_D2	55.01_42.8	55.01	42.8	Synovial stroma
+RA6_D2	34.02_47.95	34.02	47.95	Infiltrate;Synovial stroma
+RA6_D2	50_49.85	50	49.85	Synovial stroma
+RA6_D2	57.02_44.8	57.02	44.8	Synovial stroma
+RA6_D2	28.09_37.94	28.09	37.94	Synovial stroma
+RA6_D2	56.02_45.77	56.02	45.77	Synovial stroma
+RA6_D2	24.86_35.18	24.86	35.18	Synovial stroma
+RA6_D2	49.96_43.81	49.96	43.81	Synovial stroma
+RA6_D2	25.01_39.18	25.01	39.18	Synovial stroma
+RA6_D2	32.01_44.02	32.01	44.02	Synovial stroma
+RA6_D2	26.09_39.96	26.09	39.96	Synovial stroma
+RA6_D2	27.04_43	27.04	43	Synovial stroma
+RA6_D2	46.94_52.87	46.94	52.87	Synovial stroma
+RA6_D2	36.05_43.94	36.05	43.94	Synovial stroma
+RA6_D2	40.24_57.99	40.24	57.99	Synovial cell hyperplasia
+RA6_D2	40.93_36.98	40.93	36.98	Synovial stroma
+RA6_D2	39.97_36.03	39.97	36.03	Synovial stroma
+RA6_D2	41.17_54.94	41.17	54.94	Synovial stroma;Unknown
+RA6_D2	27.96_33.95	27.96	33.95	Synovial stroma
+RA6_D2	39.05_36.96	39.05	36.96	Synovial stroma
+RA6_D2	40.09_47.95	40.09	47.95	Infiltrate;Synovial stroma
+RA6_D2	48.87_42.9	48.87	42.9	Synovial stroma
+RA6_D2	28.11_41.96	28.11	41.96	Synovial stroma
+RA6_D2	40.11_53.98	40.11	53.98	Infiltrate;Synovial stroma
+RA6_D2	27.09_38.96	27.09	38.96	Unknown
+RA6_D2	23_45.16	23	45.16	Unknown
+RA6_D2	45.85_37.85	45.85	37.85	Synovial stroma
+RA6_D2	29.09_40.95	29.09	40.95	Synovial stroma
+RA6_D2	38.23_56.03	38.23	56.03	Synovial cell hyperplasia
+RA6_D2	42.2_59.97	42.2	59.97	Synovial stroma;Unknown
+RA6_D2	45.14_56.95	45.14	56.95	Synovial stroma
+RA6_D2	48.95_46.93	48.95	46.93	Synovial stroma
+RA6_D2	54.03_43.79	54.03	43.79	Synovial stroma
+RA6_D2	41.08_46.97	41.08	46.97	Synovial stroma
+RA6_D2	23.97_44.15	23.97	44.15	Synovial stroma
+RA6_D2	27.1_40.94	27.1	40.94	Synovial stroma
+RA6_D2	51.16_58.82	51.16	58.82	Synovial cell hyperplasia;Unknown
+RA6_D2	48.87_38.89	48.87	38.89	Synovial stroma
+RA6_D2	55.05_48.8	55.05	48.8	Synovial stroma
+RA6_D2	40.03_43.97	40.03	43.97	Infiltrate;Synovial stroma
+RA6_D2	30.11_48.06	30.11	48.06	Synovial stroma
+RA6_D2	48.93_40.87	48.93	40.87	Synovial stroma
+RA6_D2	38.06_46.02	38.06	46.02	Synovial stroma
+RA6_D2	35.01_40.87	35.01	40.87	Synovial stroma
+RA6_D2	35.97_39.91	35.97	39.91	Synovial stroma
+RA6_D2	47.94_39.89	47.94	39.89	Synovial stroma
+RA6_D2	24.01_42.12	24.01	42.12	Synovial stroma
+RA6_D2	44.06_47.94	44.06	47.94	Synovial stroma
+RA6_D2	52.99_48.83	52.99	48.83	Synovial stroma
+RA6_D2	42.17_55.98	42.17	55.98	Synovial cell hyperplasia
+RA6_D2	54.08_53.82	54.08	53.82	Synovial stroma
+RA6_D2	52.05_55.84	52.05	55.84	Synovial stroma
+RA6_D2	38.12_52.02	38.12	52.02	Synovial stroma
+RA6_D2	59.06_54.83	59.06	54.83	Synovial stroma
+RA6_D2	31.05_49.06	31.05	49.06	Unknown
+RA6_D2	38.06_39.96	38.06	39.96	Synovial stroma
+RA6_D2	44.08_45.96	44.08	45.96	Synovial stroma
+RA6_D2	30.1_52.03	30.1	52.03	Unknown
+RA6_D2	33.02_45.07	33.02	45.07	Synovial stroma
+RA6_D2	37.05_52.88	37.05	52.88	Infiltrate;Synovial stroma
+RA6_D2	49.96_41.87	49.96	41.87	Synovial stroma
+RA6_D2	41.13_44.95	41.13	44.95	Synovial stroma
+RA6_D2	33.98_39.92	33.98	39.92	Synovial stroma
+RA6_D2	45.11_50.92	45.11	50.92	Synovial stroma
+RA6_D2	53.03_52.82	53.03	52.82	Synovial stroma
+RA6_D2	33.04_43.05	33.04	43.05	Infiltrate;Synovial stroma
+RA6_D2	41.98_39.97	41.98	39.97	Infiltrate;Synovial stroma
+RA6_D2	48.91_44.89	48.91	44.89	Synovial stroma
+RA6_D2	55.98_41.73	55.98	41.73	Synovial stroma
+RA6_D2	34.95_34.89	34.95	34.89	Infiltrate;Synovial stroma
+RA6_D2	38.07_43.98	38.07	43.98	Synovial stroma
+RA6_D2	38.04_37.96	38.04	37.96	Synovial stroma
+RA6_D2	47.93_43.89	47.93	43.89	Synovial stroma
+RA6_D2	49.91_39.82	49.91	39.82	Synovial stroma
+RA6_D2	45.96_51.9	45.96	51.9	Synovial stroma
+RA6_D2	39.21_52.98	39.21	52.98	Synovial stroma
+RA6_D2	40.2_55.99	40.2	55.99	Infiltrate;Synovial stroma
+RA6_D2	46.04_55.96	46.04	55.96	Synovial stroma
+RA6_D2	45.96_49.91	45.96	49.91	Synovial stroma
+RA6_D2	27.06_46.93	27.06	46.93	Synovial stroma
+RA6_D2	30.05_42.08	30.05	42.08	Synovial stroma
+RA6_D2	33.99_37.96	33.99	37.96	Synovial stroma
+RA6_D2	44.08_51.92	44.08	51.92	Synovial stroma
+RA6_D2	51.92_43.83	51.92	43.83	Synovial stroma
+RA6_D2	57.09_50.75	57.09	50.75	Synovial stroma
+RA6_D2	49.99_45.87	49.99	45.87	Synovial stroma
+RA6_D2	22.01_44.26	22.01	44.26	Unknown
+RA6_D2	29.05_36.94	29.05	36.94	Synovial stroma
+RA6_D2	43.03_44.96	43.03	44.96	Infiltrate;Synovial stroma
+RA6_D2	31.05_43.06	31.05	43.06	Synovial stroma
+RA6_D2	42.13_53.99	42.13	53.99	Synovial stroma
+RA6_D2	34.94_46.94	34.94	46.94	Infiltrate
+RA6_D2	36_45.93	36	45.93	Synovial stroma
+RA6_D2	46.99_48.87	46.99	48.87	Synovial stroma
+RA6_D2	41.13_48.95	41.13	48.95	Synovial stroma
+RA6_D2	57.09_54.81	57.09	54.81	Synovial stroma
+RA6_D2	43.01_40.96	43.01	40.96	Infiltrate;Synovial stroma
+RA6_D2	45.9_43.91	45.9	43.91	Synovial stroma
+RA6_D2	31.99_38.05	31.99	38.05	Infiltrate;Synovial stroma
+RA6_D2	40.07_45.99	40.07	45.99	Synovial stroma
+RA6_D2	27.09_34.99	27.09	34.99	Synovial stroma
+RA6_D2	56.06_49.79	56.06	49.79	Synovial stroma
+RA6_D2	49.05_58.91	49.05	58.91	Synovial stroma
+RA6_D2	51.89_37.79	51.89	37.79	Synovial stroma;Unknown
+RA6_D2	51.95_41.83	51.95	41.83	Synovial stroma
+RA6_D2	29.05_38.97	29.05	38.97	Synovial stroma
+RA6_D2	38.17_48.02	38.17	48.02	Synovial stroma
+RA6_D2	39.16_47.01	39.16	47.01	Infiltrate
+RA6_D2	34.96_38.84	34.96	38.84	Synovial stroma
+RA6_D2	38.07_42.02	38.07	42.02	Synovial stroma
+RA6_D2	36.91_34.8	36.91	34.8	Synovial stroma
+RA6_D2	42.01_41.98	42.01	41.98	Infiltrate
+RA6_D2	40.07_42.01	40.07	42.01	Infiltrate
+RA6_D2	38.99_39.01	38.99	39.01	Synovial stroma
+RA6_D2	40.04_39.99	40.04	39.99	Synovial stroma
+RA6_D2	41.99_37.96	41.99	37.96	Infiltrate;Synovial stroma
+RA6_D2	47.96_47.93	47.96	47.93	Synovial stroma
+RA6_D2	44.07_49.97	44.07	49.97	Synovial stroma
+RA6_D2	43.06_42.92	43.06	42.92	Synovial stroma
+RA6_D2	48_55.93	48	55.93	Synovial stroma
+RA6_D2	32.05_40.05	32.05	40.05	Collagenous/Adipose tissue
+RA6_D2	43.11_54.97	43.11	54.97	Synovial stroma
+RA6_D2	41.11_53.01	41.11	53.01	Synovial stroma
+RA6_D2	31.1_47.07	31.1	47.07	Synovial stroma
+RA6_D2	29.15_48.96	29.15	48.96	Unknown
+RA6_D2	35.06_44.92	35.06	44.92	Synovial stroma
+RA6_D2	49.99_51.85	49.99	51.85	Synovial stroma
+RA6_D2	29.18_50.91	29.18	50.91	Unknown
+RA6_D2	54.07_47.72	54.07	47.72	Synovial stroma
+RA6_D2	42.02_43.93	42.02	43.93	Infiltrate;Synovial stroma
+RA6_D2	56.12_55.83	56.12	55.83	Infiltrate;Synovial stroma
+RA6_D2	51.02_50.81	51.02	50.81	Synovial stroma
+RA6_D2	53.04_56.84	53.04	56.84	Synovial stroma
+RA6_D2	40.11_51.96	40.11	51.96	Synovial stroma
+RA6_D2	24.99_43.12	24.99	43.12	Synovial stroma
+RA6_D2	43.95_35.93	43.95	35.93	Synovial stroma
+RA6_D2	50.97_46.83	50.97	46.83	Synovial stroma
+RA6_D2	41_34.96	41	34.96	Synovial stroma;Unknown
+RA6_D2	39.17_48.95	39.17	48.95	Synovial stroma
+RA6_D2	51.02_52.81	51.02	52.81	Synovial stroma
+RA6_D2	51.01_48.89	51.01	48.89	Synovial stroma
+RA6_D2	44.14_57.96	44.14	57.96	Synovial cell hyperplasia
+RA6_D2	46.93_44.88	46.93	44.88	Synovial stroma
+RA6_D2	38.13_54.02	38.13	54.02	Infiltrate;Synovial stroma
+RA6_D2	43.97_39.95	43.97	39.95	Infiltrate;Synovial stroma
+RA6_D2	43.18_56.97	43.18	56.97	Synovial stroma
+RA6_D2	50.89_38.82	50.89	38.82	Synovial stroma
+RA6_D2	46.01_53.96	46.01	53.96	Synovial stroma
+RA6_D2	41.23_57.03	41.23	57.03	Synovial stroma
+RA6_D2	55.03_46.78	55.03	46.78	Synovial stroma
+RA6_D2	27.13_44.95	27.13	44.95	Collagenous/Adipose tissue
+RA6_D2	30.13_50.08	30.13	50.08	Synovial stroma
+RA6_D2	30.96_35.06	30.96	35.06	Synovial stroma
+RA6_D2	43.05_46.96	43.05	46.96	Synovial stroma
+RA6_D2	44.03_41.91	44.03	41.91	Synovial stroma
+RA6_D2	41.08_38.96	41.08	38.96	Infiltrate
+RA6_D2	45.07_54.97	45.07	54.97	Synovial stroma
+RA6_D2	44.13_53.96	44.13	53.96	Synovial stroma
+RA6_D2	41.12_51.04	41.12	51.04	Synovial stroma
+RA6_D2	47.08_58.91	47.08	58.91	Synovial stroma
+RA6_D2	36.91_44.87	36.91	44.87	Synovial stroma
+RA6_D2	39.21_55.02	39.21	55.02	Infiltrate;Synovial stroma
+RA6_D2	46.98_50.9	46.98	50.9	Synovial stroma
+RA6_D2	36.05_51.89	36.05	51.89	Synovial stroma
+RA6_D2	37.04_50.89	37.04	50.89	Synovial stroma
+RA6_D2	55.09_52.81	55.09	52.81	Infiltrate;Synovial stroma
+RA6_D2	38.17_50.01	38.17	50.01	Synovial stroma
+RA6_D2	45.12_52.95	45.12	52.95	Synovial stroma
+RA6_D2	31.97_34.06	31.97	34.06	Synovial stroma
+RA6_D2	50.15_57.9	50.15	57.9	Synovial stroma
+RA6_D2	43.03_38.94	43.03	38.94	Infiltrate;Synovial stroma
+RA6_D2	50.95_40.83	50.95	40.83	Synovial stroma
+RA6_D2	41.07_42.98	41.07	42.98	Infiltrate;Synovial stroma
+RA6_D2	46.05_59.93	46.05	59.93	Synovial stroma;Unknown
+RA6_D2	34.06_51.86	34.06	51.86	Synovial stroma
+RA6_D2	39.02_43.05	39.02	43.05	Infiltrate
+RA6_D2	57_42.75	57	42.75	Synovial cell hyperplasia;Synovial stroma
+RA6_D2	25.02_47.11	25.02	47.11	Unknown
+RA6_D2	36.08_55.9	36.08	55.9	Synovial cell hyperplasia
+RA6_D2	31.14_53.05	31.14	53.05	Unknown
+RA6_D2	26.97_36.97	26.97	36.97	Synovial stroma;Unknown
+RA6_D2	47.91_45.89	47.91	45.89	Synovial stroma
+RA6_D2	24.97_41.13	24.97	41.13	Synovial stroma
+RA6_D2	54.03_39.8	54.03	39.8	Synovial stroma
+RA6_D2	46.03_57.91	46.03	57.91	Synovial stroma
+RA6_D2	51.93_45.85	51.93	45.85	Synovial stroma
+RA6_D2	31.04_37.03	31.04	37.03	Synovial stroma
+RA6_D2	26.09_45.94	26.09	45.94	Synovial stroma
+RA6_D2	52.96_44.83	52.96	44.83	Synovial stroma
+RA6_D2	42.16_58.01	42.16	58.01	Synovial stroma
+RA6_D2	44.1_59.98	44.1	59.98	Synovial stroma
+RA6_D2	52.92_40.77	52.92	40.77	Synovial stroma
+RA6_D2	43.12_52.93	43.12	52.93	Synovial stroma
+RA6_D2	47.02_56.9	47.02	56.9	Synovial stroma
+RA6_D2	27.99_35.96	27.99	35.96	Synovial stroma
+RA6_D2	29.08_44.97	29.08	44.97	Synovial stroma
+RA6_D2	43.19_58.96	43.19	58.96	Synovial cell hyperplasia
+RA6_D2	41.17_58.99	41.17	58.99	Synovial stroma
+RA6_D2	34.09_53.91	34.09	53.91	Synovial stroma
+RA6_D2	30.03_36.08	30.03	36.08	Synovial stroma
+RA6_D2	36.03_41.91	36.03	41.91	Infiltrate;Synovial stroma
+RA6_D2	28.96_34.9	28.96	34.9	Synovial stroma
+RA6_D2	30.02_38.04	30.02	38.04	Synovial stroma
+RA6_D2	34.04_45.95	34.04	45.95	Synovial stroma
+RA6_D2	45.9_41.92	45.9	41.92	Synovial stroma
+RA6_D2	54.12_57.79	54.12	57.79	Synovial stroma
+RA6_D2	29.08_42.95	29.08	42.95	Synovial stroma
+RA6_D2	30.08_40.09	30.08	40.09	Collagenous/Adipose tissue
+RA6_D2	26.2_47.98	26.2	47.98	Unknown
+RA6_D2	45.02_40.95	45.02	40.95	Infiltrate;Synovial stroma
+RA6_D2	53.05_54.87	53.05	54.87	Synovial stroma
+RA6_D2	57.07_48.79	57.07	48.79	Synovial stroma
+RA6_D2	51.96_47.86	51.96	47.86	Synovial stroma
+RA6_D2	44.99_42.95	44.99	42.95	Synovial stroma
+RA6_D2	40.13_50.01	40.13	50.01	Synovial stroma
+RA6_D2	56.04_53.87	56.04	53.87	Synovial stroma
+RA6_D2	39.01_41.07	39.01	41.07	Synovial stroma
+RA6_D2	23.98_40.13	23.98	40.13	Synovial stroma
+RA6_D2	46.91_42.91	46.91	42.91	Synovial stroma
+RA6_D2	32.07_46.09	32.07	46.09	Synovial stroma
+RA6_D2	51.93_39.83	51.93	39.83	Synovial stroma
+RA6_D2	44.01_43.93	44.01	43.93	Synovial stroma
+RA6_D2	42.05_45.94	42.05	45.94	Synovial stroma
+RA6_D2	32.96_37.05	32.96	37.05	Synovial stroma
+RA6_D2	54.05_49.83	54.05	49.83	Synovial stroma
+RA6_D2	58.07_51.84	58.07	51.84	Synovial stroma
+RA6_D2	37_40.88	37	40.88	Synovial stroma
+RA6_D2	48.99_48.91	48.99	48.91	Synovial stroma
+RA6_D2	32.95_35.02	32.95	35.02	Synovial stroma
+RA6_D2	39.04_44.98	39.04	44.98	Infiltrate;Synovial stroma
+RA6_D2	31.05_45.07	31.05	45.07	Synovial stroma
+RA6_D2	41.91_35.91	41.91	35.91	Synovial stroma
+RA6_D2	33.98_49.89	33.98	49.89	Infiltrate;Synovial stroma
+RA6_D2	54.12_55.92	54.12	55.92	Synovial stroma
+RA6_D2	45.1_48.93	45.1	48.93	Synovial stroma
+RA6_D2	51.98_53.83	51.98	53.83	Synovial stroma
+RA6_D2	59.06_52.85	59.06	52.85	Synovial stroma
+RA6_D2	55.02_44.76	55.02	44.76	Synovial stroma
+RA6_D2	48.97_54.87	48.97	54.87	Synovial stroma;Unknown
+RA6_D2	36.98_38.88	36.98	38.88	Synovial stroma
+RA6_D2	45.01_44.94	45.01	44.94	Synovial stroma
