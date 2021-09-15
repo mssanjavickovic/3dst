@@ -1,0 +1,314 @@
+id_cp_interaction	interacting_pair	partner_a	partner_b	gene_a	gene_b	secreted	receptor_a	receptor_b	annotation_strategy	is_integrin	rank	background|background	background|cluster_1	cluster_1|background	cluster_1|cluster_1
+CPI-SS04C672963	ESAM_ESAM	simple:Q96AP7	simple:Q96AP7	ESAM	ESAM	False	False	False	curated	False	0.25				0.182
+CPI-SC0BD4C290F	COL14A1_a1b1 complex	simple:Q05707	complex:a1b1 complex	COL14A1		True	False	False	curated	True	0.25				0.872
+CPI-SS0E9A581F8	ICAM1_ITGAL	simple:P05362	simple:P20701	ICAM1	ITGAL	False	True	True	curated	False	0.25				0.435
+CPI-SC0F4AC5AA2	ICAM1_aLb2 complex	simple:P05362	complex:aLb2 complex	ICAM1		False	True	False	curated	True	0.25				0.435
+CPI-SC0EA3FC100	COL18A1_a1b1 complex	simple:P39060	complex:a1b1 complex	COL18A1		True	False	False	curated	True	0.25				0.704
+CPI-SC0F8D27FBC	COL15A1_a1b1 complex	simple:P39059	complex:a1b1 complex	COL15A1		True	False	False	curated	True	0.25				0.211
+CPI-SC02F06FF62	COL8A1_a1b1 complex	simple:P27658	complex:a1b1 complex	COL8A1		True	False	False	curated	True	0.25				0.281
+CPI-SC0DAD29856	COL5A3_a1b1 complex	simple:P25940	complex:a1b1 complex	COL5A3		True	False	False	curated	True	0.25				0.327
+CPI-SC063BC3DDE	ICAM2_aLb2 complex	simple:P13598	complex:aLb2 complex	ICAM2		False	False	False	curated	True	0.25				0.199
+CPI-SC02AE206BE	COL6A3_a1b1 complex	simple:P12111	complex:a1b1 complex	COL6A3		True	False	False	curated	True	0.25				1.561
+CPI-SC0F4BC2909	COL6A2_a1b1 complex	simple:P12110	complex:a1b1 complex	COL6A2		True	False	False	curated	True	0.25				1.89
+CPI-SC09FDA4F45	COL6A1_a1b1 complex	simple:P12109	complex:a1b1 complex	COL6A1		True	False	False	curated	True	0.25				0.751
+CPI-SC0458F68A5	COL4A2_a1b1 complex	simple:P08572	complex:a1b1 complex	COL4A2		True	False	False	curated	True	0.25				0.654
+CPI-SC006E22794	COL1A2_a1b1 complex	simple:P08123	complex:a1b1 complex	COL1A2		True	False	False	curated	True	0.25				4.216
+CPI-SC0545E2502	COL5A2_a1b1 complex	simple:P05997	complex:a1b1 complex	COL5A2		True	False	False	curated	True	0.25				0.443
+CPI-SC0672FBD31	COL4A1_a1b1 complex	simple:P02462	complex:a1b1 complex	COL4A1		True	False	False	curated	True	0.25				0.878
+CPI-SC0BC63F8C0	COL3A1_a1b1 complex	simple:P02461	complex:a1b1 complex	COL3A1		True	False	False	curated	True	0.25				6.441
+CPI-SC0F73E9099	COL1A1_a1b1 complex	simple:P02452	complex:a1b1 complex	COL1A1		True	False	False	curated	True	0.25				1.757
+CPI-SC0329D5397	ICAM3_aLb2 complex	simple:P32942	complex:aLb2 complex	ICAM3		False	False	False	curated	True	0.25				0.265
+CPI-SC0B6D68FD5	ICAM1_aMb2 complex	simple:P05362	complex:aMb2 complex	ICAM1		False	True	False	curated	True	0.25				0.43
+CPI-SC053BBE2B1	COL16A1_a1b1 complex	simple:Q07092	complex:a1b1 complex	COL16A1		True	False	False	curated	True	0.25				0.435
+CPI-SC004A436C5	COL12A1_a1b1 complex	simple:Q99715	complex:a1b1 complex	COL12A1		True	False	False	curated	True	0.25				0.383
+CPI-SS044C72D0D	SEMA4A_PLXND1	simple:Q9H3S1	simple:Q9Y4D7	SEMA4A	PLXND1	False	False	True	curated	False	0.25				0.622
+CPI-SS0F00D756A	CD40_TNFSF13B	simple:P25942	simple:Q9Y275	CD40	TNFSF13B	True	True	False	I2D,InnateDB	False	0.25				0.333
+CPI-SC0A05D3880	THY1_aMb2 complex	simple:P04216	complex:aMb2 complex	THY1		False	False	False	curated	True	0.25				0.838
+CPI-SC0F9DD28F3	JAM3_aMb2 complex	simple:Q9BX67	complex:aMb2 complex	JAM3		True	False	False	curated	True	0.25				0.171
+CPI-SS085EE60B1	TGFB1_TGFBR3	simple:P01137	simple:Q03167	TGFB1	TGFBR3	True	False	True	curated	False	0.25				0.3
+CPI-SC0A9458008	ICAM1_aXb2 complex	simple:P05362	complex:aXb2 complex	ICAM1		False	True	False	curated	True	0.25				0.677
+CPI-SS0C1BD22BC	SPP1_PTGER4	simple:P10451	simple:P35408	SPP1	PTGER4	True	False	True	IMEx,MINT	False	0.25				0.409
+CPI-SC0984894BC	TGFB1_TGFbeta receptor2	simple:P01137	complex:TGFbeta receptor2	TGFB1		True	False	True	curated	False	0.25				0.301
+CPI-SS0F9D53834	JAM3_JAM3	simple:Q9BX67	simple:Q9BX67	JAM3	JAM3	True	False	False	curated	False	0.25				0.126
+CPI-SS055E061C9	LAMP1_FAM3C	simple:P11279	simple:Q92520	LAMP1	FAM3C	True	True	False	InnateDB-All	False	0.25				0.635
+CPI-SS0ABC5C1B8	CD74_MIF	simple:P04233	simple:P14174	CD74	MIF	True	True	False	I2D,InnateDB-All	False	0.25				9.144
+CPI-SS079DDF890	TNFSF12_TNFRSF25	simple:O43508	simple:Q93038	TNFSF12	TNFRSF25	True	False	True	I2D	False	0.25				0.195
+CPI-SS02AB0C3E0	SPP1_CD44	simple:P10451	simple:P16070	SPP1	CD44	True	False	True	I2D,IMEx,InnateDB-All,IntAct	False	0.25				1.063
+CPI-SC0EEF3A379	LAMC1_a6b1 complex	simple:P11047	complex:a6b1 complex	LAMC1		True	False	False	curated	True	0.25				0.177
+CPI-SC096929DB0	FN1_aVb1 complex	simple:P02751	complex:aVb1 complex	FN1		True	False	False	curated	True	0.25				29.985
+CPI-SS08FAC0A55	PLXNB2_SEMA4D	simple:O15031	simple:Q92854	PLXNB2	SEMA4D	False	True	True	curated	False	0.25				0.847
+CPI-SS0A28DCA72	CXCL12_CXCR4	simple:P48061	simple:P61073	CXCL12	CXCR4	True	False	True	curated	False	0.25				3.014
+CPI-SC058F72F90	FBN1_a5b1 complex	simple:P35555	complex:a5b1 complex	FBN1		True	False	False	curated	True	0.25				0.575
+CPI-SC062C5C6C2	PLA2G2A_a5b1 complex	simple:P14555	complex:a5b1 complex	PLA2G2A		True	False	False	curated	True	0.25				2.878
+CPI-SC08B2AD7C6	FN1_a5b1 complex	simple:P02751	complex:a5b1 complex	FN1		True	False	False	curated	True	0.25				29.985
+CPI-SS0632A027A	CD44_HBEGF	simple:P16070	simple:Q99075	CD44	HBEGF	True	True	True	I2D,InnateDB-All	False	0.25				0.978
+CPI-SS03133B4F2	TFRC_TNFSF13B	simple:P02786	simple:Q9Y275	TFRC	TNFSF13B	True	True	False	IMEx,IntAct	False	0.25				0.222
+CPI-SS0C4E86714	TNFRSF1B_GRN	simple:P20333	simple:P28799	TNFRSF1B	GRN	True	True	False	IMEx,InnateDB-All,MINT	False	0.25				2.124
+CPI-SS0898D7F7F	TNFRSF10B_TNFSF10	simple:O14763	simple:P50591	TNFRSF10B	TNFSF10	True	True	False	curated	False	0.25				0.369
+CPI-SS060B82BBC	JAG1_NOTCH2	simple:P78504	simple:Q04721	JAG1	NOTCH2	False	False	True	curated	False	0.25				0.631
+CPI-SS02A0FF87F	FAM3C_CLEC2D	simple:Q92520	simple:Q9UHP7	FAM3C	CLEC2D	True	False	True	IMEx,InnateDB-All,IntAct	False	0.25				0.248
+CPI-SS02EF3E1BA	TNFSF12_TNFRSF12A	simple:O43508	simple:Q9NP84	TNFSF12	TNFRSF12A	True	False	True	curated	False	0.25				0.259
+CPI-SS080611C5B	ALOX5_ALOX5AP	simple:P09917	simple:P20292	ALOX5	ALOX5AP	False	False	False	guidetopharmacology.org	False	0.25				0.323
+CPI-SS015E1E2C6	SELP_CD34	simple:P16109	simple:P28906	SELP	CD34	False	False	False	curated	False	0.25				0.14
+CPI-SS02B7540B0	SELP_SELPLG	simple:P16109	simple:Q14242	SELP	SELPLG	False	False	True	curated	False	0.25				0.244
+CPI-SS01560CA22	CD99_PILRA	simple:P14209	simple:Q9UKJ1	CD99	PILRA	True	False	True	curated	False	0.25				1.48
+CPI-SS0BD9F32BA	LGALS9_DAG1	simple:O00182	simple:Q14118	LGALS9	DAG1	True	False	True	InnateDB-All	False	0.25				0.392
+CPI-SS006C6537E	MDK_LRP1	simple:P21741	simple:Q07954	MDK	LRP1	True	False	True	I2D,InnateDB-All	False	0.25				1.525
+CPI-SS04F3A1E5C	COPA_SORT1	simple:P53621	simple:Q99523	COPA	SORT1	True	False	True	IMEx,InnateDB-All,IntAct,MatrixDB	False	0.25				0.401
+CPI-SS01946BE5C	C5AR1_RPS19	simple:P21730	simple:P39019	C5AR1	RPS19	False	True	False	guidetopharmacology.org	False	0.25				4.634
+CPI-SS08991B378	CD6_ALCAM	simple:P30203	simple:Q13740	CD6	ALCAM	True	False	False	curated	False	0.25				0.165
+CPI-SS02928C71A	PDGFB_LRP1	simple:P01127	simple:Q07954	PDGFB	LRP1	True	False	True	I2D,InnateDB-All	False	0.25				1.429
+CPI-SS0DEDA3567	TNFSF10_RIPK1	simple:P50591	simple:Q13546	TNFSF10	RIPK1	True	False	True	InnateDB-All	False	0.25				0.4
+CPI-SS0CF0E4DE9	CCL2_CCR2	simple:P13500	simple:P41597	CCL2	CCR2	True	False	True	curated	False	0.25				0.506
+CPI-SS01A07768A	CD46_JAG1	simple:P15529	simple:P78504	CD46	JAG1	False	True	False	curated	False	0.25				0.341
+CPI-SS06CBC985C	LTBR_LTB	simple:P36941	simple:Q06643	LTBR	LTB	False	True	False	curated	False	0.25				0.334
+CPI-SS0B87FE6E0	NOTCH1_JAG1	simple:P46531	simple:P78504	NOTCH1	JAG1	False	True	False	curated	False	0.25				0.196
+CPI-SS0D2539AEB	FPR3_HEBP1	simple:P25089	simple:Q9NRV9	FPR3	HEBP1	False	True	False	guidetopharmacology.org	False	0.25				0.191
+CPI-SS07CCAD9BF	GRN_SORT1	simple:P28799	simple:Q99523	GRN	SORT1	True	False	True	IMEx,InnateDB-All,MINT	False	0.25				2.039
+CPI-SC0527EEE7A	C3_aMb2 complex	simple:P01024	complex:aMb2 complex	C3		True	False	False	curated	True	0.25				2.101
+CPI-SS065F7DA2A	COPA_P2RY6	simple:P53621	simple:Q15077	COPA	P2RY6	True	False	True	IMEx,IntAct	False	0.25				0.406
+CPI-SS09A3FA737	NAMPT_P2RY6	simple:P43490	simple:Q15077	NAMPT	P2RY6	True	False	True	IMEx,IntAct	False	0.25				0.286
+CPI-SS03E48EFEA	C3_C3AR1	simple:P01024	simple:Q16581	C3	C3AR1	True	False	True	guidetopharmacology.org	False	0.25				2.248
+CPI-SS0FF6CFDCA	ADORA3_ENTPD1	simple:P0DMS8	simple:P49961	ADORA3	ENTPD1	False	True	False	curated	False	0.25				0.219
+CPI-SS0FEEB187C	PDGFB_PDGFRA	simple:P01127	simple:P16234	PDGFB	PDGFRA	True	False	True	curated	False	0.25				0.521
+CPI-SS0D3C90DDA	WISP3_SORL1	simple:O95389	simple:Q92673	WISP3	SORL1	True	False	True	InnateDB-All	False	0.25				0.184
+CPI-SS083CBFACD	MDK_SORL1	simple:P21741	simple:Q92673	MDK	SORL1	True	False	True	InnateDB-All	False	0.25				0.279
+CPI-SS05A26A1DE	PDGFB_PDGFRB	simple:P01127	simple:P09619	PDGFB	PDGFRB	True	False	True	curated	False	0.25				0.38
+CPI-SS0241A1F57	NRP2_SEMA3C	simple:O60462	simple:Q99985	NRP2	SEMA3C	True	True	False	curated	False	0.25				0.89
+CPI-SS06CCF5A54	ANXA1_FPR3	simple:P04083	simple:P25089	ANXA1	FPR3	True	False	True	guidetopharmacology.org	False	0.25				1.006
+CPI-SS00B1BEE64	CD2_CD58	simple:P06729	simple:P19256	CD2	CD58	False	True	False	curated	False	0.25				0.24
+CPI-SC033E22B14	PDGFB_PDGFR complex	simple:P01127	complex:PDGFR complex	PDGFB		True	False	True	curated	False	0.25				0.38
+CPI-SS0855C0353	NRP1_PGF	simple:O14786	simple:P49763	NRP1	PGF	True	True	False	curated	False	0.5			0.217	0.348
+CPI-SS07833475A	FGFR1_FGF7	simple:P11362	simple:P21781	FGFR1	FGF7	True	True	False	I2D	False	0.5		0.173		0.279
+CPI-SC098C06330	TGFB1_TGFbeta receptor1	simple:P01137	complex:TGFbeta receptor1	TGFB1		True	False	True	curated	False	0.5		0.253		0.408
+CPI-SC0C6B54D7A	THY1_aXb2 complex	simple:P04216	complex:aXb2 complex	THY1		False	False	False	curated	True	0.5		0.704		1.085
+CPI-SS0419B80C4	LGALS9_LRP1	simple:O00182	simple:Q07954	LGALS9	LRP1	True	False	True	InnateDB-All	False	0.5		1.433		1.649
+CPI-SS07D56EB05	CMKLR1_RARRES2	simple:Q99788	simple:Q99969	CMKLR1	RARRES2	True	True	False	guidetopharmacology.org	False	0.5		0.69		0.78
+CPI-SS07155793F	ACKR3_CXCL12	simple:P25106	simple:P48061	ACKR3	CXCL12	True	True	False	guidetopharmacology.org	False	0.5		2.912		3.057
+CPI-SS02ACCF1F7	MIF_TNFRSF14	simple:P14174	simple:Q92956	MIF	TNFRSF14	True	False	True	I2D,IntAct	False	0.5			0.218	0.407
+CPI-SS03A4F7DC8	AXL_GAS6	simple:P30530	simple:Q14393	AXL	GAS6	True	True	False	guidetopharmacology.org	False	0.5		1.044		1.199
+CPI-SS0D22A09AD	NRP2_PGF	simple:O60462	simple:P49763	NRP2	PGF	True	True	False	curated	False	0.5			0.192	0.322
+CPI-SS0DA033F03	TNFRSF1A_GRN	simple:P19438	simple:P28799	TNFRSF1A	GRN	True	True	False	IMEx,InnateDB-All,MINT	False	0.5		2.151		2.389
+CPI-SS09C52F54E	LGALS9_SORL1	simple:O00182	simple:Q92673	LGALS9	SORL1	True	False	True	InnateDB-All	False	0.5		0.187		0.402
+CPI-SC0847A64D2	FN1_aVb5 complex	simple:P02751	complex:aVb5 complex	FN1		True	False	False	curated	True	0.5			30.065	30.287
+CPI-SS0C85BC9AF	PROS1_AXL	simple:P07225	simple:P30530	PROS1	AXL	True	False	True	guidetopharmacology.org	False	0.5			0.327	0.482
+CPI-SS0302E8E8F	CD74_COPA	simple:P04233	simple:P53621	CD74	COPA	True	True	False	IMEx,IntAct	False	0.5			9.091	9.328
+CPI-SS0F739D3DB	ANXA1_FPR1	simple:P04083	simple:P21462	ANXA1	FPR1	True	False	True	guidetopharmacology.org	False	0.5		0.619		1.176
+CPI-SC05992FDC8	COL5A1_a1b1 complex	simple:P20908	complex:a1b1 complex	COL5A1		True	False	False	curated	True	0.5		0.175		0.282
+CPI-SS0B99F22A2	JAG1_NOTCH3	simple:P78504	simple:Q9UM47	JAG1	NOTCH3	False	False	True	curated	False	0.5			0.272	0.361
+CPI-SS09808DEAE	CD74_APP	simple:P04233	simple:P05067	CD74	APP	False	True	False	curated	False	0.5			9.276	9.552
+CPI-SS002DF6C31	LGALS9_SLC1A5	simple:O00182	simple:Q15758	LGALS9	SLC1A5	True	False	True	I2D,InnateDB-All	False	0.5		0.216		0.431
+CPI-SS067BA9202	LAIR1_LILRB4	simple:Q6GTX8	simple:Q8NHJ6	LAIR1	LILRB4	False	True	True	curated	False	0.5		0.314		0.493
+CPI-SS0D0252D87	AXL_IL15RA	simple:P30530	simple:Q13261	AXL	IL15RA	True	True	True	I2D	False	0.5		0.235		0.389
+CPI-SS033E6DE7E	NRP1_VEGFB	simple:O14786	simple:P49765	NRP1	VEGFB	True	True	False	curated	False	0.5			0.221	0.322
+CPI-SS048346C2B	LGALS9_MRC2	simple:O00182	simple:Q9UBG0	LGALS9	MRC2	True	False	True	InnateDB-All	False	0.75		0.91	0.637	1.125
+CPI-SS014958F32	LGALS9_CD47	simple:O00182	simple:Q08722	LGALS9	CD47	True	False	True	InnateDB-All	False	0.75		0.349	0.367	0.564
+CPI-SS0339AE950	SIRPA_CD47	simple:P78324	simple:Q08722	SIRPA	CD47	False	True	True	curated	False	0.75		0.359	0.367	0.565
+CPI-SS08877A081	LGALS9_COLEC12	simple:O00182	simple:Q5KU26	LGALS9	COLEC12	True	False	True	InnateDB-All	False	0.75		0.276	0.387	0.491
+CPI-SS0703338F5	LGALS9_CD44	simple:O00182	simple:P16070	LGALS9	CD44	True	False	True	InnateDB	False	0.75		0.942	0.525	1.157
+CPI-SS068C129D6	CSF1_SIRPA	simple:P09603	simple:P78324	CSF1	SIRPA	True	False	True	I2D	False	0.75		0.382	0.42	0.626
+CPI-SS0B01CF3AB	CSF1R_CSF1	simple:P07333	simple:P09603	CSF1R	CSF1	True	True	False	curated	False	0.75		0.51	0.774	1.018
+CPI-SC017215F7F	GDF11_TGFR_AVR2B	simple:O95390	complex:TGFR_AVR2B	GDF11		True	False	True	curated	False	1.75				
+CPI-SS0D954EA1C	PDGFRB_PDGFD	simple:P09619	simple:Q9GZP0	PDGFRB	PDGFD	True	True	False	curated	False	1.75				
+CPI-SS056FF4363	CD48_CD244	simple:P09326	simple:Q9BZW8	CD48	CD244	False	False	True	curated	False	1.75				
+CPI-SS07F60834D	MET_HGF	simple:P08581	simple:P14210	MET	HGF	True	True	False	curated	False	1.75				
+CPI-SS0A9FB762A	LGALS9_PTPRK	simple:O00182	simple:Q15262	LGALS9	PTPRK	True	False	True	InnateDB-All	False	1.75				
+CPI-SS0CBC7840D	PTPRC_CD22	simple:P08575	simple:P20273	PTPRC	CD22	False	False	True	curated	False	1.75				
+CPI-SS0DFA98A14	CSF1R_IL34	simple:P07333	simple:Q6ZMJ4	CSF1R	IL34	True	True	False	curated	False	1.75				
+CPI-SS0E23CEB91	LGALS9_HAVCR2	simple:O00182	simple:Q8TDQ0	LGALS9	HAVCR2	True	False	True	curated	False	1.75				
+CPI-SS09C4988F8	PROS1_TYRO3	simple:P07225	simple:Q06418	PROS1	TYRO3	True	False	True	guidetopharmacology.org	False	1.75				
+CPI-SS0A7E3A1AF	C5_C5AR2	simple:P01031	simple:Q9P296	C5	C5AR2	True	False	True	guidetopharmacology.org	False	1.75				
+CPI-SS00581282E	C5_C5AR1	simple:P01031	simple:P21730	C5	C5AR1	True	False	True	guidetopharmacology.org	False	1.75				
+CPI-SS03E7587E4	ADORA1_ENTPD1	simple:P30542	simple:P49961	ADORA1	ENTPD1	False	True	False	curated	False	1.75				
+CPI-SS05B1FA8A8	LRP6_CKLF	simple:O75581	simple:Q9UBR5	LRP6	CKLF	True	True	False	IMEx,IntAct	False	1.75				
+CPI-SS0A874F65F	LGR4_RSPO3	simple:Q9BXB1	simple:Q9BXY4	LGR4	RSPO3	True	True	False	guidetopharmacology.org	False	1.75				
+CPI-SS02B567BC7	PLXNC1_SEMA7A	simple:O60486	simple:O75326	PLXNC1	SEMA7A	False	True	False	curated	False	1.75				
+CPI-CS0BAF97962	PDGFR complex_PDGFD	complex:PDGFR complex	simple:Q9GZP0		PDGFD	True	True	False	curated	False	1.75				
+CPI-SS0B70EB09E	PDGFA_PDGFRA	simple:P04085	simple:P16234	PDGFA	PDGFRA	True	False	True	curated	False	1.75				
+CPI-SS02A170A99	SPN_SIGLEC1	simple:P16150	simple:Q9BZZ2	SPN	SIGLEC1	True	False	False	curated	False	1.75				
+CPI-SS0273C9AED	KDR_VEGFC	simple:P35968	simple:P49767	KDR	VEGFC	True	True	False	curated	False	1.75				
+CPI-SS05FEE05CB	NOTCH4_JAG2	simple:Q99466	simple:Q9Y219	NOTCH4	JAG2	False	True	False	curated	False	1.75				
+CPI-CS0123BC66C	PlexinA1_complex2_SEMA6D	complex:PlexinA1_complex2	simple:Q8NFY4		SEMA6D	False	True	False	curated	False	1.75				
+CPI-SS0C4D54E39	NOTCH3_JAG2	simple:Q9UM47	simple:Q9Y219	NOTCH3	JAG2	False	True	False	curated	False	1.75				
+CPI-CS0C57A3081	PlexinA1_complex1_SEMA6D	complex:PlexinA1_complex1	simple:Q8NFY4		SEMA6D	False	True	False	curated	False	1.75				
+CPI-SS076FEB261	FLT3_FLT3LG	simple:P36888	simple:P49771	FLT3	FLT3LG	True	True	False	curated	False	1.75				
+CPI-SS0E5593D5C	BMP8B_PLAUR	simple:P34820	simple:Q03405	BMP8B	PLAUR	True	False	True	InnateDB-All	False	1.75				
+CPI-SS073C1B796	CD52_SIGLEC10	simple:P31358	simple:Q96LC7	CD52	SIGLEC10	True	False	False	curated	False	1.75				
+CPI-SS0F972435E	FLT4_VEGFC	simple:P35916	simple:P49767	FLT4	VEGFC	True	True	False	curated	False	1.75				
+CPI-SS08B249DBA	CCL2_CCR10	simple:P13500	simple:P46092	CCL2	CCR10	True	False	True	I2D	False	1.75				
+CPI-SS0CDAC688B	CXCL2_DPP4	simple:P19875	simple:P27487	CXCL2	DPP4	True	False	True	curated	False	1.75				
+CPI-SS080683E15	CXCL10_CXCR3	simple:P02778	simple:P49682	CXCL10	CXCR3	True	False	True	curated	False	1.75				
+CPI-SS0EFE0B07A	CXCL12_CXCR3	simple:P48061	simple:P49682	CXCL12	CXCR3	True	False	True	guidetopharmacology.org	False	1.75				
+CPI-SS06C0074BD	CCL21_CCR7	simple:O00585	simple:P32248	CCL21	CCR7	True	False	True	curated	False	1.75				
+CPI-SS0BC7CD11B	LGALS9_MET	simple:O00182	simple:P08581	LGALS9	MET	True	False	True	InnateDB-All	False	1.75				
+CPI-SS085195142	TYRO3_GAS6	simple:Q06418	simple:Q14393	TYRO3	GAS6	True	True	False	guidetopharmacology.org	False	1.75				
+CPI-SS077B160B9	IL15_IL15RA	simple:P40933	simple:Q13261	IL15	IL15RA	True	False	True	guidetopharmacology.org	False	1.75				
+CPI-SS0FDAB7BA8	CXCL10_DPP4	simple:P02778	simple:P27487	CXCL10	DPP4	True	False	True	curated	False	1.75				
+CPI-SS02371A6D6	VEGFA_EPHB2	simple:P15692	simple:P29323	VEGFA	EPHB2	True	False	True	I2D	False	1.75				
+CPI-SS0331C5A49	GDF11_ANTXR1	simple:O95390	simple:Q9H6X2	GDF11	ANTXR1	True	False	True	InnateDB-All	False	1.75				
+CPI-SS0B9B3870A	VEGFA_FLT1	simple:P15692	simple:P17948	VEGFA	FLT1	True	False	True	curated	False	1.75				
+CPI-SS004C23DCE	EREG_EGFR	simple:O14944	simple:P00533	EREG	EGFR	True	False	True	curated	False	1.75				
+CPI-SS0B887F7AC	CCR1_CCL13	simple:P32246	simple:Q99616	CCR1	CCL13	True	True	False	guidetopharmacology.org	False	1.75				
+CPI-SS0C98C08DA	CCR2_CCL13	simple:P41597	simple:Q99616	CCR2	CCL13	True	True	False	curated	False	1.75				
+CPI-SS0DFAF1FE2	CCR5_CCL8	simple:P51681	simple:P80075	CCR5	CCL8	True	True	False	curated	False	1.75				
+CPI-SS0CCCF7C69	PLXNB1_SEMA4D	simple:O43157	simple:Q92854	PLXNB1	SEMA4D	True	True	True	curated	False	1.75				
+CPI-SS08C3D27F7	NOTCH1_JAG2	simple:P46531	simple:Q9Y219	NOTCH1	JAG2	False	True	False	curated	False	1.75				
+CPI-SS06AA638A8	CD72_SEMA4D	simple:P21854	simple:Q92854	CD72	SEMA4D	False	False	True	curated	False	1.75				
+CPI-SS0C03F7CDC	VEGFA_KDR	simple:P15692	simple:P35968	VEGFA	KDR	True	False	True	curated	False	1.75				
+CPI-SS0F8C2FA91	CCR1_CCL8	simple:P32246	simple:P80075	CCR1	CCL8	True	True	False	curated	False	1.75				
+CPI-SS08330207B	BTLA_TNFRSF14	simple:Q7Z6A9	simple:Q92956	BTLA	TNFRSF14	False	True	True	guidetopharmacology.org	False	1.75				
+CPI-SS095E52E66	TNFSF10_TNFRSF10D	simple:P50591	simple:Q9UBN6	TNFSF10	TNFRSF10D	True	False	True	curated	False	1.75				
+CPI-SS09AFCF898	CCR2_CCL8	simple:P41597	simple:P80075	CCR2	CCL8	True	True	False	curated	False	1.75				
+CPI-SC0077CEB82	TGFB3_TGFbeta receptor2	simple:P10600	complex:TGFbeta receptor2	TGFB3		True	False	True	curated	False	1.75				
+CPI-SS059EEFDC6	MIF_TNFRSF10D	simple:P14174	simple:Q9UBN6	MIF	TNFRSF10D	True	False	True	I2D,IntAct	False	1.75				
+CPI-SC0D5CFA431	TGFB3_TGFbeta receptor1	simple:P10600	complex:TGFbeta receptor1	TGFB3		True	False	True	curated	False	1.75				
+CPI-SS0BFB29A42	PLXNB2_PTN	simple:O15031	simple:P21246	PLXNB2	PTN	True	True	False	I2D,IMEx,InnateDB-All,IntAct	False	1.75				
+CPI-SC0A68C5F13	IGF1_a6b4 complex	simple:P05019	complex:a6b4 complex	IGF1		True	False	False	curated	True	1.75				
+CPI-SS0ED2573CA	TNFSF11_TNFRSF11A	simple:O14788	simple:Q9Y6Q6	TNFSF11	TNFRSF11A	True	True	True	curated	False	1.75				
+CPI-SS06A999D25	PLD2_ARF1	simple:O14939	simple:P84077	PLD2	ARF1	False	False	False	guidetopharmacology.org	False	1.75				
+CPI-SS0179FBFD3	TNFRSF10A_TNFSF10	simple:O00220	simple:P50591	TNFRSF10A	TNFSF10	True	True	False	curated	False	1.75				
+CPI-SS0B0CF0EDF	TNFSF15_TNFRSF25	simple:O95150	simple:Q93038	TNFSF15	TNFRSF25	True	False	True	guidetopharmacology.org	False	1.75				
+CPI-SS0A2949959	ICAM3_CD209	simple:P32942	simple:Q9NNX6	ICAM3	CD209	True	False	True	curated	False	1.75				
+CPI-SS082ABF1EA	EFNB2_EPHB3	simple:P52799	simple:P54753	EFNB2	EPHB3	False	True	True	curated	False	1.75				
+CPI-SS0EBFE1854	EFNA1_EPHA4	simple:P20827	simple:P54764	EFNA1	EPHA4	True	False	True	curated	False	1.75				
+CPI-SS0659DBE72	EFNA4_EPHA4	simple:P52798	simple:P54764	EFNA4	EPHA4	True	False	True	curated	False	1.75				
+CPI-SS0FC01B947	EFNA5_EPHA4	simple:P52803	simple:P54764	EFNA5	EPHA4	False	False	True	curated	False	1.75				
+CPI-SC001669E22	GDF11_TGFR_AVR2A	simple:O95390	complex:TGFR_AVR2A	GDF11		True	False	True	curated	False	1.75				
+CPI-SS087E0E3FB	EFNB2_EPHA4	simple:P52799	simple:P54764	EFNB2	EPHA4	False	True	True	curated	False	1.75				
+CPI-SS00046DCF3	EPHA4_EFNB1	simple:P54764	simple:P98172	EPHA4	EFNB1	False	True	False	curated	False	1.75				
+CPI-SS0FF55B42C	EPHB3_EFNB1	simple:P54753	simple:P98172	EPHB3	EFNB1	False	True	False	curated	False	1.75				
+CPI-SS0111AAD26	EPHB2_EFNB1	simple:P29323	simple:P98172	EPHB2	EFNB1	False	True	False	curated	False	1.75				
+CPI-SS0DC4D593E	EPHB6_EFNB1	simple:O15197	simple:P98172	EPHB6	EFNB1	True	True	False	curated	False	1.75				
+CPI-SS0837E9F59	JAG1_NOTCH4	simple:P78504	simple:Q99466	JAG1	NOTCH4	False	False	True	curated	False	1.75				
+CPI-SS0B9E8C0DE	EPHB2_EFNB2	simple:P29323	simple:P52799	EPHB2	EFNB2	False	True	True	curated	False	1.75				
+CPI-SS090FC28E1	EPHB6_EFNB2	simple:O15197	simple:P52799	EPHB6	EFNB2	True	True	True	curated	False	1.75				
+CPI-SS0586F2596	EPHB2_EFNA5	simple:P29323	simple:P52803	EPHB2	EFNA5	False	True	False	curated	False	1.75				
+CPI-SS02770D68F	NOTCH2_JAG2	simple:Q04721	simple:Q9Y219	NOTCH2	JAG2	False	True	False	curated	False	1.75				
+CPI-SS00A8596B5	PVR_TNFSF9	simple:P15151	simple:P41273	PVR	TNFSF9	True	True	False	InnateDB-All	False	1.75				
+CPI-CS04CBDE052	IL10 receptor_IL10	complex:IL10 receptor	simple:P22301		IL10	True	True	False	curated	False	1.75				
+CPI-SC0A0532ADC	COL4A1_a11b1 complex	simple:P02462	complex:a11b1 complex	COL4A1		True	False	False	curated	True	1.75				
+CPI-SC0CFF5E19D	FN1_a11b1 complex	simple:P02751	complex:a11b1 complex	FN1		True	False	False	curated	True	1.75				
+CPI-SC0DF641DAA	COL5A2_a11b1 complex	simple:P05997	complex:a11b1 complex	COL5A2		True	False	False	curated	True	1.75				
+CPI-SC0681D30FE	COL1A2_a11b1 complex	simple:P08123	complex:a11b1 complex	COL1A2		True	False	False	curated	True	1.75				
+CPI-SC02017BE74	COL4A2_a11b1 complex	simple:P08572	complex:a11b1 complex	COL4A2		True	False	False	curated	True	1.75				
+CPI-SC04085F9F9	COL6A1_a11b1 complex	simple:P12109	complex:a11b1 complex	COL6A1		True	False	False	curated	True	1.75				
+CPI-SC0A54B5323	COL6A2_a11b1 complex	simple:P12110	complex:a11b1 complex	COL6A2		True	False	False	curated	True	1.75				
+CPI-SC0ECFACED2	COL6A3_a11b1 complex	simple:P12111	complex:a11b1 complex	COL6A3		True	False	False	curated	True	1.75				
+CPI-SC0092846B0	COL5A1_a11b1 complex	simple:P20908	complex:a11b1 complex	COL5A1		True	False	False	curated	True	1.75				
+CPI-SC08AF9CA91	COL8A2_a11b1 complex	simple:P25067	complex:a11b1 complex	COL8A2		True	False	False	curated	True	1.75				
+CPI-SC07E958BDE	COL5A3_a11b1 complex	simple:P25940	complex:a11b1 complex	COL5A3		True	False	False	curated	True	1.75				
+CPI-SC08CC68F11	COL8A1_a11b1 complex	simple:P27658	complex:a11b1 complex	COL8A1		True	False	False	curated	True	1.75				
+CPI-SC03BFF1D95	COL15A1_a11b1 complex	simple:P39059	complex:a11b1 complex	COL15A1		True	False	False	curated	True	1.75				
+CPI-SC0A8902C85	COL3A1_a11b1 complex	simple:P02461	complex:a11b1 complex	COL3A1		True	False	False	curated	True	1.75				
+CPI-SC03ADD2063	COL18A1_a11b1 complex	simple:P39060	complex:a11b1 complex	COL18A1		True	False	False	curated	True	1.75				
+CPI-SC03D71E025	COL7A1_a11b1 complex	simple:Q02388	complex:a11b1 complex	COL7A1		True	False	False	curated	True	1.75				
+CPI-SC060984F83	COL14A1_a11b1 complex	simple:Q05707	complex:a11b1 complex	COL14A1		True	False	False	curated	True	1.75				
+CPI-SC0014D5A6E	COL16A1_a11b1 complex	simple:Q07092	complex:a11b1 complex	COL16A1		True	False	False	curated	True	1.75				
+CPI-SC0D2BDC009	COL13A1_a11b1 complex	simple:Q5TAT6	complex:a11b1 complex	COL13A1		False	False	False	curated	True	1.75				
+CPI-SC05F111D21	COL27A1_a11b1 complex	simple:Q8IZC6	complex:a11b1 complex	COL27A1		True	False	False	curated	True	1.75				
+CPI-SC05B2AA866	COL12A1_a11b1 complex	simple:Q99715	complex:a11b1 complex	COL12A1		True	False	False	curated	True	1.75				
+CPI-SC069F95780	COL8A2_a1b1 complex	simple:P25067	complex:a1b1 complex	COL8A2		True	False	False	curated	True	1.75				
+CPI-SC07FB88720	COL4A3_a1b1 complex	simple:Q01955	complex:a1b1 complex	COL4A3		True	False	False	curated	True	1.75				
+CPI-SC035953E6B	COL7A1_a1b1 complex	simple:Q02388	complex:a1b1 complex	COL7A1		True	False	False	curated	True	1.75				
+CPI-SC08BF895FC	COL13A1_a1b1 complex	simple:Q5TAT6	complex:a1b1 complex	COL13A1		False	False	False	curated	True	1.75				
+CPI-SC0D7F33CFB	COL27A1_a1b1 complex	simple:Q8IZC6	complex:a1b1 complex	COL27A1		True	False	False	curated	True	1.75				
+CPI-SC0EAF80261	SEMA7A_a1b1 complex	simple:O75326	complex:a1b1 complex	SEMA7A		False	False	False	curated	True	1.75				
+CPI-SC04F2478E9	FN1_a3b1 complex	simple:P02751	complex:a3b1 complex	FN1		True	False	False	curated	True	1.75				
+CPI-SC0674C647E	COL4A3_a11b1 complex	simple:Q01955	complex:a11b1 complex	COL4A3		True	False	False	curated	True	1.75				
+CPI-SC02BFEEC8A	THBS1_a3b1 complex	simple:P07996	complex:a3b1 complex	THBS1		False	False	False	curated	True	1.75				
+CPI-SC0F7E26271	COL1A1_a11b1 complex	simple:P02452	complex:a11b1 complex	COL1A1		True	False	False	curated	True	1.75				
+CPI-SC0C9CBDD21	COL27A1_a10b1 complex	simple:Q8IZC6	complex:a10b1 complex	COL27A1		True	False	False	curated	True	1.75				
+CPI-SS0B84DAE3D	PVR_CD96	simple:P15151	simple:P40200	PVR	CD96	True	True	True	curated	False	1.75				
+CPI-SS0A8627ED6	PVR_CD226	simple:P15151	simple:Q15762	PVR	CD226	True	True	True	curated	False	1.75				
+CPI-SS09C06644C	CADM3_CADM1	simple:Q8N126	simple:Q9BY67	CADM3	CADM1	False	False	False	curated	False	1.75				
+CPI-SS0889E281D	CADM1_CADM1	simple:Q9BY67	simple:Q9BY67	CADM1	CADM1	False	False	False	curated	False	1.75				
+CPI-SS0C9696AAA	CRTAM_CADM1	simple:O95727	simple:Q9BY67	CRTAM	CADM1	False	False	False	curated	False	1.75				
+CPI-SS02D18D12B	CADM3_CADM4	simple:Q8N126	simple:Q8NFZ8	CADM3	CADM4	False	False	False	curated	False	1.75				
+CPI-SS0B3829651	CADM3_EPB41L1	simple:Q8N126	simple:Q9H4G0	CADM3	EPB41L1	False	False	False	curated	False	1.75				
+CPI-SC07ECBFCA7	COL1A1_a10b1 complex	simple:P02452	complex:a10b1 complex	COL1A1		True	False	False	curated	True	1.75				
+CPI-SC067433F6B	COL3A1_a10b1 complex	simple:P02461	complex:a10b1 complex	COL3A1		True	False	False	curated	True	1.75				
+CPI-SC0B6F1A278	COL4A1_a10b1 complex	simple:P02462	complex:a10b1 complex	COL4A1		True	False	False	curated	True	1.75				
+CPI-SC0D19BAF15	FN1_a10b1 complex	simple:P02751	complex:a10b1 complex	FN1		True	False	False	curated	True	1.75				
+CPI-SC0F516B854	COL5A2_a10b1 complex	simple:P05997	complex:a10b1 complex	COL5A2		True	False	False	curated	True	1.75				
+CPI-SC011F01833	COL1A2_a10b1 complex	simple:P08123	complex:a10b1 complex	COL1A2		True	False	False	curated	True	1.75				
+CPI-SC02131C05A	COL12A1_a10b1 complex	simple:Q99715	complex:a10b1 complex	COL12A1		True	False	False	curated	True	1.75				
+CPI-SC0FA79E269	COL4A2_a10b1 complex	simple:P08572	complex:a10b1 complex	COL4A2		True	False	False	curated	True	1.75				
+CPI-SC0CE851065	COL6A2_a10b1 complex	simple:P12110	complex:a10b1 complex	COL6A2		True	False	False	curated	True	1.75				
+CPI-SC07375C073	COL6A3_a10b1 complex	simple:P12111	complex:a10b1 complex	COL6A3		True	False	False	curated	True	1.75				
+CPI-SC041DEF0FB	COL5A1_a10b1 complex	simple:P20908	complex:a10b1 complex	COL5A1		True	False	False	curated	True	1.75				
+CPI-SC0C907A888	COL8A2_a10b1 complex	simple:P25067	complex:a10b1 complex	COL8A2		True	False	False	curated	True	1.75				
+CPI-SC08B1D5269	COL5A3_a10b1 complex	simple:P25940	complex:a10b1 complex	COL5A3		True	False	False	curated	True	1.75				
+CPI-SC0F8101D41	COL8A1_a10b1 complex	simple:P27658	complex:a10b1 complex	COL8A1		True	False	False	curated	True	1.75				
+CPI-SC08E75294D	COL15A1_a10b1 complex	simple:P39059	complex:a10b1 complex	COL15A1		True	False	False	curated	True	1.75				
+CPI-SC0017F527E	COL18A1_a10b1 complex	simple:P39060	complex:a10b1 complex	COL18A1		True	False	False	curated	True	1.75				
+CPI-SC0A3F146C2	COL4A3_a10b1 complex	simple:Q01955	complex:a10b1 complex	COL4A3		True	False	False	curated	True	1.75				
+CPI-SC008F4294F	COL7A1_a10b1 complex	simple:Q02388	complex:a10b1 complex	COL7A1		True	False	False	curated	True	1.75				
+CPI-SC015980AEB	COL14A1_a10b1 complex	simple:Q05707	complex:a10b1 complex	COL14A1		True	False	False	curated	True	1.75				
+CPI-SC0F94B2CF9	COL16A1_a10b1 complex	simple:Q07092	complex:a10b1 complex	COL16A1		True	False	False	curated	True	1.75				
+CPI-SC0725E3A76	COL13A1_a10b1 complex	simple:Q5TAT6	complex:a10b1 complex	COL13A1		False	False	False	curated	True	1.75				
+CPI-SC02B111AB0	COL6A1_a10b1 complex	simple:P12109	complex:a10b1 complex	COL6A1		True	False	False	curated	True	1.75				
+CPI-CS06E556972	IL15 receptor_IL15	complex:IL15 receptor	simple:P40933		IL15	True	True	False	curated	False	1.75				
+CPI-SC09938698A	CSPG4_a3b1 complex	simple:Q6UVK1	complex:a3b1 complex	CSPG4		False	False	False	curated	True	1.75				
+CPI-SC092C3E4DF	FN1_a8b1 complex	simple:P02751	complex:a8b1 complex	FN1		True	False	False	curated	True	1.75				
+CPI-SS08083B141	NRP1_SEMA3A	simple:O14786	simple:Q14563	NRP1	SEMA3A	True	True	False	curated	False	1.75				
+CPI-CS0E5D1ECCE	PlexinA1_complex3_SEMA3A	complex:PlexinA1_complex3	simple:Q14563		SEMA3A	True	True	False	curated	False	1.75				
+CPI-CS0D238C22B	PlexinA2_complex1_SEMA3A	complex:PlexinA2_complex1	simple:Q14563		SEMA3A	True	True	False	curated	False	1.75				
+CPI-CS0AA769F5B	PlexinA3_complex1_SEMA3A	complex:PlexinA3_complex1	simple:Q14563		SEMA3A	True	True	False	curated	False	1.75				
+CPI-CS0AB19226A	PlexinA4_complex1_SEMA3A	complex:PlexinA4_complex1	simple:Q14563		SEMA3A	True	True	False	curated	False	1.75				
+CPI-SS0F15C1AB3	NRP2_SEMA3F	simple:O60462	simple:Q13275	NRP2	SEMA3F	True	True	False	curated	False	1.75				
+CPI-SS0EAB03260	CD1D_LILRB2	simple:P15813	simple:Q8N423	CD1D	LILRB2	False	False	True	curated	False	1.75				
+CPI-SS03105D292	CSF1_SLC7A1	simple:P09603	simple:P30825	CSF1	SLC7A1	True	False	True	I2D	False	1.75				
+CPI-SS0579FA162	IGF2_IGF1R	simple:P01344	simple:P08069	IGF2	IGF1R	True	False	True	curated	False	1.75				
+CPI-SS0E41702C1	IGF1_IGF1R	simple:P05019	simple:P08069	IGF1	IGF1R	True	False	True	curated	False	1.75				
+CPI-SS042A6F835	IGF2_IGF2R	simple:P01344	simple:P11717	IGF2	IGF2R	True	False	True	curated	False	1.75				
+CPI-SS0E292C126	KLRB1_CLEC2D	simple:Q12918	simple:Q9UHP7	KLRB1	CLEC2D	False	True	True	curated	False	1.75				
+CPI-SS0F8EFEECF	TNF_DAG1	simple:P01375	simple:Q14118	TNF	DAG1	True	False	True	InnateDB-All	False	1.75				
+CPI-SS098425155	ADRB2_VEGFB	simple:P07550	simple:P49765	ADRB2	VEGFB	True	True	False	InnateDB-All	False	1.75				
+CPI-SS02EBC1BB0	TNF_NOTCH1	simple:P01375	simple:P46531	TNF	NOTCH1	True	False	True	I2D	False	1.75				
+CPI-SS0AB21032D	PLXNB2_SEMA4C	simple:O15031	simple:Q9C0C4	PLXNB2	SEMA4C	False	True	True	curated	False	1.75				
+CPI-SS09C917D22	TNF_FLT4	simple:P01375	simple:P35916	TNF	FLT4	True	False	True	InnateDB-All	False	1.75				
+CPI-SS03B8E2D7A	TNF_ICOS	simple:P01375	simple:Q9Y6W8	TNF	ICOS	True	False	True	InnateDB-All	False	1.75				
+CPI-SS0E4B1484B	ICOSLG_ICOS	simple:O75144	simple:Q9Y6W8	ICOSLG	ICOS	True	False	True	curated	False	1.75				
+CPI-SS04B4619D0	TNF_TNFRSF1A	simple:P01375	simple:P19438	TNF	TNFRSF1A	True	False	True	curated	False	1.75				
+CPI-SS08B7D54A3	TNF_FAS	simple:P01375	simple:P25445	TNF	FAS	True	False	True	InnateDB-All	False	1.75				
+CPI-SS0E7D5974D	TNF_TNFRSF1B	simple:P01375	simple:P20333	TNF	TNFRSF1B	True	False	True	curated	False	1.75				
+CPI-SS048A2311A	TNF_RIPK1	simple:P01375	simple:Q13546	TNF	RIPK1	True	False	True	I2D,IMEx,InnateDB,InnateDB-All,IntAct,MINT	False	1.75				
+CPI-SS003610FF9	CXCR3_CCL19	simple:P49682	simple:Q99731	CXCR3	CCL19	True	True	False	guidetopharmacology.org	False	1.75				
+CPI-SS056BE1011	CCRL2_CCL19	simple:O00421	simple:Q99731	CCRL2	CCL19	True	True	False	guidetopharmacology.org	False	1.75				
+CPI-SS098EFF959	CCR7_CCL19	simple:P32248	simple:Q99731	CCR7	CCL19	True	True	False	curated	False	1.75				
+CPI-SS0DBA4D668	DPP4_CXCL12	simple:P27487	simple:P48061	DPP4	CXCL12	True	True	False	curated	False	1.75				
+CPI-SS083296041	CD40_CD40LG	simple:P25942	simple:P29965	CD40	CD40LG	True	True	False	curated	False	1.75				
+CPI-SS0B81F1BF5	TNF_SEMA4C	simple:P01375	simple:Q9C0C4	TNF	SEMA4C	True	False	True	InnateDB-All	False	1.75				
+CPI-SC0C8B4C056	CD40LG_a5b1 complex	simple:P29965	complex:a5b1 complex	CD40LG		True	False	False	curated	True	1.75				
+CPI-SS0947A8549	FLT1_VEGFB	simple:P17948	simple:P49765	FLT1	VEGFB	True	True	False	curated	False	1.75				
+CPI-SS0E61DB5DF	FLT1_PGF	simple:P17948	simple:P49763	FLT1	PGF	True	True	False	curated	False	1.75				
+CPI-SC01195CB48	TNC_a8b1 complex	simple:P24821	complex:a8b1 complex	TNC		True	False	False	curated	True	1.75				
+CPI-SC0A2FE9693	LAMC1_a7b1 complex	simple:P11047	complex:a7b1 complex	LAMC1		True	False	False	curated	True	1.75				
+CPI-SS03DA2A820	FGF2_CD44	simple:P09038	simple:P16070	FGF2	CD44	True	False	True	I2D,InnateDB-All	False	1.75				
+CPI-SS03722104E	HGF_CD44	simple:P14210	simple:P16070	HGF	CD44	True	False	True	IMEx,InnateDB-All,IntAct	False	1.75				
+CPI-SS01F67987A	FGF2_FGFR1	simple:P09038	simple:P11362	FGF2	FGFR1	True	False	True	curated	False	1.75				
+CPI-SS03189F5F6	FGF10_FGFR1	simple:O15520	simple:P11362	FGF10	FGFR1	True	False	True	InnateDB-All	False	1.75				
+CPI-SS0CB6968B9	FGF2_FGFRL1	simple:P09038	simple:Q8N441	FGF2	FGFRL1	True	False	True	I2D	False	1.75				
+CPI-SC01AB9BED7	SPP1_a9b1 complex	simple:P10451	complex:a9b1 complex	SPP1		True	False	False	curated	True	1.75				
+CPI-SC056BF6CBB	TNC_a9b1 complex	simple:P24821	complex:a9b1 complex	TNC		True	False	False	curated	True	1.75				
+CPI-SC062D34C2A	VCAM1_a9b1 complex	simple:P19320	complex:a9b1 complex	VCAM1		False	False	False	curated	True	1.75				
+CPI-SS0D46E2B45	TGFB3_TGFBR3	simple:P10600	simple:Q03167	TGFB3	TGFBR3	True	False	True	curated	False	1.75				
+CPI-SS087B53ABF	JAM2_JAM3	simple:P57087	simple:Q9BX67	JAM2	JAM3	True	False	False	curated	False	1.75				
+CPI-CS091BF99D0	ACVR_1A2A receptor_INHBA	complex:ACVR_1A2A receptor	simple:P08476		INHBA	True	True	False	curated	False	1.75				
+CPI-CS077F1340A	FLT1 complex_VEGFB	complex:FLT1 complex	simple:P49765		VEGFB	True	True	False	curated	False	1.75				
+CPI-CS04DD927C9	ACVR_1A2B receptor_INHBA	complex:ACVR_1A2B receptor	simple:P08476		INHBA	True	True	False	curated	False	1.75				
+CPI-SS0055264F3	EGFR_TGFB1	simple:P00533	simple:P01137	EGFR	TGFB1	True	True	False	IMEx,InnateDB-All,MINT	False	1.75				
+CPI-SS00EDDD458	EGFR_MIF	simple:P00533	simple:P14174	EGFR	MIF	True	True	False	IMEx,InnateDB-All	False	1.75				
+CPI-SS08CA619FE	EGFR_GRN	simple:P00533	simple:P28799	EGFR	GRN	True	True	False	InnateDB-All	False	1.75				
+CPI-SS088A0A760	EGFR_COPA	simple:P00533	simple:P53621	EGFR	COPA	True	True	False	InnateDB-All	False	1.75				
+CPI-SS0C10824C7	EGFR_HBEGF	simple:P00533	simple:Q99075	EGFR	HBEGF	True	True	True	curated	False	1.75				
+CPI-SS09648FAA9	TNFRSF13C_TNFSF13B	simple:Q96RJ3	simple:Q9Y275	TNFRSF13C	TNFSF13B	True	True	False	guidetopharmacology.org	False	1.75				
+CPI-SS09C4FCB90	ICAM1_SPN	simple:P05362	simple:P16150	ICAM1	SPN	False	True	False	curated	False	1.75				
+CPI-SC092659F65	ICAM4_aLb2 complex	simple:Q14773	complex:aLb2 complex	ICAM4		True	False	False	curated	True	1.75				
+CPI-SC08923F7F7	F11R_aLb2 complex	simple:Q9Y624	complex:aLb2 complex	F11R		False	True	False	curated	True	1.75				
+CPI-CS067298D94	FLT1 complex_VEGFA	complex:FLT1 complex	simple:P15692		VEGFA	True	True	False	curated	False	1.75				
+CPI-SS0DE0A486F	NRP1_VEGFA	simple:O14786	simple:P15692	NRP1	VEGFA	True	True	False	curated	False	1.75				
+CPI-SS0E00478B4	NRP2_VEGFA	simple:O60462	simple:P15692	NRP2	VEGFA	True	True	False	curated	False	1.75				
+CPI-CS073D36B1D	FLT1 complex_PGF	complex:FLT1 complex	simple:P49763		PGF	True	True	False	curated	False	1.75				
+CPI-CS0A66DB1CA	CD8 receptor_LCK	complex:CD8 receptor	simple:P06239		LCK	False	True	False	curated	False	1.75				
+CPI-SS0A3569604	IGF2_IDE	simple:P01344	simple:P14735	IGF2	IDE	True	False	True	I2D,InnateDB-All	False	1.75				
