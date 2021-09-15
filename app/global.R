@@ -53,6 +53,17 @@ t5.2 = m2
 load('data/RA_5/RA5_norm.exp.values.3')
 t5.3 = m3
 
+### Load data
+load('data/RA_6/RA6_norm.exp.values.1')
+t6.1 = m1
+load('data/RA_6/RA6_norm.exp.values.2')
+t6.2 = m2
+load('data/RA_6/RA6_norm.exp.values.3')
+t6.3 = m3
+load('data/RA_6/RA6_norm.exp.values.4')
+t6.4 = m4
+
+
 # Names to be used in app
 t1_names <- c(row.names(t1.1), row.names(t1.2), row.names(t1.3), rownames(t1.4))
 t1_names = unique(t1_names)
@@ -72,6 +83,10 @@ t4_names = unique(t4_names)
 #Names to be used in app
 t5_names <- c(row.names(t5.1), row.names(t5.2), row.names(t5.3))
 t5_names = unique(t5_names)
+
+#Names to be used in app
+t6_names <- c(row.names(t6.1), row.names(t6.2), row.names(t6.3), row.names(t6.4))
+t6_names = unique(t6_names)
 
 #Load z spots
 load('data/RA_1/RA1_1_selected_adjusted_spots_3D_manual_app')
@@ -125,8 +140,17 @@ s5.2 = s2
 load('data/RA_5/RA5_3_selected_adjusted_spots_3D_manual_app')
 s5.3 = s3
 
+load('data/RA_6/RA6_1_selected_adjusted_spots_3D_manual_app')
+s6.1 = s1
+load('data/RA_6/RA6_2_selected_adjusted_spots_3D_manual_app')
+s6.2 = s2
+load('data/RA_6/RA6_3_selected_adjusted_spots_3D_manual_app')
+s6.3 = s3
+load('data/RA_6/RA6_4_selected_adjusted_spots_3D_manual_app')
+s6.4 = s4
+
 ## All names together
-t_names = c(t1_names, t2_names, t3_names, t4_names, t5_names)
+t_names = c(t1_names, t2_names, t3_names, t4_names, t5_names, t6_names)
 t_names = unique(t_names)
 
 ### Load functions
