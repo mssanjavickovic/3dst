@@ -420,7 +420,7 @@ for (j in unique(by_vs$ct)){
   for (i in 1:6){
     print(paste0("RA",i))
     if (length(by_vs_ct[by_vs_ct$sample == paste0("RA",i),]$meanct)==0) next
-    if (t.test(by_vs_ct[by_vs_ct$sample == paste0("RA",i),]$meanct,by_vs_ct[by_vs_ct$sample != paste0("RA",i),]$meanct, alternative = "greater")$p.value < 0.05){
+    if (t.test(by_vs_ct[by_vs_ct$sample == paste0("RA",i),]$meanct,by_vs_ct[by_vs_ct$sample != paste0("RA",i),]$meanct ,alternative = "greater", p.adjust.method = "BH")$p.value < 0.05){
       print("significant")
     }
   }
@@ -444,11 +444,12 @@ for (j in unique(by_vs$ct)){
     if (length(by_vs_ct[by_vs_ct$sample == paste0("RA",i),]$meanct)==0) {
       print("no cells")
       next}
-    if (t.test(by_vs_ct[by_vs_ct$sample == paste0("RA",i) & by_vs_ct$inf == "inf",]$meanct,by_vs_ct[by_vs_ct$sample != paste0("RA",i),]$meanct, alternative = "greater")$p.value < 0.05){
+    if (t.test(by_vs_ct[by_vs_ct$sample == paste0("RA",i) & by_vs_ct$inf == "inf",]$meanct,by_vs_ct[by_vs_ct$sample != paste0("RA",i),]$meanct, alternative = "greater", p.adjust.method = "BH")$p.value < 0.05){
       print("significant")
       }
   }
 }
+
 
 # first checks general changes in abundances in Rest (ex. b cells)
 by_vs_am <- abun %>% group_by(sample, ct, section, inf)
