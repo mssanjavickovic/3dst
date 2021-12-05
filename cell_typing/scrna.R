@@ -20,7 +20,7 @@ rm(list = ls())
 
 # Run sc imputation for ex. RA1 samples
 # Which samples do you want to use? 
-norm_samples = "RA6"
+norm_samples = "RA2"
 
 # Where are you norm expression R files located? 
 path_samples = "../data/"
@@ -178,17 +178,17 @@ for (i in 1:length(files_norm)){
 
 # Plot spatial heatmaps per cell type
 setwd(path_output)
-for (i in row.names(mf1)){
-  # Plot spatial spots
-  ## (un)comment for specific samples ex. use only plot.gene.2d.4 for RA1
-  if (norm_samples == 'RA1') plot.gene.2d.4("RA1_scRNAseqtest",i, mn1, mn2, mn3, mn4, s1, s2, s3, s4, con = T, x=40, y=20, transparency=1, min=min(mf1), max=max(mf1)) # for RA1
-  if (norm_samples == 'RA2') plot.gene.2d.7("RA2_scRNAseq",i, mn1, mn2, mn3, mn4, mn5, mn6, mn7, s1, s2, s3, s4, s5, s6, s7, con = T, x=40, y=20, transparency=1, min=min(mf1), max=max(mf1)) # for RA2
-  #if (norm_samples == 'RA2') plot.gene.3d.7("RA2_scRNAseq",i, mn1, mn2, mn3, mn4, mn5, mn6, mn7, s1, s2, s3, s4, s5, s6, s7, x=40, y=20, transparency=0.1, min=min(mf1), max=max(mf1)) # for RA2
-  if (norm_samples == 'RA3') plot.gene.2d.4("RA3_scRNAseq",i, mn1, mn2, mn3, mn4, s1, s2, s3, s4, con = T, x=40, y=40, transparency=1, min=min(mf1), max=0.15) # for RA3
-  if (norm_samples == 'RA4') plot.gene.2d.5("RA4_scRNAseq",i, mn1, mn2, mn3, mn4, mn5, s1, s2, s3, s4, s5, con = T, x=40, y=40, transparency=1, min=min(mf1), max=0.25) # for RA4
-  if (norm_samples == 'RA5') plot.gene.2d.3("RA5_scRNAseq",i, mn1, mn2, mn3, s1, s2, s3, con = T, x=80, y=80, transparency=1, min=min(mf1), max=max(mf1)) # for RA5
-  if (norm_samples == 'RA6') plot.gene.2d.4("RA6_scRNAseq",i, mn1, mn2, mn3, mn4, s1, s2, s3, s4, con = T, x=40, y=40, transparency=1, min=min(mf1), max=0.2) # for RA6
-}
+# for (i in row.names(mf1)){
+#   # Plot spatial spots
+#   ## (un)comment for specific samples ex. use only plot.gene.2d.4 for RA1
+#   if (norm_samples == 'RA1') plot.gene.2d.4("RA1_scRNAseqtest",i, mn1, mn2, mn3, mn4, s1, s2, s3, s4, con = T, x=40, y=20, transparency=1, min=min(mf1), max=max(mf1)) # for RA1
+#   if (norm_samples == 'RA2') plot.gene.2d.7("RA2_scRNAseq",i, mn1, mn2, mn3, mn4, mn5, mn6, mn7, s1, s2, s3, s4, s5, s6, s7, con = T, x=40, y=20, transparency=1, min=min(mf1), max=max(mf1)) # for RA2
+#   #if (norm_samples == 'RA2') plot.gene.3d.7("RA2_scRNAseq",i, mn1, mn2, mn3, mn4, mn5, mn6, mn7, s1, s2, s3, s4, s5, s6, s7, x=40, y=20, transparency=0.1, min=min(mf1), max=max(mf1)) # for RA2
+#   if (norm_samples == 'RA3') plot.gene.2d.4("RA3_scRNAseq",i, mn1, mn2, mn3, mn4, s1, s2, s3, s4, con = T, x=40, y=40, transparency=1, min=min(mf1), max=0.15) # for RA3
+#   if (norm_samples == 'RA4') plot.gene.2d.5("RA4_scRNAseq",i, mn1, mn2, mn3, mn4, mn5, s1, s2, s3, s4, s5, con = T, x=40, y=40, transparency=1, min=min(mf1), max=0.25) # for RA4
+#   if (norm_samples == 'RA5') plot.gene.2d.3("RA5_scRNAseq",i, mn1, mn2, mn3, s1, s2, s3, con = T, x=80, y=80, transparency=1, min=min(mf1), max=max(mf1)) # for RA5
+#   if (norm_samples == 'RA6') plot.gene.2d.4("RA6_scRNAseq",i, mn1, mn2, mn3, mn4, s1, s2, s3, s4, con = T, x=40, y=40, transparency=1, min=min(mf1), max=0.2) # for RA6
+# }
 
 # Avg cell signature per infiltrate 
 ### Take only infiltrates that are present in all sections according to annotations
@@ -203,7 +203,54 @@ for (i in 1:length(unique(inf_all$Inf.))){
 }
 all_inf = all_inf[-1]
 
-# Calculate avg gene expression per inf and section
+# get all cluster x_y from Cluster*RA*
+cl = list.files(pattern = glob2rx(paste0("Cluster*", norm_samples, "*.csv")), path = path_output)
+clusters = matrix(nrow = 1, ncol = 2)
+colnames(clusters) = c("spcluster", "section")
+for (f in cl){
+  scabun = read.csv(paste0(path_output, f), sep = ",")
+  tmp = cbind(paste(paste0("X", sapply(strsplit(scabun[,1], "_"), "[[", 2)),scabun[,2],scabun[,3], sep = "_"), sapply(strsplit(f, "\\."), "[[", 1), paste0("Section", sapply(strsplit(scabun[,1], "_"), "[[", 2)))
+  row.names(tmp) = tmp[,1]
+  tmp = as.matrix(tmp[,-1])
+  colnames(tmp) = c("spcluster", "section")
+  clusters = rbind(clusters, tmp)
+}
+clusters = as.matrix(clusters[-1,])
+colnames(clusters) = c("spcluster", "section")
+
+# get scores per cluster
+dfcl = as.data.frame(merge(t(mf1),clusters, by = 0))
+rownames(dfcl) = dfcl$Row.names
+dfcl = dfcl[,-1]
+dfcl = melt(dfcl)
+colnames(dfcl) = c("spcluster", "section", "ct", "value")
+dfcl$short_ct = paste0(sapply(strsplit(as.character(dfcl$ct), "_"), "[[",3),
+                       "_",sapply(strsplit(as.character(dfcl$ct), "_"), "[[",4))
+
+dfclavg = dfcl %>%
+  group_by(spcluster, section, short_ct) %>%
+  summarise(meanct = mean(value)) %>% 
+  mutate(freq = 100*meanct / sum(meanct))%>%
+  slice_max(order_by = meanct, n = 3)
+
+set3 <- colorRampPalette(c(brewer.pal('Set3',n=12),c(brewer.pal('Set1',n=9))))
+setnm = setNames(set3(16), unique(dfcl$short_ct))
+setnm_final = setnm[names(setnm) %in% unique(dfcl$short_ct)]
+
+#plot scores per cluster
+myplots <- vector("list", 1)
+plotsizer = length(unique(dfclavg$short_ct))*length(unique(dfclavg$section))
+
+myplots[[1]] <-ggplot(data = dfclavg, aes(x = short_ct, y = freq, fill = short_ct, na.rm = TRUE)) + 
+  stat_boxplot_custom(qs = c(0.0, 0.25, 0.5, 0.75, 1),size=.3) + 
+  facet_grid(~spcluster) + 
+  labs(x = "", y = "Cell type [%]") + 
+  scale_fill_manual(name = "Cell type", values = setnm_final)+  
+  labs(title = paste0(norm_samples, " cell type scores per cluster")) + theme(axis.text.x = element_text(angle = 30, vjust=1, hjust=1), legend.key.size = unit(0.2, "cm"), axis.title.x=element_blank())#,axis.text.x=element_blank(),axis.ticks.x=element_blank())
+save_plot(paste0(path_output,"Average_SC_sigs_per_cluster_", norm_samples, ".pdf"), plot_grid(plotlist=myplots), ncol = 1, nrow = 1)
+write.table(dfclavg, file = paste0(path_output,"Average_SC_per_spatial_cluster_", norm_samples, ".csv"), sep = ",", quote = F)
+
+ # Calculate avg gene expression per inf and section
 inf_mat_loaded_in_env=""
 for (i in 1:length(unique(inf_all$Inf.))){
   assign(paste0("inf", i, "_rm"), sum_section(get(paste0("SC.norm.inf", i))))
@@ -241,8 +288,8 @@ myplots[[1]] <-ggplot(data = melted, aes(x = inf, y = Avg, fill = ct)) +
   labs(x = "", y = "Cell type [%]") + 
   scale_fill_manual(name = "Cell types", values = setnm_final) +
   labs(title = paste0("Cell type scores")) + theme(legend.key.size = unit(0.2, "cm"))
+print(myplots[[1]])
 save_plot(paste0(path_output,"Average_SC_sigs_per_section_", norm_samples, ".pdf"), plot_grid(plotlist=myplots), ncol = 3, nrow = 2)
-
 
 melted$cluster = substr(melted$inf, 1,3)
 melted$ct_short = paste0(sapply(strsplit(as.character(melted$ct), "_"), "[[",3),
@@ -259,6 +306,7 @@ for (j in unique(melted$ct_short)){
            theme_minimal()
          counter = counter + 1
 }
+#plot_grid(plotlist=myplots)
 save_plot(paste0(path_output,"Average_SC_density_", norm_samples, ".pdf"), plot_grid(plotlist=myplots), ncol = 4, nrow = 4)
 melted$ra = norm_samples
 write.table(melted, file = paste0(path_output,"Average_SC_density_", norm_samples, ".csv"), sep = ",", quote = F)
@@ -272,12 +320,13 @@ myplots[[1]] <- ggplot(data = melted, aes(x = section, y = Avg, fill = ct)) +
   scale_fill_manual(name = "Cell types", values = setnm_final) +
   labs(title = paste0("Cell type scores")) + theme(legend.key.size = unit(0.2, "cm")) +
   theme(axis.text.x=element_text(angle=30, hjust=1))
+print(myplots[[1]])
 save_plot(paste0(path_output,"Average_SC_sigs_per_inf_", norm_samples, ".pdf"), plot_grid(plotlist=myplots), ncol = 3, nrow = 2)
 
 # plot correlation plots between cell type abundances per inf
 #ct1 = paste0("scRNAseq_", tolower(norm_samples), "_", "macrophage", "_clusters") #echange cell types here
-#ct2 = paste0("scRNAseq_", tolower(norm_samples), "_", "fibroblasts_HLADRAsublining", "_clusters") #echange cell types here #b_cells
-ct1 = paste0("scRNAseq_", tolower(norm_samples), "_", "dendritic_cells", "_clusters") #echange cell types here
+ct1 = paste0("scRNAseq_", tolower(norm_samples), "_", "fibro2b_thy1", "_clusters") #echange cell types here #b_cells
+#ct1 = paste0("scRNAseq_", tolower(norm_samples), "_", "dendritic_cells", "_clusters") #echange cell types here
 ct2 = paste0("scRNAseq_", tolower(norm_samples), "_", "plasma_cells", "_clusters") #echange cell types here #b_cells
 
 melted_cts_cor1 = melted[(melted$ct == ct1),] # & melted$inf != 'rest'
@@ -287,6 +336,10 @@ head(melted_cts_cor2)
 
 df = data.frame(melted_cts_cor1, melted_cts_cor2)
 myplots <- vector("list", 1)
+#df = df[df$inf == "rest",]
+
+#write.table(df, file =  "/Users/sanjavickovic/Desktop/morphoSPOT/Manuscript_Nov2021/figshare/SupFig9c_RA3.csv", sep = ",", quote = F) 
+
 myplots[[1]] <- 
 ggplot(data = df, aes(x = as.numeric(Avg), y = as.numeric(Avg.1))) + 
   facet_grid(~inf) + 
@@ -298,14 +351,22 @@ ggplot(data = df, aes(x = as.numeric(Avg), y = as.numeric(Avg.1))) +
   geom_smooth(method = "lm", formula = y~x,col="darkgray", se=FALSE) +
   stat_cor(method = "pearson", p.accuracy = 0.05) +
   facet_wrap(~ inf, scales = "free")
+print(myplots[[1]])
 save_plot(paste0(path_output,"Average_SC_sigs_per_inf_correlations_", ct1, "_", ct2, "_", norm_samples, ".pdf"), plot_grid(plotlist=myplots), ncol = 3, nrow = 2)
 
 # plot correlation plots between cell type abundances in whole biosy
-#ct1 = paste0("scRNAseq_", tolower(norm_samples), "_", "fibroblasts_HLADRAsublining", "_clusters") #echange cell types here # fibro2b_thy1
-#ct2 = paste0("scRNAseq_", tolower(norm_samples), "_", "macrophage", "_clusters") #echange cell types here #b_cells
-#melted_cts_cor1 = melted[(melted$ct == ct1),] # & melted$inf != 'rest'
-#melted_cts_cor2 = melted[(melted$ct == ct2),]
-#df = data.frame(melted_cts_cor1, melted_cts_cor2)
+ct1 = paste0("scRNAseq_", tolower(norm_samples), "_", "fibro2b_thy1", "_clusters") #echange cell types here # fibro2b_thy1
+#"fibroblasts_HLADRAsublining"
+#"fibro1_cd55"
+#"fibro2b_thy1"
+unique(melted$ct)
+
+ct2 = paste0("scRNAseq_", tolower(norm_samples), "_", "plasma_cells", "_clusters") #echange cell types here #b_cells
+melted_cts_cor1 = melted[(melted$ct == ct1),] # & melted$inf != 'rest'
+melted_cts_cor2 = melted[(melted$ct == ct2),]
+df = data.frame(melted_cts_cor1, melted_cts_cor2)
+
+#write.table(df, file = paste0("/Users/sanjavickovic/Desktop/morphoSPOT/Manuscript_Nov2021/figshare/SupFig9a_", norm_samples, "_plasma_thy1.csv"), sep = ",", quote = F) 
 
 myplots <- vector("list", 1)
 myplots[[1]] <- 
@@ -317,8 +378,9 @@ myplots[[1]] <-
   labs(title = paste0("Cell type correlations")) + theme(legend.key.size = unit(0.2, "cm")) +
   theme(axis.text.x=element_text(angle=0, hjust=1)) +
   geom_smooth(method = "lm", formula = y~x,col="darkgray", se=FALSE) +
-  stat_cor(method = "pearson", p.accuracy = 0.05) 
+  stat_cor(method = "pearson", p.accuracy = 0.05)
   #facet_wrap(~ inf, scales = "free")
+print(myplots[[1]])
 save_plot(paste0(path_output,"Average_SC_sigs_correlations_", ct1, "_", ct2, "_", norm_samples, ".pdf"), plot_grid(plotlist=myplots), ncol = 3, nrow = 2)
 
 # save melted file
@@ -327,6 +389,7 @@ write.table(melted, paste0(path_output, "Average_sc_sigs_table_", norm_samples, 
 
 ### This part of the code should be run when data on all samples is collected
 # check if cell type abundance changes are significant in all samples
+setwd("/Users/sanjavickovic/Desktop/morphoSPOT/3dst_repo/3dst/cell_typing")
 fl = list.files(pattern = glob2rx("Average_sc_sigs_table_*"), path = path_output)
 abun = matrix(nrow = 1, ncol = 9)
 colnames(abun) = c("area","ct","Avg","inf","section","cluster" ,"ct_short","ra","sample")
@@ -424,7 +487,11 @@ by_vs_am = abun%>%
     endsWith(sample, "6") ~ "seronegative"
   ))
 
+
+#write.table(by_vs_am, file =  "/Users/sanjavickovic/Desktop/morphoSPOT/Manuscript_Nov2021/figshare/Fig4c.csv", sep = ",", quote = F)
+
 counter = 1
+myplots <- vector("list", length(unique(by_vs_am$ct)))
 for (j in unique(by_vs_am$ct_short)){
   print(j)
   meltedsub = by_vs_am[by_vs_am$ct_short == j,]
@@ -453,3 +520,8 @@ for (j in unique(by_vs_am$ct_short)){
   counter = counter + 1
 }
 save_plot(paste0(path_output,"Average_SC_rest_samples_density.pdf"), plot_grid(plotlist=myplots), ncol = 4, nrow = 4)
+
+
+
+
+

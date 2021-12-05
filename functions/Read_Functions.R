@@ -71,6 +71,16 @@ rm_section = function (RA.norm.inf) {
   })
 }
 
+rm_section_all = function (RA.norm.inf) {
+  sapply(unique(sapply(strsplit(colnames(RA.norm.inf), split = "_"),"[[",1)), function(x) {
+    if (!is.null(ncol(RA.norm.inf[,sapply(strsplit(colnames(RA.norm.inf), split = "_"),"[[",1) == x]))){
+      RA.norm.inf[,sapply(strsplit(colnames(RA.norm.inf), split = "_"),"[[",1) == x]
+    } else {
+      RA.norm.inf[,sapply(strsplit(colnames(RA.norm.inf), split = "_"),"[[",1) == x]
+    }
+  })
+}
+
 sum_section = function (RA.norm.inf) {
   sapply(unique(sapply(strsplit(colnames(RA.norm.inf), split = "_"),"[[",1)), function(x) {
     if (!is.null(ncol(RA.norm.inf[,sapply(strsplit(colnames(RA.norm.inf), split = "_"),"[[",1) == x]))){
@@ -180,14 +190,15 @@ avg_genes_barplot = function(all_bar, gen_names, cluster_names){
   
   #all_bar = RA.norm
   #### Make barplot of avg expression per interesting marker genes
-  # cluster_names = col.spatial.clusters
+  col.spatial.clusters = cluster_names
   # gen_names = c("CCL19","CXCL13","LTB","PRG4","MMP3","CD52","MS4A1","FN1","TYROBP") #, "CD79A", "CD79B", "TYROBP"
-  col.scale = unique(cluster_names[,1])
+  col.scale = unique(col.spatial.clusters[,1])
+  
 
   ### arrange matrix per cluster 
   # all_bar = mbind(mg1, mg2, mg3, mg4)
   all_bar = all_bar[row.names(all_bar) %in% gen_names,]
-  all_bar = all_bar[,match(colnames(all_bar), rownames(cluster_names))]
+  all_bar = all_bar[,match(colnames(all_bar), rownames(col.spatial.clusters))]
   all_bar = all_bar[match(rownames(all_bar), gen_names),]
   
   # Avg expression and std error per cluster for selected genes
@@ -335,7 +346,6 @@ avg_genes_barplot = function(all_bar, gen_names, cluster_names){
   limits <- aes(ymax = clusters_rm + clusters_sd,
                 ymin = clusters_rm - clusters_sd)
   
-  library(ggpubr)
   p <- ggplot(data = myData, aes(x = factor(as.character(gene_names), levels = gen_names), y = clusters_rm, fill = cluster_names)) + 
     ylab(c("Avg Log(norm counts)")) + ylim(0, max(clusters_rm)+1)+ theme_bw() + 
     geom_bar(stat = "identity", position = position_dodge(width = 0.9)) + 
@@ -345,6 +355,168 @@ avg_genes_barplot = function(all_bar, gen_names, cluster_names){
     theme(axis.line.y = element_line(colour = "black"), axis.title.x = element_blank(), axis.ticks.x= element_blank(), axis.title.y = element_text(), axis.text.x = element_text(angle = 0),panel.border = element_blank(), panel.grid.major = element_blank(), panel.grid.minor = element_blank())
 
   return(p)
+
+}
+
+# Make Barplot for avg gene expression per cluster group 
+avg_genes_barplot_data = function(all_bar, gen_names, cluster_names){
+  
+  #all_bar = RA.norm
+  #### Make barplot of avg expression per interesting marker genes
+  col.spatial.clusters = cluster_names
+  # gen_names = c("CCL19","CXCL13","LTB","PRG4","MMP3","CD52","MS4A1","FN1","TYROBP") #, "CD79A", "CD79B", "TYROBP"
+  col.scale = unique(cluster_names[,1])
+  
+  ### arrange matrix per cluster 
+  # all_bar = mbind(mg1, mg2, mg3, mg4)
+  all_bar = all_bar[row.names(all_bar) %in% gen_names,]
+  all_bar = all_bar[,match(colnames(all_bar), rownames(cluster_names))]
+  all_bar = all_bar[match(rownames(all_bar), gen_names),]
+  
+  # Avg expression and std error per cluster for selected genes
+  clusters_rm = ""
+  clusters_sd = ""
+  cluster_names = ""
+  counter = 1
+  for (i in col.scale){
+    #print(i)
+    mat.cluster = all_bar[, colnames(all_bar) %in% names(col.spatial.clusters[col.spatial.clusters == i,])]
+    clusters_rm_tmp = as.numeric(rowMeans(mat.cluster))
+    clusters_sd_tmp = as.numeric(rowSds(mat.cluster))/sqrt(ncol(mat.cluster))
+    clusters_rm = c(clusters_rm, clusters_rm_tmp)
+    clusters_sd = c(clusters_sd, clusters_sd_tmp)
+    cluster_names = c(cluster_names, rep(paste0("Cluster",counter), length(gen_names)))
+    counter=counter+1
+  }
+  clusters_rm = as.numeric(clusters_rm[-1])
+  clusters_sd = as.numeric(clusters_sd[-1])
+  cluster_names = cluster_names[-1]
+  gene_names = rep(row.names(all_bar), length(col.scale))
+  
+  #get wilcoxons values cluster1 vs all 
+  wilc_p = ""
+  for (j in rownames(all_bar)){
+    print(j)
+    if ((j == "PRG4") | (j == "MMP3")| (j == "FN1")| (j == "TYROBP")) met = "less"
+    else met = "greater"
+    
+    
+    counter = 1
+    for (i in c(1:length(col.scale))){
+      if (i == 1){
+        
+        #print(i)
+        clusters_rm_tmp1 = ""
+        clusters_rm_tmp2 = ""
+        
+        mat.cluster1 = all_bar[j, colnames(all_bar) %in% names(col.spatial.clusters[col.spatial.clusters == col.scale[1],])]
+        tss = unique(sapply(strsplit(names(mat.cluster1),"_"),"[[",1))
+        for (nm in tss){
+          tmp = mat.cluster1[sapply(strsplit(names(mat.cluster1),"_"),"[[",1) == nm]
+          clusters_rm_tmp1 = c(clusters_rm_tmp1,mean(tmp)) 
+        }
+        mat.cluster2 = all_bar[j, colnames(all_bar) %in% names(col.spatial.clusters[col.spatial.clusters == col.scale[1],])]
+        tss = unique(sapply(strsplit(names(mat.cluster2),"_"),"[[",1))
+        for (nm in tss){
+          tmp = mat.cluster2[sapply(strsplit(names(mat.cluster2),"_"),"[[",1) == nm]
+          clusters_rm_tmp2 = c(clusters_rm_tmp2,mean(tmp))
+        }
+        clusters_rm_tmp1 = as.numeric(clusters_rm_tmp1[-1])
+        clusters_rm_tmp2 = as.numeric(clusters_rm_tmp2[-1])
+        
+        #print(clusters_rm_tmp1)
+        #print(clusters_rm_tmp2)
+        wilc_p = c(wilc_p, 1)
+        
+      } else {
+        
+        
+        
+        #print(i)
+        clusters_rm_tmp1 = ""
+        clusters_rm_tmp2 = ""
+        
+        mat.cluster1 = all_bar[j, colnames(all_bar) %in% names(col.spatial.clusters[col.spatial.clusters == col.scale[1],])]
+        tss = unique(sapply(strsplit(names(mat.cluster1),"_"),"[[",1))
+        for (nm in tss){
+          tmp = mat.cluster1[sapply(strsplit(names(mat.cluster1),"_"),"[[",1) == nm]
+          clusters_rm_tmp1 = c(clusters_rm_tmp1,mean(tmp)) 
+        }
+        mat.cluster2 = all_bar[j, colnames(all_bar) %in% names(col.spatial.clusters[col.spatial.clusters == col.scale[i],])]
+        tss = unique(sapply(strsplit(names(mat.cluster2),"_"),"[[",1))
+        for (nm in tss){
+          tmp = mat.cluster2[sapply(strsplit(names(mat.cluster2),"_"),"[[",1) == nm]
+          clusters_rm_tmp2 = c(clusters_rm_tmp2,mean(tmp))
+        }
+        clusters_rm_tmp1 = as.numeric(clusters_rm_tmp1[-1])
+        clusters_rm_tmp2 = as.numeric(clusters_rm_tmp2[-1])
+        
+        #print(clusters_rm_tmp1)
+        #print(clusters_rm_tmp2)
+        
+        if ((j == "CXCL13") | (j == "TYROBP") | (j == "CCL19") | (j == "LTB")){
+          if (j == "CXCL13"){
+            sv_cx1 = clusters_rm_tmp1}
+          if (j == "TYROBP"){
+            sv_ty1 = clusters_rm_tmp1}
+          if (j == "CCL19"){
+            sv_cc1 = clusters_rm_tmp1}
+          if (j == "LTB"){
+            sv_ltb1 = clusters_rm_tmp1}}
+        #print(met)
+        wilc_p = c(wilc_p, wilcox.test(clusters_rm_tmp1, clusters_rm_tmp2, paired = FALSE, alternative = met,exact=FALSE)$p.value)
+        #print(wilcox.test(clusters_rm_tmp1, clusters_rm_tmp2, paired = FALSE, exact=FALSE)$p.value)
+      }
+    }
+  }
+  
+  
+  
+  #sv_ty1 = as.numeric(sv_ty1)
+  #sv_cx1 = as.numeric(sv_cx1)
+  #sv_cc1 = as.numeric(sv_cc1)
+  #sv_ltb1 = as.numeric(sv_ltb1)
+  
+  #print("testing cxcl13 vs tyrobp per cluster 1")
+  #print(sv_cx1)
+  #print(sv_ty1)
+  #print(wilcox.test(sv_cx1, sv_ty1, paired = FALSE, alternative = 'less')$p.value)
+  
+  #print("testing cxcl13 vs ltb per cluster 1")
+  #print(sv_cx1)
+  #print(sv_ltb1)
+  #print(wilcox.test(sv_cx1, sv_ltb1, paired = FALSE, alternative = 'less')$p.value)
+  
+  #print("testing ccl21 vs tyrobp per cluster 1")
+  #print(sv_cc1)
+  #print(sv_ltb1)
+  #print(wilcox.test(sv_cc1, sv_ltb1, paired = FALSE, alternative = 'less')$p.value)
+  
+  
+  
+  wilc_p = as.numeric(wilc_p[-1])
+  reordered_wilc_p = ""
+  for (i in 1:length(col.scale)){
+    reordered_wilc_p = c(reordered_wilc_p, wilc_p[seq(i, length(wilc_p), length(col.scale))])
+  }
+  reordered_wilc_p = as.numeric(reordered_wilc_p[-1])
+  
+  signs_p= ""
+  for (i in reordered_wilc_p){
+    if (i>0.05) signs_p=c(signs_p, "ns")
+    if ((i<=0.05) & (i>0.01)) signs_p=c(signs_p, "*")
+    if ((i<=0.01) & (i>0.001)) signs_p=c(signs_p, "**")
+    if (i<=0.001) signs_p=c(signs_p, "***")
+  }
+  signs_p = signs_p[-1]
+  group2 = cluster_names
+  group1 = rep("Cluster1", length(signs_p))
+  # Plot barplot
+  
+  myData = data.frame(clusters_rm, clusters_sd, cluster_names, gene_names,reordered_wilc_p,signs_p, group1, group2)
+
+  return(myData)
+  
 }
 
 # Check how many inf and clusters correspond
@@ -500,6 +672,7 @@ run_inf_analysis = function(inf_all, k, norm_samples, path_output){
   print("Generating plots on infiltrates ...")
   pdf(paste0(path_output,"PCA_Infiltrates_", norm_samples, ".pdf"))
   scatter3D(dm$RA1, dm$RA2, dm$RA3, main = "Infiltrate PCA", pch=16, col = col.inf.clusters, colkey = list(plot = FALSE))
+  write.table(dm[,1:3], file = paste0("/Users/sanjavickovic/Desktop/morphoSPOT/Manuscript_Nov2021/figshare/run_inf_analysis_pca_", norm_samples, ".csv"), sep = ",", quote = F)
   dev.off()
   hc_plot = plot(hc, labels = F, sub="", xlab = "", main = "Infiltrate Dendogram")
   rect.hclust(hc , k = k, border = col.panel[1:k])
@@ -509,6 +682,8 @@ run_inf_analysis = function(inf_all, k, norm_samples, path_output){
   col.inf.clusters = as.matrix(col.inf.clusters[match(colnames(m3_ref),row.names(col.inf.clusters)),])
   
   heat = plot_heatmap(m3_ref[genes,], col.inf.clusters)
+  mmm = rbind(t(as.matrix(col.inf.clusters)), m3_ref[genes,])
+  write.table(mmm, file = paste0("/Users/sanjavickovic/Desktop/morphoSPOT/Manuscript_Nov2021/figshare/run_inf_analysis_heatmap_", norm_samples, ".csv"), sep = ",", quote = F)
   
   pdf(paste0(path_output, "Heatmap_Infiltrates_", norm_samples, ".pdf"))
   genes1 = c("CXCL13","RAC2","LCP1", "MS4A1", "CD52", "FTL", "FTH1", "MZB1", "PIM2", "IGLL1", "CCL21", "CCL19", "XBP1", "FN1", "PCOLCE", "PRG4", "IL7R", "CRTAC1", "FOSB", "PRDX4", "IGLL5", "MMP3", "SSR4", "TYROBP", "CD79A", "CD79B", "LTB")
@@ -624,6 +799,7 @@ run_spatial_cluster_analysis = function(RA.norm, k, read_tsne_from_memory, norm_
 
   #Do DEG analysis
   m3_ref = all_matrix
+  #print(head(all_matrix))
   
   # Split into spatial cluster groups
   for (i in 1:f){
@@ -668,6 +844,10 @@ run_spatial_cluster_analysis = function(RA.norm, k, read_tsne_from_memory, norm_
   add.flag(heat, kept.labels = c("TIMP1","CLU", "PIM2", "DERL3","HTRA1", "IGLL5", "CCL19","CXCL13","LTB","PRG4","MMP3","CD52","MS4A1","FN1", "TYROBP", "SSR4", "VCAM1", "MARCO", "SEPP1", "COL1A2", "CXCL12", "CXCR4", "CCL21","IL32", "RAC2", "PIM2"), repel.degree = 0)
   dev.off()
   #dev.off()
+  
+  # save files for figshare 
+  m_output = rbind(t(double_ann), m3_ref[genes,])
+  write.table(m_output, file = paste0("/Users/sanjavickovic/Desktop/morphoSPOT/Manuscript_Nov2021/figshare/Heatmap_Cluster_Matrix_", norm_samples, ".csv"), sep = ",", quote = F)
   
   return(col.spatial.clusters)
 }
@@ -984,6 +1164,8 @@ plot.gene.3d.cluster.5 = function(sample, cluster, m1, m2, m3, m4, m5, s1, s2, s
 ### Plot 2D clusters
 #Funciton
 plot.gene.2d.cluster.4 = function(sample, ann.cluster, m1, m2, m3, m4, s1, s2, s3, s4, x, y, transparency, min, max){
+  mats_collection = matrix(ncol = 5, nrow = 1)
+  colnames(mats_collection) = c("x", "y", "score", "sample", "section")
   
   for (i in c(1:4)) {
     print(i)
@@ -1017,13 +1199,13 @@ plot.gene.2d.cluster.4 = function(sample, ann.cluster, m1, m2, m3, m4, s1, s2, s
     dis = rep(0.25 * as.numeric(i), nrow(genes.barcodes))
     w = as.numeric(dis)
     
-    library(akima)
     #x= 40
     #y= 40
     #transparency=1
     # min=1
     # max=5
     s =  interp(x1, y1, z, nx = x, ny = y)
+    mats_collection = rbind(mats_collection, make_output_tissue_matrix(s$z, norm_samples, i))
     if (i == "1") {mat.1 = s$z}
     if (i == "2") {mat.2 = s$z}
     if (i == "3") {mat.3 = s$z}
@@ -1042,9 +1224,16 @@ plot.gene.2d.cluster.4 = function(sample, ann.cluster, m1, m2, m3, m4, s1, s2, s
   pdf(paste(sample,"_4_Contour_Cluster",".pdf", sep=""))
   image2D(z = mat.4, contour = T, smooth = TRUE, col=colorvar, alpha = transparency, box = FALSE, inttype = 1, NAcol = "transparent", x = c(1:x), y = c(1:y), scale = F)
   dev.off()
+  
+  mats_collection = mats_collection[-1,]
+  write.table(mats_collection, file = paste0("Spatial_clustering_table_", norm_samples, ".csv"), quote = F,sep = ",")
+  
 }
   
 plot.gene.2d.4 = function(sample, gene,  mn1, mn2, mn3, mn4, s1, s2, s3, s4, x, y, transparency, min, max, con){
+  
+  mats_collection = matrix(ncol = 5, nrow = 1)
+  colnames(mats_collection) = c("x", "y", "score", "sample", "section")
   
   for (i in c(1:4)) {
     if (i == "1") {
@@ -1077,6 +1266,7 @@ plot.gene.2d.4 = function(sample, gene,  mn1, mn2, mn3, mn4, s1, s2, s3, s4, x, 
     w = as.numeric(dis)
     
     s =  interp(x1,y1, z, nx = x, ny = y)
+    mats_collection = rbind(mats_collection, make_output_tissue_matrix(s$z, norm_samples, i))
     if (i == "1") {mat.1 = s$z}
     if (i == "2") {mat.2 = s$z}
     if (i == "3") {mat.3 = s$z}
@@ -1094,9 +1284,14 @@ plot.gene.2d.4 = function(sample, gene,  mn1, mn2, mn3, mn4, s1, s2, s3, s4, x, 
   pdf(paste(sample,"_4_Contour_",gene,".pdf", sep=""))
   image2D(z = mat.4, contour = con, smooth = TRUE, alpha = transparency, box = FALSE, inttype = 1, clim = c(min, max), NAcol = "transparent", x = c(1:x), y = c(1:y), scale = F)
   dev.off()
+  mats_collection = mats_collection[-1,]
+  write.table(mats_collection, file = paste0("Gene_expression_tissue_table_", gene, "_", norm_samples, ".csv"), quote = F,sep = ",")
+  
 }
 
 plot.gene.2d.5 = function(sample, gene,  m1, m2, m3, m4, m5, s1, s2, s3, s4, s5, x, y, transparency, min, max, con){
+  mats_collection = matrix(ncol = 5, nrow = 1)
+  colnames(mats_collection) = c("x", "y", "score", "sample", "section")
   
   for (i in c(1:5)) {
     if (i == "1") {
@@ -1132,6 +1327,8 @@ plot.gene.2d.5 = function(sample, gene,  m1, m2, m3, m4, m5, s1, s2, s3, s4, s5,
     w = as.numeric(dis)
     
     s =  interp(x1,y1, z, nx = x, ny = y)
+    mats_collection = rbind(mats_collection, make_output_tissue_matrix(s$z, norm_samples, i))
+    
     if (i == "1") {mat.1 = s$z}
     if (i == "2") {mat.2 = s$z}
     if (i == "3") {mat.3 = s$z}
@@ -1153,9 +1350,15 @@ plot.gene.2d.5 = function(sample, gene,  m1, m2, m3, m4, m5, s1, s2, s3, s4, s5,
   pdf(paste(sample,"_5_Contour_",gene,".pdf", sep=""))
   image2D(z = mat.5, contour = con, smooth = TRUE, alpha = transparency, box = FALSE, inttype = 1, clim = c(min, max), NAcol = "transparent", x = c(1:x), y = c(1:y), scale = F)
   dev.off()
+  mats_collection = mats_collection[-1,]
+  write.table(mats_collection, file = paste0("Gene_expression_tissue_table_", gene, "_", norm_samples, ".csv"), quote = F,sep = ",")
+  
 }
 
 plot.gene.2d.cluster.7 = function(sample, cluster, m1, m2, m3, m4, m5, m6, m7, s1, s2, s3, s4, s5, s6, s7, x, y, transparency, min, max){
+  
+  mats_collection = matrix(ncol = 5, nrow = 1)
+  colnames(mats_collection) = c("x", "y", "score", "sample", "section")
   
   for (i in c(1:7)) {
     if (i == "1") {
@@ -1196,13 +1399,14 @@ plot.gene.2d.cluster.7 = function(sample, cluster, m1, m2, m3, m4, m5, m6, m7, s
     dis = rep(0.25 * as.numeric(i), nrow(genes.barcodes))
     w = as.numeric(dis)
     
-    library(akima)
     # x= 40
     # y= 40
     # transparency=1
     # min=1
     # max=5
     s =  interp(x1, y1, z, nx = x, ny = y)
+    mats_collection = rbind(mats_collection, make_output_tissue_matrix(s$z, norm_samples, i))
+    
     if (i == "1") {mat.1 = s$z}
     if (i == "2") {mat.2 = s$z}
     if (i == "3") {mat.3 = s$z}
@@ -1234,9 +1438,15 @@ plot.gene.2d.cluster.7 = function(sample, cluster, m1, m2, m3, m4, m5, m6, m7, s
   pdf(paste(sample,"_7_Contour_Cluster",".pdf", sep=""))
   image2D(z = mat.7, contour = T, smooth = TRUE, col=colorvar, alpha = transparency, box = FALSE, inttype = 1, clim = c(min, max), NAcol = "transparent", x = c(1:x), y = c(1:y), scale = F, colkey = list(plot = FALSE))
   dev.off()
+  
+  mats_collection = mats_collection[-1,]
+  write.table(mats_collection, file = paste0("Spatial_clustering_table_", norm_samples, ".csv"), quote = F,sep = ",")
+  
 }
 
 plot.gene.2d.cluster.5 = function(sample, ann.cluster, m1, m2, m3, m4, m5, s1, s2, s3, s4, s5, x, y, transparency, min, max){
+  mats_collection = matrix(ncol = 5, nrow = 1)
+  colnames(mats_collection) = c("x", "y", "score", "sample", "section")
   
   for (i in c(1:5)) {
     if (i == "1") {
@@ -1271,10 +1481,11 @@ plot.gene.2d.cluster.5 = function(sample, ann.cluster, m1, m2, m3, m4, m5, s1, s
     dis = rep(0.25 * as.numeric(i), nrow(genes.barcodes))
     w = as.numeric(dis)
     
-    library(akima)
     # x=40
     # y=40
     s =  interp(x1, y1, z, nx = x, ny = y)
+    mats_collection = rbind(mats_collection, make_output_tissue_matrix(s$z, norm_samples, i))
+    
     if (i == "1") {mat.1 = s$z}
     if (i == "2") {mat.2 = s$z}
     if (i == "3") {mat.3 = s$z}
@@ -1299,10 +1510,17 @@ plot.gene.2d.cluster.5 = function(sample, ann.cluster, m1, m2, m3, m4, m5, s1, s
   pdf(paste(sample,"_5_Contour_Cluster",".pdf", sep=""))
   image2D(z = mat.5, contour = T, smooth = TRUE, col=colorvar, alpha = transparency, box = FALSE, inttype = 1, clim = c(min, max), NAcol = "transparent", x = c(1:x), y = c(1:y), scale = F)
   dev.off()
+  
+  mats_collection = mats_collection[-1,]
+  write.table(mats_collection, file = paste0("Spatial_clustering_table_", norm_samples, ".csv"), quote = F,sep = ",")
+  
 }
 
-plot.gene.2d.7 = function(sample, gene, m1, m2, m3, m4, m5, m6, m7, s1, s2, s3, s4, s5, s6, s7, x, y, transparency, min, max, con){
-  
+plot.gene.2d.7 = function(sample, gene, m1, m2, m3, m4, m5, m6, m7, s1, s2, s3, s4, s5, s6, s7, x, y, transparency, min, max, con){ #, inf_all){
+  mats_collection = matrix(ncol = 5, nrow = 1)
+  colnames(mats_collection) = c("x", "y", "score", "sample", "section" ) #, "Inf.")
+  #inf_all$names = row.names(inf_all)
+  #print(inf_all)
   suppressWarnings({for (i in c(1:7)) {
     if (i == "1") {
       spots = s1
@@ -1345,13 +1563,50 @@ plot.gene.2d.7 = function(sample, gene, m1, m2, m3, m4, m5, m6, m7, s1, s2, s3, 
     z = as.numeric(genes.barcodes.1[,3])
 
     s =  interp(x1, y1, z, nx = x, ny = y)
-    if (i == "1") {mat.1 = s$z}
-    if (i == "2") {mat.2 = s$z}
-    if (i == "3") {mat.3 = s$z}
-    if (i == "4") {mat.4 = s$z}
-    if (i == "5") {mat.5 = s$z}
-    if (i == "6") {mat.6 = s$z}
-    if (i == "7") {mat.7 = s$z}
+    # mat_tmp = make_output_tissue_matrix(s$z, norm_samples, i)
+    # row.names(mat_tmp) = paste(str_replace_all(mat_tmp[,"section"], "Section", "X"), mat_tmp[,"x"], mat_tmp[,"y"], sep = "_")
+    # mat_tmp.1 = merge(mat_tmp, inf_all, by = 0)
+    # mat_tmp.1 = mat_tmp.1[,-1]
+    # mat_tmp.1 = mat_tmp.1[,-7]
+    # print(mat_tmp.1)
+    # mats_collection = rbind(mats_collection, mat_tmp.1)
+    mats_collection = rbind(mats_collection, make_output_tissue_matrix(s$z, norm_samples, i))
+    
+    # genes.barcodes.small = genes.barcodes.1[row.names(genes.barcodes.1) %in% row.names(inf_all[inf_all$Inf. == "Inf6",]),]
+    # x1.small = as.numeric(genes.barcodes.small[,1])
+    # x1.small = x1.small[!is.na(x1.small)]
+    # y1.small = as.numeric(genes.barcodes.small[,2])
+    # y1.small = y1.small[!is.na(y1.small)]
+    # z.small = as.numeric(genes.barcodes.small[,3])
+    # dis.small = rep(0.25 * as.numeric(i), nrow(genes.barcodes.small))
+    # w = as.numeric(dis.small)
+    # 
+    # x.small = 100
+    # y.small = 100
+    # # transparency = 1
+    # s.small =  interp(x1.small, y1.small, z.small, nx = x.small, ny = y.small)
+    
+    if (i == "1") {
+      mat.1 = s$z}
+      #mat.1.small = s.small$z}
+    if (i == "2") {
+      mat.2 = s$z}
+      #mat.2.small = s.small$z}
+    if (i == "3") {
+      mat.3 = s$z}
+      #mat.3.small = s.small$z}
+    if (i == "4") {
+      mat.4 = s$z}
+      #mat.4.small = s.small$z}
+    if (i == "5") {
+      mat.5 = s$z}
+      #mat.5.small = s.small$z}
+    if (i == "6") {
+      mat.6 = s$z}
+      #mat.6.small = s.small$z}
+    if (i == "7") {
+      mat.7 = s$z}
+      #mat.7.small = s.small$z}
   }
   })
   pdf(paste(sample,"_1_Contour_",gene,".pdf", sep=""))
@@ -1375,11 +1630,46 @@ plot.gene.2d.7 = function(sample, gene, m1, m2, m3, m4, m5, m6, m7, s1, s2, s3, 
   pdf(paste(sample,"_7_Contour_",gene,".pdf", sep=""))
   image2D(z = mat.7, contour = con, smooth = TRUE, alpha = transparency, box = FALSE, inttype = 1, clim = c(min, max), NAcol = "transparent", x = c(1:x), y = c(1:y), scale = F)
   dev.off()
+  mats_collection = mats_collection[-1,]
+  write.table(mats_collection, file = paste0("Gene_expression_tissue_table_", gene, "_", norm_samples, ".csv"), quote = F,sep = ",")
+  
+  
+  # pdf(paste(sample,"_1_Contour_Inf6_",gene,".pdf", sep=""))
+  # image2D(z = mat.1.small, contour = T, smooth = TRUE, alpha = transparency, box = FALSE, inttype = 1, clim = c(min, max), NAcol = "transparent", x = c(1:x.small), y = c(1:y.small), scale = F, colkey = list(plot = FALSE))
+  # dev.off()
+  # pdf(paste(sample,"_2_Contour_Inf6_",gene,".pdf", sep=""))
+  # image2D(z = mat.2.small, contour = T, smooth = TRUE, alpha = transparency, box = FALSE, inttype = 1, clim = c(min, max), NAcol = "transparent", x = c(1:x.small), y = c(1:y.small), scale = F, colkey = list(plot = FALSE))
+  # dev.off()
+  # pdf(paste(sample,"_3_Contour_Inf6_",gene,".pdf", sep=""))
+  # image2D(z = mat.3.small, contour = T, smooth = TRUE, alpha = transparency, box = FALSE, inttype = 1, clim = c(min, max), NAcol = "transparent", x = c(1:x.small), y = c(1:y.small), scale = F, colkey = list(plot = FALSE))
+  # dev.off()
+  # pdf(paste(sample,"_4_Contour_Inf6_",gene,".pdf", sep=""))
+  # image2D(z = mat.4.small, contour = T, smooth = TRUE, alpha = transparency, box = FALSE, inttype = 1, clim = c(min, max), NAcol = "transparent", x = c(1:x.small), y = c(1:y.small), scale = F, colkey = list(plot = FALSE))
+  # dev.off()
+  # pdf(paste(sample,"_5_Contour_Inf6_",gene,".pdf", sep=""))
+  # image2D(z = mat.5.small, contour = T, smooth = TRUE, alpha = transparency, box = FALSE, inttype = 1, clim = c(min, max), NAcol = "transparent", x = c(1:x.small), y = c(1:y.small), scale = F, colkey = list(plot = FALSE))
+  # dev.off()
+  # pdf(paste(sample,"_6_Contour_Inf6_",gene,".pdf", sep=""))
+  # image2D(z = mat.6.small, contour = T, smooth = TRUE, alpha = transparency, box = FALSE, inttype = 1, clim = c(min, max), NAcol = "transparent", x = c(1:x.small), y = c(1:y.small), scale = F, colkey = list(plot = FALSE))
+  # dev.off()
+  # pdf(paste(sample,"_7_Contour_Inf6_",gene,".pdf", sep=""))
+  # image2D(z = mat.7.small, contour = T, smooth = TRUE,  alpha = transparency, box = FALSE, inttype = 1, clim = c(min, max), NAcol = "transparent", x = c(1:x.small), y = c(1:y.small), scale = F, colkey = list(plot = FALSE))
+  # dev.off()
+  
+  # plot inf6 for figshare
+  #print(head(mats_collection))
+  # row.names(mats_collection) = paste(str_replace_all(mats_collection[,"section"], "Section", "X"), mats_collection[,"x"], mats_collection[,"y"], sep = "_")
+  # mats_collection = mats_collection[row.names(mats_collection) %in% row.names(inf_all[inf_all$Inf. == "Inf6",]),]
+  # write.table(mats_collection, file = paste0("Gene_expression_tissue_table_Inf6_", gene, "_", norm_samples, ".csv"), quote = F,sep = ",")
+  
   
 }
 
-plot.gene.2d.inf.7 = function(sample, cluster, m1, m2, m3, m4, m5, m6, m7, s1, s2, s3, s4, s5, s6, s7, x, y, transparency, min, max){
+plot.gene.2d.inf.7 = function(sample, cluster, m1, m2, m3, m4, m5, m6, m7, s1, s2, s3, s4, s5, s6, s7, x, y, transparency, min, max, inf_all){
   
+  mats_collection = matrix(ncol = 5, nrow = 1)
+  colnames(mats_collection) = c("x", "y", "score", "sample", "section")
+  inf_all$names = row.names(inf_all)
   
   for (i in c(1:7)) {
     if (i == "1") {
@@ -1409,7 +1699,7 @@ plot.gene.2d.inf.7 = function(sample, cluster, m1, m2, m3, m4, m5, m6, m7, s1, s
     genes.barcodes = clust.spots[rownames(clust.spots) %in% colnames(exp.values),]
     exp.values = exp.values[,colnames(exp.values) %in% rownames(clust.spots)]
     exp.values = exp.values[rowSums(exp.values) != 0,]
-    #cluster = ann.col.inf
+    cluster = ann.col.inf
     cluster = cluster[colnames(exp.values),]
     genes.barcodes = cbind(genes.barcodes, cluster)
     
@@ -1424,15 +1714,45 @@ plot.gene.2d.inf.7 = function(sample, cluster, m1, m2, m3, m4, m5, m6, m7, s1, s
     # x = 40
     # y = 40
     # transparency = 1
-    library(akima)
     s =  interp(x1, y1, z, nx = x, ny = y)
-    if (i == "1") {mat.1 = s$z}
-    if (i == "2") {mat.2 = s$z}
-    if (i == "3") {mat.3 = s$z}
-    if (i == "4") {mat.4 = s$z}
-    if (i == "5") {mat.5 = s$z}
-    if (i == "6") {mat.6 = s$z}
-    if (i == "7") {mat.7 = s$z}
+    mats_collection = rbind(mats_collection, make_output_tissue_matrix(s$z, norm_samples, i))
+    
+    
+    genes.barcodes.small = genes.barcodes[row.names(genes.barcodes) %in% row.names(inf_all[inf_all$Inf. == "Inf6",]),]
+    x1.small = as.numeric(genes.barcodes.small[,1])
+    x1.small = x1.small[!is.na(x1.small)]
+    y1.small = as.numeric(genes.barcodes.small[,2])
+    y1.small = y1.small[!is.na(y1.small)]
+    z.small = as.numeric(genes.barcodes.small[,3])
+    dis.small = rep(0.25 * as.numeric(i), nrow(genes.barcodes.small))
+    w = as.numeric(dis.small)
+
+    x.small = 100
+    y.small = 100
+    # transparency = 1
+    s.small =  interp(x1.small, y1.small, z.small, nx = x.small, ny = y.small)
+
+    if (i == "1") {
+      mat.1 = s$z
+      mat.1.small = s.small$z}
+    if (i == "2") {
+      mat.2 = s$z
+      mat.2.small = s.small$z}
+    if (i == "3") {
+      mat.3 = s$z
+      mat.3.small = s.small$z}
+    if (i == "4") {
+      mat.4 = s$z
+      mat.4.small = s.small$z}
+    if (i == "5") {
+      mat.5 = s$z
+      mat.5.small = s.small$z}
+    if (i == "6") {
+      mat.6 = s$z
+      mat.6.small = s.small$z}
+    if (i == "7") {
+      mat.7 = s$z
+      mat.7.small = s.small$z}
   }
 
   colorvar = colorRampPalette(c("#8a3795", "#4ebceb","#f15f48","gray80"))(4)
@@ -1457,11 +1777,64 @@ plot.gene.2d.inf.7 = function(sample, cluster, m1, m2, m3, m4, m5, m6, m7, s1, s
   pdf(paste(sample,"_7_Contour_Inf",".pdf", sep=""))
   image2D(z = mat.7, contour = T, smooth = TRUE, col=colorvar, alpha = transparency, box = FALSE, inttype = 1, clim = c(min, max), NAcol = "transparent", x = c(1:x), y = c(1:y), scale = F, colkey = list(plot = FALSE))
   dev.off()
-
+  pdf(paste(sample,"_1_Contour_Inf6",".pdf", sep=""))
+  image2D(z = mat.1.small, contour = T, smooth = TRUE, col=colorvar, alpha = transparency, box = FALSE, inttype = 1, clim = c(min, max), NAcol = "transparent", x = c(1:x.small), y = c(1:y.small), scale = F, colkey = list(plot = FALSE))
+  dev.off()
+  pdf(paste(sample,"_2_Contour_Inf6",".pdf", sep=""))
+  image2D(z = mat.2.small, contour = T, smooth = TRUE, col=colorvar, alpha = transparency, box = FALSE, inttype = 1, clim = c(min, max), NAcol = "transparent", x = c(1:x.small), y = c(1:y.small), scale = F, colkey = list(plot = FALSE))
+  dev.off()
+  pdf(paste(sample,"_3_Contour_Inf6",".pdf", sep=""))
+  image2D(z = mat.3.small, contour = T, smooth = TRUE, col=colorvar, alpha = transparency, box = FALSE, inttype = 1, clim = c(min, max), NAcol = "transparent", x = c(1:x.small), y = c(1:y.small), scale = F, colkey = list(plot = FALSE))
+  dev.off()
+  pdf(paste(sample,"_4_Contour_Inf6",".pdf", sep=""))
+  image2D(z = mat.4.small, contour = T, smooth = TRUE, col=colorvar, alpha = transparency, box = FALSE, inttype = 1, clim = c(min, max), NAcol = "transparent", x = c(1:x.small), y = c(1:y.small), scale = F, colkey = list(plot = FALSE))
+  dev.off()
+  pdf(paste(sample,"_5_Contour_Inf6",".pdf", sep=""))
+  image2D(z = mat.5.small, contour = T, smooth = TRUE, col=colorvar, alpha = transparency, box = FALSE, inttype = 1, clim = c(min, max), NAcol = "transparent", x = c(1:x.small), y = c(1:y.small), scale = F, colkey = list(plot = FALSE))
+  dev.off()
+  pdf(paste(sample,"_6_Contour_Inf6",".pdf", sep=""))
+  image2D(z = mat.6.small, contour = T, smooth = TRUE, col=colorvar, alpha = transparency, box = FALSE, inttype = 1, clim = c(min, max), NAcol = "transparent", x = c(1:x.small), y = c(1:y.small), scale = F, colkey = list(plot = FALSE))
+  dev.off()
+  pdf(paste(sample,"_7_Contour_Inf6",".pdf", sep=""))
+  image2D(z = mat.7.small, contour = T, smooth = TRUE, col=colorvar, alpha = transparency, box = FALSE, inttype = 1, clim = c(min, max), NAcol = "transparent", x = c(1:x.small), y = c(1:y.small), scale = F, colkey = list(plot = FALSE))
+  dev.off()
+  
+  mats_collection = mats_collection[-1,]
+  write.table(mats_collection, file = paste0("Inf_clustering_table_", norm_samples, ".csv"), quote = F,sep = ",")
+  
+  # plot inf6 for figshare
+  #print(head(mats_collection))
+  row.names(mats_collection) = paste(str_replace_all(mats_collection[,"section"], "Section", "X"), mats_collection[,"x"], mats_collection[,"y"], sep = "_")
+  mats_collection = mats_collection[row.names(mats_collection) %in% row.names(inf_all[inf_all$Inf. == "Inf6",]),]
+  write.table(mats_collection, file = paste0("Inf_clustering_table_Inf6_", norm_samples, ".csv"), quote = F,sep = ",")
+  
 }
 
-plot.gene.2d.inf.4 = function(sample, ann.col.inf, m1, m2, m3, m4, s1, s2, s3, s4, x, y, transparency, min, max){
+make_output_tissue_matrix = function(mat.1, norm_samples, i) {
 
+  xs = ""
+  ys = ""
+  scores = ""
+  for (xxx in 1:nrow(mat.1)){
+    for (yyy in 1:ncol(mat.1)){
+      xs = c(xs,xxx)
+      ys = c(ys,yyy)
+      scores = c(scores, mat.1[xxx,yyy])
+    }
+  }
+
+  mat_output = cbind(as.numeric(xs), as.numeric(ys),as.numeric(scores),rep(norm_samples, length(xs)),rep(paste0("Section",i), length(xs)))
+  mat_output = mat_output[-1,]
+  colnames(mat_output) = c("x", "y", "score", "sample", "section")
+
+  return(mat_output)
+}
+
+
+plot.gene.2d.inf.4 = function(sample, ann.col.inf, m1, m2, m3, m4, s1, s2, s3, s4, x, y, transparency, min, max){
+    
+    mats_collection = matrix(ncol = 5, nrow = 1)
+    colnames(mats_collection) = c("x", "y", "score", "sample", "section")
     for (i in c(1:4)) {
       print(i)
         if (i == "1") {
@@ -1496,14 +1869,16 @@ plot.gene.2d.inf.4 = function(sample, ann.col.inf, m1, m2, m3, m4, s1, s2, s3, s
         #x = 40
         #y = 40
         #transparency = 1
-        library(akima)
         s =  interp(x1, y1, z, nx = x, ny = y)
+        mats_collection = rbind(mats_collection, make_output_tissue_matrix(s$z, norm_samples, i))
+
         if (i == "1") {mat.1 = s$z}
         if (i == "2") {mat.2 = s$z}
         if (i == "3") {mat.3 = s$z}
         if (i == "4") {mat.4 = s$z}
     }
   
+
     if (max(cluster) == 3) {colorvar = colorRampPalette(c("#4ebceb", "#8a3795","gray80"))(3)}
     if (max(cluster) == 4) {colorvar = colorRampPalette(c("#4ebceb", "#8a3795", "#f15f48","gray80"))(4)}
 
@@ -1520,10 +1895,15 @@ plot.gene.2d.inf.4 = function(sample, ann.col.inf, m1, m2, m3, m4, s1, s2, s3, s
     image2D(z = mat.4, contour = T, smooth = TRUE, col=colorvar, alpha = transparency, box = FALSE, inttype = 1, NAcol = "transparent", x = c(1:x), y = c(1:y), scale = F)
     dev.off()
     
+    mats_collection = mats_collection[-1,]
+    write.table(mats_collection, file = paste0("Inf_clustering_table_", norm_samples, ".csv"), quote = F,sep = ",")
+    
 }
 
 plot.gene.2d.inf.5 = function(sample, cluster, m1, m2, m3, m4, m5, s1, s2, s3, s4, s5, x, y, transparency, min, max){
-
+  mats_collection = matrix(ncol = 5, nrow = 1)
+  colnames(mats_collection) = c("x", "y", "score", "sample", "section")
+  
   for (i in c(1:5)) {
     if (i == "1") {
       spots = s1
@@ -1545,7 +1925,7 @@ plot.gene.2d.inf.5 = function(sample, cluster, m1, m2, m3, m4, m5, s1, s2, s3, s
     genes.barcodes = clust.spots[rownames(clust.spots) %in% colnames(exp.values),]
     exp.values = exp.values[,colnames(exp.values) %in% rownames(clust.spots)]
     exp.values = exp.values[rowSums(exp.values) != 0,]
-    #cluster = ann.col.inf
+    cluster = ann.col.inf
     cluster = cluster[colnames(exp.values),]
     genes.barcodes = cbind(genes.barcodes, cluster)
     
@@ -1560,8 +1940,10 @@ plot.gene.2d.inf.5 = function(sample, cluster, m1, m2, m3, m4, m5, s1, s2, s3, s
     # x = 40
     # y = 40
     # transparency = 1
-    library(akima)
+
     s =  interp(x1, y1, z, nx = x, ny = y)
+    mats_collection = rbind(mats_collection, make_output_tissue_matrix(s$z, norm_samples, i))
+    
     if (i == "1") {mat.1 = s$z}
     if (i == "2") {mat.2 = s$z}
     if (i == "3") {mat.3 = s$z}
@@ -1587,10 +1969,15 @@ plot.gene.2d.inf.5 = function(sample, cluster, m1, m2, m3, m4, m5, s1, s2, s3, s
   pdf(paste(sample,"_5_Contour_Inf",".pdf", sep=""))
   image2D(z = mat.5, contour = T, smooth = TRUE, col=colorvar, alpha = transparency, box = FALSE, inttype = 1, clim = c(min, max), NAcol = "transparent", x = c(1:x), y = c(1:y), scale = F)
   dev.off()
+  mats_collection = mats_collection[-1,]
+  write.table(mats_collection, file = paste0("Inf_clustering_table_", norm_samples, ".csv"), quote = F,sep = ",")
+  
 
 }
 
 plot.gene.2d.inf.3 = function(sample, cluster, m1, m2, m3, s1, s2, s3, x, y, transparency, min, max){
+  mats_collection = matrix(ncol = 5, nrow = 1)
+  colnames(mats_collection) = c("x", "y", "score", "sample", "section")
   
   for (i in c(1:3)) {
     if (i == "1") {
@@ -1622,15 +2009,14 @@ plot.gene.2d.inf.3 = function(sample, cluster, m1, m2, m3, s1, s2, s3, x, y, tra
     # x = 40
     # y = 40
     # transparency = 1
-    library(akima)
     s =  interp(x1, y1, z, nx = x, ny = y)
+    mats_collection = rbind(mats_collection, make_output_tissue_matrix(s$z, norm_samples, i))
+    
     if (i == "1") {mat.1 = s$z}
     if (i == "2") {mat.2 = s$z}
     if (i == "3") {mat.3 = s$z}
 
   }
-  
-  library(rgl)
   
   colorvar = colorRampPalette(c("#8a3795", "#4ebceb","#f15f48","gray80"))(4)
   pdf(paste(sample,"_1_Contour_Inf",".pdf", sep=""))
@@ -1642,12 +2028,17 @@ plot.gene.2d.inf.3 = function(sample, cluster, m1, m2, m3, s1, s2, s3, x, y, tra
   pdf(paste(sample,"_3_Contour_Inf",".pdf", sep=""))
   image2D(z = mat.3, contour = T, smooth = TRUE, col=colorvar, alpha = transparency, box = FALSE, inttype = 1, clim = c(min, max), NAcol = "transparent", x = c(1:x), y = c(1:y), scale = F)
   dev.off()
+  mats_collection = mats_collection[-1,]
+  write.table(mats_collection, file = paste0("Inf_clustering_table_", norm_samples, ".csv"), quote = F,sep = ",")
+  
 
   
 }
 
 
 plot.gene.2d.cluster.3 = function(sample, ann.cluster, m1, m2, m3, s1, s2, s3, x, y, transparency, min, max){
+  mats_collection = matrix(ncol = 5, nrow = 1)
+  colnames(mats_collection) = c("x", "y", "score", "sample", "section")
   
   for (i in c(1:3)) {
     if (i == "1") {
@@ -1676,10 +2067,12 @@ plot.gene.2d.cluster.3 = function(sample, ann.cluster, m1, m2, m3, s1, s2, s3, x
     dis = rep(0.25 * as.numeric(i), nrow(genes.barcodes))
     w = as.numeric(dis)
     
-    library(akima)
+
     # x=40
     # y=40
     s =  interp(x1, y1, z, nx = x, ny = y)
+    mats_collection = rbind(mats_collection, make_output_tissue_matrix(s$z, norm_samples, i))
+    
     if (i == "1") {mat.1 = s$z}
     if (i == "2") {mat.2 = s$z}
     if (i == "3") {mat.3 = s$z}
@@ -1697,10 +2090,16 @@ plot.gene.2d.cluster.3 = function(sample, ann.cluster, m1, m2, m3, s1, s2, s3, x
   pdf(paste(sample,"_3_Contour_Cluster",".pdf", sep=""))
   image2D(z = mat.3, contour = T, smooth = TRUE, col=colorvar, alpha = transparency, box = FALSE, inttype = 1, clim = c(min, max), NAcol = "transparent", x = c(1:x), y = c(1:y), scale = F)
   dev.off()
+  
+  mats_collection = mats_collection[-1,]
+  write.table(mats_collection, file = paste0("Spatial_clustering_table_", norm_samples, ".csv"), quote = F,sep = ",")
+  
 
 }
 
 plot.gene.2d.3 = function(sample, gene,  m1, m2, m3,  s1, s2, s3,  x, y, transparency, min, max, con){
+  mats_collection = matrix(ncol = 5, nrow = 1)
+  colnames(mats_collection) = c("x", "y", "score", "sample", "section")
   
   for (i in c(1:3)) {
     if (i == "1") {
@@ -1730,6 +2129,7 @@ plot.gene.2d.3 = function(sample, gene,  m1, m2, m3,  s1, s2, s3,  x, y, transpa
     w = as.numeric(dis)
     
     s =  interp(x1,y1, z, nx = x, ny = y)
+    mats_collection = rbind(mats_collection, make_output_tissue_matrix(s$z, norm_samples, i))
     if (i == "1") {mat.1 = s$z}
     if (i == "2") {mat.2 = s$z}
     if (i == "3") {mat.3 = s$z}
@@ -1744,6 +2144,10 @@ plot.gene.2d.3 = function(sample, gene,  m1, m2, m3,  s1, s2, s3,  x, y, transpa
   pdf(paste(sample,"_3_Contour_",gene,".pdf", sep=""))
   image2D(z = mat.3, contour = con, smooth = TRUE, alpha = transparency, box = FALSE, inttype = 1, clim = c(min, max), NAcol = "transparent", x = c(1:x), y = c(1:y), scale = F)
   dev.off()
+  
+  mats_collection = mats_collection[-1,]
+  write.table(mats_collection, file = paste0("Gene_expression_tissue_table_", gene, "_", norm_samples, ".csv"), quote = F,sep = ",")
+  
 
 }
 
@@ -1819,3 +2223,392 @@ add.flag <- function(pheatmap,
   invisible(heatmap)
 }
 
+stat_boxplot_custom <- function(mapping = NULL, data = NULL,
+                                geom = "boxplot", position = "dodge",
+                                ...,
+                                qs = c(.05, .25, 0.5, 0.75, 0.95),
+                                na.rm = FALSE,
+                                show.legend = NA,
+                                inherit.aes = TRUE) {
+  layer(
+    data = data,
+    mapping = mapping,
+    stat = StatBoxplotCustom,
+    geom = geom,
+    position = position,
+    show.legend = show.legend,
+    inherit.aes = inherit.aes,
+    params = list(
+      na.rm = na.rm,
+      qs = qs,
+      ...
+    )
+  )
+}
+StatBoxplotCustom <- ggproto("StatBoxplotCustom", Stat,
+                             required_aes = c("x", "y"),
+                             non_missing_aes = "weight",
+                             
+                             setup_params = function(data, params) {
+                               params$width <- ggplot2:::"%||%"(
+                                 params$width, (resolution(data$x) * 0.75)
+                               )
+                               
+                               if (is.double(data$x) && !ggplot2:::has_groups(data) && any(data$x != data$x[1L])) {
+                                 warning(
+                                   "Continuous x aesthetic -- did you forget aes(group=...)?",
+                                   call. = FALSE
+                                 )
+                               }
+                               
+                               params
+                             },
+                             
+                             compute_group = function(data, scales, width = NULL, na.rm = FALSE, qs = c(.05, .25, 0.5, 0.75, 0.95)) {
+                               
+                               if (!is.null(data$weight)) {
+                                 mod <- quantreg::rq(y ~ 1, weights = weight, data = data, tau = qs)
+                                 stats <- as.numeric(stats::coef(mod))
+                               } else {
+                                 stats <- as.numeric(stats::quantile(data$y, qs))
+                               }
+                               names(stats) <- c("ymin", "lower", "middle", "upper", "ymax")
+                               iqr <- diff(stats[c(2, 4)])
+                               
+                               outliers <- (data$y < stats[1]) | (data$y > stats[5])
+                               
+                               if (length(unique(data$x)) > 1)
+                                 width <- diff(range(data$x)) * 0.9
+                               
+                               df <- as.data.frame(as.list(stats))
+                               df$outliers <- list(data$y[outliers])
+                               
+                               if (is.null(data$weight)) {
+                                 n <- sum(!is.na(data$y))
+                               } else {
+                                 # Sum up weights for non-NA positions of y and weight
+                                 n <- sum(data$weight[!is.na(data$y) & !is.na(data$weight)])
+                               }
+                               
+                               df$notchupper <- df$middle + 1.58 * iqr / sqrt(n)
+                               df$notchlower <- df$middle - 1.58 * iqr / sqrt(n)
+                               
+                               df$x <- if (is.factor(data$x)) data$x[1] else mean(range(data$x))
+                               df$width <- width
+                               df$relvarwidth <- sqrt(n)
+                               df
+                             }
+)
+
+
+avg_genes_box_old = function(all_bar, gen_names, cluster_names){
+  
+  #### Make boxplot of avg expression per interesting marker genes
+  col.spatial.clusters = cluster_names
+  col.scale = unique(col.spatial.clusters[,1])
+  
+  ### arrange matrix per cluster 
+  #all_bar = RA.norm
+  all_bar = all_bar[row.names(all_bar) %in% gen_names,]
+  all_bar = all_bar[,match(colnames(all_bar), rownames(col.spatial.clusters))]
+  all_bar = all_bar[match(rownames(all_bar), gen_names),]
+  
+  # Avg expression and std error per cluster for selected genes
+  clusters_rm = ""
+  cluster_names = ""
+  gene_matrix_names = ""
+  counter = 1
+  for (i in col.scale){
+    
+    mat.cluster = all_bar[, colnames(all_bar) %in% names(col.spatial.clusters[col.spatial.clusters == i,])]
+    mat.clusters = matrix(ncol = 1, nrow = length(gen_names))
+    for (x in unique(sapply(strsplit(colnames(mat.cluster), "_"), "[[",1))){
+      mat.clusters = cbind(mat.clusters, rowMeans(mat.cluster[,sapply(strsplit(colnames(mat.cluster), "_"), "[[",1) == x]))
+    }
+    mat.clusters = mat.clusters[,-1]
+    colnames(mat.clusters) = unique(sapply(strsplit(colnames(mat.cluster), "_"), "[[",1))
+    # mat.clusters = as.data.frame(rowMeans(mat.clusters))
+    clusters_rm_tmp = ""
+    gene_matrix = ""
+    for (j in colnames(mat.clusters)){
+      clusters_rm_tmp = c(clusters_rm_tmp, mat.clusters[,j])
+      gene_matrix = c(gene_matrix, row.names(mat.clusters))
+    }
+    clusters_rm_tmp = clusters_rm_tmp[-1]
+    gene_matrix = gene_matrix[-1]
+    clusters_rm = c(clusters_rm, clusters_rm_tmp)
+    gene_matrix_names = c(gene_matrix_names, gene_matrix)
+    cluster_names = c(cluster_names, rep(paste0("Cluster",counter), length(row.names(mat.clusters))*ncol(mat.clusters)))
+    
+    counter=counter+1
+  }
+  
+  clusters_rm = as.numeric(clusters_rm[-1])
+  cluster_names = cluster_names[-1]
+  gene_matrix_names = gene_matrix_names[-1]
+  myData = data.frame(clusters_rm, cluster_names, gene_matrix_names)
+
+  anno_df = compare_means(clusters_rm ~ cluster_names, data = myData,
+                          group.by = "gene_matrix_names", ref.group = "Cluster1",
+                          method = "t.test", p.adjust.method = "BH",
+                          paired = F, var.equal = TRUE, exact=FALSE) %>% mutate(y_pos = 8)
+  anno_df = anno_df[anno_df$group1 == "Cluster1",]
+  anno_df$y_position = as.numeric(rep(seq(round(max(myData$clusters_rm)), round(max(myData$clusters_rm))+0.25*(length(unique(cluster_names))-2), by = 0.25), length(unique(gene_matrix_names))))
+  anno_df$group = rep(1:length(unique(gene_matrix_names)), each = length(unique(cluster_names))-1)
+
+  signs_p= ""
+  for (i in anno_df$p.adj){
+    if (i>0.05) signs_p=c(signs_p, "ns")
+    if ((i<=0.05) & (i>0.01)) signs_p=c(signs_p, "*")
+    if ((i<=0.01) & (i>0.001)) signs_p=c(signs_p, "**")
+    if (i<=0.001) signs_p=c(signs_p, "***")
+  }
+  signs_p = signs_p[-1]
+  anno_df$p.signif.adj = signs_p
+
+  myData$gene_matrix_names <- factor(myData$gene_matrix_names, levels = unique(gen_names)) 
+  
+  anno_df_f = matrix(nrow = 1, ncol = ncol(anno_df))
+  colnames(anno_df_f) = colnames(anno_df)
+  for (gene in gen_names){
+    anno_df_f = rbind(anno_df_f, anno_df[anno_df$gene_matrix_names == gene,])
+  }
+  anno_df_f = anno_df_f[-1,]
+
+  g <- ggplot(myData, aes(x = gene_matrix_names, y = clusters_rm, fill = cluster_names), group = dummy) + 
+    #geom_boxplot() + 
+    scale_fill_manual(values = col.scale, aesthetics = "fill")  + 
+    stat_boxplot_custom(qs = c(0.0, 0.25, 0.5, 0.75, 1))
+  
+  xmins = as.numeric(ggplot_build(g)$data[[1]]$xmin) + (as.numeric(ggplot_build(g)$data[[1]]$xmax[1])-as.numeric(ggplot_build(g)$data[[1]]$xmin[1]))/2
+  xmaxs = as.numeric(ggplot_build(g)$data[[1]]$xmax) + (as.numeric(ggplot_build(g)$data[[1]]$xmax[1])-as.numeric(ggplot_build(g)$data[[1]]$xmin[1]))/2
+  xmins = xmins[!xmins %in%  xmins[seq(1, length(xmins), length(unique(cluster_names)))]]-(as.numeric(ggplot_build(g)$data[[1]]$xmax[1])-as.numeric(ggplot_build(g)$data[[1]]$xmin[1]))
+  xmaxs = xmaxs[!xmaxs %in%  xmaxs[seq(1, length(xmaxs), length(unique(cluster_names)))]]-(as.numeric(ggplot_build(g)$data[[1]]$xmax[1])-as.numeric(ggplot_build(g)$data[[1]]$xmin[1]))
+  
+  p <- g +
+    geom_point(shape=16, position = position_jitterdodge(0.01)) + 
+    geom_signif(
+    xmin = rep(xmins[seq(1, length(xmins), (length(unique(cluster_names))-1))], each = (length(unique(cluster_names))-1)), xmax = xmaxs, y_position = anno_df_f$y_position, annotations = anno_df_f$p.signif.adj,
+    tip_length = 0.01) +
+    theme(axis.line.y = element_line(colour = "black"), axis.title.x = element_blank(), axis.ticks.x= element_blank(), axis.title.y = element_text(), axis.text.x = element_text(angle = 0),panel.border = element_blank(), panel.grid.major = element_blank(), panel.grid.minor = element_blank())
+
+  return(p)
+}
+
+avg_genes_box = function(all_bar, gen_names, cluster_names){
+  
+  
+  #### Make barplot of avg expression per interesting marker genes
+  col.scale = unique(cluster_names[,1])
+  col.spatial.clusters = cluster_names
+  
+  ### arrange matrix per cluster 
+  
+  all_bar = all_bar[row.names(all_bar) %in% gen_names,]
+  all_bar = all_bar[,match(colnames(all_bar), rownames(col.spatial.clusters))]
+  all_bar = all_bar[match(rownames(all_bar), gen_names),]
+  
+  # Avg expression and std error per cluster for selected genes
+  clusters_rm = ""
+  cluster_names = ""
+  gene_matrix_names = ""
+  counter = 1
+  for (i in col.scale){
+    
+    mat.cluster = all_bar[, colnames(all_bar) %in% names(col.spatial.clusters[col.spatial.clusters == i,])]
+    mat.clusters = matrix(ncol = 1, nrow = length(gen_names))
+    for (x in unique(sapply(strsplit(colnames(mat.cluster), "_"), "[[",1))){
+      mat.clusters = cbind(mat.clusters, rowMeans(mat.cluster[,sapply(strsplit(colnames(mat.cluster), "_"), "[[",1) == x]))
+    }
+    mat.clusters = mat.clusters[,-1]
+    colnames(mat.clusters) = unique(sapply(strsplit(colnames(mat.cluster), "_"), "[[",1))
+    # mat.clusters = as.data.frame(rowMeans(mat.clusters))
+    clusters_rm_tmp = ""
+    gene_matrix = ""
+    for (j in colnames(mat.clusters)){
+      clusters_rm_tmp = c(clusters_rm_tmp, mat.clusters[,j])
+      gene_matrix = c(gene_matrix, row.names(mat.clusters))
+    }
+    clusters_rm_tmp = clusters_rm_tmp[-1]
+    gene_matrix = gene_matrix[-1]
+    clusters_rm = c(clusters_rm, clusters_rm_tmp)
+    gene_matrix_names = c(gene_matrix_names, gene_matrix)
+    cluster_names = c(cluster_names, rep(paste0("Cluster",counter), length(row.names(mat.clusters))*ncol(mat.clusters)))
+    
+    counter=counter+1
+  }
+  
+  clusters_rm = as.numeric(clusters_rm[-1])
+  cluster_names = cluster_names[-1]
+  gene_matrix_names = gene_matrix_names[-1]
+  myData = data.frame(clusters_rm, cluster_names, gene_matrix_names)
+
+  anno_df = avg_genes_barplot_data(RA.norm, gen_names, col.spatial.clusters)
+  anno_df = anno_df[anno_df$group1 != anno_df$group2,] 
+  anno_df = anno_df[order(anno_df$gene_names),]
+  anno_df$y_position = as.numeric(rep(seq(round(max(myData$clusters_rm)), round(max(myData$clusters_rm))+0.25*(length(unique(cluster_names))-2), by = 0.25), length(unique(gene_matrix_names))))
+  anno_df$group = rep(1:length(unique(gene_matrix_names)), each = length(unique(cluster_names))-1)
+  
+  myData$gene_matrix_names <- factor(myData$gene_matrix_names, levels = unique(anno_df$gene_names)) 
+  
+  g <- ggplot(myData, aes(x = gene_matrix_names, y = clusters_rm, fill = cluster_names)) + 
+    #geom_boxplot() + 
+    scale_fill_manual(values = col.scale, aesthetics = "fill")  + 
+    stat_boxplot_custom(qs = c(0.0, 0.25, 0.5, 0.75, 1))
+  
+  xmins = as.numeric(ggplot_build(g)$data[[1]]$xmin) + (as.numeric(ggplot_build(g)$data[[1]]$xmax[1])-as.numeric(ggplot_build(g)$data[[1]]$xmin[1]))/2
+  xmaxs = as.numeric(ggplot_build(g)$data[[1]]$xmax) + (as.numeric(ggplot_build(g)$data[[1]]$xmax[1])-as.numeric(ggplot_build(g)$data[[1]]$xmin[1]))/2
+  xmins = xmins[!xmins %in%  xmins[seq(1, length(xmins), 4)]]-(as.numeric(ggplot_build(g)$data[[1]]$xmax[1])-as.numeric(ggplot_build(g)$data[[1]]$xmin[1]))
+  xmaxs = xmaxs[!xmaxs %in%  xmaxs[seq(1, length(xmaxs), 4)]]-(as.numeric(ggplot_build(g)$data[[1]]$xmax[1])-as.numeric(ggplot_build(g)$data[[1]]$xmin[1]))
+  
+  p <- g +
+    geom_jitter(shape=16, position=position_jitter(0.01)) + 
+    geom_signif(
+    xmin = rep(xmins[seq(1, length(xmins), 3)], each = 3), xmax = xmaxs, y_position = anno_df$y_position, annotations = anno_df$signs_p,
+    tip_length = 0.01) +
+    theme(axis.line.y = element_line(colour = "black"), axis.title.x = element_blank(), axis.ticks.x= element_blank(), axis.title.y = element_text(), axis.text.x = element_text(angle = 0),panel.border = element_blank(), panel.grid.major = element_blank(), panel.grid.minor = element_blank())
+  
+  return(p)
+  print(mydata)
+}
+
+avg_genes_box_data = function(all_bar, gen_names, cluster_names){
+  
+  
+  #### Make barplot of avg expression per interesting marker genes
+  col.scale = unique(cluster_names[,1])
+  col.spatial.clusters = cluster_names
+  
+  ### arrange matrix per cluster 
+  #all_bar = RA.norm
+  all_bar = all_bar[row.names(all_bar) %in% gen_names,]
+  all_bar = all_bar[,match(colnames(all_bar), rownames(col.spatial.clusters))]
+  all_bar = all_bar[match(rownames(all_bar), gen_names),]
+  
+  # Avg expression and std error per cluster for selected genes
+  clusters_rm = ""
+  cluster_names = ""
+  gene_matrix_names = ""
+  counter = 1
+  for (i in col.scale){
+    
+    mat.cluster = all_bar[, colnames(all_bar) %in% names(col.spatial.clusters[col.spatial.clusters == i,])]
+    mat.clusters = matrix(ncol = 1, nrow = length(gen_names))
+    for (x in unique(sapply(strsplit(colnames(mat.cluster), "_"), "[[",1))){
+      mat.clusters = cbind(mat.clusters, rowMeans(mat.cluster[,sapply(strsplit(colnames(mat.cluster), "_"), "[[",1) == x]))
+    }
+    mat.clusters = mat.clusters[,-1]
+    colnames(mat.clusters) = unique(sapply(strsplit(colnames(mat.cluster), "_"), "[[",1))
+    # mat.clusters = as.data.frame(rowMeans(mat.clusters))
+    clusters_rm_tmp = ""
+    gene_matrix = ""
+    for (j in colnames(mat.clusters)){
+      clusters_rm_tmp = c(clusters_rm_tmp, mat.clusters[,j])
+      gene_matrix = c(gene_matrix, row.names(mat.clusters))
+    }
+    clusters_rm_tmp = clusters_rm_tmp[-1]
+    gene_matrix = gene_matrix[-1]
+    clusters_rm = c(clusters_rm, clusters_rm_tmp)
+    gene_matrix_names = c(gene_matrix_names, gene_matrix)
+    cluster_names = c(cluster_names, rep(paste0("Cluster",counter), length(row.names(mat.clusters))*ncol(mat.clusters)))
+    
+    counter=counter+1
+  }
+  
+  clusters_rm = as.numeric(clusters_rm[-1])
+  cluster_names = cluster_names[-1]
+  gene_matrix_names = gene_matrix_names[-1]
+  myData = data.frame(clusters_rm, cluster_names, gene_matrix_names)
+  
+  anno_df = avg_genes_barplot_data(RA.norm, gen_names, col.spatial.clusters)
+  anno_df = anno_df[anno_df$group1 != anno_df$group2,] 
+  anno_df = anno_df[order(anno_df$gene_names),]
+  anno_df$y_position = as.numeric(rep(seq(round(max(myData$clusters_rm)), round(max(myData$clusters_rm))+0.25*(length(unique(cluster_names))-2), by = 0.25), length(unique(gene_matrix_names))))
+  anno_df$group = rep(1:length(unique(gene_matrix_names)), each = length(unique(cluster_names))-1)
+  
+  myData$gene_matrix_names <- factor(myData$gene_matrix_names, levels = unique(anno_df$gene_names)) 
+  
+  return(mydata)
+
+}
+
+avg_genes_box_old_data = function(all_bar, gen_names, cluster_names){
+  
+  #### Make barplot of avg expression per interesting marker genes
+  col.scale = unique(cluster_names[,1])
+  col.spatial.clusters = cluster_names
+  
+  ### arrange matrix per cluster 
+  all_bar = all_bar[row.names(all_bar) %in% gen_names,]
+  all_bar = all_bar[,match(colnames(all_bar), rownames(cluster_names))]
+  all_bar = all_bar[match(rownames(all_bar), gen_names),]
+  
+  # Avg expression and std error per cluster for selected genes
+  clusters_rm = ""
+  cluster_names = ""
+  gene_matrix_names = ""
+  counter = 1
+  for (i in col.scale){
+    
+    mat.cluster = all_bar[, colnames(all_bar) %in% names(col.spatial.clusters[col.spatial.clusters == i,])]
+    mat.clusters = matrix(ncol = 1, nrow = length(gen_names))
+    for (x in unique(sapply(strsplit(colnames(mat.cluster), "_"), "[[",1))){
+      mat.clusters = cbind(mat.clusters, rowMeans(mat.cluster[,sapply(strsplit(colnames(mat.cluster), "_"), "[[",1) == x]))
+    }
+    mat.clusters = mat.clusters[,-1]
+    colnames(mat.clusters) = unique(sapply(strsplit(colnames(mat.cluster), "_"), "[[",1))
+    # mat.clusters = as.data.frame(rowMeans(mat.clusters))
+    clusters_rm_tmp = ""
+    gene_matrix = ""
+    for (j in colnames(mat.clusters)){
+      clusters_rm_tmp = c(clusters_rm_tmp, mat.clusters[,j])
+      gene_matrix = c(gene_matrix, row.names(mat.clusters))
+    }
+    clusters_rm_tmp = clusters_rm_tmp[-1]
+    gene_matrix = gene_matrix[-1]
+    clusters_rm = c(clusters_rm, clusters_rm_tmp)
+    gene_matrix_names = c(gene_matrix_names, gene_matrix)
+    cluster_names = c(cluster_names, rep(paste0("Cluster",counter), length(row.names(mat.clusters))*ncol(mat.clusters)))
+    
+    counter=counter+1
+  }
+  
+  clusters_rm = as.numeric(clusters_rm[-1])
+  cluster_names = cluster_names[-1]
+  gene_matrix_names = gene_matrix_names[-1]
+  myData = data.frame(clusters_rm, cluster_names, gene_matrix_names)
+  # for (clus in unique(cluster_names)){
+  #   for (gen in unique(gene_matrix_names)){
+  #     print(paste0("checking normal distr for: ", clus, " and ", gen))
+  #     print(with(myData, shapiro.test(clusters_rm[(cluster_names == clus) & (gene_matrix_names == gen)])))
+  #   }
+  # }
+  # m = myData[(gene_matrix_names == "CD52") & ((cluster_names == "Cluster1") | (cluster_names == "Cluster2")), ]
+  # print(m)
+  # r = var.test(clusters_rm ~ cluster_names, data = m)
+  # print(r)
+  
+  anno_df = compare_means(clusters_rm ~ cluster_names, data = myData,
+                          group.by = "gene_matrix_names", ref.group = "Cluster1",
+                          method = "t.test", p.adjust.method = "BH",
+                          paired = F, var.equal = TRUE, exact=FALSE) %>% mutate(y_pos = 8) #, alternative = c("two-sided")
+  anno_df = anno_df[anno_df$group1 == "Cluster1",]
+  anno_df$y_position = as.numeric(rep(seq(round(max(myData$clusters_rm)), round(max(myData$clusters_rm))+0.25*(length(unique(cluster_names))-2), by = 0.25), length(unique(gene_matrix_names))))
+  anno_df$group = rep(1:length(unique(gene_matrix_names)), each = length(unique(cluster_names))-1)
+
+  signs_p= ""
+  for (i in anno_df$p.adj){
+    if (i>0.05) signs_p=c(signs_p, "ns")
+    if ((i<=0.05) & (i>0.01)) signs_p=c(signs_p, "*")
+    if ((i<=0.01) & (i>0.001)) signs_p=c(signs_p, "**")
+    if (i<=0.001) signs_p=c(signs_p, "***")
+  }
+  signs_p = signs_p[-1]
+  anno_df$p.signif.adj = signs_p
+  return(anno_df)
+
+}
+
+scale_this <-  function(x, na.rm = TRUE) {
+  return((x- min(x)) /(max(x)-min(x)))
+}

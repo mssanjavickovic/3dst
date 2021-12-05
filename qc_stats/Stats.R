@@ -17,6 +17,7 @@ path_samples = list.files("../data/", pattern = glob2rx("RA*Raw.exp*"))
 path_output = "/Users/sanjavickovic/Desktop/morphoSPOT/plot_output"
 
 stats = matrix(ncol = 6, nrow = 1)
+statsbox = matrix(ncol = 4, nrow = 1)
 for (ra in unique(sapply(str_split(path_samples, "_"),"[[",1))){
 
   # List avaiable raw matrices for normalization 
@@ -36,18 +37,20 @@ for (ra in unique(sapply(str_split(path_samples, "_"),"[[",1))){
     ra_ncols = c(ra_ncols, ncol(get(paste0("raw_mat", sample_counter))))
     sample_counter = sample_counter + 1
   }
-  raw_mat_loaded_in_env <- grep("raw_mat",names(.GlobalEnv),value=TRUE)
+  raw_max_loaded_in_env <- grep("raw_mat",names(.GlobalEnv),value=TRUE)
 
   
   trans_means = as.numeric(trans_means[-1])
   genes_means = as.numeric(genes_means[-1])
   ra_ncols = as.numeric(ra_ncols[-1])
-  ra_size = as.numeric(length(unique(raw_mat_loaded_in_env)))
+  ra_size = as.numeric(length(unique(raw_max_loaded_in_env)))
   trans_sd = as.numeric(sd(trans_means)/sqrt(ra_size))
   genes_sd = as.numeric(sd(genes_means)/sqrt(ra_size))
-  trans_means = mean(trans_means)
-  genes_means = mean(genes_means)
+  trans_mean = mean(trans_means)
+  genes_mean = mean(genes_means)
   print(ra_ncols)
+  print(ra_size)
+  print(raw_max_loaded_in_env)
   
   if (ra == "RA1"){
     seq = (c(60000000,60000000,60000000,60000000)/ra_ncols)/100
@@ -80,13 +83,18 @@ for (ra in unique(sapply(str_split(path_samples, "_"),"[[",1))){
     seq_mean = mean(seq)
   }
   
-  stats = rbind(stats, cbind(seq_mean, seq_sd, trans_means, trans_sd, genes_means, genes_sd))
-  
+  stats = rbind(stats, cbind(seq_mean, seq_sd, trans_mean, trans_sd, genes_mean, genes_sd))
+  statsbox = rbind(statsbox, cbind(seq, trans_means, genes_means, rep(ra, ra_size)))
+  rm(list=raw_max_loaded_in_env)
 }
-stats = stats[-1,]
-row.names(stats) = unique(sapply(str_split(path_samples, "_"),"[[",1))
 
-# Plot avg gene expression for each RA sample separately
+stats = stats[-1,]
+statsbox = statsbox[-1,]
+row.names(stats) = unique(sapply(str_split(path_samples, "_"),"[[",1))
+colnames(statsbox) = c("seq", "trans_means", "genes_means", "sample")
+row.names(statsbox) = statsbox[,4]
+
+# Plot avg gene expression for each RA sample separately (barplots)
 counter = 1
 myplots <- vector("list", 3)
 for(i in 1:3){
@@ -109,3 +117,33 @@ for(i in 1:3){
 }
 plot_grid(plotlist=myplots)
 
+
+# Plot avg gene expression for each RA sample separately
+myplots <- vector("list", 3)
+f <- function(x) {
+  r <- quantile(x, probs = c(0.05, 0.25, 0.5, 0.75, 0.95))
+  names(r) <- c("ymin", "lower", "middle", "upper", "ymax")
+  r
+}
+for(i in 1:3){
+  print(i)
+  myData = data.frame(cbind(statsbox[,i], statsbox[,4]))
+  colnames(myData) = c("Avg", "sample")
+  myData$Avg = as.numeric(myData$Avg)
+  if (i == 1) {y_lab = "Avg seq depth count per ST spot x 10E2"}
+  if (i == 2) {y_lab = "Avg UMI count per ST spot"}
+  if (i == 3) {y_lab = "Avg gene count per ST spot"}
+  myplots[[i]] <- ggplot(data = myData, aes(x = sample, y = Avg, fill = sample) )+ 
+
+    geom_boxplot() + 
+    geom_jitter(shape=16, position=position_jitter(0.01)) +
+    scale_fill_manual(name = "RA patient biopsy", values = c("firebrick4","firebrick","firebrick3","firebrick2","firebrick1", "tomato1")) + 
+    labs(x = "", y = "Number of observations") + 
+    labs(title = y_lab) + 
+    ylab(y_lab)
+}
+plot_grid(plotlist=myplots)
+
+# export data for manuscript figshare
+row.names(myData) = seq(1, nrow(myData))
+write.table(myData, file = "/Users/sanjavickovic/Desktop/morphoSPOT/Manuscript_Nov2021/figshare/SuppFig1b.csv", sep = ",", quote = F)

@@ -22,12 +22,14 @@ suppressMessages(suppressWarnings(library(pheatmap,warn.conflicts = F, quietly =
 suppressMessages(suppressWarnings(library(stringr,warn.conflicts = F, quietly = T)))
 suppressMessages(suppressWarnings(library(grid,warn.conflicts = F, quietly = T)))
 suppressMessages(suppressWarnings(library(ggpubr,warn.conflicts = F, quietly = T)))
+suppressMessages(suppressWarnings(library(ggsignif,warn.conflicts = F, quietly = T)))
+
 
 # set wd
 setwd('/Users/sanjavickovic/Desktop/morphoSPOT/3dst_repo/3dst/de_analysis')
 
 # Which samples do you want to use? 
-norm_samples = "RA1"
+norm_samples = "RA2"
 
 # Where are you norm expression R files located? 
 path_samples = "../data/"
@@ -77,11 +79,13 @@ gen_names = c("CD52","MS4A1","FN1") # list of marker genes
 # Calculate avg gene expression per inf and section
 for (i in 1:length(unique(inf_all$Inf.))){
   assign(paste0("inf", i, "_rm"), rm_section(get(paste0("RA.norm.inf", i))[gen_names,]))
+  assign(paste0("inf_all_", i, "_rm"), rm_section_all(get(paste0("RA.norm.inf", i))[gen_names,]))
   assign(paste0("sd", i, "_rm"), sd_section(get(paste0("RA.norm.inf", i))[gen_names,]))
   assign(paste0("s", i, "_rm"), size_section(get(paste0("RA.norm.inf", i))[gen_names,]))
+  
 }
 
-# Plot avg gene expression for each Inf separately
+# Plot avg gene expression for each Inf separately (barplots)
 myplots <- vector("list", length(unique(inf_all$Inf.)))
 for(i in 1:length(unique(inf_all$Inf.))){
   myData = data.frame(as.numeric(get(paste0("inf", i, "_rm"))),as.numeric(sweep(get(paste0("sd", i, "_rm")), 2, sqrt(get(paste0("s", i, "_rm"))), "/")))
@@ -102,9 +106,49 @@ for(i in 1:length(unique(inf_all$Inf.))){
 }
 save_plot(paste0(path_output,"Average_genes_per_infiltrate_", norm_samples, ".pdf"), plot_grid(plotlist=myplots), ncol = 3, nrow = 2)
 
+# Plot avg gene expression for each Inf separately (barplots)
+myplots <- vector("list", length(unique(inf_all$Inf.))*length(unique(sapply(strsplit(row.names(inf_all), "_"), "[[", 1))))
+counter = 1
+myData_collect = matrix(nrow = 1, ncol = 4)
+colnames(myData_collect) = c("Avg", "Section", "Gene", "inf")
+for(i in 1:length(unique(inf_all$Inf.))){
+  myData = data.frame(get(paste0("inf_all_", i, "_rm")))
+  myData = t(myData)
+  row.names(myData) = str_replace(sapply(strsplit(row.names(myData), "\\."), "[[",1), "X", "Section")
+  myData_0 = matrix(ncol = 3, nrow = 1)
+  for (c in 1:ncol(myData)){
+    myData_0 = rbind(myData_0, cbind(as.matrix(myData[,c]), as.matrix(row.names(myData)), as.matrix(rep(colnames(myData)[c], nrow(myData)))))
+  }
+  myData_0 = myData_0[-1,]
+  colnames(myData_0) = c("Avg", "Section", "Gene")
+  myData_0 = as.data.frame(myData_0)
+  myData_0$Avg = as.numeric(myData_0$Avg)
+  row.names(myData_0) = seq(1, nrow(myData_0))
+  myData_0$inf = rep(paste0("inf", i), nrow(myData_0))
+  myData_collect = rbind(myData_collect, myData_0)
+  
+  for (sec in 1:length(unique(myData_0$Section))){
+    myData_sec = myData_0[myData_0$Section == unique(myData_0$Section)[sec],]
+    myplots[[counter]] <- ggplot(data = myData_sec, aes(x = Gene, y = Avg, fill = Gene)) + 
+      geom_boxplot() + 
+      geom_jitter(shape=16, position=position_jitter(0.01)) +
+      labs(x = "", y = "Avg expression") + 
+      scale_fill_manual(name = "Gene", values=c("#066799",  "#7392CB","#CDCC63")) +
+      labs(title = paste0("Infiltrate#", i, " Section#", sec))
+    counter = counter + 1
+
+  }
+}
+myData_collect = myData_collect[-1,]
+save_plot(paste0(path_output,"Average_genes_per_infiltrate_boxplots_", norm_samples, ".pdf"), plot_grid(plotlist=myplots, ncol = length(unique(myData_0$Section)), nrow = length(unique(inf_all$Inf.))), base_width = 15, base_height =10)
+
+# export data for manuscript figshare
+row.names(myData_collect) = seq(1, nrow(myData_collect))
+#write.table(myData_collect, file = "/Users/sanjavickovic/Desktop/morphoSPOT/Manuscript_Nov2021/figshare/SuppFig5b.csv", sep = ",", quote = F)
+
 # Run analysis on infiltrates only
 #k = 2 #RA1
-#k = 3 #RA2
+k = 3 #RA2
 #k = 3 #RA3
 #k = 3 #RA4
 #k = 2 #RA5
@@ -113,19 +157,21 @@ col.inf.clusters = run_inf_analysis(RA.norm[,colnames(RA.norm) %in% all_inf], k=
 
 # Run spatial clustering analysis on all ST spots per biopsy
 #f = 4 #RA1
-#f = 3 #RA2
+f = 3 #RA2
 #f = 3 #RA3
 #f = 4 #RA4
 #f = 4 # RA5
 #f = 4 # RA6
-col.spatial.clusters = run_spatial_cluster_analysis(RA.norm, 4, read_tsne_from_memory="yes", norm_samples, path_output)
+col.spatial.clusters = run_spatial_cluster_analysis(RA.norm, f, read_tsne_from_memory="yes", norm_samples, path_output)
 
 # Which barcodes and clusters are part of the annotated infiltrates? 
 inf_per_cluster(RA.norm, all_ann_inf, col.spatial.clusters)
 
 #### Make barplot of avg expression per interesting marker genes
-gen_names = c("LTB","CCL19","CXCL13","CD52","MS4A1","TYROBP","MMP3","FN1","PRG4")
-save_plot(paste0(path_output,"Average_genes_per_cluster_", norm_samples, ".pdf"), avg_genes_barplot(RA.norm, gen_names, col.spatial.clusters), ncol = 1, nrow = 1)
+gen_names = c("CCL19","CXCL13","LTB","PRG4","MMP3", "CD52","MS4A1","FN1","TYROBP")
+save_plot(paste0(path_output,"Average_genes_per_cluster_", norm_samples, ".pdf"), avg_genes_barplot(RA.norm, gen_names, col.spatial.clusters), ncol = 1, nrow = 1, base_width = 10, base_height = 5)
+save_plot(paste0(path_output,"Average_genes_per_cluster_boxplot_", norm_samples, ".pdf"), avg_genes_box_old(RA.norm, gen_names, col.spatial.clusters), ncol = 1, nrow = 1, base_width = 10, base_height = 10)
+write.table(avg_genes_box_old_data(RA.norm, gen_names, col.spatial.clusters), file = paste0("/Users/sanjavickovic/Desktop/morphoSPOT/Manuscript_Nov2021/figshare/Average_genes_per_cluster_boxplot_", norm_samples, ".csv"), sep = ",", quote = F)
 
 ### Make gene-to-gene correlation plots 
 #df1 = data.frame(t(RA.norm[c("RASGRP2", "CXCL13"),]))
@@ -138,26 +184,26 @@ save_plot(paste0(path_output,"Average_genes_per_cluster_", norm_samples, ".pdf")
 #df4[,3] = col.spatial.clusters[row.names(df4),]
 #df5 = data.frame(t(RA.norm[c("RASGRP2", "CXCL13"),]))
 #df5[,3] = col.spatial.clusters[row.names(df5),]
-t1 = c(mean(df1[df1[,1] & df1[,3] == "#FED8B1",][,1]),mean(df2[df2[,1] & df2[,3] == "#FED8B1",][,1]),mean(df3[df3[,1] & df3[,3] == "#FED8B1",][,1]))
-t2 = c(mean(df4[df4[,1] & df4[,3] == "#FED8B1",][,1]),mean(df5[df5[,1] & df5[,3] == "#FED8B1",][,1]))
-t.test(t1, t2, paired = FALSE, alternative = "greater")$p.value
-
-# takes only cluster 1
-df = data.frame(t(RA.norm[c("RASGRP2", "CXCL13"),]))
-df[,3] = col.spatial.clusters[row.names(df),]
-df = df[df[,3] == "#FED8B1",]
-
-# Change the confidence interval fill color
-ggplot(df, aes(x=df[,1], y=df[,2], color = df[,3])) + 
-  facet_grid(~df[,3]) + 
-  stat_cor(method = "pearson", p.accuracy = 0.05) +
-  geom_point(shape=18, color = df[,3])
+# t1 = c(mean(df1[df1[,1] & df1[,3] == "#FED8B1",][,1]),mean(df2[df2[,1] & df2[,3] == "#FED8B1",][,1]),mean(df3[df3[,1] & df3[,3] == "#FED8B1",][,1]))
+# t2 = c(mean(df4[df4[,1] & df4[,3] == "#FED8B1",][,1]),mean(df5[df5[,1] & df5[,3] == "#FED8B1",][,1]))
+# t.test(t1, t2, paired = FALSE, alternative = "greater")$p.value
+# 
+# # takes only cluster 1
+# df = data.frame(t(RA.norm[c("RASGRP2", "CXCL13"),]))
+# df[,3] = col.spatial.clusters[row.names(df),]
+# df = df[df[,3] == "#FED8B1",]
+# 
+# # Change the confidence interval fill color
+# ggplot(df, aes(x=df[,1], y=df[,2], color = df[,3])) + 
+#   facet_grid(~df[,3]) + 
+#   stat_cor(method = "pearson", p.accuracy = 0.05) +
+#   geom_point(shape=18, color = df[,3])
 
 # Print out how many cells are gene1 high and gene2 low
 #df = df5
-nrow(df[df[,1] > 0.5 & df[,2] > 0.5,])/nrow(df) # in the whole data
-nrow(df[df[,1] > 0.5 & df[,2] < 0.5 & df[,3] == "#FED8B1",])/nrow(df[df[,3] == "#FED8B1",]) # in cluster1 only data
- 
+# nrow(df[df[,1] > 0.5 & df[,2] > 0.5,])/nrow(df) # in the whole data
+# nrow(df[df[,1] > 0.5 & df[,2] < 0.5 & df[,3] == "#FED8B1",])/nrow(df[df[,3] == "#FED8B1",]) # in cluster1 only data
+#  
 # # Checks weather gene1 high spots are also gene3 low
 # df = df[df[,1] > 0.5 & df[,2] < 0.5,]
 # spots_subset1 = row.names(df)
@@ -170,7 +216,7 @@ nrow(df[df[,1] > 0.5 & df[,2] < 0.5 & df[,3] == "#FED8B1",])/nrow(df[df[,3] == "
 # nrow(df[df[,1] > 0.5 & df[,2] > 0.5 & df[,3] == "#FED8B1",])/nrow(df[df[,3] == "#FED8B1",]) # in cluster1 only data
 
 
-  #Plot all barcode clusters over the tissue for Fig3a
+#Plot all barcode clusters over the tissue for Fig3a
 # ann.col = matrix(nrow=nrow(ann_to_plot), ncol = 1)
 # rownames(ann.col) = rownames(ann_to_plot)
 # for (sam in rownames(ann)){
@@ -189,28 +235,24 @@ setwd(path_output)
 if (norm_samples == 'RA1' | norm_samples =='RA3' | norm_samples =='RA6') {
   plot.gene.2d.inf.4(norm_samples, ann.col.inf, m1, m2, m3, m4, s1, s2, s3, s4, x=40, y=20, transparency=1, min=1, max=3)
   plot.gene.2d.cluster.4(norm_samples, ann.cluster, m1, m2, m3, m4, s1, s2, s3, s4, x=40, y=20, transparency=1, min=1, max=3)
-  plot.gene.2d.4(norm_samples, "CD79A", m1, m2, m3, m4, s1, s2, s3, s4, x=40, y=20, transparency=1, min=0, max=6, con = T)
+  plot.gene.2d.4(norm_samples, "CCR7", m1, m2, m3, m4, s1, s2, s3, s4, x=100, y=50, transparency=1, min=0, max=2, con = T)
 }
 
 if (norm_samples == 'RA2'){
-  plot.gene.2d.inf.7(norm_samples, ann.col.inf, m1, m2, m3, m4, m5, m6, m7, s1, s2, s3, s4, s5, s6, s7, x=40, y=20, transparency=1, min=1, max=4)
+  plot.gene.2d.inf.7(norm_samples, ann.col.inf, m1, m2, m3, m4, m5, m6, m7, s1, s2, s3, s4, s5, s6, s7, x=40, y=20, transparency=1, min=1, max=4, inf_all)
   plot.gene.2d.cluster.7(norm_samples, ann.cluster, m1, m2, m3, m4, m5, m6, m7, s1, s2, s3, s4, s5, s6, s7, x=40, y=20, transparency=1, min=1, max=5)
-  plot.gene.2d.7(norm_samples, "LTB", m1, m2, m3, m4, m5, m6, m7, s1, s2, s3, s4, s5, s6, s7, x=40, y=40, transparency=1, min=0, max=4, con = T)
+  plot.gene.2d.7(norm_samples, "CD74", m1, m2, m3, m4, m5, m6, m7, s1, s2, s3, s4, s5, s6, s7, x=40, y=40, transparency=1, min=4, max=6, con = T)
 } 
 if (norm_samples == 'RA4') {
   plot.gene.2d.inf.5(norm_samples, ann.col.inf, m1, m2, m3, m4, m5, s1, s2, s3, s4, s5, x=20, y=40, transparency=1, min=1, max=4)
   plot.gene.2d.cluster.5(norm_samples, ann.cluster, m1, m2, m3, m4, m5, s1, s2, s3, s4, s5, x=30, y=40, transparency=1, min=1, max=5)
   plot.gene.2d.5(norm_samples, "ACTB", m1, m2, m3, m4, m5, s1, s2, s3, s4, s5, x=20, y=40, transparency=1, min=0, max=6, con = T)
 }
+
 if (norm_samples == 'RA5') {
   plot.gene.2d.inf.3(norm_samples, ann.col.inf, m1, m2, m3, s1, s2, s3, x=30, y=30, transparency=1, min=1, max=4)
   plot.gene.2d.cluster.3(norm_samples, ann.cluster, m1, m2, m3,  s1, s2, s3, x=30, y=30, transparency=1, min=1, max=5)
   plot.gene.2d.3(norm_samples, "ACTB", m1, m2, m3, s1, s2, s3, x=30, y=30, transparency=1, min=0, max=6, con = T)
 }
 
-rms1 = c(0.6723, 0.2423, 0.1737)
-rms2 = c(0.0163,0.2083,0.0239)
 
-rms1 = c(1.1844, 1.8742, 1.0053)
-rms2 = c(0.5881, 0.3413, 0.2746)
-t.test(rms1, rms2)
