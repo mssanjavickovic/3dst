@@ -85,21 +85,3 @@ for (secs in 1:length(raw_mat_loaded_in_env)){
   write.table(get(paste0("m", secs)), file = paste0(norm_samples, '_Norm.exp_', secs, '.csv'), sep = ",", quote = F, col.names = T, row.names = T)
 }
 
-# # how to make s files from xyz from britta
-# setwd('/Users/sanjavickovic/Desktop/morphoSPOT/new_tranforms')
-# files_raw = list.files(pattern =  glob2rx("RA6*xyz*"), path = './')
-# files_raw
-# # Load all raw counts matrices in your env
-# norm_samples = "RA6"
-# sample_counter = 1
-# for (i in files_raw){
-#    print(i)
-#    assign(paste0("s", sample_counter), read.delim(i, header = T, row.names = 1))
-#    save(list=paste0("s", sample_counter), file = paste0(norm_samples, "_", sample_counter, "_selected_adjusted_spots_3D_manual_app"))
-#    sample_counter = sample_counter + 1
-# }
-# 
-# 
-# 
-# 
-# 

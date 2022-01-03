@@ -365,7 +365,6 @@ ct2 = paste0("scRNAseq_", tolower(norm_samples), "_", "plasma_cells", "_clusters
 melted_cts_cor1 = melted[(melted$ct == ct1),] # & melted$inf != 'rest'
 melted_cts_cor2 = melted[(melted$ct == ct2),]
 df = data.frame(melted_cts_cor1, melted_cts_cor2)
-
 #write.table(df, file = paste0("/Users/sanjavickovic/Desktop/morphoSPOT/Manuscript_Nov2021/figshare/SupFig9a_", norm_samples, "_plasma_thy1.csv"), sep = ",", quote = F) 
 
 myplots <- vector("list", 1)
@@ -449,7 +448,6 @@ for (j in unique(by_vs$ct)){
       }
   }
 }
-
 
 # first checks general changes in abundances in Rest (ex. b cells)
 by_vs_am <- abun %>% group_by(sample, ct, section, inf)

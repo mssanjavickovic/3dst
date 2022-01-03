@@ -173,57 +173,6 @@ save_plot(paste0(path_output,"Average_genes_per_cluster_", norm_samples, ".pdf")
 save_plot(paste0(path_output,"Average_genes_per_cluster_boxplot_", norm_samples, ".pdf"), avg_genes_box_old(RA.norm, gen_names, col.spatial.clusters), ncol = 1, nrow = 1, base_width = 10, base_height = 10)
 write.table(avg_genes_box_old_data(RA.norm, gen_names, col.spatial.clusters), file = paste0("/Users/sanjavickovic/Desktop/morphoSPOT/Manuscript_Nov2021/figshare/Average_genes_per_cluster_boxplot_", norm_samples, ".csv"), sep = ",", quote = F)
 
-### Make gene-to-gene correlation plots 
-#df1 = data.frame(t(RA.norm[c("RASGRP2", "CXCL13"),]))
-#df1[,3] = col.spatial.clusters[row.names(df1),]
-#df2 = data.frame(t(RA.norm[c("RASGRP2", "CXCL13"),]))
-#df2[,3] = col.spatial.clusters[row.names(df2),]
-#df3 = data.frame(t(RA.norm[c("RASGRP2", "CXCL13"),]))
-#df3[,3] = col.spatial.clusters[row.names(df3),]
-#df4 = data.frame(t(RA.norm[c("RASGRP2", "CXCL13"),]))
-#df4[,3] = col.spatial.clusters[row.names(df4),]
-#df5 = data.frame(t(RA.norm[c("RASGRP2", "CXCL13"),]))
-#df5[,3] = col.spatial.clusters[row.names(df5),]
-# t1 = c(mean(df1[df1[,1] & df1[,3] == "#FED8B1",][,1]),mean(df2[df2[,1] & df2[,3] == "#FED8B1",][,1]),mean(df3[df3[,1] & df3[,3] == "#FED8B1",][,1]))
-# t2 = c(mean(df4[df4[,1] & df4[,3] == "#FED8B1",][,1]),mean(df5[df5[,1] & df5[,3] == "#FED8B1",][,1]))
-# t.test(t1, t2, paired = FALSE, alternative = "greater")$p.value
-# 
-# # takes only cluster 1
-# df = data.frame(t(RA.norm[c("RASGRP2", "CXCL13"),]))
-# df[,3] = col.spatial.clusters[row.names(df),]
-# df = df[df[,3] == "#FED8B1",]
-# 
-# # Change the confidence interval fill color
-# ggplot(df, aes(x=df[,1], y=df[,2], color = df[,3])) + 
-#   facet_grid(~df[,3]) + 
-#   stat_cor(method = "pearson", p.accuracy = 0.05) +
-#   geom_point(shape=18, color = df[,3])
-
-# Print out how many cells are gene1 high and gene2 low
-#df = df5
-# nrow(df[df[,1] > 0.5 & df[,2] > 0.5,])/nrow(df) # in the whole data
-# nrow(df[df[,1] > 0.5 & df[,2] < 0.5 & df[,3] == "#FED8B1",])/nrow(df[df[,3] == "#FED8B1",]) # in cluster1 only data
-#  
-# # Checks weather gene1 high spots are also gene3 low
-# df = df[df[,1] > 0.5 & df[,2] < 0.5,]
-# spots_subset1 = row.names(df)
-# df = data.frame(t(RA.norm[c("TYROBP", "RASGRP2"),]))
-# df[,3] = col.spatial.clusters[row.names(df),]
-# df = df[row.names(df) %in% spots_subset1,]
-# 
-# # Print out how many cells are gene1 high and gene3 low
-# nrow(df[df[,1] > 0.5 & df[,2] > 0.5,])/nrow(df) # in the whole data
-# nrow(df[df[,1] > 0.5 & df[,2] > 0.5 & df[,3] == "#FED8B1",])/nrow(df[df[,3] == "#FED8B1",]) # in cluster1 only data
-
-
-#Plot all barcode clusters over the tissue for Fig3a
-# ann.col = matrix(nrow=nrow(ann_to_plot), ncol = 1)
-# rownames(ann.col) = rownames(ann_to_plot)
-# for (sam in rownames(ann)){
-#   if ((ann[sam,1] == "#FED8B1") & (ann[sam,2] == "#FF7F00")){ ann.col[sam,1] = "red"}
-#   else {ann.col[sam,1] = ann[sam,1] }
-# }
-
 #Plot 3D genes as a heatmap (not morphological)
 #Assign color annotations for plotting in 3D for inf and clusters
 ann.col.inf = assign_col_inf_numbers(RA.norm, col.inf.clusters) # presumes max 4 clusters
@@ -239,7 +188,7 @@ if (norm_samples == 'RA1' | norm_samples =='RA3' | norm_samples =='RA6') {
 }
 
 if (norm_samples == 'RA2'){
-  plot.gene.2d.inf.7(norm_samples, ann.col.inf, m1, m2, m3, m4, m5, m6, m7, s1, s2, s3, s4, s5, s6, s7, x=40, y=20, transparency=1, min=1, max=4, inf_all)
+  plot.gene.2d.inf.7(norm_samples, ann.col.inf, m1, m2, m3, m4, m5, m6, m7, s1, s2, s3, s4, s5, s6, s7, x=40, y=20, transparency=1, min=1, max=4)
   plot.gene.2d.cluster.7(norm_samples, ann.cluster, m1, m2, m3, m4, m5, m6, m7, s1, s2, s3, s4, s5, s6, s7, x=40, y=20, transparency=1, min=1, max=5)
   plot.gene.2d.7(norm_samples, "CD74", m1, m2, m3, m4, m5, m6, m7, s1, s2, s3, s4, s5, s6, s7, x=40, y=40, transparency=1, min=4, max=6, con = T)
 } 

@@ -1665,11 +1665,11 @@ plot.gene.2d.7 = function(sample, gene, m1, m2, m3, m4, m5, m6, m7, s1, s2, s3, 
   
 }
 
-plot.gene.2d.inf.7 = function(sample, cluster, m1, m2, m3, m4, m5, m6, m7, s1, s2, s3, s4, s5, s6, s7, x, y, transparency, min, max, inf_all){
+plot.gene.2d.inf.7 = function(sample, cluster, m1, m2, m3, m4, m5, m6, m7, s1, s2, s3, s4, s5, s6, s7, x, y, transparency, min, max){ #, inf_all)
   
-  mats_collection = matrix(ncol = 5, nrow = 1)
-  colnames(mats_collection) = c("x", "y", "score", "sample", "section")
-  inf_all$names = row.names(inf_all)
+  #mats_collection = matrix(ncol = 5, nrow = 1)
+  #colnames(mats_collection) = c("x", "y", "score", "sample", "section")
+  #inf_all$names = row.names(inf_all)
   
   for (i in c(1:7)) {
     if (i == "1") {
@@ -1715,44 +1715,44 @@ plot.gene.2d.inf.7 = function(sample, cluster, m1, m2, m3, m4, m5, m6, m7, s1, s
     # y = 40
     # transparency = 1
     s =  interp(x1, y1, z, nx = x, ny = y)
-    mats_collection = rbind(mats_collection, make_output_tissue_matrix(s$z, norm_samples, i))
+    #mats_collection = rbind(mats_collection, make_output_tissue_matrix(s$z, norm_samples, i))
     
     
-    genes.barcodes.small = genes.barcodes[row.names(genes.barcodes) %in% row.names(inf_all[inf_all$Inf. == "Inf6",]),]
-    x1.small = as.numeric(genes.barcodes.small[,1])
-    x1.small = x1.small[!is.na(x1.small)]
-    y1.small = as.numeric(genes.barcodes.small[,2])
-    y1.small = y1.small[!is.na(y1.small)]
-    z.small = as.numeric(genes.barcodes.small[,3])
-    dis.small = rep(0.25 * as.numeric(i), nrow(genes.barcodes.small))
-    w = as.numeric(dis.small)
+    #genes.barcodes.small = genes.barcodes[row.names(genes.barcodes) %in% row.names(inf_all[inf_all$Inf. == "Inf6",]),]
+    #x1.small = as.numeric(genes.barcodes.small[,1])
+    #x1.small = x1.small[!is.na(x1.small)]
+    #y1.small = as.numeric(genes.barcodes.small[,2])
+    #y1.small = y1.small[!is.na(y1.small)]
+    #z.small = as.numeric(genes.barcodes.small[,3])
+    #dis.small = rep(0.25 * as.numeric(i), nrow(genes.barcodes.small))
+    #w = as.numeric(dis.small)
 
-    x.small = 100
-    y.small = 100
+    #x.small = 100
+    #y.small = 100
     # transparency = 1
-    s.small =  interp(x1.small, y1.small, z.small, nx = x.small, ny = y.small)
+    #s.small =  interp(x1.small, y1.small, z.small, nx = x.small, ny = y.small)
 
     if (i == "1") {
-      mat.1 = s$z
-      mat.1.small = s.small$z}
+      mat.1 = s$z}
+      #mat.1.small = s.small$z}
     if (i == "2") {
-      mat.2 = s$z
-      mat.2.small = s.small$z}
+      mat.2 = s$z}
+      #mat.2.small = s.small$z}
     if (i == "3") {
-      mat.3 = s$z
-      mat.3.small = s.small$z}
+      mat.3 = s$z}
+      #mat.3.small = s.small$z}
     if (i == "4") {
-      mat.4 = s$z
-      mat.4.small = s.small$z}
+      mat.4 = s$z}
+      #mat.4.small = s.small$z}
     if (i == "5") {
-      mat.5 = s$z
-      mat.5.small = s.small$z}
+      mat.5 = s$z}
+      #mat.5.small = s.small$z}
     if (i == "6") {
-      mat.6 = s$z
-      mat.6.small = s.small$z}
+      mat.6 = s$z}
+      #mat.6.small = s.small$z}
     if (i == "7") {
-      mat.7 = s$z
-      mat.7.small = s.small$z}
+      mat.7 = s$z}
+      #mat.7.small = s.small$z}
   }
 
   colorvar = colorRampPalette(c("#8a3795", "#4ebceb","#f15f48","gray80"))(4)
@@ -1777,36 +1777,36 @@ plot.gene.2d.inf.7 = function(sample, cluster, m1, m2, m3, m4, m5, m6, m7, s1, s
   pdf(paste(sample,"_7_Contour_Inf",".pdf", sep=""))
   image2D(z = mat.7, contour = T, smooth = TRUE, col=colorvar, alpha = transparency, box = FALSE, inttype = 1, clim = c(min, max), NAcol = "transparent", x = c(1:x), y = c(1:y), scale = F, colkey = list(plot = FALSE))
   dev.off()
-  pdf(paste(sample,"_1_Contour_Inf6",".pdf", sep=""))
-  image2D(z = mat.1.small, contour = T, smooth = TRUE, col=colorvar, alpha = transparency, box = FALSE, inttype = 1, clim = c(min, max), NAcol = "transparent", x = c(1:x.small), y = c(1:y.small), scale = F, colkey = list(plot = FALSE))
-  dev.off()
-  pdf(paste(sample,"_2_Contour_Inf6",".pdf", sep=""))
-  image2D(z = mat.2.small, contour = T, smooth = TRUE, col=colorvar, alpha = transparency, box = FALSE, inttype = 1, clim = c(min, max), NAcol = "transparent", x = c(1:x.small), y = c(1:y.small), scale = F, colkey = list(plot = FALSE))
-  dev.off()
-  pdf(paste(sample,"_3_Contour_Inf6",".pdf", sep=""))
-  image2D(z = mat.3.small, contour = T, smooth = TRUE, col=colorvar, alpha = transparency, box = FALSE, inttype = 1, clim = c(min, max), NAcol = "transparent", x = c(1:x.small), y = c(1:y.small), scale = F, colkey = list(plot = FALSE))
-  dev.off()
-  pdf(paste(sample,"_4_Contour_Inf6",".pdf", sep=""))
-  image2D(z = mat.4.small, contour = T, smooth = TRUE, col=colorvar, alpha = transparency, box = FALSE, inttype = 1, clim = c(min, max), NAcol = "transparent", x = c(1:x.small), y = c(1:y.small), scale = F, colkey = list(plot = FALSE))
-  dev.off()
-  pdf(paste(sample,"_5_Contour_Inf6",".pdf", sep=""))
-  image2D(z = mat.5.small, contour = T, smooth = TRUE, col=colorvar, alpha = transparency, box = FALSE, inttype = 1, clim = c(min, max), NAcol = "transparent", x = c(1:x.small), y = c(1:y.small), scale = F, colkey = list(plot = FALSE))
-  dev.off()
-  pdf(paste(sample,"_6_Contour_Inf6",".pdf", sep=""))
-  image2D(z = mat.6.small, contour = T, smooth = TRUE, col=colorvar, alpha = transparency, box = FALSE, inttype = 1, clim = c(min, max), NAcol = "transparent", x = c(1:x.small), y = c(1:y.small), scale = F, colkey = list(plot = FALSE))
-  dev.off()
-  pdf(paste(sample,"_7_Contour_Inf6",".pdf", sep=""))
-  image2D(z = mat.7.small, contour = T, smooth = TRUE, col=colorvar, alpha = transparency, box = FALSE, inttype = 1, clim = c(min, max), NAcol = "transparent", x = c(1:x.small), y = c(1:y.small), scale = F, colkey = list(plot = FALSE))
-  dev.off()
+  # pdf(paste(sample,"_1_Contour_Inf6",".pdf", sep=""))
+  # image2D(z = mat.1.small, contour = T, smooth = TRUE, col=colorvar, alpha = transparency, box = FALSE, inttype = 1, clim = c(min, max), NAcol = "transparent", x = c(1:x.small), y = c(1:y.small), scale = F, colkey = list(plot = FALSE))
+  # dev.off()
+  # pdf(paste(sample,"_2_Contour_Inf6",".pdf", sep=""))
+  # image2D(z = mat.2.small, contour = T, smooth = TRUE, col=colorvar, alpha = transparency, box = FALSE, inttype = 1, clim = c(min, max), NAcol = "transparent", x = c(1:x.small), y = c(1:y.small), scale = F, colkey = list(plot = FALSE))
+  # dev.off()
+  # pdf(paste(sample,"_3_Contour_Inf6",".pdf", sep=""))
+  # image2D(z = mat.3.small, contour = T, smooth = TRUE, col=colorvar, alpha = transparency, box = FALSE, inttype = 1, clim = c(min, max), NAcol = "transparent", x = c(1:x.small), y = c(1:y.small), scale = F, colkey = list(plot = FALSE))
+  # dev.off()
+  # pdf(paste(sample,"_4_Contour_Inf6",".pdf", sep=""))
+  # image2D(z = mat.4.small, contour = T, smooth = TRUE, col=colorvar, alpha = transparency, box = FALSE, inttype = 1, clim = c(min, max), NAcol = "transparent", x = c(1:x.small), y = c(1:y.small), scale = F, colkey = list(plot = FALSE))
+  # dev.off()
+  # pdf(paste(sample,"_5_Contour_Inf6",".pdf", sep=""))
+  # image2D(z = mat.5.small, contour = T, smooth = TRUE, col=colorvar, alpha = transparency, box = FALSE, inttype = 1, clim = c(min, max), NAcol = "transparent", x = c(1:x.small), y = c(1:y.small), scale = F, colkey = list(plot = FALSE))
+  # dev.off()
+  # pdf(paste(sample,"_6_Contour_Inf6",".pdf", sep=""))
+  # image2D(z = mat.6.small, contour = T, smooth = TRUE, col=colorvar, alpha = transparency, box = FALSE, inttype = 1, clim = c(min, max), NAcol = "transparent", x = c(1:x.small), y = c(1:y.small), scale = F, colkey = list(plot = FALSE))
+  # dev.off()
+  # pdf(paste(sample,"_7_Contour_Inf6",".pdf", sep=""))
+  # image2D(z = mat.7.small, contour = T, smooth = TRUE, col=colorvar, alpha = transparency, box = FALSE, inttype = 1, clim = c(min, max), NAcol = "transparent", x = c(1:x.small), y = c(1:y.small), scale = F, colkey = list(plot = FALSE))
+  # dev.off()
   
-  mats_collection = mats_collection[-1,]
-  write.table(mats_collection, file = paste0("Inf_clustering_table_", norm_samples, ".csv"), quote = F,sep = ",")
+  #mats_collection = mats_collection[-1,]
+  #write.table(mats_collection, file = paste0("Inf_clustering_table_", norm_samples, ".csv"), quote = F,sep = ",")
   
   # plot inf6 for figshare
   #print(head(mats_collection))
-  row.names(mats_collection) = paste(str_replace_all(mats_collection[,"section"], "Section", "X"), mats_collection[,"x"], mats_collection[,"y"], sep = "_")
-  mats_collection = mats_collection[row.names(mats_collection) %in% row.names(inf_all[inf_all$Inf. == "Inf6",]),]
-  write.table(mats_collection, file = paste0("Inf_clustering_table_Inf6_", norm_samples, ".csv"), quote = F,sep = ",")
+  #row.names(mats_collection) = paste(str_replace_all(mats_collection[,"section"], "Section", "X"), mats_collection[,"x"], mats_collection[,"y"], sep = "_")
+  #mats_collection = mats_collection[row.names(mats_collection) %in% row.names(inf_all[inf_all$Inf. == "Inf6",]),]
+  #write.table(mats_collection, file = paste0("Inf_clustering_table_Inf6_", norm_samples, ".csv"), quote = F,sep = ",")
   
 }
 

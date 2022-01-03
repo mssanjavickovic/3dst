@@ -58,12 +58,9 @@ for (cl in celltypes) {
 saveWorkbook(sh, file = paste0(path_output, "/", norm_samples, "_cell_types_GO_enrichment.xlsx"), overwrite = TRUE)
 #saveWorkbook(sh, file = paste0(path_output, "/", norm_samples, "_spatial_clusters_GO_enrichment.xlsx"), overwrite = TRUE)          
 
-
-
-
 # make one big doc with all top 3 pathways 
 # Which samples do you want to use? 
-norm_samples = c("RA4", "RA5") #, #c(),,  
+norm_samples = c("RA4", "RA5", "RA6") #, #c(),,  
 go_infs = matrix(ncol = 3, nrow = 1)
 for (samples in norm_samples){
   print(samples)
