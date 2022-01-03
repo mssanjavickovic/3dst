@@ -146,4 +146,4 @@ plot_grid(plotlist=myplots)
 
 # export data for manuscript figshare
 row.names(myData) = seq(1, nrow(myData))
-write.table(myData, file = "/Users/sanjavickovic/Desktop/morphoSPOT/Manuscript_Nov2021/figshare/SuppFig1b.csv", sep = ",", quote = F)
+#write.table(myData, file = "/Users/sanjavickovic/Desktop/morphoSPOT/Manuscript_Nov2021/figshare/SuppFig1b.csv", sep = ",", quote = F)
